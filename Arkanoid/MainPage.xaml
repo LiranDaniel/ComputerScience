@@ -9,6 +9,46 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets\App\Images\Arkanoid.jpg" Stretch="Fill">
+            </ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
+        <Button x:Name="btnPlay" Grid.Column="5" Grid.Row="6" Grid.RowSpan="4" Grid.ColumnSpan="3"
+                Background="Transparent" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited">
+            <Image x:Name="imgPlay" Source="Assets\App\Buttons\LIstOfButtons\Play (1).png"></Image>
+        </Button>
+
+        <Button x:Name="btnExit" Background="Transparent"
+                PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited">
+            <Image Source="Assets\App\Buttons\LIstOfButtons\Exit (1).png" x:Name="imgExit">
+            </Image>
+        </Button>
     </Grid>
 </Page>
