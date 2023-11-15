@@ -16,13 +16,13 @@ namespace TrafficLight.Objects
             switch (_state)
             {
                 case CharacterStateType.Standing:
-                    _bitmapimage.UriSource = new Uri("");                  //new Uri("ms-appx:///Assets/GameAssets/gifs/TempleGirl/TempleGirlIdle.gif");
+                    _bitmapimage.UriSource = new Uri("ms-appx:///Assets/App/Characters/Boy_Idle_gif.gif");              //new Uri("ms-appx:///Assets/GameAssets/gifs/TempleGirl/TempleGirlIdle.gif");
                     break;
                 case CharacterStateType.Ready:
-                    _bitmapimage.UriSource = new Uri("");
+                    _bitmapimage.UriSource = new Uri("ms-appx:///Assets/App/Characters/Boy_Jump_gif.gif");
                     break;
                 case CharacterStateType.Runing:
-                    _bitmapimage.UriSource = new Uri("");
+                    _bitmapimage.UriSource = new Uri("ms-appx:///Assets/App/Characters/Boy_Run_gif.gif");
                     break;
             }
         }

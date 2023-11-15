@@ -40,7 +40,7 @@
                 BorderBrush="Black" VerticalAlignment="Top" CornerRadius="60" Margin="40"
                 BorderThickness="10" Click="btnManual_Click">
         </Button>
-        <Image x:Name="imgNinjaBoy" Width="200" Height="200"></Image>
+        <Image x:Name="imgNinjaBoy"  Grid.Column="0" Width="250" Height="250"></Image>
         <Image x:Name="imgNinjaGirl" Grid.Column="2" Width="250" Height="250" ></Image>
 
     </Grid>

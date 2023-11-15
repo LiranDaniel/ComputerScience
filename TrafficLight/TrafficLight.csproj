@@ -135,6 +135,12 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\App\Characters\Boy_Idle_gif.gif" />
+    <Content Include="Assets\App\Characters\Boy_Jump_gif.gif" />
+    <Content Include="Assets\App\Characters\Boy_Run_gif.gif" />
+    <Content Include="Assets\App\Characters\Girl_Idle_gif.gif" />
+    <Content Include="Assets\App\Characters\Girl_Jump_gif.gif" />
+    <Content Include="Assets\App\Characters\Girl_Run_gif.gif" />
     <Content Include="Assets\App\Icon\LargeTile.scale-100.png" />
     <Content Include="Assets\App\Icon\LargeTile.scale-125.png" />
     <Content Include="Assets\App\Icon\LargeTile.scale-150.png" />
