@@ -49,5 +49,10 @@ namespace Arkanoid
         {
             Application.Current.Exit();
         }
+
+        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SignInPage));
+        }
     }
 }
