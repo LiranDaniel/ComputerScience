@@ -6,9 +6,42 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
 
-    <Grid>
+    <Grid Background="OldLace" CornerRadius="100" BorderBrush="Black" BorderThickness="25">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid  Grid.Column="1" Background="Black" CornerRadius="60" Margin="50,10,50,10">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Ellipse  x:Name="elpRed" Height="180" Width="180" Stroke="Black" StrokeThickness="4"
+                      Fill="DarkRed" Grid.Column="1" Grid.Row="0" ></Ellipse>
+            <Ellipse  x:Name="elpYellow" Height="180" Width="180" Stroke="Black" StrokeThickness="4"
+                      Fill="Gray" Grid.Column="1" Grid.Row="1"></Ellipse>
+            <Ellipse  x:Name="elpGreen" Height="180" Width="180" Stroke="Black"
+                      StrokeThickness="4" Fill="Gray" Grid.Column="1" Grid.Row="2"></Ellipse>
+        </Grid>
+        <Button x:Name="btnAuto" Background="Bisque" HorizontalAlignment="Stretch"
+                Height="180" Content="Auto" FontSize="60" Foreground="DarkSlateGray" 
+                FontFamily="Ink Draft" BorderBrush="Black" VerticalAlignment="Top"
+                CornerRadius="60" Margin="40" BorderThickness="10" Click="btnAuto_Click">
+        </Button>
+
+        <Button x:Name="btnManual" Background="Bisque" HorizontalAlignment="Stretch"
+                Height="180" Content="Manual" FontSize="60" Grid.Column="2"
+                Foreground="DarkSlateGray" FontFamily="Ink Draft"
+                BorderBrush="Black" VerticalAlignment="Top" CornerRadius="60" Margin="40"
+                BorderThickness="10" Click="btnManual_Click">
+        </Button>
+        <Image x:Name="imgNinjaBoy" Width="200" Height="200"></Image>
+        <Image x:Name="imgNinjaGirl" Grid.Column="2" Width="250" Height="250" ></Image>
 
     </Grid>
 </Page>

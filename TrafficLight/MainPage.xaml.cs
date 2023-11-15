@@ -28,10 +28,34 @@ namespace TrafficLight
             this.InitializeComponent();
         }
 
-        private Traffic _lights;        // רמזור 
-        private NinjaGIrl _TempleGirl;  // דמות
-        private NinjaBoy _TempleBoy;    // דמות שנייה
+        private Traffic _traffic;        // רמזור 
+        private NinjaGIrl _ninjaGirl;  // דמות
+        private NinjaBoy _ninjaBoy;    // דמות שנייה
 
+        private void btnAuto_Click(object sender, RoutedEventArgs e)
+        {
+            _traffic.IsAuto = !_traffic.IsAuto;
 
+            if (_traffic.IsAuto)        //כך משנים כתוביות ללחצן
+                btnAuto.Content = "Stop";
+            else
+                btnAuto.Content = "Auto";
+
+            btnManual.IsEnabled = !_traffic.IsAuto;
+        }
+
+        private void btnManual_Click(object sender, RoutedEventArgs e)
+        {
+            _traffic.SetState();
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            _traffic = new Traffic(elpRed, elpYellow, elpGreen);//בניית רמזור
+
+            _ninjaGirl = new NinjaGIrl(imgNinjaGirl);
+            _ninjaBoy = new NinjaBoy(imgNinjaBoy);
+
+        }
     }
 }
