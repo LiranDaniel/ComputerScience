@@ -46,7 +46,7 @@
         </Button>
 
         <Button x:Name="btnExit" Background="Transparent"
-                PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited">
+                PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Click="btnExit_Click">
             <Image Source="Assets\App\Buttons\LIstOfButtons\Exit (1).png" x:Name="imgExit">
             </Image>
         </Button>
