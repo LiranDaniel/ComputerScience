@@ -122,6 +122,11 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Objects\Character.cs" />
+    <Compile Include="Objects\Events.cs" />
+    <Compile Include="Objects\NinjaBoy.cs" />
+    <Compile Include="Objects\NinjaGIrl.cs" />
+    <Compile Include="Objects\Traffic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

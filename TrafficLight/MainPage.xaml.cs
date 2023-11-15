@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using TrafficLight.Objects;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -26,5 +27,11 @@ namespace TrafficLight
         {
             this.InitializeComponent();
         }
+
+        private Traffic _lights;        // רמזור 
+        private NinjaGIrl _TempleGirl;  // דמות
+        private NinjaBoy _TempleBoy;    // דמות שנייה
+
+
     }
 }
