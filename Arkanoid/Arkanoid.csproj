@@ -373,6 +373,17 @@
     <Content Include="Assets\App\Icon\Wide310x150Logo.scale-400.png" />
     <Content Include="Assets\App\Images\Arkanoid.jpg" />
     <Content Include="Assets\App\Images\Arkanoid_background.jpg" />
+    <Content Include="Assets\App\Images\Numbers\Number-0.png" />
+    <Content Include="Assets\App\Images\Numbers\Number-1.png" />
+    <Content Include="Assets\App\Images\Numbers\Number-2.png" />
+    <Content Include="Assets\App\Images\Numbers\Number-3.png" />
+    <Content Include="Assets\App\Images\Numbers\Number-4.png" />
+    <Content Include="Assets\App\Images\Numbers\Number-5.png" />
+    <Content Include="Assets\App\Images\Numbers\Number-6.png" />
+    <Content Include="Assets\App\Images\Numbers\Number-7.png" />
+    <Content Include="Assets\App\Images\Numbers\Number-8.png" />
+    <Content Include="Assets\App\Images\Numbers\Number-9.png" />
+    <Content Include="Assets\App\Images\person_icon.png" />
     <Content Include="Assets\App\Images\SignInBackGround.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

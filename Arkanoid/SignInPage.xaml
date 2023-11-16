@@ -88,21 +88,30 @@
                 <RowDefinition></RowDefinition>
 
             </Grid.RowDefinitions>
-            <TextBlock x:Name="blockMail" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5">
-                
+            <TextBlock x:Name="blockMail" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5" Grid.RowSpan="2"
+                       FontSize="30" Margin="7">
+                Mail:
             </TextBlock>
-            <TextBlock x:Name="blockPassword" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="5">
-
+            <TextBlock x:Name="blockPassword" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="5" Grid.RowSpan="2"
+                       FontSize="30" Margin="0">
+                Password:
             </TextBlock>
-            <Viewbox x:Name="vboxMail" Grid.Column="6" Grid.Row="3" Grid.ColumnSpan="10">
-                <TextBox x:Name="tboxMail"   ></TextBox>
-            </Viewbox>
-            <Viewbox x:Name="vboxPassword" Grid.Column="6" Grid.Row="5" Grid.ColumnSpan="10">
-                <TextBox    x:Name="tboxPassword"></TextBox>
-            </Viewbox>
-
         </Grid>
         
+        
+        <Viewbox x:Name="vboxMail" Grid.Column="7" Grid.Row="3" Grid.ColumnSpan="7" Grid.RowSpan="1" Stretch="Fill">
+            <TextBox x:Name="tboxMail" Height="47"   ></TextBox>
+        </Viewbox>
+        <Viewbox x:Name="vboxPassword" Grid.Column="7" Grid.Row="5" Grid.ColumnSpan="7" Grid.RowSpan="1" Stretch="Fill">
+            <TextBox    x:Name="tboxPassword"></TextBox>
+        </Viewbox>
+        
+        
+        
+        <Image Source="Assets\App\Images\person_icon.png" Grid.Column="4" Grid.Row="7" Grid.ColumnSpan="2"
+               Grid.RowSpan="2" Stretch="Fill">
+            
+        </Image>
         <Button Grid.Row="0" Grid.Column="0" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
         x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click">
             <Image x:Name="imgSliderVertical" Source="Assets\App\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
