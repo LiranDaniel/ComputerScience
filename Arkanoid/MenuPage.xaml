@@ -52,8 +52,8 @@
             </Image>
         </Button>
 
-        <Button x:Name="btnProfile" Grid.Column="17" Grid.Row="0"
-         Background="Transparent" Click="btnProfile_Click">
+        <Button x:Name="btnProfile" Grid.Column="17" Grid.Row="0" Background="Transparent"
+                Click="btnProfile_Click" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited">
             <Image x:Name="imgProfile" Source="Assets\App\Buttons\LIstOfButtons\Profile (1).png"></Image>
         </Button>
         

@@ -51,6 +51,58 @@
 
         </Grid.RowDefinitions>
 
+        <Grid Grid.Column='3' Grid.Row="2" Grid.ColumnSpan="12" Grid.RowSpan="8"
+              BorderBrush="Black" BorderThickness="7" CornerRadius="40">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <TextBlock x:Name="blockMail" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5">
+                
+            </TextBlock>
+            <TextBlock x:Name="blockPassword" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="5">
+
+            </TextBlock>
+            <Viewbox x:Name="vboxMail" Grid.Column="6" Grid.Row="3" Grid.ColumnSpan="10">
+                <TextBox x:Name="tboxMail"   ></TextBox>
+            </Viewbox>
+            <Viewbox x:Name="vboxPassword" Grid.Column="6" Grid.Row="5" Grid.ColumnSpan="10">
+                <TextBox    x:Name="tboxPassword"></TextBox>
+            </Viewbox>
+
+        </Grid>
+        
         <Button Grid.Row="0" Grid.Column="0" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
         x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click">
             <Image x:Name="imgSliderVertical" Source="Assets\App\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
