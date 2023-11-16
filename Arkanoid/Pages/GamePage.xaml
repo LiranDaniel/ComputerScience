@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Assets\App\Images\Arkanoid_background.jpg">
+            <ImageBrush ImageSource="/Assets\App\Images\Arkanoid_background.jpg">
             </ImageBrush>
         </Grid.Background>
 
@@ -53,10 +53,10 @@
 
         <Button Grid.Row="0" Grid.Column="0" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
                 x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click">
-            <Image x:Name="imgSliderVertical" Source="Assets\App\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
+            <Image x:Name="imgSliderVertical" Source="/Assets\App\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
         </Button>
         <Button x:Name="btnNumber0" Grid.Row="5" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="3">
-            <Image Source="Assets\App\Images\Numbers\Number-0.png"></Image>
+            <Image Source="/Assets\App\Images\Numbers\Number-0.png"></Image>
         </Button>
     </Grid>
 </Page>

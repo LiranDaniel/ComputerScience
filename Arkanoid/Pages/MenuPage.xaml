@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="Assets\App\Images\Arkanoid.jpg" Stretch="Fill">
+            <ImageBrush ImageSource="/Assets\App\Images\Arkanoid.jpg" Stretch="Fill">
             </ImageBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
@@ -40,22 +40,29 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="btnPlay" Grid.Column="5" Grid.Row="6" Grid.RowSpan="4" Grid.ColumnSpan="3"
+        <Button x:Name="btnPlay" Grid.Column="5" Grid.Row="6" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 Background="Transparent" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
                 Click="btnPlay_Click">
-            <Image x:Name="imgPlay" Source="Assets\App\Buttons\LIstOfButtons\Play (1).png"></Image>
+            <Image x:Name="imgPlay" Source="/Assets\App\Buttons\LIstOfButtons\Play (1).png"></Image>
         </Button>
 
         <Button x:Name="btnExit" Background="Transparent"
                 PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Click="btnExit_Click">
-            <Image Source="Assets\App\Buttons\LIstOfButtons\Exit (1).png" x:Name="imgExit">
+            <Image Source="/Assets\App\Buttons\LIstOfButtons\Exit (1).png" x:Name="imgExit">
             </Image>
         </Button>
 
-        <Button x:Name="btnProfile" Grid.Column="17" Grid.Row="0" Background="Transparent"
+        <Button x:Name="btnProfile" Grid.Column="7" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="Transparent"
                 Click="btnProfile_Click" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited">
-            <Image x:Name="imgProfile" Source="Assets\App\Buttons\LIstOfButtons\Profile (1).png"></Image>
+            <Image x:Name="imgProfile" Source="/Assets\App\Buttons\LIstOfButtons\Profile (1).png"></Image>
         </Button>
-        
+
+
+        <Button x:Name="btnInfo" Grid.Column="12" Grid.Row="0" Background="Transparent"
+              Click="btnProfile_Click" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited">
+            <Image x:Name="imgInfo" Source="/Assets\App\Buttons\LIstOfButtons\Info (1).png"></Image>
+        </Button>
+
+
     </Grid>
 </Page>
