@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets\App\Images\Arkanoid_background.jpg">
+            <ImageBrush ImageSource="/Assets\App\Images\SignInBackGround.png">
             </ImageBrush>
         </Grid.Background>
 
@@ -55,8 +55,21 @@
                 x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click">
             <Image x:Name="imgSliderVertical" Source="/Assets\App\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
         </Button>
-        <Button x:Name="btnNumber0" Grid.Row="5" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="3">
-            <Image Source="/Assets\App\Images\Numbers\Number-0.png"></Image>
+        
+        <Button x:Name="btnNumber1" Grid.Row="5" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="3">
+            <Image Source="/Assets\App\Images\Numbers\Number1.png"></Image>
+        </Button> 
+
+        <Button x:Name="btnNumber2" Grid.Row="5" Grid.Column="6" Grid.RowSpan="3" Grid.ColumnSpan="3">
+            <Image Source="/Assets\App\Images\Numbers\Number2.png"></Image>
+        </Button>
+        
+        <Button x:Name="btnNumber3" Grid.Row="5" Grid.Column="9" Grid.RowSpan="3" Grid.ColumnSpan="3">
+            <Image Source="/Assets\App\Images\Numbers\Number3.png"></Image>
+        </Button>
+        
+        <Button x:Name="btnNumber4" Grid.Row="5" Grid.Column="12" Grid.RowSpan="3" Grid.ColumnSpan="3">
+            <Image Source="/Assets\App\Images\Numbers\Number4.png"></Image>
         </Button>
     </Grid>
 </Page>
