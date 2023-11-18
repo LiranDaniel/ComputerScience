@@ -81,7 +81,7 @@
 
         </Image>
         <Button Grid.Row="0" Grid.Column="0" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
-        x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click">
+        x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}">
             <Image x:Name="imgSliderVertical" Source="/Assets\App\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
         </Button>
     </Grid>
