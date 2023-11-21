@@ -1,14 +1,10 @@
-﻿using Arkanoid.Pages;
-using GameEngine.GameServices;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -18,16 +14,16 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Arkanoid
+namespace Arkanoid.Pages
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class SoundPage : Page
     {
-        public MainPage()
+        public SoundPage()
         {
             this.InitializeComponent();
         }
@@ -47,33 +43,19 @@ namespace Arkanoid
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
 
-        private void btnExit_Click(object sender, RoutedEventArgs e)
+        private void btn_SliderVertical_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Exit();
+            Frame.Navigate(typeof(MainPage));
         }
 
-        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        private void SoundEffectSw_Toggled(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(GamePage));
-        }
 
-        private void btnProfile_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SignInPage));
         }
 
         private void backgroundMusicSw_Toggled(object sender, RoutedEventArgs e)
         {
-            MusicPlayer.IsOn = !MusicPlayer.IsOn;
-            if (MusicPlayer.IsOn)
-                MusicPlayer.Play("");
-            else
-                MusicPlayer.Stop();
-        }
 
-        private void btnMusic_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SoundPage));
         }
     }
 }
