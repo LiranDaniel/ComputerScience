@@ -79,9 +79,9 @@
         </Viewbox>
 
         <Button x:Name="btnSignIn" Style="{StaticResource MyButtonStyle}" Grid.Row="7" Grid.Column="9"
-                Grid.ColumnSpan="3" Click="btnSignIn_Click">Sign in</Button>
+                Grid.ColumnSpan="3" Click="btnSignIn_Click" >Sign in</Button>
         <Button x:Name="btnSignUp" Style="{StaticResource MyButtonStyle}" Grid.Row="8" Grid.Column="9"
-                Grid.ColumnSpan="3" Click="btnSignUp_Click">Sign Up</Button>
+                Grid.ColumnSpan="3" Click="btnSignUp_Click" Foreground="Blue">Sign Up</Button>
 
         <TextBlock x:Name="blockSignIn" Grid.Row="8" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center"
                 Grid.ColumnSpan="3" Grid.RowSpan="2"> Not a member?
