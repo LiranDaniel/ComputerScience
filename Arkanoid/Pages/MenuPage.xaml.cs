@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameEngine.GameServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -58,6 +59,15 @@ namespace Arkanoid
         private void btnProfile_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(SignInPage));
+        }
+
+        private void backgroundMusicSw_Toggled(object sender, RoutedEventArgs e)
+        {
+            MusicPlayer.IsOn = !MusicPlayer.IsOn;
+            if (MusicPlayer.IsOn)
+                MusicPlayer.Play("");
+            else
+                MusicPlayer.Stop();
         }
     }
 }

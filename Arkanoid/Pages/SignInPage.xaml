@@ -10,10 +10,9 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets\App\Images\SignInBackGround.png">
+            <ImageBrush ImageSource="/Assets\App\Images\Arkanoid.jpg">
             </ImageBrush>
         </Grid.Background>
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -52,14 +51,19 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Column='3' Grid.Row="2" Grid.ColumnSpan="12" Grid.RowSpan="8"
-              BorderBrush="Black" BorderThickness="7" CornerRadius="40">
+              BorderBrush="Black" BorderThickness="7" CornerRadius="40" >
+            <Grid.Background>
+                <ImageBrush  ImageSource="/Assets\App\Images\SignInBackGround.png"></ImageBrush>
+            </Grid.Background>
         </Grid>
-        <TextBlock x:Name="blockMail" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="5" Grid.RowSpan="2"
-                       FontSize="45">
+
+
+        <TextBlock x:Name="blockMail" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                       FontSize="30">
                 Mail:
         </TextBlock>
-        <TextBlock x:Name="blockPassword" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="5" Grid.RowSpan="2"
-                       FontSize="45">
+        <TextBlock x:Name="blockPassword" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3" Grid.RowSpan="2"
+                       FontSize="30">
                 Password:
         </TextBlock>
 
@@ -73,6 +77,15 @@
             <TextBox x:Name="tboxPassword" Height="447"  Width="3700" FontSize="260"
                      PlaceholderText="  Type Password" CornerRadius="100"></TextBox>
         </Viewbox>
+
+        <Button x:Name="btnSignIn" Style="{StaticResource MyButtonStyle}" Grid.Row="7" Grid.Column="9"
+                Grid.ColumnSpan="3" Click="btnSignIn_Click">Sign in</Button>
+        <Button x:Name="btnSignUp" Style="{StaticResource MyButtonStyle}" Grid.Row="8" Grid.Column="9"
+                Grid.ColumnSpan="3" Click="btnSignUp_Click">Sign Up</Button>
+
+        <TextBlock x:Name="blockSignIn" Grid.Row="8" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center"
+                Grid.ColumnSpan="3" Grid.RowSpan="2"> Not a member?
+        </TextBlock>
 
 
 

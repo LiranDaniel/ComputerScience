@@ -46,5 +46,15 @@ namespace Arkanoid
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void btnSignIn_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(GamePage));
+        }
+
+        private void btnSignUp_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(GamePage));
+        }
     }
 }

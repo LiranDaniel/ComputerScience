@@ -64,6 +64,12 @@
             <Image x:Name="imgInfo" Source="/Assets\App\Buttons\LIstOfButtons\Info (1).png"></Image>
         </Button>
 
+        <ToggleSwitch IsOn="False" OnContent="Music On" OffContent="Music Off" x:Name="backgroundMusicSw" 
+                      Grid.Column="4" Grid.Row="3" Grid.RowSpan="4" Grid.ColumnSpan="5"
+                      Toggled="backgroundMusicSw_Toggled"></ToggleSwitch>
+        <Slider Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="8">
+            
+        </Slider>
 
     </Grid>
 </Page>
