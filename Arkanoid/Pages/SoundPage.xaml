@@ -70,7 +70,7 @@
                Grid.Column="7" Grid.Row="4" Grid.RowSpan="4" Grid.ColumnSpan="5"
                Toggled="SoundEffectSw_Toggled"></ToggleSwitch>
 
-        <Slider Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="8" >
+        <Slider  x:Name="sldVolume" Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="8" ValueChanged="Slider_ValueChanged" Value="100">
 
         </Slider>
     </Grid>

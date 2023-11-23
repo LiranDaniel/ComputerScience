@@ -68,5 +68,11 @@ namespace Arkanoid.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
         }
+
+        private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            MusicPlayer.ChangeVolume(sldVolume.Value);
+
+        }
     }
 }
