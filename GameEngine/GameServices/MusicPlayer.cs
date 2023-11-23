@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel.Contacts;
 using Windows.Media.Core;
 using Windows.Media.Playback;
+using Windows.System;
 
 namespace GameEngine.GameServices
 {
     public static class MusicPlayer
     {
         private static MediaPlayer _mediaPlayer = new MediaPlayer();
-        public static bool IsOn { get; set; } = false;
+        public static bool IsOn { get; set; } = true;
         
         public static void Play(string fileName)
         {
             IsOn = true;
-            _mediaPlayer.Source = MediaSource.CreateFromUri(new Uri($"ms-appx:///Assets/Music{fileName}"));
+            _mediaPlayer.Source = MediaSource.CreateFromUri(new Uri($"ms-appx:///Assets/App/Music/{fileName}")); // OGBackground.wav
             _mediaPlayer.IsLoopingEnabled = true;
             _mediaPlayer.Play();
         }

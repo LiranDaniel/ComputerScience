@@ -388,6 +388,7 @@
     <Content Include="Assets\App\Images\Numbers\Number9.png" />
     <Content Include="Assets\App\Images\person_icon.png" />
     <Content Include="Assets\App\Images\SignInBackGround.png" />
+    <Content Include="Assets\App\Music\OGBackground.wav" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

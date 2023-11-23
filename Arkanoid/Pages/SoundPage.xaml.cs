@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameEngine.GameServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -55,7 +56,17 @@ namespace Arkanoid.Pages
 
         private void backgroundMusicSw_Toggled(object sender, RoutedEventArgs e)
         {
+            MusicPlayer.IsOn = !MusicPlayer.IsOn;
+            if (MusicPlayer.IsOn)
+                MusicPlayer.Play("OGBackground.wav");
+            else
+                MusicPlayer.Stop();
 
+            MusicPlayer.ChangeVolume(100);
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

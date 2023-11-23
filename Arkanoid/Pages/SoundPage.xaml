@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
 
     <Grid>
         <Grid.Background>
@@ -62,7 +62,7 @@
             <Image x:Name="imgSliderVertical" Source="/Assets\App\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
         </Button>
 
-        <ToggleSwitch IsOn="False" OnContent="Music On" OffContent="Music Off" x:Name="backgroundMusicSw" 
+        <ToggleSwitch IsOn="False" OnContent="Music Off" OffContent="Music On" x:Name="backgroundMusicSw" 
                Grid.Column="7" Grid.Row="3" Grid.RowSpan="4" Grid.ColumnSpan="5"
                Toggled="backgroundMusicSw_Toggled"></ToggleSwitch>
 
@@ -70,7 +70,7 @@
                Grid.Column="7" Grid.Row="4" Grid.RowSpan="4" Grid.ColumnSpan="5"
                Toggled="SoundEffectSw_Toggled"></ToggleSwitch>
 
-        <Slider Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="8">
+        <Slider Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="8" >
 
         </Slider>
     </Grid>

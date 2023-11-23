@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameEngine.GameServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -30,6 +31,10 @@ namespace Arkanoid
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            if (MusicPlayer.IsOn)
+                MusicPlayer.Play("OGBackground.wav");
+            else
+                MusicPlayer.Stop();
         }
 
         /// <summary>
@@ -71,6 +76,7 @@ namespace Arkanoid
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
+            Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().TryEnterFullScreenMode();
         }
 
         /// <summary>

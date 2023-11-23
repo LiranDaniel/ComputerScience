@@ -62,18 +62,13 @@ namespace Arkanoid
             Frame.Navigate(typeof(SignInPage));
         }
 
-        private void backgroundMusicSw_Toggled(object sender, RoutedEventArgs e)
-        {
-            MusicPlayer.IsOn = !MusicPlayer.IsOn;
-            if (MusicPlayer.IsOn)
-                MusicPlayer.Play("");
-            else
-                MusicPlayer.Stop();
-        }
-
         private void btnMusic_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(SoundPage));
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
         }
     }
 }
