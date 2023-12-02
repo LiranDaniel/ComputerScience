@@ -22,20 +22,8 @@ namespace Arkanoid.GameServices
         public void Init()
         {
             Scene.RemoveAllObjects();
-            while(y != 700)
-            {
-                Jelly jelly = new Jelly(Scene, Jelly.JellyType.yellow, 100, x, y);
-                Scene.AddObject(jelly);
-                if (x != 1300)
-                {
-                    x += 100;
-                }
-                if (x == 1300)
-                {
-                    y += 200;
-                    x = 0;
-                }
-            }
+            Jelly jelly = new Jelly(Scene, Jelly.JellyType.yellow, 100, x, y);
+            Scene.AddObject(jelly); 
         }
     }
 }
