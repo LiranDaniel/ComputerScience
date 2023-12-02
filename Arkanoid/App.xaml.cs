@@ -31,6 +31,10 @@ namespace Arkanoid
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            InitializeSound();
+        }
+        public static void InitializeSound()
+        {
             if (MusicPlayer.IsOn)
                 MusicPlayer.Play("OGBackground.wav");
             else

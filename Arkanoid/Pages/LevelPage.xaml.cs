@@ -1,5 +1,4 @@
-﻿using GameEngine.GameServices;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,13 +21,12 @@ namespace Arkanoid.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class SoundPage : Page
+    public sealed partial class LevelPage : Page
     {
-        public SoundPage()
+        public LevelPage()
         {
             this.InitializeComponent();
         }
-
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             Button btnPlayEnter = (Button)sender;
@@ -47,34 +45,6 @@ namespace Arkanoid.Pages
         private void btn_SliderVertical_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
-        }
-
-        private void SoundEffectSw_Toggled(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void backgroundMusicSw_Toggled(object sender, RoutedEventArgs e)
-        {
-            ToggleSwitch sw = (ToggleSwitch)sender;
-            
-            MusicPlayer.IsOn = !MusicPlayer.IsOn;
-            if (MusicPlayer.IsOn)
-                MusicPlayer.Play("OGBackground.wav");
-            else
-                MusicPlayer.Stop();
-
-            MusicPlayer.ChangeVolume(100);
-        }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            sldVolume.SetValue(TagProperty, 3);
-        }
-
-        private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
-        {
-            MusicPlayer.ChangeVolume(sldVolume.Value);
         }
     }
 }
