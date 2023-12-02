@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace GameEngine.GameServices
 {
-    internal class Manager
+    public abstract class Manager
     {
+        public Scene Scene { get; private set; }
+
+        public Manager(Scene scene)
+        {
+            Scene = scene;
+        }
     }
 }

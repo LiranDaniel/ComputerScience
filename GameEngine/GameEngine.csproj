@@ -120,6 +120,8 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="GameObjects\GameObject.cs" />
+    <Compile Include="GameObjects\MoveObject.cs" />
     <Compile Include="GameServices\Manager.cs" />
     <Compile Include="GameServices\MusicPlayer.cs" />
     <Compile Include="GameServices\Scene.cs" />
@@ -132,9 +134,7 @@
       <Version>6.2.14</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GameObjects\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
