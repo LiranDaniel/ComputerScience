@@ -31,6 +31,8 @@ namespace Arkanoid.Pages
             backgroundMusicSw.IsOn = MusicPlayer.IsOn;
             sldVolume.ValueChanged += Slider_ValueChanged;
             backgroundMusicSw.Toggled += backgroundMusicSw_Toggled;
+            SoundEffectSw.IsOn = SoundPlayer.IsOn;
+            SoundEffectSw.Toggled += SoundEffectSw_Toggled;
         }
 
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -55,20 +57,11 @@ namespace Arkanoid.Pages
 
         private void SoundEffectSw_Toggled(object sender, RoutedEventArgs e)
         {
-
+            SoundPlayer.IsOn = SoundEffectSw.IsOn;
         }
 
         private void backgroundMusicSw_Toggled(object sender, RoutedEventArgs e)
         {
-            /* ToggleSwitch sw = (ToggleSwitch)sender;
-
-             MusicPlayer.IsOn = !MusicPlayer.IsOn;
-             if (MusicPlayer.IsOn)
-                 MusicPlayer.Play("OGBackground.wav");
-             else
-                 MusicPlayer.Stop();
-
-             MusicPlayer.ChangeVolume(100);*/
             if (backgroundMusicSw.IsOn)
                 MusicPlayer.Play();
             else

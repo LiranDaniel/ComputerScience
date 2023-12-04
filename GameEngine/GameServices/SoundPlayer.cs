@@ -13,7 +13,7 @@ namespace GameEngine.GameServices
     {
         public static MediaPlayer _mediaPlayer = new MediaPlayer();
 
-        public static bool IsOn;
+        public static bool IsOn = false;
 
         public static void Play(string filename)
         {
