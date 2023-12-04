@@ -380,8 +380,13 @@
     <Content Include="Assets\App\Icon\Wide310x150Logo.scale-150.png" />
     <Content Include="Assets\App\Icon\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\App\Icon\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\App\Images\GameBackGround.jpg" />
     <Content Include="Assets\App\Images\Arkanoid.jpg" />
     <Content Include="Assets\App\Images\Arkanoid_background.jpg" />
+    <Content Include="Assets\App\Images\GameImages\Heart.gif" />
+    <Content Include="Assets\App\Images\GameImages\jelly_green.png" />
+    <Content Include="Assets\App\Images\GameImages\jelly_pink.png" />
+    <Content Include="Assets\App\Images\GameImages\jelly_yellow.png" />
     <Content Include="Assets\App\Images\Numbers\Number0.png" />
     <Content Include="Assets\App\Images\Numbers\Number1.png" />
     <Content Include="Assets\App\Images\Numbers\Number2.png" />

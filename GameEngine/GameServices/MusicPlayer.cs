@@ -14,7 +14,7 @@ namespace GameEngine.GameServices
     {
         private static MediaPlayer _mediaPlayer = new MediaPlayer();
         public static bool IsOn { get; set; } = true;
-        public static double Volume { get; private set; } = 70;
+        public static double Volume { get; private set; } = 100;
 
         public static void LoadMusicPlayer(string fileName)
         {

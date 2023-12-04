@@ -11,7 +11,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets\App\Images\SignInBackGround.png">
+            <ImageBrush ImageSource="/Assets\App\Images\GameBackGround.jpg">
             </ImageBrush>
         </Grid.Background>
 
@@ -52,11 +52,16 @@
 
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="0" Grid.Column="0" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" 
+        <Button Grid.Row="0" Grid.Column="17" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" 
                 x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}">
             <Image x:Name="imgSliderVertical" Source="/Assets\App\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
         </Button>
-        
+
+        <Button Grid.Row="0" Grid.Column="16" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" 
+         x:Name="btn_Help" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}">
+            <Image x:Name="imgHelp" Source="/Assets\App\Buttons\LIstOfButtons\Help (1).png"></Image>
+        </Button>
+
         <Border>
             <GameServices:GameScene Name="scene"></GameServices:GameScene>
         </Border>
