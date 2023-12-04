@@ -54,7 +54,7 @@ namespace Arkanoid
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(GamePage));
+            Frame.Navigate(typeof(LevelPage));
         }
 
         private void btnProfile_Click(object sender, RoutedEventArgs e)

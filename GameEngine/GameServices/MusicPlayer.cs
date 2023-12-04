@@ -14,12 +14,18 @@ namespace GameEngine.GameServices
     {
         private static MediaPlayer _mediaPlayer = new MediaPlayer();
         public static bool IsOn { get; set; } = true;
-        
-        public static void Play(string fileName)
+        public static double Volume { get; private set; } = 70;
+
+        public static void LoadMusicPlayer(string fileName)
+        {
+            _mediaPlayer.Volume = Volume;
+            _mediaPlayer.AutoPlay = true;
+            _mediaPlayer.IsLoopingEnabled = true;
+            _mediaPlayer.Source = MediaSource.CreateFromUri(new Uri($"ms-appx:///Assets/App/Music/{fileName}")); // OGBackground.wav
+        }
+        public static void Play()
         {
             IsOn = true;
-            _mediaPlayer.Source = MediaSource.CreateFromUri(new Uri($"ms-appx:///Assets/App/Music/{fileName}")); // OGBackground.wav
-            _mediaPlayer.IsLoopingEnabled = true;
             _mediaPlayer.Play();
         }
         public static void Stop()
@@ -29,6 +35,7 @@ namespace GameEngine.GameServices
         }
         public static void ChangeVolume(double volume)
         {
+            Volume = volume;
             _mediaPlayer.Volume = volume / 100;
         }
     }

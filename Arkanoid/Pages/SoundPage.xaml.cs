@@ -27,6 +27,10 @@ namespace Arkanoid.Pages
         public SoundPage()
         {
             this.InitializeComponent();
+            sldVolume.Value = MusicPlayer.Volume;
+            backgroundMusicSw.IsOn = MusicPlayer.IsOn;
+            sldVolume.ValueChanged += Slider_ValueChanged;
+            backgroundMusicSw.Toggled += backgroundMusicSw_Toggled;
         }
 
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -56,15 +60,19 @@ namespace Arkanoid.Pages
 
         private void backgroundMusicSw_Toggled(object sender, RoutedEventArgs e)
         {
-            ToggleSwitch sw = (ToggleSwitch)sender;
-            
-            MusicPlayer.IsOn = !MusicPlayer.IsOn;
-            if (MusicPlayer.IsOn)
-                MusicPlayer.Play("OGBackground.wav");
+            /* ToggleSwitch sw = (ToggleSwitch)sender;
+
+             MusicPlayer.IsOn = !MusicPlayer.IsOn;
+             if (MusicPlayer.IsOn)
+                 MusicPlayer.Play("OGBackground.wav");
+             else
+                 MusicPlayer.Stop();
+
+             MusicPlayer.ChangeVolume(100);*/
+            if (backgroundMusicSw.IsOn)
+                MusicPlayer.Play();
             else
                 MusicPlayer.Stop();
-
-            MusicPlayer.ChangeVolume(100);
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

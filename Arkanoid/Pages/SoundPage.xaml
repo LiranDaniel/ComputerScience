@@ -62,11 +62,11 @@
             <Image x:Name="imgSliderVertical" Source="/Assets\App\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
         </Button>
 
-        <ToggleSwitch  OnContent="Music Off" OffContent="Music On" x:Name="backgroundMusicSw" 
+        <ToggleSwitch OnContent="Music On" OffContent="Music Off" x:Name="backgroundMusicSw" 
                Grid.Column="7" Grid.Row="3" Grid.RowSpan="4" Grid.ColumnSpan="5"
                Toggled="backgroundMusicSw_Toggled"></ToggleSwitch>
 
-        <ToggleSwitch  OnContent="Sound Effect On" OffContent="Sound Effect Off" x:Name="SoundEffectSw" 
+        <ToggleSwitch OnContent="Sound Effect On" OffContent="Sound Effect Off" x:Name="SoundEffectSw" 
                Grid.Column="7" Grid.Row="4" Grid.RowSpan="4" Grid.ColumnSpan="5"
                Toggled="SoundEffectSw_Toggled"></ToggleSwitch>
 
