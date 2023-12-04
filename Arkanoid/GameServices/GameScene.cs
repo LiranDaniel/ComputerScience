@@ -10,6 +10,6 @@ namespace Arkanoid.GameServices
 {
     public class GameScene : Scene
     {
-        public int JellyBrickCount => _gameObjectsSnapshot.Count(x => x is Jelly);
+        //public int JellyBrickCount => _gameObjectsSnapshot.Count(x => x is Jelly);
     }
 }

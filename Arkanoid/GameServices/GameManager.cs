@@ -12,9 +12,6 @@ namespace Arkanoid.GameServices
 {
     public class GameManager : Manager
     {
-        private int x = 0;
-        private int y = 100;
-
         public GameManager(Scene scene) : base(scene)
         {
             Init();
@@ -22,7 +19,7 @@ namespace Arkanoid.GameServices
         public void Init()
         {
             Scene.RemoveAllObjects();
-            Jelly jelly = new Jelly(Scene, Jelly.JellyType.yellow, 100, x, y);
+            var jelly = new Jelly(Scene, Jelly.JellyType.yellow, 200, 200, 300);
             Scene.AddObject(jelly); 
         }
     }

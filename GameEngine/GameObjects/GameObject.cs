@@ -33,7 +33,7 @@ namespace GameEngine.GameObjects
         public GameObject(Scene scene, string fileName, double placeX, double placeY)
         {
             _scene = scene; 
-            _fileName = fileName;
+            //_fileName = fileName;
             _placeX = placeX;
             _placeY = placeY;
             _X = _placeX;

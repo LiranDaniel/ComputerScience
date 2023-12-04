@@ -23,7 +23,7 @@ namespace Arkanoid.GameObjects
             base(scene, string.Empty, placeX, placeY)
         {
             image.Width = width;
-            image.Height = height;
+            image.Height = width; 
             _jellyType = jellyType;
             SetImage();
         }
@@ -31,14 +31,14 @@ namespace Arkanoid.GameObjects
         {
             switch(_jellyType)
             {
-                case JellyType.green:
-                    base.SetImage("Jelly/Jelly_green.png");
+                case JellyType.green: 
+                    base.SetImage("App/Images/GameImages/jelly_green.png");
                     break;
                 case JellyType.pink:
-                    base.SetImage("Jelly/Jelly_pink.png");
+                    base.SetImage("App/Images/GameImages/jelly_pink.png");
                     break;
                 case JellyType.yellow:
-                    base.SetImage("Jelly/Jelly_yellow.png");
+                    base.SetImage("App/Images/GameImages/jelly_yellow.png");
                     break;
 
             }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Arkanoid.GameServices;
+using GameEngine.GameServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,10 +25,17 @@ namespace Arkanoid
     /// </summary>
     public sealed partial class GamePage : Page
     {
+        private GameManager _gameManager;
         public GamePage()
         {
             this.InitializeComponent();
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            _gameManager = new GameManager(scene);
+        }
+
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             Button btnPlayEnter = (Button)sender;

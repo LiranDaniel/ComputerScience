@@ -6,8 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:GameServices="using:Arkanoid.GameServices"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d" Loaded="Page_Loaded"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
 
     <Grid>
         <Grid.Background>
@@ -16,6 +16,7 @@
         </Grid.Background>
 
         <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -52,12 +53,12 @@
 
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="0" Grid.Column="17" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" 
+        <Button Grid.Row="0" Grid.Column="18" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" 
                 x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}">
             <Image x:Name="imgSliderVertical" Source="/Assets\App\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
         </Button>
 
-        <Button Grid.Row="0" Grid.Column="16" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" 
+        <Button Grid.Row="0" Grid.Column="17" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" 
          x:Name="btn_Help" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}">
             <Image x:Name="imgHelp" Source="/Assets\App\Buttons\LIstOfButtons\Help (1).png"></Image>
         </Button>
@@ -71,8 +72,9 @@
         <Image x:Name="Heart_3" Source="/Assets\App\Images\GameImages\Heart.gif"
                Grid.Column="2" Grid.Row="0"></Image>
 
-        <Border>
-            <GameServices:GameScene Name="scene"></GameServices:GameScene>
+        <Border Grid.Row="2" Grid.Column="2" Grid.RowSpan="9" Grid.ColumnSpan="15"
+                 BorderBrush="Black" BorderThickness="20"  CornerRadius="20">
+            <GameServices:GameScene x:Name="scene" Background="Transparent"></GameServices:GameScene>
         </Border>
         <Page x:Name="ScorePage" Grid.Column="6" Grid.ColumnSpan="7">
             <Grid>
