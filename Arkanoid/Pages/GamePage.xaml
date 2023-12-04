@@ -74,5 +74,13 @@
         <Border>
             <GameServices:GameScene Name="scene"></GameServices:GameScene>
         </Border>
+        <Page x:Name="ScorePage" Grid.Column="6" Grid.ColumnSpan="7">
+            <Grid>
+                <TextBlock x:Name="blockSignIn" HorizontalAlignment="Center" VerticalAlignment="Center"
+                           FontSize="60" FontFamily="Ink Draft" 
+                           > Score: 0
+                </TextBlock>
+            </Grid>
+        </Page>
     </Grid>
 </Page>
