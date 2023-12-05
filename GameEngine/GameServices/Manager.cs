@@ -77,5 +77,13 @@ namespace GameEngine.GameServices
             _runTimer.Stop();
             GameState = GameState.Paused;
         }
+        
+        public void Resume()
+        {
+            _runTimer.Start();
+            GameState = GameState.Started;
+        }
+
+        
     }
 }
