@@ -30,6 +30,24 @@ namespace GameEngine.GameServices
                 _runTimer.Tick += _runTimer_Tick;
                 _runTimer.Start();
             }
+            Window.Current.CoreWindow.KeyDown += CoreWindow_KeyDown;
+            Window.Current.CoreWindow.KeyUp += CoreWindow_KeyUp;
+        }
+
+        private void CoreWindow_KeyUp(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.KeyEventArgs args)
+        {
+            if(GameEvent.OnKeyUp != null)
+            {
+                GameEvent.OnKeyUp(args.VirtualKey);
+            }
+        }
+
+        private void CoreWindow_KeyDown(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.KeyEventArgs args)
+        {
+            if (GameEvent.OnKeyDown != null)
+            {
+                GameEvent.OnKeyDown(args.VirtualKey);
+            }
         }
 
 
