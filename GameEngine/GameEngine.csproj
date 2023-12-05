@@ -121,7 +121,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GameObjects\GameObject.cs" />
-    <Compile Include="GameObjects\MoveObject.cs" />
+    <Compile Include="GameObjects\GameMovingObject.cs" />
     <Compile Include="GameServices\Constants.cs" />
     <Compile Include="GameServices\GameEvent.cs" />
     <Compile Include="GameServices\Manager.cs" />
