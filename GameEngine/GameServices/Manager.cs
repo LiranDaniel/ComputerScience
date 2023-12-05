@@ -82,8 +82,6 @@ namespace GameEngine.GameServices
         {
             _runTimer.Start();
             GameState = GameState.Started;
-        }
-
-        
+        }   
     }
 }
