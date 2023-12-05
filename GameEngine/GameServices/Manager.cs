@@ -64,5 +64,12 @@ namespace GameEngine.GameServices
                 GameEvent.OnRun();
             }
         }
+
+        public void Start()
+        {
+            Scene.Init();
+            _runTimer.Start();
+            GameState = GameState.Started;
+        }
     }
 }
