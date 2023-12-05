@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Contacts;
 using Windows.UI.Xaml;
+using static GameEngine.GameServices.Constants;
 
 namespace GameEngine.GameServices
 {
@@ -16,6 +17,7 @@ namespace GameEngine.GameServices
 
         public static GameEvent GameEvent { get; } = new GameEvent();       // יצירת אירוע חדש ממחלקה GameEvent
         private static DispatcherTimer _clockTimer;
+        public static GameState GameState = GameState.Loaded;
 
         public Manager(Scene scene)
         {
