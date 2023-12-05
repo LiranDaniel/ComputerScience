@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets\App\Images\SignInBackGround.png">
+            <ImageBrush ImageSource="/Assets\App\Images\GameBackGround.jpg">
             </ImageBrush>
         </Grid.Background>
 
@@ -57,22 +57,22 @@
         </Button>
 
         <Button x:Name="btnNumber1" Grid.Row="5" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="3"
-                Style="{StaticResource MyButtonStyle}">
+                Style="{StaticResource MyButtonStyle}" Click="btnNumber1_Click">
             <Image Source="/Assets\App\Images\Numbers\Number1.png"></Image>
         </Button>
 
         <Button x:Name="btnNumber2" Grid.Row="5" Grid.Column="6" Grid.RowSpan="3" Grid.ColumnSpan="3"
-                Style="{StaticResource MyButtonStyle}">
+                Style="{StaticResource MyButtonStyle}" Click="btnNumber2_Click">
             <Image Source="/Assets\App\Images\Numbers\Number2.png"></Image>
         </Button>
 
         <Button x:Name="btnNumber3" Grid.Row="5" Grid.Column="9" Grid.RowSpan="3" Grid.ColumnSpan="3"
-                Style="{StaticResource MyButtonStyle}">
+                Style="{StaticResource MyButtonStyle}" Click="btnNumber3_Click">
             <Image Source="/Assets\App\Images\Numbers\Number3.png"></Image>
         </Button>
 
         <Button x:Name="btnNumber4" Grid.Row="5" Grid.Column="12" Grid.RowSpan="3" Grid.ColumnSpan="3"
-                Style="{StaticResource MyButtonStyle}">
+                Style="{StaticResource MyButtonStyle}" Click="btnNumber4_Click">
             <Image Source="/Assets\App\Images\Numbers\Number4.png"></Image>
         </Button>
 

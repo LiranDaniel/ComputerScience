@@ -46,5 +46,25 @@ namespace Arkanoid.Pages
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void btnNumber1_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(GamePage));
+        }
+
+        private void btnNumber2_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(GamePage));
+        }
+
+        private void btnNumber3_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(GamePage));
+        }
+
+        private void btnNumber4_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(GamePage));
+        }
     }
 }
