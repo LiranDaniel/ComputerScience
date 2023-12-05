@@ -45,6 +45,13 @@ namespace GameEngine.GameObjects
             _vX = _vY = _vvX = 0;
         }
 
+        /// <summary>
+        /// The function is moving the object
+        /// </summary>
+        /// <param name="toX">horizontal destination</param>
+        /// <param name="toY">vertical desination</param>
+        /// <param name="speed">velocity</param>
+        /// <param name="acceleration">accelaration</param>
         public void MoveTo(double toX, double toY, double speed = 1, double acceleration = 0)
         {
             _toX = toX;
