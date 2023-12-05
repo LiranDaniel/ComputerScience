@@ -24,7 +24,7 @@ namespace GameEngine.GameServices
             if(_runTimer == null)
             {
                 _runTimer = new DispatcherTimer();
-                _runTimer.Interval = TimeSpan.FromMilliseconds(10);
+                _runTimer.Interval = TimeSpan.FromMilliseconds(Constants.RunInterval);
                 _runTimer.Tick += _runTimer_Tick;
                 _runTimer.Start();
             }
