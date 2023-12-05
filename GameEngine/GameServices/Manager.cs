@@ -82,6 +82,17 @@ namespace GameEngine.GameServices
         {
             _runTimer.Start();
             GameState = GameState.Started;
-        }   
+        } 
+        
+        public static bool GameOver()
+        {
+            if (GameState != GameState.GameOver)
+            {
+                GameState = GameState.GameOver;
+                _runTimer.Stop();
+                return true;
+            }
+            return false;
+        }
     }
 }
