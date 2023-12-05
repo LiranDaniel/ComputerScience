@@ -13,6 +13,6 @@ namespace GameEngine.GameObjects
     public abstract class GameMovingObject : GameObject
     {
         protected GameMovingObject(Scene scene, string filename, double placeX, double placeY) :
-            base(scene, filename, placeX, placeY) { }
+        base(scene, filename, placeX, placeY) { }
     }
 }
