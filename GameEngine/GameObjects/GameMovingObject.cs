@@ -21,5 +21,14 @@ namespace GameEngine.GameObjects
 
         protected GameMovingObject(Scene scene, string filename, double placeX, double placeY) :
         base(scene, filename, placeX, placeY) { }
+
+        public override void Render()
+        {
+            _vX += _vvX;
+            _vY += _vvY;
+
+            _X += _vX;
+            _Y += _vY;
+        }
     }
 }
