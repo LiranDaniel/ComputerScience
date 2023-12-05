@@ -14,7 +14,21 @@ namespace GameEngine.GameServices
         protected List<GameObject> _gameObjectsSnapshot => _gameObjects.ToList();
         public double Ground;
 
-        public Scene() { }
+        public Scene() 
+        {
+            Manager.GameEvent.OnRun += Run;
+        }
+
+        private void Run()
+        {
+            foreach (GameObject gameObject in _gameObjects)
+            {
+                if (gameObject is GameMovingObject)
+                {
+                    gameObject.Render();
+                }
+            }
+        }
 
         public void Init()
         {
