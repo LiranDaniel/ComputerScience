@@ -48,7 +48,7 @@
 
         <Button x:Name="btnLevelList" Grid.Column="5" Grid.Row="6" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 Background="Transparent" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
-                Click="btnPlay_Click" Style="{StaticResource MyButtonStyle}">
+                Click="btnLevelList_Click" Style="{StaticResource MyButtonStyle}">
             <Image x:Name="imgLevelList" Source="/Assets\App\Buttons\LIstOfButtons\LevelList (1).png"></Image>
         </Button>
         

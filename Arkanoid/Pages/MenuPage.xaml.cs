@@ -70,5 +70,10 @@ namespace Arkanoid
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
         }
+
+        private void btnLevelList_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(LevelPage));
+        }
     }
 }
