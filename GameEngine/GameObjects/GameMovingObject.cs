@@ -1,6 +1,7 @@
 ﻿using GameEngine.GameServices;
 using System;
 using System.Collections.Generic;
+using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,17 @@ namespace GameEngine.GameObjects
 
             _X += _vX;
             _Y += _vY;
+
+            if (Math.Abs(_X - _toX) < 4 && Math.Abs(_Y - _toY) < 4)
+            {
+                
+            }
+            base.Render();
+        }
+
+        public void Stop()
+        {
+            _vX = _vY = _vvX = 0;
         }
     }
 }
