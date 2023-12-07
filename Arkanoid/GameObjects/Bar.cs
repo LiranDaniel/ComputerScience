@@ -31,7 +31,7 @@ namespace Arkanoid.GameObjects
                     break;
             }
         }
-        public override void Render()
+        public override void Render() 
         {
             base.Render();
             if (_X <= 0)
