@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets\App\Images\Arkanoid.jpg">
+            <ImageBrush ImageSource="/Assets\App\Images\GameBackGround.jpg">
             </ImageBrush>
         </Grid.Background>
         <Grid.ColumnDefinitions>
