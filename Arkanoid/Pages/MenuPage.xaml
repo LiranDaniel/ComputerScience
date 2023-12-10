@@ -75,8 +75,5 @@
                 Click="btnMusic_Click" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited">
             <Image x:Name="imgMusic" Source="/Assets\App\Buttons\LIstOfButtons\Music (1).png"></Image>
         </Button>
-
-
-
     </Grid>
 </Page>
