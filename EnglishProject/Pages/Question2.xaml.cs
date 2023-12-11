@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EnglishProject.Classes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,21 +22,18 @@ namespace EnglishProject.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MenuPage : Page
+    public sealed partial class Question2 : Page
     {
-        public MenuPage()
+        public Question2()
         {
             this.InitializeComponent();
         }
 
-        private void btnPlay_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(GamePage));
-        }
+        int answer;
 
-        private void btnExit_Click(object sender, RoutedEventArgs e)
+        private void btnSliderVertical_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Exit();
+            Frame.Navigate(typeof(MenuPage));
         }
 
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -55,9 +53,52 @@ namespace EnglishProject.Pages
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
 
-        private void btnMusic_Click(object sender, RoutedEventArgs e)
+        private void btnAnswer1_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MusicPage));  
+            answer = 1;
+            CheckAnswer();
+        }
+
+        private void btnAnswer2_Click(object sender, RoutedEventArgs e)
+        {
+            answer = 2;
+            CheckAnswer();
+        }
+
+        private void btnAnswer3_Click(object sender, RoutedEventArgs e)
+        {
+            answer = 3;
+            CheckAnswer();
+        }
+
+        private void btnAnswer4_Click(object sender, RoutedEventArgs e)
+        {
+            answer = 4;
+            CheckAnswer();
+        }
+        private void btn_AnswerPointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
+        }
+
+        private void btn_AnswerPointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
+        }
+        private void CheckAnswer()
+        {
+            Answer.AddAnswer(2, answer);
+            if (answer != 2)
+                Answer.IncorrectAnswer++;
+            if (Answer.IncorrectAnswer >= 3)
+                Frame.Navigate(typeof(EndGame));
+            else
+                Frame.Navigate(typeof(EndGame));
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

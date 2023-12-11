@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
 
     <Grid>
 
@@ -98,9 +98,35 @@
             </TextBlock>
         </Grid>
 
+        <Button Background="Black" Grid.Row="4" Grid.Column="14" CornerRadius="30"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                Content=".1" FontSize="60" FontFamily="Ink Draft"
+                x:Name="btnAnswer1" Click="btnAnswer1_Click" PointerEntered="btn_AnswerPointerEntered"
+                PointerExited="btn_AnswerPointerExited">
+            
+        </Button>
 
+        <Button Background="Black" Grid.Row="6" Grid.Column="14" CornerRadius="30"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Content=".2" FontSize="60" FontFamily="Ink Draft"
+                x:Name="btnAnswer2" Click="btnAnswer2_Click" PointerEntered="btn_AnswerPointerEntered"
+                PointerExited="btn_AnswerPointerExited">
 
+        </Button>
 
+        <Button Background="Black" Grid.Row="8" Grid.Column="14" CornerRadius="30"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Content=".3" FontSize="60" FontFamily="Ink Draft"
+                x:Name="btnAnswer3" Click="btnAnswer3_Click" PointerEntered="btn_AnswerPointerEntered"
+                PointerExited="btn_AnswerPointerExited">
+        </Button>
 
+        <Button Background="Black" Grid.Row="10" Grid.Column="14" CornerRadius="30"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Content=".4" FontSize="60" FontFamily="Ink Draft"
+                x:Name="btnAnswer4" Click="btnAnswer4_Click" PointerEntered="btn_AnswerPointerEntered"
+                PointerExited="btn_AnswerPointerExited">
+
+        </Button>
     </Grid>
 </Page>

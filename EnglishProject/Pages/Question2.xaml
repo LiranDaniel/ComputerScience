@@ -1,0 +1,132 @@
+﻿<Page
+    x:Class="EnglishProject.Pages.Question2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EnglishProject.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets\Imges\BackGrounds\Physics_Background.jpg"></ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="0" x:Name="btnSliderVertical" Click="btnSliderVertical_Click"
+            PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Style="{StaticResource MyButtonStyle}">
+            <Image x:Name="imgSliderVertical" Source="/Assets\Buttons\ListOfButtons\SliderVertical (1).png"></Image>
+        </Button>
+
+        <Grid Background="Black" Opacity=".88" Grid.Column="4" Grid.Row="1"
+          Grid.ColumnSpan="10" Grid.RowSpan="2" CornerRadius="100">
+
+            <TextBlock x:Name="txtQuetion1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontSize="60" FontFamily="Ink Draft">
+            Quetion 1
+            </TextBlock>
+        </Grid>
+
+        <Grid Background="#0c0c0c" Opacity=".88" Grid.Column="4" Grid.Row="4"
+          Grid.ColumnSpan="10" Grid.RowSpan="1" CornerRadius="50">
+
+            <TextBlock x:Name="txtAnswer1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontSize="60" FontFamily="Ink Draft">
+            Answer 1
+            </TextBlock>
+        </Grid>
+
+        <Grid Background="#0c0c0c" Opacity=".88" Grid.Column="4" Grid.Row="6"
+          Grid.ColumnSpan="10" Grid.RowSpan="1" CornerRadius="50">
+
+            <TextBlock x:Name="txtAnswer2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontSize="60" FontFamily="Ink Draft">
+           Answer2
+            </TextBlock>
+        </Grid>
+
+        <Grid Background="#0c0c0c" Opacity=".88" Grid.Column="4" Grid.Row="8"
+          Grid.ColumnSpan="10" Grid.RowSpan="1" CornerRadius="50">
+
+            <TextBlock x:Name="txtAnswer3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontSize="60" FontFamily="Ink Draft">
+            Answer3
+            </TextBlock>
+        </Grid>
+
+        <Grid Background="#0c0c0c" Opacity=".88" Grid.Column="4" Grid.Row="10"
+          Grid.ColumnSpan="10" Grid.RowSpan="1" CornerRadius="50">
+
+            <TextBlock x:Name="txtAnswer4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                   FontSize="60" FontFamily="Ink Draft">
+            Answer4
+            </TextBlock>
+        </Grid>
+
+        <Button Background="Black" Grid.Row="4" Grid.Column="14" CornerRadius="30"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+            Content=".1" FontSize="60" FontFamily="Ink Draft"
+            x:Name="btnAnswer1" Click="btnAnswer1_Click" PointerEntered="btn_AnswerPointerEntered"
+            PointerExited="btn_AnswerPointerExited">
+
+        </Button>
+
+        <Button Background="Black" Grid.Row="6" Grid.Column="14" CornerRadius="30"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            Content=".2" FontSize="60" FontFamily="Ink Draft"
+            x:Name="btnAnswer2" Click="btnAnswer2_Click" PointerEntered="btn_AnswerPointerEntered"
+            PointerExited="btn_AnswerPointerExited">
+
+        </Button>
+
+        <Button Background="Black" Grid.Row="8" Grid.Column="14" CornerRadius="30"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            Content=".3" FontSize="60" FontFamily="Ink Draft"
+            x:Name="btnAnswer3" Click="btnAnswer3_Click" PointerEntered="btn_AnswerPointerEntered"
+            PointerExited="btn_AnswerPointerExited">
+        </Button>
+
+        <Button Background="Black" Grid.Row="10" Grid.Column="14" CornerRadius="30"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            Content=".4" FontSize="60" FontFamily="Ink Draft"
+            x:Name="btnAnswer4" Click="btnAnswer4_Click" PointerEntered="btn_AnswerPointerEntered"
+            PointerExited="btn_AnswerPointerExited">
+
+        </Button>
+    </Grid>
+</Page>

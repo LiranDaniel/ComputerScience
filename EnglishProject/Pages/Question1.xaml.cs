@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EnglishProject.Classes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,6 +24,8 @@ namespace EnglishProject.Pages
     /// </summary>
     public sealed partial class GamePage : Page
     {
+        int answer;
+
         public GamePage()
         {
             this.InitializeComponent();
@@ -48,6 +51,54 @@ namespace EnglishProject.Pages
             ((Image)btnPlayExit.Content).Source = new BitmapImage(new Uri("ms-appx:/// " +
                 "Assets/Buttons/ListOfButtons/" + ((Image)btnPlayExit.Content).Name.Replace("img", "") + " (1).png"));
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
+        }
+
+        private void btnAnswer1_Click(object sender, RoutedEventArgs e)
+        {
+            answer = 1;
+            CheckAnswer();
+        }
+
+        private void btnAnswer2_Click(object sender, RoutedEventArgs e)
+        {
+            answer = 2; 
+            CheckAnswer();
+        }
+
+        private void btnAnswer3_Click(object sender, RoutedEventArgs e)
+        {
+            answer = 3;
+            CheckAnswer();
+        }
+
+        private void btnAnswer4_Click(object sender, RoutedEventArgs e)
+        {
+            answer = 4;
+            CheckAnswer();
+        }
+        private void btn_AnswerPointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
+        }
+
+        private void btn_AnswerPointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
+        }
+        private void CheckAnswer()
+        {
+            Answer.AddAnswer(1, answer);
+            if (answer != 2)
+                Answer.IncorrectAnswer++;
+            if (Answer.IncorrectAnswer >= 3)
+                Frame.Navigate(typeof(Question2));
+            else
+                Frame.Navigate(typeof(Question2));
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

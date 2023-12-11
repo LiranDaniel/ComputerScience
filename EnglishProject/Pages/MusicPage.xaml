@@ -1,12 +1,13 @@
 ﻿<Page
-    x:Class="EnglishProject.Pages.MenuPage"
+    x:Class="EnglishProject.Pages.MusicPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:EnglishProject.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" 
+    Loaded="Page_Loaded">
 
     <Grid>
 
@@ -48,22 +49,20 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Row="0" Grid.Column="0" x:Name="btnExit" Click="btnExit_Click" 
-        PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Style="{StaticResource MyButtonStyle}">
-            <Image x:Name="imgExit" Source="/Assets\Buttons\ListOfButtons\Exit (1).png"></Image>
-        </Button>
-        <Button Grid.Row="8" Grid.Column="8" Grid.ColumnSpan="2" Grid.RowSpan="2" x:Name="btnPlay" 
-        Click="btnPlay_Click" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Style="{StaticResource MyButtonStyle}">
-            <Image x:Name="imgPlay" Source="/Assets\Buttons\ListOfButtons\Play (1).png"></Image>
-        </Button>
-        
-        <Button Grid.Row="1" Grid.Column="0" x:Name="btnMusic" Click="btnMusic_Click"
-        PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Style="{StaticResource MyButtonStyle}">
-            <Image x:Name="imgMusic" Source="/Assets\Buttons\ListOfButtons\Music (1).png"></Image>
-        </Button>
+        <Grid Grid.Column='3' Grid.Row="2" Grid.ColumnSpan="12" Grid.RowSpan="8"
+              BorderBrush="Black" BorderThickness="7" CornerRadius="70" Background="Black"
+              Opacity=".7" >
+        </Grid>
 
-        <Image x:Name="imgRobert" Grid.Row="1" Grid.Column="6" Grid.RowSpan="6" Grid.ColumnSpan="6"
-               Source="/Assets\Imges\Robert_Picture.png">
-        </Image>
+        <Button Grid.Row="0" Grid.Column="0" x:Name="btnSliderVertical" Click="btnSliderVertical_Click"
+                PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Style="{StaticResource MyButtonStyle}">
+            <Image x:Name="imgSliderVertical" Source="/Assets\Buttons\ListOfButtons\SliderVertical (1).png"></Image>
+        </Button>
+        <Slider x:Name="sldVolume" Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="8" 
+                ValueChanged="Slider_ValueChanged"></Slider>
+        <ToggleSwitch OnContent="Music On" OffContent="Music Off" x:Name="backgroundMusicSw" 
+               Grid.Column="7" Grid.Row="3" Grid.RowSpan="4" Grid.ColumnSpan="5"
+               Toggled="backgroundMusicSw_Toggled">
+        </ToggleSwitch>
     </Grid>
 </Page>
