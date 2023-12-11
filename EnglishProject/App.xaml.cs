@@ -1,4 +1,5 @@
-﻿using EnglishProject.Pages;
+﻿using EnglishProject.Classes;
+using EnglishProject.Pages;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -31,6 +32,7 @@ namespace EnglishProject
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            MusicPlayer.LoadMusicPlayer("OGBackground.wav");
         }
 
         /// <summary>

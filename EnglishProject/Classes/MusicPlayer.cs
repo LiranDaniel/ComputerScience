@@ -19,7 +19,7 @@ namespace EnglishProject.Classes
             _mediaPlayer.Volume = Volume;
             _mediaPlayer.AutoPlay = true;
             _mediaPlayer.IsLoopingEnabled = true;
-            _mediaPlayer.Source = MediaSource.CreateFromUri(new Uri($"ms-appx:///Assets/App/Music/{fileName}")); // OGBackground.wav
+            _mediaPlayer.Source = MediaSource.CreateFromUri(new Uri($"ms-appx:///Assets/Sounds/{fileName}")); // OGBackground.wav
         }
         public static void Play()
         {
