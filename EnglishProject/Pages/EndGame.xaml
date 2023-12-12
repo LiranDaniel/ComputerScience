@@ -6,7 +6,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded">
 
     <Grid>
 
@@ -52,6 +53,11 @@
                 PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Style="{StaticResource MyButtonStyle}">
             <Image x:Name="imgSliderVertical" Source="/Assets\Buttons\ListOfButtons\SliderVertical (1).png"></Image>
         </Button>
-
+        <Viewbox x:Name="vwb" Grid.Column="5">
+            <TextBlock x:Name="txtblock">
+                
+            </TextBlock>
+        </Viewbox>
+        
     </Grid>
 </Page>

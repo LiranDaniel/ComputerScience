@@ -49,5 +49,13 @@ namespace EnglishProject.Pages
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
 
+        private void AddingContent()
+        {
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            AddingContent();
+        }
     }
 }
