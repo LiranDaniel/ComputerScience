@@ -16,6 +16,7 @@ namespace EnglishProject.Classes
         public static void Init()
         {
             dictionary.Clear();
+            IncorrectAnswer = 0;
         }
         public static void AddAnswer(int numberOfQuetion, int answer)
         {

@@ -1,6 +1,8 @@
-﻿using System;
+﻿using EnglishProject.Classes;
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Pipes;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
@@ -21,12 +23,13 @@ namespace EnglishProject.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class EndGame : Page
+    public sealed partial class YesNoQuestion1 : Page
     {
-        public EndGame()
+        public YesNoQuestion1()
         {
             this.InitializeComponent();
         }
+        int answer;
         private void btnSliderVertical_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MenuPage));
@@ -49,5 +52,37 @@ namespace EnglishProject.Pages
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
 
+        private void CheckAnswer()
+        {
+            Answer.AddAnswer(3, answer);
+            if (answer != 1)
+                Answer.IncorrectAnswer++;
+            if (Answer.IncorrectAnswer >= 3)
+                Frame.Navigate(typeof(EndGame));
+            else
+                Frame.Navigate(typeof(EndGame));
+        }
+
+        private void btn_AnswerPointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
+        }
+
+        private void btn_AnswerPointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
+        }
+
+        private void btnAnswerNo_Click(object sender, RoutedEventArgs e)
+        {
+            answer = 1;
+            CheckAnswer();
+        }
+
+        private void btnAnswerYes_Click(object sender, RoutedEventArgs e)
+        {
+            answer = 0;
+            CheckAnswer();
+        }
     }
 }

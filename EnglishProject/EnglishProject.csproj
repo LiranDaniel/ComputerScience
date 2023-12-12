@@ -136,6 +136,9 @@
     <Compile Include="Pages\Question2.xaml.cs">
       <DependentUpon>Question2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\YesNoQuestion1.xaml.cs">
+      <DependentUpon>YesNoQuestion1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -415,6 +418,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Question2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\YesNoQuestion1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

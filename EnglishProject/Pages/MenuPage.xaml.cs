@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EnglishProject.Classes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -58,6 +59,11 @@ namespace EnglishProject.Pages
         private void btnMusic_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MusicPage));  
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            Answer.Init();
         }
     }
 }

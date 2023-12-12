@@ -93,7 +93,7 @@ namespace EnglishProject.Pages
             if (Answer.IncorrectAnswer >= 3)
                 Frame.Navigate(typeof(EndGame));
             else
-                Frame.Navigate(typeof(EndGame));
+                Frame.Navigate(typeof(YesNoQuestion1));
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
