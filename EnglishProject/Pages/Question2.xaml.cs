@@ -90,7 +90,7 @@ namespace EnglishProject.Pages
             Answer.AddAnswer(2, answer);
             if (answer != 2)
                 Answer.IncorrectAnswer++;
-            if (Answer.IncorrectAnswer >= 3)
+            if (Answer.IncorrectAnswer == 3)
                 Frame.Navigate(typeof(EndGame));
             else
                 Frame.Navigate(typeof(YesNoQuestion1));

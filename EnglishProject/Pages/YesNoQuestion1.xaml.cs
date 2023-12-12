@@ -57,10 +57,10 @@ namespace EnglishProject.Pages
             Answer.AddAnswer(3, answer);
             if (answer != 1)
                 Answer.IncorrectAnswer++;
-            if (Answer.IncorrectAnswer >= 3)
+            if (Answer.IncorrectAnswer == 3)
                 Frame.Navigate(typeof(EndGame));
             else
-                Frame.Navigate(typeof(EndGame));
+                Frame.Navigate(typeof(MenuPage));
         }
 
         private void btn_AnswerPointerEntered(object sender, PointerRoutedEventArgs e)
