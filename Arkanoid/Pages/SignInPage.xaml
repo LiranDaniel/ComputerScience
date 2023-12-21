@@ -32,9 +32,30 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-
         <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -50,51 +71,56 @@
 
         </Grid.RowDefinitions>
 
-        <Grid Grid.Column='3' Grid.Row="2" Grid.ColumnSpan="12" Grid.RowSpan="8"
+        <Grid Grid.Column='5' Grid.Row="3" Grid.ColumnSpan="22" Grid.RowSpan="13"
               BorderBrush="Black" BorderThickness="7" CornerRadius="40" >
             <Grid.Background>
-                <ImageBrush  ImageSource="/Assets\App\Images\SignInBackGround.png"></ImageBrush>
+                <SolidColorBrush Color="White" Opacity=".25"></SolidColorBrush>
             </Grid.Background>
         </Grid>
 
-
-        <TextBlock x:Name="blockMail" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                       FontSize="30">
+        <TextBlock x:Name="blockMail" Grid.Row="5" Grid.Column="7" Grid.ColumnSpan="7" Grid.RowSpan="3"
+                   FontSize="50" FontFamily="Ink Draft" Foreground="Black" HorizontalAlignment="Left"
+                   VerticalAlignment="Top">
                 Mail:
         </TextBlock>
-        <TextBlock x:Name="blockPassword" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="3" Grid.RowSpan="2"
-                       FontSize="30">
+        
+        <TextBlock x:Name="blockPassword" Grid.Row="8" Grid.Column="7" Grid.ColumnSpan="8" Grid.RowSpan="3"
+                   FontSize="50" FontFamily="Ink Draft" Foreground="Black">
                 Password:
         </TextBlock>
 
-        <Viewbox x:Name="vboxMail" Grid.Column="7" Grid.Row="3" Grid.ColumnSpan="7" Grid.RowSpan="1" >
-            <TextBox x:Name="tboxMail" Height="447"  Width="3700" FontSize="260"
+        <Viewbox x:Name="vboxMail" Grid.Column="15" Grid.Row="5" Grid.ColumnSpan="10" Grid.RowSpan="2" 
+                 HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <TextBox x:Name="tboxMail" Height="460"  Width="3700" FontSize="260"
                      PlaceholderText="  Type Address" CornerRadius="100">
             </TextBox>
         </Viewbox>
 
-        <Viewbox x:Name="vboxPassword" Grid.Column="7" Grid.Row="5" Grid.ColumnSpan="7" Grid.RowSpan="1">
+        <Viewbox x:Name="vboxPassword" Grid.Column="15" Grid.Row="9" Grid.ColumnSpan="10" Grid.RowSpan="2"
+                 HorizontalAlignment="Left" VerticalAlignment="Top">
             <TextBox x:Name="tboxPassword" Height="447"  Width="3700" FontSize="260"
                      PlaceholderText="  Type Password" CornerRadius="100"></TextBox>
         </Viewbox>
 
         <Button x:Name="btnSignIn" Style="{StaticResource MyButtonStyle}" Grid.Row="7" Grid.Column="9"
                 Grid.ColumnSpan="3" Click="btnSignIn_Click" >Sign in</Button>
+        
         <Button x:Name="btnSignUp" Style="{StaticResource MyButtonStyle}" Grid.Row="8" Grid.Column="9"
                 Grid.ColumnSpan="3" Click="btnSignUp_Click" Foreground="Blue">Sign Up</Button>
 
-        <TextBlock x:Name="blockSignIn" Grid.Row="8" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center"
-                Grid.ColumnSpan="3" Grid.RowSpan="2"> Not a member?
+        <TextBlock x:Name="blockSignIn" Grid.Row="8" Grid.Column="7" HorizontalAlignment="Center"
+                   VerticalAlignment="Center" Grid.ColumnSpan="3" Grid.RowSpan="2" 
+                   FontFamily="Ink Draft"> Not a member?
         </TextBlock>
 
-
-
-        <Image Source="/Assets\App\Images\person_icon.png" Grid.Column="4" Grid.Row="7" Grid.ColumnSpan="2"
-               Grid.RowSpan="2" Stretch="Fill">
+        <Image Source="/Assets\App\Images\person_icon.png" Grid.Column="7" Grid.Row="11" 
+               Grid.ColumnSpan="3" Grid.RowSpan="3" Stretch="Fill">
 
         </Image>
+
         <Button Grid.Row="0" Grid.Column="0" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
-        x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}">
+                x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}"
+                Grid.ColumnSpan="2" Grid.RowSpan="2">
             <Image x:Name="imgSliderVertical" Source="/Assets\App\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
         </Button>
     </Grid>
