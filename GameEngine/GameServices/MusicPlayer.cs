@@ -21,7 +21,7 @@ namespace GameEngine.GameServices
             _mediaPlayer.Volume = Volume;
             _mediaPlayer.AutoPlay = true;
             _mediaPlayer.IsLoopingEnabled = true;
-            _mediaPlayer.Source = MediaSource.CreateFromUri(new Uri($"ms-appx:///Assets/App/Music/{fileName}")); // OGBackground.wav
+            _mediaPlayer.Source = MediaSource.CreateFromUri(new Uri($"ms-appx:///Assets/Music/{fileName}")); // OGBackground.wav
         }
         public static void Play()
         {
