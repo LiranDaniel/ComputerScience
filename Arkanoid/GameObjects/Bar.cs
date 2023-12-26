@@ -13,12 +13,13 @@ namespace Arkanoid.GameObjects
     public class Bar : GameMovingObject
     {
         double _speed;
-        public Bar(Scene scene, string filename, double placeX, double placeY, double speed) : 
+        public Bar(Scene scene, string filename,double width,double lenght, double placeX, double placeY, double speed) : 
             base(scene, filename, placeX, placeY)
         {
             _speed = speed;
-
-
+            image.Width = width;
+            image.Height = width;
+            SetImage(filename);
         }
         private void KeyDown(VirtualKey key)
         {

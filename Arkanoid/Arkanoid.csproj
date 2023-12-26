@@ -390,6 +390,7 @@
     <Content Include="Assets\Icon\Wide310x150Logo.scale-400.png" />
     <Content Include="Assets\Images\Arkanoid.jpg" />
     <Content Include="Assets\Images\Arkanoid_background.jpg" />
+    <Content Include="Assets\Images\Bar.png" />
     <Content Include="Assets\Images\GameBackGround.jpg" />
     <Content Include="Assets\Images\GameImages\Bar.jpg" />
     <Content Include="Assets\Images\GameImages\Heart.gif" />
