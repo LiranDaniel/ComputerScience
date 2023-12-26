@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets\App\Images\Arkanoid.jpg" Stretch="Fill">
+            <ImageBrush ImageSource="/Assets\Images\Arkanoid.jpg" Stretch="Fill">
             </ImageBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
@@ -43,37 +43,37 @@
         <Button x:Name="btnPlay" Grid.Column="3" Grid.Row="6" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 Background="Transparent" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
                 Click="btnPlay_Click" Style="{StaticResource MyButtonStyle}">
-            <Image x:Name="imgPlay" Source="/Assets\App\Buttons\LIstOfButtons\Play (1).png"></Image>
+            <Image x:Name="imgPlay" Source="/Assets\Buttons\LIstOfButtons\Play (1).png"></Image>
         </Button>
 
         <Button x:Name="btnLevelList" Grid.Column="5" Grid.Row="6" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 Background="Transparent" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
                 Click="btnLevelList_Click" Style="{StaticResource MyButtonStyle}">
-            <Image x:Name="imgLevelList" Source="/Assets\App\Buttons\LIstOfButtons\LevelList (1).png"></Image>
+            <Image x:Name="imgLevelList" Source="/Assets\Buttons\LIstOfButtons\LevelList (1).png"></Image>
         </Button>
         
 
         <Button x:Name="btnExit" Background="Transparent" Style="{StaticResource MyButtonStyle}"
                 PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Click="btnExit_Click">
-            <Image Source="/Assets\App\Buttons\LIstOfButtons\Exit (1).png" x:Name="imgExit">
+            <Image Source="/Assets\Buttons\LIstOfButtons\Exit (1).png" x:Name="imgExit">
             </Image>
         </Button>
 
         <Button x:Name="btnProfile" Grid.Column="7" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="Transparent"
                 Click="btnProfile_Click" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
                 Style="{StaticResource MyButtonStyle}">
-            <Image x:Name="imgProfile" Source="/Assets\App\Buttons\LIstOfButtons\Profile (1).png"></Image>
+            <Image x:Name="imgProfile" Source="/Assets\Buttons\LIstOfButtons\Profile (1).png"></Image>
         </Button>
 
 
         <Button x:Name="btnInfo" Grid.Column="12" Grid.Row="0" Background="Transparent" Style="{StaticResource MyButtonStyle}"
               Click="btnProfile_Click" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited">
-            <Image x:Name="imgInfo" Source="/Assets\App\Buttons\LIstOfButtons\Info (1).png"></Image>
+            <Image x:Name="imgInfo" Source="/Assets\Buttons\LIstOfButtons\Info (1).png"></Image>
         </Button>
 
         <Button x:Name="btnMusic" Grid.Column="12" Grid.Row="1" Background="Transparent" Style="{StaticResource MyButtonStyle}"
                 Click="btnMusic_Click" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited">
-            <Image x:Name="imgMusic" Source="/Assets\App\Buttons\LIstOfButtons\Music (1).png"></Image>
+            <Image x:Name="imgMusic" Source="/Assets\Buttons\LIstOfButtons\Music (1).png"></Image>
         </Button>
     </Grid>
 </Page>

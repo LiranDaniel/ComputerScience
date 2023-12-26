@@ -41,14 +41,14 @@ namespace Arkanoid
         {
             Button btnPlayEnter = (Button)sender;
             ((Image)btnPlayEnter.Content).Source = new BitmapImage(new Uri("ms-appx:/// " +
-                "Assets/App/Buttons/LIstOfButtons/" + ((Image)btnPlayEnter.Content).Name.Replace("img", "") + " (2).png"));
+                "Assets/Buttons/LIstOfButtons/" + ((Image)btnPlayEnter.Content).Name.Replace("img", "") + " (2).png"));
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
         }
         private void btn_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             Button btnPlayExit = (Button)sender;
             ((Image)btnPlayExit.Content).Source = new BitmapImage(new Uri("ms-appx:/// " +
-                "Assets/App/Buttons/LIstOfButtons/" + ((Image)btnPlayExit.Content).Name.Replace("img", "") + " (1).png"));
+                "Assets/Buttons/LIstOfButtons/" + ((Image)btnPlayExit.Content).Name.Replace("img", "") + " (1).png"));
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
 

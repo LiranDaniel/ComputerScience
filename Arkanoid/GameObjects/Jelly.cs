@@ -32,13 +32,13 @@ namespace Arkanoid.GameObjects
             switch(_jellyType)
             {
                 case JellyType.green: 
-                    base.SetImage("App/Images/GameImages/jelly_green.png");
+                    base.SetImage("Images/GameImages/jelly_green.png");
                     break;
                 case JellyType.pink:
-                    base.SetImage("App/Images/GameImages/jelly_pink.png");
+                    base.SetImage("Images/GameImages/jelly_pink.png");
                     break;
                 case JellyType.yellow:
-                    base.SetImage("App/Images/GameImages/jelly_yellow.png");
+                    base.SetImage("Images/GameImages/jelly_yellow.png");
                     break;
 
             }

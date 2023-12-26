@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets\App\Images\Arkanoid.jpg" Stretch="Fill">
+            <ImageBrush ImageSource="/Assets\Images\GameBackGround.jpg" Stretch="Fill">
             </ImageBrush>
         </Grid.Background>
         
@@ -50,16 +50,16 @@
 
         </Grid.RowDefinitions>
         
+        
         <Grid Grid.Column='3' Grid.Row="2" Grid.ColumnSpan="12" Grid.RowSpan="8"
-       BorderBrush="Black" BorderThickness="7" CornerRadius="40" >
+              BorderBrush="Black" BorderThickness="7" CornerRadius="40" >
             <Grid.Background>
-                <ImageBrush  ImageSource="/Assets\App\Images\SignInBackGround.png"></ImageBrush>
+                <SolidColorBrush Color="White" Opacity=".25"></SolidColorBrush>
             </Grid.Background>
         </Grid>
-        
         <Button Grid.Row="0" Grid.Column="0" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
         x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}">
-            <Image x:Name="imgSliderVertical" Source="/Assets\App\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
+            <Image x:Name="imgSliderVertical" Source="/Assets\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
         </Button>
 
         <ToggleSwitch OnContent="Music On" OffContent="Music Off" x:Name="backgroundMusicSw" 

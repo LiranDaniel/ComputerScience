@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets\App\Images\GameBackGround.jpg">
+            <ImageBrush ImageSource="/Assets\Images\GameBackGround.jpg">
             </ImageBrush>
         </Grid.Background>
         <Grid.ColumnDefinitions>
@@ -110,7 +110,7 @@
                 Grid.ColumnSpan="3" Click="btnSignUp_Click" Foreground="Blue" FontSize="30"
                 Grid.RowSpan="2" FontFamily="Ink Draft">Sign Up</Button>
 
-        <Image Source="/Assets\App\Images\person_icon.png" Grid.Column="7" Grid.Row="11" 
+        <Image Source="/Assets\Images\person_icon.png" Grid.Column="7" Grid.Row="11" 
                Grid.ColumnSpan="3" Grid.RowSpan="3" Stretch="Fill">
 
         </Image>
@@ -118,7 +118,7 @@
         <Button Grid.Row="0" Grid.Column="0" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
                 x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}"
                 Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Image x:Name="imgSliderVertical" Source="/Assets\App\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
+            <Image x:Name="imgSliderVertical" Source="/Assets\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
         </Button>
     </Grid>
 </Page>
