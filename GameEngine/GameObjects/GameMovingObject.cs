@@ -33,16 +33,17 @@ namespace GameEngine.GameObjects
 
             if (Math.Abs(_X - _toX) < 4 && Math.Abs(_Y - _toY) < 4)
             {
-                Stop();
                 _X = _toX;
                 _Y = _toY;
+                Stop();
+                
             }
             base.Render();
         }
 
         public void Stop()
         {
-            _vX = _vY = _vvX = 0;
+            _vX = _vY = _vvX = _vvY = 0;
         }
 
         /// <summary>

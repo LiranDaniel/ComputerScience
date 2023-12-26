@@ -37,7 +37,7 @@ namespace Arkanoid.GameServices
             }
 
             //var bar = new Bar(Scene, "Images/Bar.png", 200,200,200,200,200);
-            var bar = new Bar(Scene, "Images/Bar.png",width:300,lenght:300,placeX:422,placeY:350,speed:3);
+            var bar = new Bar(Scene, "Images/Bar.png",width:300,lenght:200,placeX:374,placeY:330,speed:2);
             //new Bar(Scene, "file",speed:2,placeY:1, Scene.ActualWidth / 2 - 80, Scene.Ground)
             Scene.AddObject(bar);
         }
