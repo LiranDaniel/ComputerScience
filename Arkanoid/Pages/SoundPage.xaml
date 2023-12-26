@@ -63,14 +63,15 @@
         </Button>
 
         <ToggleSwitch OnContent="Music On" OffContent="Music Off" x:Name="backgroundMusicSw" 
-               Grid.Column="7" Grid.Row="3" Grid.RowSpan="4" Grid.ColumnSpan="5"
-               Toggled="backgroundMusicSw_Toggled"></ToggleSwitch>
+               Grid.Column="7" Grid.Row="3" Grid.RowSpan="4" Grid.ColumnSpan="5" Foreground="Black"
+               Toggled="backgroundMusicSw_Toggled" FontFamily="Ink Draft" FontSize="30"></ToggleSwitch>
 
         <ToggleSwitch OnContent="Sound Effect On" OffContent="Sound Effect Off" x:Name="SoundEffectSw" 
-               Grid.Column="7" Grid.Row="4" Grid.RowSpan="4" Grid.ColumnSpan="5"
-               Toggled="SoundEffectSw_Toggled"></ToggleSwitch>
+               Grid.Column="7" Grid.Row="4" Grid.RowSpan="4" Grid.ColumnSpan="5" Foreground="Black"
+               Toggled="SoundEffectSw_Toggled" FontFamily="Ink Draft" FontSize="30"></ToggleSwitch>
 
-        <Slider  x:Name="sldVolume" Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="8" ValueChanged="Slider_ValueChanged">
+        <Slider  x:Name="sldVolume" Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="8" 
+                 ValueChanged="Slider_ValueChanged" Foreground="Black" Background="Black">
 
         </Slider>
     </Grid>
