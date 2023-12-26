@@ -23,10 +23,9 @@ namespace Arkanoid.GameServices
             int pos = 3;
             int row = 3;
             
-            Random rnd = new Random();
-            for (int z =1; z<4; z++)
+            for (int z =0; z<3; z++)
             {
-                var currentColorEnum = (Jelly.JellyType)rnd.Next(0, 3);
+                var currentColorEnum = (Jelly.JellyType)(z);
                 for (int i = 1; i < 11; i++)
                 {
                     var jelly = new Jelly(Scene, currentColorEnum, 100, pos, row);
@@ -34,7 +33,7 @@ namespace Arkanoid.GameServices
                     pos += 103;
                 }
                 row += 103;
-                pos = 0;
+                pos = 3;
             }
 
             //var bar = new Bar(Scene, "file", speed: 3, width: 160, Scene.ActualWidth / 2 - 80, Scene.Ground);
