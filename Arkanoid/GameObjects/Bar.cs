@@ -68,6 +68,7 @@ namespace Arkanoid.GameObjects
                 _X = _scene.ActualWidth - width;
                 Stop();
             }
+
         }
     }
 }
