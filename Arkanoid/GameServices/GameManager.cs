@@ -36,7 +36,10 @@ namespace Arkanoid.GameServices
                 pos = 3;
             }
 
-            //var bar = new Bar(Scene, "file", speed: 3, width: 160, Scene.ActualWidth / 2 - 80, Scene.Ground);
+            //var bar = new Bar(Scene,"file",2,2,2);
+            //new Bar(Scene, "file",speed:2,placeY:1, Scene.ActualWidth / 2 - 80, Scene.Ground)
+            //
+            //C:\Users\Liran Daniel PC\Documents\RepositoryGIt\Arkanoid\GameObjects\Bar.cs;
             //Scene.AddObject(bar);
         }
     }

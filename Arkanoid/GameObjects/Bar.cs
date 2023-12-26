@@ -13,7 +13,8 @@ namespace Arkanoid.GameObjects
     public class Bar : GameMovingObject
     {
         double _speed;
-        public Bar(Scene scene, string filename, double placeX, double placeY, double speed) : base(scene, filename, placeX, placeY)
+        public Bar(Scene scene, string filename, double placeX, double placeY, double speed) : 
+            base(scene, filename, placeX, placeY)
         {
             _speed = speed;
 
