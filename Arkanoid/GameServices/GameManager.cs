@@ -1,4 +1,5 @@
 ﻿using Arkanoid.GameObjects;
+using GameEngine.GameObjects;
 using GameEngine.GameServices;
 using System;
 using System.Collections.Generic;
@@ -36,10 +37,12 @@ namespace Arkanoid.GameServices
                 pos = 3;
             }
 
-            //var bar = new Bar(Scene, "Images/Bar.png", 200,200,200,200,200);
-            var bar = new Bar(Scene, "Images/Bar.png",width:300,lenght:200,placeX:374,placeY:330,speed:2);
-            //new Bar(Scene, "file",speed:2,placeY:1, Scene.ActualWidth / 2 - 80, Scene.Ground)
+            var bar = new Bar(Scene, "Images/Bar.png",width:300, lenght: 200,placeX:374,placeY:330,speed:2);
             Scene.AddObject(bar);
+
+            Ball ball = new Ball(Scene, "Images/Ball.png",placeX:300,placeY:400,speed:1,length:60,width:60);
+            Scene.AddObject(ball);
+
         }
     }
 }

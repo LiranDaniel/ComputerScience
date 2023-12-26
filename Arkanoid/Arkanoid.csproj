@@ -119,6 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GameObjects\Ball.cs" />
     <Compile Include="GameObjects\Bar.cs" />
     <Compile Include="GameObjects\Jelly.cs" />
     <Compile Include="GameServices\GameManager.cs" />
@@ -390,6 +391,7 @@
     <Content Include="Assets\Icon\Wide310x150Logo.scale-400.png" />
     <Content Include="Assets\Images\Arkanoid.jpg" />
     <Content Include="Assets\Images\Arkanoid_background.jpg" />
+    <Content Include="Assets\Images\Ball.png" />
     <Content Include="Assets\Images\Bar.png" />
     <Content Include="Assets\Images\GameBackGround.jpg" />
     <Content Include="Assets\Images\GameImages\Bar.jpg" />
