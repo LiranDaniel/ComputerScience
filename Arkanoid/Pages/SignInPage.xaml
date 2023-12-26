@@ -102,16 +102,13 @@
                      PlaceholderText="  Type Password" CornerRadius="100"></TextBox>
         </Viewbox>
 
-        <Button x:Name="btnSignIn" Style="{StaticResource MyButtonStyle}" Grid.Row="7" Grid.Column="9"
-                Grid.ColumnSpan="3" Click="btnSignIn_Click" >Sign in</Button>
-        
-        <Button x:Name="btnSignUp" Style="{StaticResource MyButtonStyle}" Grid.Row="8" Grid.Column="9"
-                Grid.ColumnSpan="3" Click="btnSignUp_Click" Foreground="Blue">Sign Up</Button>
+        <Button x:Name="btnSignIn" Style="{StaticResource MyButtonStyle}" Grid.Row="11" Grid.Column="17"
+                Grid.ColumnSpan="6" Click="btnSignIn_Click" Grid.RowSpan="2" FontSize="30"
+                FontFamily="Ink Draft" >Sign in</Button>
 
-        <TextBlock x:Name="blockSignIn" Grid.Row="8" Grid.Column="7" HorizontalAlignment="Center"
-                   VerticalAlignment="Center" Grid.ColumnSpan="3" Grid.RowSpan="2" 
-                   FontFamily="Ink Draft"> Not a member?
-        </TextBlock>
+        <Button x:Name="btnSignUp" Style="{StaticResource MyButtonStyle}" Grid.Row="11" Grid.Column="21"
+                Grid.ColumnSpan="3" Click="btnSignUp_Click" Foreground="Blue" FontSize="30"
+                Grid.RowSpan="2" FontFamily="Ink Draft">Sign Up</Button>
 
         <Image Source="/Assets\App\Images\person_icon.png" Grid.Column="7" Grid.Row="11" 
                Grid.ColumnSpan="3" Grid.RowSpan="3" Stretch="Fill">

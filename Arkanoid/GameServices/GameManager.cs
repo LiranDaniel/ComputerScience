@@ -20,12 +20,22 @@ namespace Arkanoid.GameServices
         public void Init()
         {
             Scene.RemoveAllObjects();
-            var jelly = new Jelly(Scene, Jelly.JellyType.yellow, 100, 1, 1);
-            Scene.AddObject(jelly);
-            jelly = new Jelly(Scene, Jelly.JellyType.pink, 100, 100, 1);
-            Scene.AddObject(jelly);
-            jelly = new Jelly(Scene, Jelly.JellyType.green, 100, 200, 1);
-            Scene.AddObject(jelly);
+            int pos = 3;
+            int row = 3;
+            
+            Random rnd = new Random();
+            for (int z =1; z<4; z++)
+            {
+                var currentColorEnum = (Jelly.JellyType)rnd.Next(0, 3);
+                for (int i = 1; i < 11; i++)
+                {
+                    var jelly = new Jelly(Scene, currentColorEnum, 100, pos, row);
+                    Scene.AddObject(jelly);
+                    pos += 103;
+                }
+                row += 103;
+                pos = 0;
+            }
 
             //var bar = new Bar(Scene, "file", speed: 3, width: 160, Scene.ActualWidth / 2 - 80, Scene.Ground);
             //Scene.AddObject(bar);
