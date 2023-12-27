@@ -62,7 +62,7 @@
                 ValueChanged="Slider_ValueChanged"></Slider>
         <ToggleSwitch OnContent="Music On" OffContent="Music Off" x:Name="backgroundMusicSw" 
                Grid.Column="7" Grid.Row="3" Grid.RowSpan="4" Grid.ColumnSpan="5"
-               Toggled="backgroundMusicSw_Toggled">
+               Toggled="backgroundMusicSw_Toggled"  FontFamily="Ink Draft" FontSize="40">
         </ToggleSwitch>
     </Grid>
 </Page>

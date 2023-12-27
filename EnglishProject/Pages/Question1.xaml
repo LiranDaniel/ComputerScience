@@ -100,7 +100,7 @@
 
         <Button Background="Black" Grid.Row="4" Grid.Column="14" CornerRadius="30"
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-                Content=".1" FontSize="60" FontFamily="Ink Draft"
+                Content=".1" FontSize="40" FontFamily="Ink Draft"
                 x:Name="btnAnswer1" Click="btnAnswer1_Click" PointerEntered="btn_AnswerPointerEntered"
                 PointerExited="btn_AnswerPointerExited">
             
@@ -108,7 +108,7 @@
 
         <Button Background="Black" Grid.Row="6" Grid.Column="14" CornerRadius="30"
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                Content=".2" FontSize="60" FontFamily="Ink Draft"
+                Content=".2" FontSize="40" FontFamily="Ink Draft"
                 x:Name="btnAnswer2" Click="btnAnswer2_Click" PointerEntered="btn_AnswerPointerEntered"
                 PointerExited="btn_AnswerPointerExited">
 
@@ -116,14 +116,14 @@
 
         <Button Background="Black" Grid.Row="8" Grid.Column="14" CornerRadius="30"
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                Content=".3" FontSize="60" FontFamily="Ink Draft"
+                Content=".3" FontSize="40" FontFamily="Ink Draft"
                 x:Name="btnAnswer3" Click="btnAnswer3_Click" PointerEntered="btn_AnswerPointerEntered"
                 PointerExited="btn_AnswerPointerExited">
         </Button>
 
         <Button Background="Black" Grid.Row="10" Grid.Column="14" CornerRadius="30"
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                Content=".4" FontSize="60" FontFamily="Ink Draft"
+                Content=".4" FontSize="40" FontFamily="Ink Draft"
                 x:Name="btnAnswer4" Click="btnAnswer4_Click" PointerEntered="btn_AnswerPointerEntered"
                 PointerExited="btn_AnswerPointerExited">
 
