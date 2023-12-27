@@ -12,7 +12,7 @@
     <Grid>
 
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets\Imges\BackGrounds\Physics_Background.jpg"></ImageBrush>
+            <ImageBrush ImageSource="/Assets\Imges\AnmationBomb.gif"></ImageBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
