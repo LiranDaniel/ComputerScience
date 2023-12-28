@@ -43,5 +43,21 @@ namespace Arkanoid.GameObjects
 
             }
         }
+        public void ChangeJelly()
+        {
+            switch(_jellyType)
+            {
+                case JellyType.green:
+                    break;
+                case JellyType.pink:
+                    _jellyType = JellyType.green;
+                    SetImage();
+                    break;
+                case JellyType.yellow:
+                    _jellyType = JellyType.pink;
+                    SetImage();
+                    break;
+            }
+        }
     }
 }

@@ -87,6 +87,36 @@ namespace Arkanoid.GameObjects
             }
             base.Render();
         }
+
+        public override void Collide(GameObject gameObject) // CheckCollistion פעולה מתבצעת רק כאשר יש נגיעה וודאית שבודקים את זה בפונקציה
+        {
+            if (gameObject is Bar bar)
+            {
+                _vY = -_vY;
+                if (Math.Abs(bar.vX) > 0)
+                {
+                    _vX += bar.vX / 2.6; // מעניק לכדור כמחצית המהירות של המחבט, כלומר. הכדור נוטה לכיוון תנועת המחבט
+                }
+                _Y = bar.Rect.Top - height;
+            }
+            if (gameObject is Jelly jelly)// בדיקת פגיעה וגם מוצאת את גיילי זה
+            {
+                var intersectRect = RectHelper.Intersect(Rect, jelly.Rect); // בדיקת התנגשות בין כדור לגיילי
+                if (intersectRect.Height > intersectRect.Width) // בדיקת פגיעה שאחרי זה לאן הכדור ילך
+                {
+                    _X -= _vX;
+                    _vX = -_vX;
+                }
+                else
+                {
+                    _Y -= _vY;
+                    _vY = -_vY;
+                }
+                jelly.ChangeJelly();
+            }
+
+
+        }
     }
 }
 
@@ -115,32 +145,6 @@ namespace Arcanoid1.GameObjects
         public double _speed;
         private int _countLife;
 
-
-
-
-
-        /// <summary>
-        ///
-        /// </summary>
-        /// <param name="scene">במת המשחק</param>
-        /// <param name="fileName">שם קובץ שמתאר את המחבא</param>
-        /// <param name="speed">מהירות אופקית</param>
-        /// <param name="width">מהירות אנכית</param>
-        /// <param name="placeX">מיקום יווצרות הכדור ביחס לציר האופקי</param>
-        /// <param name="placeY">מיקום יווצרות המחבט ביחס לציר אנכי</param>
-        public Ball(Scene scene, string fileName, double speed, int width, double placeX, double placeY) :
-            base(scene, fileName, placeX, placeY)
-        {
-            _dX = 0;
-            _dY = 0;
-            _speed = speed;
-            _countLife = 3;
-            Image.Height = width; // כך אנו קובעים את עובי הכדור
-            Image.Width = width; // קובעים את הרוחב הכדור
-            //Image.Stretch = Windows.UI.Xaml.Media.Stretch.Fill; // כך אנו מותחים את מראה המחבט
-            Manager.GameEvent.OnKeyDown += KeyDown;
-            Manager.GameEvent.OnKeyUp += KeyUp;
-        }
 
 
         public override void Collide(GameObject gameObject) // CheckCollistion פעולה מתבצעת רק כאשר יש נגיעה וודאית שבודקים את זה בפונקציה
