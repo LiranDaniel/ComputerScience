@@ -19,7 +19,7 @@ namespace Arkanoid.GameObjects
             yellow = 2,
         }
         private JellyType _jellyType;
-        public virtual Rect Rect => new Rect(_X, _Y, width, height);
+        public override Rect Rect => new Rect(_X, _Y, width, height);
 
         public Jelly(Scene scene, JellyType jellyType, double width, double placeX, double placeY) :
             base(scene, string.Empty, placeX, placeY)
@@ -50,6 +50,7 @@ namespace Arkanoid.GameObjects
             switch(_jellyType)
             {
                 case JellyType.green:
+                    _scene.RemoveObject(this);
                     break;
                 case JellyType.pink:
                     _jellyType = JellyType.green;

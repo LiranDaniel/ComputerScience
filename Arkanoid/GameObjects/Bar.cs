@@ -19,8 +19,9 @@ namespace Arkanoid.GameObjects
         {
             _speed = speed;
             image.Width = width;
-            image.Height = width;
+            image.Height = lenght;
             SetImage(filename);
+            image.Stretch = Windows.UI.Xaml.Media.Stretch.Fill;
 
             Manager.GameEvent.OnKeyDown += KeyDown;
             Manager.GameEvent.OnKeyUp += KeyUp;

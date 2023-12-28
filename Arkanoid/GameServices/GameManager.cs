@@ -1,4 +1,5 @@
-﻿using Arkanoid.GameObjects;
+﻿using System;
+using Arkanoid.GameObjects;
 using DataBase.Models;
 using GameEngine.GameServices;
 
@@ -20,7 +21,7 @@ namespace Arkanoid.GameServices
             
             for (int z =0; z<3; z++)
             {
-                var currentColorEnum = (Jelly.JellyType)(z);
+                var currentColorEnum = (Jelly.JellyType)(2 - z);
                 for (int i = 1; i < 11; i++)
                 {
                     var jelly = new Jelly(Scene, currentColorEnum, 100, pos, row);
@@ -31,12 +32,11 @@ namespace Arkanoid.GameServices
                 pos = 3;
             }
 
-            var bar = new Bar(Scene, "Images/Bar.png",width:300, lenght: 200,placeX:374,placeY:330,speed:2);
+            var bar = new Bar(Scene, "Images/Bar.png",width:300, lenght: 50,placeX:374,placeY:430,speed:2);
             Scene.AddObject(bar);
 
-            Ball ball = new Ball(Scene, "Images/Ball.png",placeX:300,placeY:400,speed:1,length:60,width:60);
+            Ball ball = new Ball(Scene, "Images/Ball.png",placeX:494,placeY:350,speed:1,length:60,width:60);
             Scene.AddObject(ball);
-
         }
     }
 }
