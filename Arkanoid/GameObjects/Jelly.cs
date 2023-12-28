@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Foundation;
 using Windows.UI.Xaml.Controls;
 
 namespace Arkanoid.GameObjects
@@ -18,6 +19,7 @@ namespace Arkanoid.GameObjects
             yellow = 2,
         }
         private JellyType _jellyType;
+        public virtual Rect Rect => new Rect(_X, _Y, width, height);
 
         public Jelly(Scene scene, JellyType jellyType, double width, double placeX, double placeY) :
             base(scene, string.Empty, placeX, placeY)

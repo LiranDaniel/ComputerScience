@@ -1,19 +1,13 @@
 ﻿using Arkanoid.GameObjects;
-using GameEngine.GameObjects;
+using DataBase.Models;
 using GameEngine.GameServices;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.Foundation.Metadata;
-using Windows.Globalization.DateTimeFormatting;
-using Windows.UI.Xaml;
 
 namespace Arkanoid.GameServices
 {
     public class GameManager : Manager
     {
+        public static User User { get; set; } = new User();
+
         public GameManager(Scene scene) : base(scene)
         {
             Init();
