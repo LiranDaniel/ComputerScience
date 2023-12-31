@@ -87,10 +87,10 @@ namespace Arkanoid.GameObjects
             {
                 Stop();
                 _scene.Init();
-                /*if (Manager.GameEvent.OnRemoveHeart != null)
+                if (Manager.GameEvent.OnRemoveHeart != null)
                 {
-                    Manager.GameEvent.OnRemoveHeart(--_countLife);
-                }*/
+                    Manager.GameEvent.OnRemoveHeart(--countLife);
+                }
 
             }
             base.Render();

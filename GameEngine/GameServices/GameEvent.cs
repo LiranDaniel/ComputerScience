@@ -13,5 +13,6 @@ namespace GameEngine.GameServices
         public Action OnClock;                      // זהו אירוע אשר אחראי להפעיל את השעון של העיקוב
         public Action<VirtualKey> OnKeyUp;          // האירוע אשר אחראי לעזיבת המקש
         public Action<VirtualKey> OnKeyDown;        // האירוע אשר אחראי לחיצת המקש
+        public Action<int> OnRemoveHeart;
     }
 }

@@ -18,13 +18,14 @@ namespace Arkanoid.GameServices
             Scene.RemoveAllObjects();
             int pos = 3;
             int row = 3;
+            Random rnd = new Random();
             
             for (int z =0; z<3; z++)
             {
                 var currentColorEnum = (Jelly.JellyType)(2 - z);
                 for (int i = 1; i < 11; i++)
                 {
-                    var jelly = new Jelly(Scene, currentColorEnum, 100, pos, row);
+                    var jelly = new Jelly(Scene, (Jelly.JellyType)rnd.Next(3), 100, pos, row);
                     Scene.AddObject(jelly);
                     pos += 103;
                 }

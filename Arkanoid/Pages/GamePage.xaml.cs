@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Security.Cryptography.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,6 +27,7 @@ namespace Arkanoid
     public sealed partial class GamePage : Page
     {
         private GameManager _gameManager;
+        private int score;
         public GamePage()
         {
             this.InitializeComponent();
@@ -35,7 +37,28 @@ namespace Arkanoid
         {
             _gameManager = new GameManager(scene);
             _gameManager.Start();
+            Manager.GameEvent.OnRemoveHeart += RemoveLive;
+            score = 0;
+            blockScore.Text = $" Score: {score}";
         }
+
+        private void RemoveLive(int _countLifes)
+        {
+            if (_countLifes == 2)
+            {
+                Heart_3.Visibility = Visibility.Collapsed;
+            }
+            else if (_countLifes == 1)
+            {
+                Heart_2.Visibility = Visibility.Collapsed;
+            }
+            else if (_countLifes == 0)
+            {
+                Heart_1.Visibility = Visibility.Collapsed;
+                
+            }
+        }
+
 
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
