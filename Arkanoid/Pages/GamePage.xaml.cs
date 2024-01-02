@@ -58,7 +58,7 @@ namespace Arkanoid
                 
             }
         }
-
+         
 
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
