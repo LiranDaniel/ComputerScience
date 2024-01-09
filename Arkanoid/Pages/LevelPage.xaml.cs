@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Arkanoid.GameServices;
+using DataBase.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,6 +25,7 @@ namespace Arkanoid.Pages
     /// </summary>
     public sealed partial class LevelPage : Page
     {
+        private static Level Level = new Level();
         public LevelPage()
         {
             this.InitializeComponent();
@@ -44,26 +47,37 @@ namespace Arkanoid.Pages
 
         private void btn_SliderVertical_Click(object sender, RoutedEventArgs e)
         {
+            GameManager.User.Level = Level;
             Frame.Navigate(typeof(MainPage));
         }
 
         private void btnNumber1_Click(object sender, RoutedEventArgs e)
         {
+            Level.LevelNumber = 1;
+            GameManager.User.Level = Level;
+
             Frame.Navigate(typeof(GamePage));
         }
 
         private void btnNumber2_Click(object sender, RoutedEventArgs e)
         {
+            Level.LevelNumber = 2;
+            GameManager.User.Level = Level;
             Frame.Navigate(typeof(GamePage));
         }
 
         private void btnNumber3_Click(object sender, RoutedEventArgs e)
         {
+            Level.LevelNumber = 3;
+            GameManager.User.Level = Level;
             Frame.Navigate(typeof(GamePage));
         }
 
         private void btnNumber4_Click(object sender, RoutedEventArgs e)
         {
+            Level.LevelNumber = 4;
+            GameManager.User.Level = Level;
+
             Frame.Navigate(typeof(GamePage));
         }
     }

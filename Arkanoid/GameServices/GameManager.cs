@@ -8,7 +8,7 @@ namespace Arkanoid.GameServices
     public class GameManager : Manager
     {
         public static User User { get; set; } = new User();
-
+        
         public GameManager(Scene scene) : base(scene)
         {
             Init();
@@ -16,24 +16,31 @@ namespace Arkanoid.GameServices
         public void Init()
         {
             Scene.RemoveAllObjects();
-            int pos = 3;
+            int pos = 11;
             int row = 3;
             Random rnd = new Random();
-            
-            for (int z =0; z<3; z++)
+            if (User.Level == null)
+                User.Level = new Level();
+
+            int numTypeJelly = 0;
+            for (int z =0; z< User.Level.CountYellowRows; z++)
             {
-                var currentColorEnum = (Jelly.JellyType)(2 - z);
-                for (int i = 1; i < 11; i++)
+                var currentColorEnum = (Jelly.JellyType)(numTypeJelly);
+                for (int i = 1; i < 16; i++)
                 {
-                    var jelly = new Jelly(Scene, (Jelly.JellyType)rnd.Next(3), 100, pos, row);
+                    var jelly = new Jelly(Scene, currentColorEnum, 65, pos, row);
                     Scene.AddObject(jelly);
-                    pos += 103;
+                    pos += 68;
                 }
-                row += 103;
-                pos = 3;
+                row += 68;
+                pos = 11;
+                numTypeJelly++;
+
+                if (numTypeJelly == 3)
+                    numTypeJelly = 0;
             }
 
-            var bar = new Bar(Scene, "Images/Bar.png",width:300, lenght: 50,placeX:374,placeY:430,speed:2);
+            var bar = new Bar(Scene, "Images/Bar.png",width:300, lenght: 50,placeX:374,placeY:430,speed:3);
             Scene.AddObject(bar);
 
             Ball ball = new Ball(Scene, "Images/Ball.png",placeX:494,placeY:350,speed:1,length:60,width:60);

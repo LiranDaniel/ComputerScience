@@ -100,6 +100,7 @@ namespace Arkanoid.GameObjects
         {
             if (gameObject is Bar bar)
             {
+                var rect = RectHelper.Intersect(this.Rect, bar.Rect);
                 _vY = -_vY;
                 if (Math.Abs(bar.vX) != 0)
                 {

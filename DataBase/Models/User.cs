@@ -13,12 +13,8 @@ namespace DataBase.Models
         public string Email { get; set; }
         public string Password { get; set; }
         public Level Level { get; set; }
-        public int Points { get; set; }
+        public int Score { get; set; }
 
-        public User()
-        {
-
-        }
-
+        
     }
 }

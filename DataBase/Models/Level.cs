@@ -10,16 +10,13 @@ namespace DataBase.Models
     public class Level
     {
         public int Id { get; set; }
-        public int LevelNumber { get; set; }
-        public double BallSpeed { get; set; }
-        public int BarWith {  get; set; }
-        public int CountYellow { get; set; }
-        public int CountGreen { get; set; }
-        public int CountPink { get; set; }
+        public int LevelNumber { get; set; } = 1;
+        public double BallSpeed { get; set; } = 1;
+        public int BarWith { get; set; } = 300;
+        public int BarLenght { get; set; } = 50;
+        public int CountYellowRows { get; set; } = 1;
+        public int CountGreenRows { get; set; } = 1;
+        public int CountPinkRows { get; set; } = 1;
 
-        public Level()
-        {
-            
-        }
     }
 }
