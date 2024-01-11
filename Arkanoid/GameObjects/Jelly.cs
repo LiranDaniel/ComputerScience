@@ -53,6 +53,8 @@ namespace Arkanoid.GameObjects
                 case JellyType.green:
                     _scene.RemoveObject(this);
                     GameManager.User.Score++;
+                    if (Manager.GameEvent.OnUpdateScore != null)
+                        Manager.GameEvent.OnUpdateScore();
                     break;
                 case JellyType.pink:
                     _jellyType = JellyType.green;

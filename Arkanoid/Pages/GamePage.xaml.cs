@@ -40,7 +40,7 @@ namespace Arkanoid
             Manager.GameEvent.OnRemoveHeart += RemoveLive;
             GameManager.User.Score = 0;
             blockScore.Text = $" Score: {GameManager.User.Score}";
-            
+            Manager.GameEvent.OnUpdateScore += IncreaseScore;
         }
 
         private void RemoveLive(int _countLifes)
@@ -59,7 +59,11 @@ namespace Arkanoid
                 
             }
         }
-         
+        
+        public void IncreaseScore()
+        {
+            blockScore.Text = $" Score: {GameManager.User.Score}";
+        }
 
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
         {

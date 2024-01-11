@@ -14,5 +14,6 @@ namespace GameEngine.GameServices
         public Action<VirtualKey> OnKeyUp;          // האירוע אשר אחראי לעזיבת המקש
         public Action<VirtualKey> OnKeyDown;        // האירוע אשר אחראי לחיצת המקש
         public Action<int> OnRemoveHeart;
+        public Action OnUpdateScore; 
     }
 }
