@@ -18,14 +18,12 @@ namespace Arkanoid.GameServices
             Scene.RemoveAllObjects();
             int pos = 11;
             int row = 3;
-            Random rnd = new Random();
             if (User.Level == null)
                 User.Level = new Level();
 
-            int numTypeJelly = 0;
             for (int z =0; z< User.Level.CountYellowRows; z++)
             {
-                var currentColorEnum = (Jelly.JellyType)(numTypeJelly);
+                var currentColorEnum = Jelly.JellyType.yellow;
                 for (int i = 1; i < 16; i++)
                 {
                     var jelly = new Jelly(Scene, currentColorEnum, 65, pos, row);
@@ -34,10 +32,32 @@ namespace Arkanoid.GameServices
                 }
                 row += 68;
                 pos = 11;
-                numTypeJelly++;
-
-                if (numTypeJelly == 3)
-                    numTypeJelly = 0;
+            }
+            
+            for (int z =0; z< User.Level.CountPinkRows; z++)
+            {
+                var currentColorEnum = Jelly.JellyType.pink;
+                for (int i = 1; i < 16; i++)
+                {
+                    var jelly = new Jelly(Scene, currentColorEnum, 65, pos, row);
+                    Scene.AddObject(jelly);
+                    pos += 68;
+                }
+                row += 68;
+                pos = 11;
+            }
+            
+            for (int z =0; z< User.Level.CountGreenRows; z++)
+            {
+                var currentColorEnum = Jelly.JellyType.green;
+                for (int i = 1; i < 16; i++)
+                {
+                    var jelly = new Jelly(Scene, currentColorEnum, 65, pos, row);
+                    Scene.AddObject(jelly);
+                    pos += 68;
+                }
+                row += 68;
+                pos = 11;
             }
 
             var bar = new Bar(Scene, "Images/Bar.png",width:300, lenght: 50,placeX:374,placeY:430,speed:3);

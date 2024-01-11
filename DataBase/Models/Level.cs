@@ -18,5 +18,17 @@ namespace DataBase.Models
         public int CountGreenRows { get; set; } = 1;
         public int CountPinkRows { get; set; } = 1;
 
+        public void Init()
+        {
+            this.LevelNumber = 1;
+            this.BallSpeed = 1;
+            this.BarWith = 300;
+            this.BarLenght = 80;
+            this.CountYellowRows = 1;
+            this.CountGreenRows = 1;
+            this.CountPinkRows = 1;
+
+        }
+
     }
 }

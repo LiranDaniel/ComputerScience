@@ -28,6 +28,7 @@ namespace Arkanoid.Pages
         private static Level Level = new Level();
         public LevelPage()
         {
+            GameManager.User.Level.Init();
             this.InitializeComponent();
         }
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -55,7 +56,7 @@ namespace Arkanoid.Pages
         {
             Level.LevelNumber = 1;
             GameManager.User.Level = Level;
-
+            
             Frame.Navigate(typeof(GamePage));
         }
 
@@ -63,6 +64,7 @@ namespace Arkanoid.Pages
         {
             Level.LevelNumber = 2;
             GameManager.User.Level = Level;
+            GameManager.User.Level.CountGreenRows = 2;
             Frame.Navigate(typeof(GamePage));
         }
 
@@ -70,6 +72,8 @@ namespace Arkanoid.Pages
         {
             Level.LevelNumber = 3;
             GameManager.User.Level = Level;
+            GameManager.User.Level.CountYellowRows = 2;
+            GameManager.User.Level.CountPinkRows = 2;
             Frame.Navigate(typeof(GamePage));
         }
 
@@ -77,7 +81,7 @@ namespace Arkanoid.Pages
         {
             Level.LevelNumber = 4;
             GameManager.User.Level = Level;
-
+            GameManager.User.Level.CountYellowRows = 3;
             Frame.Navigate(typeof(GamePage));
         }
     }
