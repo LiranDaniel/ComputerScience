@@ -40,7 +40,7 @@ namespace Arkanoid
             Manager.GameEvent.OnRemoveHeart += RemoveLive;
             score = 0;
             blockScore.Text = $" Score: {score}";
-            GameManager.User.Level.Init();
+            
         }
 
         private void RemoveLive(int _countLifes)

@@ -28,7 +28,6 @@ namespace Arkanoid.Pages
         private static Level Level = new Level();
         public LevelPage()
         {
-            GameManager.User.Level.Init();
             this.InitializeComponent();
         }
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -54,6 +53,7 @@ namespace Arkanoid.Pages
 
         private void btnNumber1_Click(object sender, RoutedEventArgs e)
         {
+            GameManager.User.Level.Init();
             Level.LevelNumber = 1;
             GameManager.User.Level = Level;
             
@@ -62,6 +62,7 @@ namespace Arkanoid.Pages
 
         private void btnNumber2_Click(object sender, RoutedEventArgs e)
         {
+            GameManager.User.Level.Init();
             Level.LevelNumber = 2;
             GameManager.User.Level = Level;
             GameManager.User.Level.CountGreenRows = 2;
@@ -70,6 +71,7 @@ namespace Arkanoid.Pages
 
         private void btnNumber3_Click(object sender, RoutedEventArgs e)
         {
+            GameManager.User.Level.Init();
             Level.LevelNumber = 3;
             GameManager.User.Level = Level;
             GameManager.User.Level.CountYellowRows = 2;
@@ -79,6 +81,7 @@ namespace Arkanoid.Pages
 
         private void btnNumber4_Click(object sender, RoutedEventArgs e)
         {
+            GameManager.User.Level.Init();
             Level.LevelNumber = 4;
             GameManager.User.Level = Level;
             GameManager.User.Level.CountYellowRows = 3;
