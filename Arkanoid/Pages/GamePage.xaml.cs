@@ -27,7 +27,6 @@ namespace Arkanoid
     public sealed partial class GamePage : Page
     {
         private GameManager _gameManager;
-        DispatcherTimer _ScoreLoop = new DispatcherTimer();
         public GamePage()
         {
             this.InitializeComponent();
@@ -38,8 +37,6 @@ namespace Arkanoid
             _gameManager = new GameManager(scene);
             _gameManager.Start();
             Manager.GameEvent.OnRemoveHeart += RemoveLive;
-            GameManager.User.Score = 0;
-            blockScore.Text = $" Score: {GameManager.User.Score}";
             Manager.GameEvent.OnUpdateScore += IncreaseScore;
         }
 
