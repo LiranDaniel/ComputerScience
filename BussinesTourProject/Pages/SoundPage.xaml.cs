@@ -57,7 +57,7 @@ namespace BussinesTourProject.Pages
 
         private void SoundEffectSw_Toggled(object sender, RoutedEventArgs e)
         {
-            Sou ndPlayer.IsOn = SoundEffectSw.IsOn;
+            SoundPlayer.IsOn = SoundEffectSw.IsOn;
         }
 
         private void backgroundMusicSw_Toggled(object sender, RoutedEventArgs e)
