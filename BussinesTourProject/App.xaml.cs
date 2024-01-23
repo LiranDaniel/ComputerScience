@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BussinesTourProject.Pages;
+using GameEngine.GameServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,7 +23,7 @@ namespace BussinesTourProject
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
     sealed partial class App : Application
-    {
+    {        
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -30,6 +32,7 @@ namespace BussinesTourProject
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            MusicPlayer.LoadMusicPlayer("BusinessTour.wav");
         }
 
         /// <summary>
@@ -66,11 +69,12 @@ namespace BussinesTourProject
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                    rootFrame.Navigate(typeof(MenuPage), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
+            Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().TryEnterFullScreenMode();
         }
 
         /// <summary>
