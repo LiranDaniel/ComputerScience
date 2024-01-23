@@ -45,7 +45,7 @@
         <Button x:Name="btnPlay" Grid.Column="3" Grid.Row="6" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 Background="Transparent" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
                 Click="btnPlay_Click" Style="{StaticResource MyButtonStyle}">
-                <Image x:Name="imgPlay" Source="/Assets\Images\BusinessTourPlay.png"></Image>
+                <Image x:Name="imgPlay" Source="/Assets\Buttons\LIstOfButtons\Play (1).png"></Image>
         </Button>
 
         <Button x:Name="btnExit" Background="Transparent" Style="{StaticResource MyButtonStyle}"
