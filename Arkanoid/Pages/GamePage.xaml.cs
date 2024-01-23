@@ -1,4 +1,5 @@
 ﻿using Arkanoid.GameServices;
+using Arkanoid.Pages;
 using GameEngine.GameServices;
 using System;
 using System.Collections.Generic;
@@ -53,7 +54,7 @@ namespace Arkanoid
             else if (_countLifes == 0)
             {
                 Heart_1.Visibility = Visibility.Collapsed;
-                
+                Frame.Navigate(typeof(EndGamePage));
             }
         }
         
