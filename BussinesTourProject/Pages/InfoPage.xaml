@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="BussinesTourProject.Pages.GamePage"
+    x:Class="BussinesTourProject.Pages.InfoPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:BussinesTourProject.Pages"
@@ -71,6 +71,23 @@
             <RowDefinition></RowDefinition>
 
         </Grid.RowDefinitions>
+
+        <Grid Grid.Column='5' Grid.Row="3" Grid.ColumnSpan="22" Grid.RowSpan="13"
+              BorderBrush="Black" BorderThickness="7" CornerRadius="40" >
+            <Grid.Background>
+                <SolidColorBrush Color="White" Opacity=".25"></SolidColorBrush>
+            </Grid.Background>
+        </Grid>
+
+        <TextBlock x:Name="blockInfo" Grid.Row="5" Grid.Column="7" Grid.ColumnSpan="18" Grid.RowSpan="13"
+                   FontSize="50" FontFamily="Ink Draft" Foreground="Black" HorizontalAlignment="Left"
+                   VerticalAlignment="Top" Text="there are few ways to win, First you
+                                                 &#10; can earn more money than every one else.
+                                                 &#10; Second, You can buy win by buying all 
+                                                 &#10; the station">
+                
+        </TextBlock>
+
 
         <Button Grid.Row="0" Grid.Column="0" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
                 x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}"

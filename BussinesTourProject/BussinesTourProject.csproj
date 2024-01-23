@@ -122,6 +122,9 @@
     <Compile Include="Pages\GamePage.xaml.cs">
       <DependentUpon>GamePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\InfoPage.xaml.cs">
+      <DependentUpon>InfoPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
@@ -379,6 +382,7 @@
     <Content Include="Assets\Images\Ball.png" />
     <Content Include="Assets\Images\Bar.png" />
     <Content Include="Assets\Images\BusinessTourMainPage.png" />
+    <Content Include="Assets\Images\BusinessTourPlay.png" />
     <Content Include="Assets\Images\GameBackGround.jpg" />
     <Content Include="Assets\Images\GameImages\Bar.jpg" />
     <Content Include="Assets\Images\GameImages\Heart.gif" />
@@ -414,6 +418,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Pages\GamePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\InfoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

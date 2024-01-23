@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using Windows.Gaming.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,9 +21,9 @@ namespace BussinesTourProject.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MenuPage : Page
+    public sealed partial class InfoPage : Page
     {
-        public MenuPage()
+        public InfoPage()
         {
             this.InitializeComponent();
         }
@@ -45,29 +44,9 @@ namespace BussinesTourProject.Pages
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
 
-        private void btnExit_Click(object sender, RoutedEventArgs e)
+        private void btn_SliderVertical_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Exit();
-        }
-
-        private void btnPlay_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(GamePage));
-        }
-
-        private void btnProfile_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SignInPage));
-        }
-
-        private void btnMusic_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(SoundPage));
-        }
-
-        private void btnInfo_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(InfoPage));
+            Frame.Navigate(typeof(MenuPage));
         }
     }
 }
