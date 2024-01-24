@@ -24,12 +24,12 @@ namespace EnglishProject.Pages
     /// </summary>
     public sealed partial class Question2 : Page
     {
+        int answer;
+
         public Question2()
         {
             this.InitializeComponent();
         }
-
-        int answer;
 
         private void btnSliderVertical_Click(object sender, RoutedEventArgs e)
         {
@@ -87,10 +87,9 @@ namespace EnglishProject.Pages
         }
         private void CheckAnswer()
         {
-            Answer.AddAnswer(2, answer);
             if (answer != 2)
-                Answer.IncorrectAnswer++;
-            if (Answer.IncorrectAnswer == 3)
+                Answer.InCorrectAnswer();
+            if (Answer.IsLost())
                 Frame.Navigate(typeof(EndGame));
             else
                 Frame.Navigate(typeof(YesNoQuestion1));

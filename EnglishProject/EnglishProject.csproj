@@ -136,6 +136,12 @@
     <Compile Include="Pages\Question2.xaml.cs">
       <DependentUpon>Question2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Question3.xaml.cs">
+      <DependentUpon>Question3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WinPage.xaml.cs">
+      <DependentUpon>WinPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\YesNoQuestion1.xaml.cs">
       <DependentUpon>YesNoQuestion1.xaml</DependentUpon>
     </Compile>
@@ -419,6 +425,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Question2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Question3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\WinPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

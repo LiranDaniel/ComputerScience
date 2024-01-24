@@ -57,8 +57,8 @@
           Grid.ColumnSpan="10" Grid.RowSpan="2" CornerRadius="100">
 
             <TextBlock x:Name="txtQuetion1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                   FontSize="60" FontFamily="Ink Draft">
-            Quetion 1
+                   FontSize="45" FontFamily="Ink Draft" >
+                How long did it take him to build the bomb?
             </TextBlock>
         </Grid>
 
@@ -67,7 +67,7 @@
 
             <TextBlock x:Name="txtAnswer1" HorizontalAlignment="Center" VerticalAlignment="Center"
                    FontSize="60" FontFamily="Ink Draft">
-            Answer 1
+            2.5 years
             </TextBlock>
         </Grid>
 
@@ -76,7 +76,7 @@
 
             <TextBlock x:Name="txtAnswer2" HorizontalAlignment="Center" VerticalAlignment="Center"
                    FontSize="60" FontFamily="Ink Draft">
-           Answer2
+           5 years 
             </TextBlock>
         </Grid>
 
@@ -85,7 +85,7 @@
 
             <TextBlock x:Name="txtAnswer3" HorizontalAlignment="Center" VerticalAlignment="Center"
                    FontSize="60" FontFamily="Ink Draft">
-            Answer3
+            1 year
             </TextBlock>
         </Grid>
 
@@ -94,7 +94,7 @@
 
             <TextBlock x:Name="txtAnswer4" HorizontalAlignment="Center" VerticalAlignment="Center"
                    FontSize="60" FontFamily="Ink Draft">
-            Answer4
+            4 years
             </TextBlock>
         </Grid>
 

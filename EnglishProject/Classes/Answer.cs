@@ -10,21 +10,20 @@ namespace EnglishProject.Classes
 {
     public static class Answer
     {
-        public static Dictionary<int, int> dictionary = new Dictionary<int, int>();
-        public static int IncorrectAnswer = 0;
+        public static int IncorrectAnswer;
 
         public static void Init()
         {
-            dictionary.Clear();
             IncorrectAnswer = 0;
         }
-        public static void AddAnswer(int numberOfQuetion, int answer)
+        
+        public static void InCorrectAnswer()
         {
-            dictionary.Add(numberOfQuetion, answer);
+            IncorrectAnswer++;
         }
-        public static void ChangeAnnser(int numberOfQuetion, int answer)
+        public static bool IsLost()
         {
-            dictionary[numberOfQuetion] = answer;
-        }      
+            return IncorrectAnswer >= 3;
+        }
     }
 }

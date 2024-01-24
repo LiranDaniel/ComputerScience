@@ -1,14 +1,16 @@
 ﻿<Page
-    x:Class="EnglishProject.Pages.GamePage"
+    x:Class="EnglishProject.Pages.Question3"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:EnglishProject.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+
+
 
         <Grid.Background>
             <ImageBrush ImageSource="/Assets\Imges\BackGrounds\Physics_Background.jpg"></ImageBrush>
@@ -55,7 +57,7 @@
 
         <Grid Background="Black" Opacity=".88" Grid.Column="4" Grid.Row="1"
               Grid.ColumnSpan="10" Grid.RowSpan="2" CornerRadius="100">
-            
+
             <TextBlock x:Name="txtQuetion1" HorizontalAlignment="Center" VerticalAlignment="Center"
                        FontSize="45" FontFamily="Ink Draft">
                 What was the name of the project that he take part in?
@@ -103,7 +105,7 @@
                 Content=".1" FontSize="40" FontFamily="Ink Draft"
                 x:Name="btnAnswer1" Click="btnAnswer1_Click" PointerEntered="btn_AnswerPointerEntered"
                 PointerExited="btn_AnswerPointerExited">
-            
+
         </Button>
 
         <Button Background="Black" Grid.Row="6" Grid.Column="14" CornerRadius="30"

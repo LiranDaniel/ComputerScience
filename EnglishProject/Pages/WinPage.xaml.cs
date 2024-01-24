@@ -1,8 +1,6 @@
-﻿using EnglishProject.Classes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.IO.Pipes;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
@@ -23,14 +21,13 @@ namespace EnglishProject.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class YesNoQuestion1 : Page
+    public sealed partial class WinPage : Page
     {
-        int answer;
-
-        public YesNoQuestion1()
+        public WinPage()
         {
             this.InitializeComponent();
         }
+
         private void btnSliderVertical_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MenuPage));
@@ -53,37 +50,6 @@ namespace EnglishProject.Pages
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
 
-        private void btnAnswerYes_Click(object sender, RoutedEventArgs e)
-        {
-            answer = 1;
-            CheckAnswer();
-        }
-
-        private void btnAnswerNo_Click(object sender, RoutedEventArgs e)
-        {
-            answer = 2;
-            CheckAnswer();
-        }
-
-        private void CheckAnswer()
-        {
-            if (answer != 1)
-                Answer.InCorrectAnswer();
-            if (Answer.IsLost())
-                Frame.Navigate(typeof(EndGame));
-            else
-                Frame.Navigate(typeof(Question3));
-        }
-
-        private void btn_AnswerPointerEntered(object sender, PointerRoutedEventArgs e)
-        {
-            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
-        }
-
-        private void btn_AnswerPointerExited(object sender, PointerRoutedEventArgs e)
-        {
-            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
-        }
 
     }
 }
