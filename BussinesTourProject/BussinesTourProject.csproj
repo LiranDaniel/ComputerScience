@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{9E5BB23E-45C8-4360-97F5-E6E91BB239AC}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BussinesTourProject</RootNamespace>
+    <AssemblyName>BussinesTourProject</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.22621.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GamePage.xaml.cs">
+      <DependentUpon>GamePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InfoPage.xaml.cs">
+      <DependentUpon>InfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SignInPage.xaml.cs">
+      <DependentUpon>SignInPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SoundPage.xaml.cs">
+      <DependentUpon>SoundPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Buttons\LIstOfButtons\Back %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Back %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Back %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Back %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Badges %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Badges %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Badges %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Badges %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Blank\Icon %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Blank\Icon %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Blank\Icon %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Blank\Icon %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Blank\Text %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Blank\Text %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Blank\Text %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Blank\Text %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Check %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Check %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Check %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Check %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Cross %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Cross %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Cross %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Cross %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Down %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Down %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Down %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Down %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\DownArrow %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\DownArrow %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\DownArrow %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\DownArrow %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Download %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Download %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Download %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Download %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Exit %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Exit %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Exit %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Exit %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Facebook %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Facebook %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Facebook %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Facebook %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\GPlus %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\GPlus %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\GPlus %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\GPlus %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Help %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Help %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Help %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Help %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Home %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Home %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Home %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Home %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Info %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Info %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Info %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Info %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Leaderboard %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Leaderboard %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Leaderboard %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Leaderboard %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\LeftArrow %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\LeftArrow %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\LeftArrow %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\LeftArrow %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\LevelGrid %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\LevelGrid %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\LevelGrid %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\LevelGrid %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\LevelList %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\LevelList %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\LevelList %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\LevelList %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Like %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Like %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Like %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Like %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Locked.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Minus %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Minus %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Minus %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Minus %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\MoreGames %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\MoreGames %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\MoreGames %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\MoreGames %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Multiplayer %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Multiplayer %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Multiplayer %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Multiplayer %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Music %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Music %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Music %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Music %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Options %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Options %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Options %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Options %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Pause %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Pause %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Pause %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Pause %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Play %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Play %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Play %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Play %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Plus %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Plus %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Plus %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Plus %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Profile %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Profile %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Profile %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Profile %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Refresh %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Refresh %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Refresh %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Refresh %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Reload %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Reload %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Reload %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Reload %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\RightArrow %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\RightArrow %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\RightArrow %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\RightArrow %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Save %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Save %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Save %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Save %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SeekHorizontal %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SeekHorizontal %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SeekHorizontal %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SeekHorizontal %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SeekVertical %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SeekVertical %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SeekVertical %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SeekVertical %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Share %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Share %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Share %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Share %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Shop %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Shop %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Shop %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Shop %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SliderHorizontal %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SliderHorizontal %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SliderHorizontal %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SliderHorizontal %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SliderVertical %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SliderVertical %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SliderVertical %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\SliderVertical %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Sound %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Sound %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Sound %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Sound %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Trash %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Trash %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Trash %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Trash %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Trophy %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Trophy %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Trophy %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Trophy %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Twitter %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Twitter %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Twitter %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Twitter %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Up %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Up %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Up %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Up %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\UpArrow %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\UpArrow %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\UpArrow %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\UpArrow %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Upload %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Upload %282%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Upload %283%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Upload %284%29.png" />
+    <Content Include="Assets\Icons\LargeTile.scale-100.png" />
+    <Content Include="Assets\Icons\LargeTile.scale-125.png" />
+    <Content Include="Assets\Icons\LargeTile.scale-150.png" />
+    <Content Include="Assets\Icons\LargeTile.scale-200.png" />
+    <Content Include="Assets\Icons\LargeTile.scale-400.png" />
+    <Content Include="Assets\Icons\SmallTile.scale-100.png" />
+    <Content Include="Assets\Icons\SmallTile.scale-125.png" />
+    <Content Include="Assets\Icons\SmallTile.scale-150.png" />
+    <Content Include="Assets\Icons\SmallTile.scale-200.png" />
+    <Content Include="Assets\Icons\SmallTile.scale-400.png" />
+    <Content Include="Assets\Icons\SplashScreen.scale-100.png" />
+    <Content Include="Assets\Icons\SplashScreen.scale-125.png" />
+    <Content Include="Assets\Icons\SplashScreen.scale-150.png" />
+    <Content Include="Assets\Icons\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Icons\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Icons\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Icons\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Icons\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Icons\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Icons\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.altform-lightunplated_targetsize-32.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.altform-unplated_targetsize-24.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Icons\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\Icons\StoreLogo.scale-100.png" />
+    <Content Include="Assets\Icons\StoreLogo.scale-125.png" />
+    <Content Include="Assets\Icons\StoreLogo.scale-150.png" />
+    <Content Include="Assets\Icons\StoreLogo.scale-200.png" />
+    <Content Include="Assets\Icons\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Icons\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Icons\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Icons\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Icons\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\Icons\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\Images\Arkanoid.jpg" />
+    <Content Include="Assets\Images\Arkanoid_background.jpg" />
+    <Content Include="Assets\Images\Ball.png" />
+    <Content Include="Assets\Images\Bar.png" />
+    <Content Include="Assets\Images\BusinessTourMainPage.png" />
+    <Content Include="Assets\Images\BusinessTourPlay.png" />
+    <Content Include="Assets\Images\GameBackGround.jpg" />
+    <Content Include="Assets\Images\GameImages\Bar.jpg" />
+    <Content Include="Assets\Images\GameImages\Heart.gif" />
+    <Content Include="Assets\Images\GameImages\jelly_green.png" />
+    <Content Include="Assets\Images\GameImages\jelly_pink.png" />
+    <Content Include="Assets\Images\GameImages\jelly_yellow.png" />
+    <Content Include="Assets\Images\Numbers\Number0.png" />
+    <Content Include="Assets\Images\Numbers\Number1.png" />
+    <Content Include="Assets\Images\Numbers\Number2.png" />
+    <Content Include="Assets\Images\Numbers\Number3.png" />
+    <Content Include="Assets\Images\Numbers\Number4.png" />
+    <Content Include="Assets\Images\Numbers\Number5.png" />
+    <Content Include="Assets\Images\Numbers\Number6.png" />
+    <Content Include="Assets\Images\Numbers\Number7.png" />
+    <Content Include="Assets\Images\Numbers\Number8.png" />
+    <Content Include="Assets\Images\Numbers\Number9.png" />
+    <Content Include="Assets\Images\person_icon.png" />
+    <Content Include="Assets\Images\SignInBackGround.png" />
+    <Content Include="Assets\Music\BusinessTour.wav" />
+    <Content Include="Assets\Music\OGBackground.wav" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="App\LockScreenLogo.scale-200.png" />
+    <Content Include="App\SplashScreen.scale-200.png" />
+    <Content Include="App\Square150x150Logo.scale-200.png" />
+    <Content Include="App\Square44x44Logo.scale-200.png" />
+    <Content Include="App\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="App\StoreLogo.png" />
+    <Content Include="App\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Pages\GamePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\InfoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SignInPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SoundPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.14</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameEngine\GameEngine.csproj">
+      <Project>{7C0AD823-FAE6-4D0D-AAAD-2B436422F1EC}</Project>
+      <Name>GameEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

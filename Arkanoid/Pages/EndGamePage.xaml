@@ -10,15 +10,8 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush x:Name="imgBackGround" ImageSource="/Assets\Images\GameBackGround.jpg"></ImageBrush>
+            <ImageBrush x:Name="imgBackGround" ImageSource="/Assets\Images\LoserImage.gif"></ImageBrush>
         </Grid.Background>
-
-        <Grid>
-            <TextBlock>
-                
-            </TextBlock>
-        </Grid>
-
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -40,7 +33,6 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -57,5 +49,9 @@
 
         </Grid.RowDefinitions>
 
+        <Button Grid.Row="0" Grid.Column="0" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
+                x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}">
+            <Image x:Name="imgSliderVertical" Source="/Assets\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
+        </Button>
     </Grid>
 </Page>
