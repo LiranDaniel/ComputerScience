@@ -94,5 +94,24 @@ namespace EnglishProject.Pages
                 Frame.Navigate(typeof(WinPage));
         }
 
+
+        private void DisplayHeart()
+        {
+            switch (Answer.IncorrectAnswer)
+            {
+                case 1:
+                    Heart3.Visibility = Visibility.Collapsed;
+                    break;
+                case 2:
+                    Heart3.Visibility = Visibility.Collapsed;
+                    Heart2.Visibility = Visibility.Collapsed;
+                    break;
+            }
+        }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            DisplayHeart();
+        }
+
     }
 }

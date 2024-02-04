@@ -5,7 +5,7 @@
     xmlns:local="using:EnglishProject.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
+    mc:Ignorable="d" Loaded="Page_Loaded"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
@@ -128,5 +128,20 @@
             PointerExited="btn_AnswerPointerExited">
 
         </Button>
+
+
+
+        <Image Grid.Row="0" Grid.Column="15" x:Name="Heart1"
+            Source="/Assets\Imges\Heart.gif">
+        </Image>
+
+        <Image Grid.Row="0" Grid.Column="16" x:Name="Heart2"
+               Source="/Assets\Imges\Heart.gif">
+        </Image>
+
+        <Image Grid.Row="0" Grid.Column="17" x:Name="Heart3"
+               Source="/Assets\Imges\Heart.gif">
+        </Image>
+        
     </Grid>
 </Page>

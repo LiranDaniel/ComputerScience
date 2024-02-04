@@ -397,6 +397,7 @@
     <Content Include="Assets\Imges\AnmationBomb.gif" />
     <Content Include="Assets\Imges\BackGrounds\Physics_Background.jpg" />
     <Content Include="Assets\Imges\BackGrounds\Robert.png" />
+    <Content Include="Assets\Imges\Heart.gif" />
     <Content Include="Assets\Imges\Robert_Picture.png" />
     <Content Include="Assets\Imges\WinGif.gif" />
     <Content Include="Assets\Sounds\BusinessTour.wav" />

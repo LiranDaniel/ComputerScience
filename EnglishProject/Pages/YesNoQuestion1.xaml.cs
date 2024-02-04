@@ -85,5 +85,22 @@ namespace EnglishProject.Pages
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
 
+        private void DisplayHeart()
+        {
+            switch (Answer.IncorrectAnswer)
+            {
+                case 1:
+                    Heart3.Visibility = Visibility.Collapsed;
+                    break;
+                case 2:
+                    Heart2.Visibility = Visibility.Collapsed;
+                    Heart3.Visibility = Visibility.Collapsed;
+                    break;
+            }
+        }
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            DisplayHeart();
+        }
     }
 }

@@ -53,11 +53,11 @@
                 PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Style="{StaticResource MyButtonStyle}">
             <Image x:Name="imgSliderVertical" Source="/Assets\Buttons\ListOfButtons\SliderVertical (1).png"></Image>
         </Button>
-        <Viewbox x:Name="vwb" Grid.Column="5">
-            <TextBlock x:Name="txtblock">
-                
+        <Viewbox x:Name="vwb" Grid.Column="4" Grid.Row="9" Grid.ColumnSpan="9" Grid.RowSpan="2" >
+            <TextBlock x:Name="txtblock" FontFamily="Ink Draft" FontSize="100" Foreground="Black">
+                You Lost!
             </TextBlock>
         </Viewbox>
-        
+
     </Grid>
 </Page>
