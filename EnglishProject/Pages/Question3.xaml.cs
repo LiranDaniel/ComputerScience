@@ -91,7 +91,7 @@ namespace EnglishProject.Pages
             if (Answer.IsLost())
                 Frame.Navigate(typeof(EndGame));
             else
-                Frame.Navigate(typeof(Question4));
+                Frame.Navigate(typeof(YesNoQuestion2));
         }
 
         private void DisplayHeart()

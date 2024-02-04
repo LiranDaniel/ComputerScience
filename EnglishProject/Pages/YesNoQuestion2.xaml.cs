@@ -71,7 +71,7 @@ namespace EnglishProject.Pages
             if (Answer.IsLost())
                 Frame.Navigate(typeof(EndGame));
             else
-                Frame.Navigate(typeof(Question3));
+                Frame.Navigate(typeof(Question4));
         }
 
         private void btn_AnswerPointerEntered(object sender, PointerRoutedEventArgs e)

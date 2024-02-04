@@ -32,7 +32,7 @@ namespace EnglishProject
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            MusicPlayer.LoadMusicPlayer("OGBackground.wav");
+            MusicPlayer.LoadMusicPlayer("LAKEY INSPIRED - Better Days.wav");
         }
 
         /// <summary>
