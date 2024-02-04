@@ -86,12 +86,12 @@ namespace EnglishProject.Pages
         }
         private void CheckAnswer()
         {
-            if (answer != 2)
+            if (answer != 1)
                 Answer.InCorrectAnswer();
             if (Answer.IsLost())
                 Frame.Navigate(typeof(EndGame));
             else
-                Frame.Navigate(typeof(WinPage));
+                Frame.Navigate(typeof(Question4));
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

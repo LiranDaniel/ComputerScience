@@ -10,8 +10,6 @@
 
     <Grid>
 
-
-
         <Grid.Background>
             <ImageBrush ImageSource="/Assets\Imges\BackGrounds\Physics_Background.jpg"></ImageBrush>
         </Grid.Background>
@@ -60,7 +58,7 @@
 
             <TextBlock x:Name="txtQuetion1" HorizontalAlignment="Center" VerticalAlignment="Center"
                        FontSize="45" FontFamily="Ink Draft">
-                What was the name of the project that he take part in?
+                Why did he invited to that project?
             </TextBlock>
         </Grid>
 
@@ -69,7 +67,7 @@
 
             <TextBlock x:Name="txtAnswer1" HorizontalAlignment="Center" VerticalAlignment="Center"
                        FontSize="60" FontFamily="Ink Draft">
-                Yahalov project
+                Because other countries also work on this
             </TextBlock>
         </Grid>
 
@@ -78,7 +76,7 @@
 
             <TextBlock x:Name="txtAnswer2" HorizontalAlignment="Center" VerticalAlignment="Center"
                        FontSize="60" FontFamily="Ink Draft">
-               Python open source project
+               Because they didnt had a clue 
             </TextBlock>
         </Grid>
 
@@ -87,7 +85,7 @@
 
             <TextBlock x:Name="txtAnswer3" HorizontalAlignment="Center" VerticalAlignment="Center"
                        FontSize="60" FontFamily="Ink Draft">
-                Manhattan Project
+                Because he is smart
             </TextBlock>
         </Grid>
 
@@ -96,7 +94,7 @@
 
             <TextBlock x:Name="txtAnswer4" HorizontalAlignment="Center" VerticalAlignment="Center"
                        FontSize="60" FontFamily="Ink Draft">
-                Unix Project
+                Because he is from Germany
             </TextBlock>
         </Grid>
 

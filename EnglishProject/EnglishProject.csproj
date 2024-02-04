@@ -139,11 +139,17 @@
     <Compile Include="Pages\Question3.xaml.cs">
       <DependentUpon>Question3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Question4.xaml.cs">
+      <DependentUpon>Question4.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\WinPage.xaml.cs">
       <DependentUpon>WinPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\YesNoQuestion1.xaml.cs">
       <DependentUpon>YesNoQuestion1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\YesNoQuestion2.xaml.cs">
+      <DependentUpon>YesNoQuestion2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -392,6 +398,7 @@
     <Content Include="Assets\Imges\BackGrounds\Physics_Background.jpg" />
     <Content Include="Assets\Imges\BackGrounds\Robert.png" />
     <Content Include="Assets\Imges\Robert_Picture.png" />
+    <Content Include="Assets\Imges\WinGif.gif" />
     <Content Include="Assets\Sounds\BusinessTour.wav" />
     <Content Include="Assets\Sounds\OGBackground.wav" />
     <Content Include="Properties\Default.rd.xml" />
@@ -432,11 +439,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Question4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\WinPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\YesNoQuestion1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\YesNoQuestion2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

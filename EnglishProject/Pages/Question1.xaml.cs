@@ -87,7 +87,7 @@ namespace EnglishProject.Pages
         }
         private void CheckAnswer()
         {
-            if (answer != 2)
+            if (answer != 3)
                 Answer.InCorrectAnswer();
             if (Answer.IsLost())
                 Frame.Navigate(typeof(EndGame));

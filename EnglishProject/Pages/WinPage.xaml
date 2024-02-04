@@ -53,6 +53,12 @@
                 PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Style="{StaticResource MyButtonStyle}">
             <Image x:Name="imgSliderVertical" Source="/Assets\Buttons\ListOfButtons\SliderVertical (1).png"></Image>
         </Button>
-        
+        <Image Source="/Assets\Imges\WinGif.gif" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="10" Grid.RowSpan="7">
+        </Image>
+        <Grid Grid.Column="4" Grid.Row="9" Grid.ColumnSpan="10" Grid.RowSpan="2">
+            <TextBlock FontSize="100" FontFamily="Ink Draft" Grid.ColumnSpan="10" Grid.RowSpan="2" Grid.Row="7">
+                Congratulations, You Won!
+            </TextBlock>
+        </Grid>
     </Grid>
 </Page>

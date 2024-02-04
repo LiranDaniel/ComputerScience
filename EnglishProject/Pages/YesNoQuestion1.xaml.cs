@@ -67,7 +67,7 @@ namespace EnglishProject.Pages
 
         private void CheckAnswer()
         {
-            if (answer != 1)
+            if (answer != 2)
                 Answer.InCorrectAnswer();
             if (Answer.IsLost())
                 Frame.Navigate(typeof(EndGame));

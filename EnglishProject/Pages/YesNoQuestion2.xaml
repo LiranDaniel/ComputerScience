@@ -1,0 +1,81 @@
+﻿<Page
+    x:Class="EnglishProject.Pages.YesNoQuestion2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EnglishProject.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets\Imges\BackGrounds\Physics_Background.jpg"></ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="0" x:Name="btnSliderVertical" Click="btnSliderVertical_Click"
+            PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Style="{StaticResource MyButtonStyle}">
+            <Image x:Name="imgSliderVertical" Source="/Assets\Buttons\ListOfButtons\SliderVertical (1).png"></Image>
+        </Button>
+
+        <Grid Background="Black" Opacity=".88" Grid.Column="3" Grid.Row="1"
+              Grid.ColumnSpan="12" Grid.RowSpan="2" CornerRadius="100">
+
+            <TextBlock x:Name="txtQuetion1" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       FontSize="60" FontFamily="Ink Draft">
+                Does Robert regret creating the bomb ?
+            </TextBlock>
+        </Grid>
+
+        <Button Background="Black" Grid.Row="6" Grid.Column="11" CornerRadius="30"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            Content="Yes" FontSize="60" FontFamily="Ink Draft" Grid.ColumnSpan="4" Grid.RowSpan="2"
+            x:Name="btnAnswerYes" Click="btnAnswerYes_Click" PointerEntered="btn_AnswerPointerEntered"
+            PointerExited="btn_AnswerPointerExited">
+
+        </Button>
+
+        <Button Background="Black" Grid.Row="6" Grid.Column="3" CornerRadius="30"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            Content="No" FontSize="60" FontFamily="Ink Draft" Grid.ColumnSpan="4" Grid.RowSpan="2"
+            x:Name="btnAnswerNo" Click="btnAnswerNo_Click"  PointerEntered="btn_AnswerPointerEntered"
+            PointerExited="btn_AnswerPointerExited">
+
+        </Button>
+    </Grid>
+</Page>
