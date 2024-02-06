@@ -50,7 +50,7 @@
 
         <Button x:Name="btnExit" Background="Transparent" Style="{StaticResource MyButtonStyle}"
                 PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Click="btnExit_Click">
-            <Image Source="/Assets\Buttons\LIstOfButtons\Exit (1).png" x:Name="imgExit">
+                <Image Source="/Assets\Buttons\Wooden_Button_Exit1.png" x:Name="imgExit">
             </Image>
         </Button>
 
@@ -70,6 +70,12 @@
                 Click="btnMusic_Click" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited">
             <Image x:Name="imgMusic" Source="/Assets\Buttons\LIstOfButtons\Music (1).png"></Image>
         </Button>
-    </Grid>
+
+        <Button x:Name="btnSettings" Grid.Column="12" Grid.Row="2" Background="Transparent" Style="{StaticResource MyButtonStyle}"
+                Click="btnSettings_Click" PointerEntered="btnSettings_PointerEntered" PointerExited="btnSettings_PointerExited">
+                <Image x:Name="imgSettings" Source="/Assets\Buttons\Wooden_Button_Settings1.png"></Image>
+        </Button>
+        
+        </Grid>
     </Viewbox>
 </Page>

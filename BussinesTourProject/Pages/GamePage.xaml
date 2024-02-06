@@ -352,7 +352,7 @@
         </Button>
 
         <Grid BorderBrush="White" Background="Black"
-              Grid.Column="15" Grid.Row="15" Grid.ColumnSpan="100" Grid.RowSpan="60">
+              Grid.Column="35" Grid.Row="20" Grid.ColumnSpan="135" Grid.RowSpan="80">
             
             
         </Grid>

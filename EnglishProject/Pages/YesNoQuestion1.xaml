@@ -57,14 +57,14 @@
               Grid.ColumnSpan="12" Grid.RowSpan="2" CornerRadius="100">
 
             <TextBlock x:Name="txtQuetion1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="60" FontFamily="Ink Draft">
+                       FontSize="40" FontFamily="Ink Draft">
                 Did Robert has a wife ?
             </TextBlock>
         </Grid>
 
         <Button Background="Black" Grid.Row="6" Grid.Column="11" CornerRadius="30"
             HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-            Content="Yes" FontSize="60" FontFamily="Ink Draft" Grid.ColumnSpan="4" Grid.RowSpan="2"
+            Content="Yes" FontSize="40" FontFamily="Ink Draft" Grid.ColumnSpan="4" Grid.RowSpan="2"
             x:Name="btnAnswerYes" Click="btnAnswerYes_Click" PointerEntered="btn_AnswerPointerEntered"
             PointerExited="btn_AnswerPointerExited">
 
@@ -73,7 +73,7 @@
 
         <Button Background="Black" Grid.Row="6" Grid.Column="3" CornerRadius="30"
             HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-            Content="No" FontSize="60" FontFamily="Ink Draft" Grid.ColumnSpan="4" Grid.RowSpan="2"
+            Content="No" FontSize="40" FontFamily="Ink Draft" Grid.ColumnSpan="4" Grid.RowSpan="2"
             x:Name="btnAnswerNo" Click="btnAnswerNo_Click"  PointerEntered="btn_AnswerPointerEntered"
             PointerExited="btn_AnswerPointerExited">
 

@@ -128,6 +128,9 @@
     <Compile Include="Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\SettingsPage.xaml.cs">
+      <DependentUpon>SettingsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SignInPage.xaml.cs">
       <DependentUpon>SignInPage.xaml</DependentUpon>
     </Compile>
@@ -291,6 +294,8 @@
     <Content Include="Assets\Buttons\LIstOfButtons\Shop %282%29.png" />
     <Content Include="Assets\Buttons\LIstOfButtons\Shop %283%29.png" />
     <Content Include="Assets\Buttons\LIstOfButtons\Shop %284%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Slider %281%29.png" />
+    <Content Include="Assets\Buttons\LIstOfButtons\Slider %282%29.png" />
     <Content Include="Assets\Buttons\LIstOfButtons\SliderHorizontal %281%29.png" />
     <Content Include="Assets\Buttons\LIstOfButtons\SliderHorizontal %282%29.png" />
     <Content Include="Assets\Buttons\LIstOfButtons\SliderHorizontal %283%29.png" />
@@ -327,6 +332,10 @@
     <Content Include="Assets\Buttons\LIstOfButtons\Upload %282%29.png" />
     <Content Include="Assets\Buttons\LIstOfButtons\Upload %283%29.png" />
     <Content Include="Assets\Buttons\LIstOfButtons\Upload %284%29.png" />
+    <Content Include="Assets\Buttons\Wooden_Button_Exit1.png" />
+    <Content Include="Assets\Buttons\Wooden_Button_Mute1.png" />
+    <Content Include="Assets\Buttons\Wooden_Button_Settings1.png" />
+    <Content Include="Assets\Buttons\Wooden_Button_Slider1.png" />
     <Content Include="Assets\Icons\LargeTile.scale-100.png" />
     <Content Include="Assets\Icons\LargeTile.scale-125.png" />
     <Content Include="Assets\Icons\LargeTile.scale-150.png" />
@@ -426,6 +435,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SettingsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

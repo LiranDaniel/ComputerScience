@@ -57,7 +57,7 @@
               Grid.ColumnSpan="10" Grid.RowSpan="2" CornerRadius="100">
             
             <TextBlock x:Name="txtQuetion1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="45" FontFamily="Ink Draft">
+                       FontSize="32" FontFamily="Ink Draft">
                 What was the name of the project that he take part in?
             </TextBlock>
         </Grid>
@@ -66,7 +66,7 @@
               Grid.ColumnSpan="10" Grid.RowSpan="1" CornerRadius="50">
 
             <TextBlock x:Name="txtAnswer1" HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="60" FontFamily="Ink Draft">
+                       FontSize="40" FontFamily="Ink Draft">
                 Yahalov project
             </TextBlock>
         </Grid>
@@ -75,7 +75,7 @@
               Grid.ColumnSpan="10" Grid.RowSpan="1" CornerRadius="50">
 
             <TextBlock x:Name="txtAnswer2" HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="60" FontFamily="Ink Draft">
+                       FontSize="40" FontFamily="Ink Draft">
                Python open source project
             </TextBlock>
         </Grid>
@@ -84,7 +84,7 @@
               Grid.ColumnSpan="10" Grid.RowSpan="1" CornerRadius="50">
 
             <TextBlock x:Name="txtAnswer3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="60" FontFamily="Ink Draft">
+                       FontSize="40" FontFamily="Ink Draft">
                 Manhattan Project
             </TextBlock>
         </Grid>
@@ -93,7 +93,7 @@
               Grid.ColumnSpan="10" Grid.RowSpan="1" CornerRadius="50">
 
             <TextBlock x:Name="txtAnswer4" HorizontalAlignment="Center" VerticalAlignment="Center"
-                       FontSize="60" FontFamily="Ink Draft">
+                       FontSize="40" FontFamily="Ink Draft">
                 Unix Project
             </TextBlock>
         </Grid>
