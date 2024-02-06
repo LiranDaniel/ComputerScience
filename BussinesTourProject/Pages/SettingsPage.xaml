@@ -91,9 +91,9 @@
 
 
         <Button Grid.Row="0" Grid.Column="0" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
-                x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}"
+                x:Name="btn_Slider" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}"
                 Grid.ColumnSpan="2" Grid.RowSpan="2">
-            <Image x:Name="imgSlider" Source="/Assets\Buttons\LIstOfButtons\Slider (1).png"></Image>
+            <Image x:Name="imgSlider" Source="/Assets\Buttons\UsingButtons\Slider (1).png"></Image>
         </Button>
         
     </Grid>

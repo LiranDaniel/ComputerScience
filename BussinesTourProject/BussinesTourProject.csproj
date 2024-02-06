@@ -294,8 +294,6 @@
     <Content Include="Assets\Buttons\LIstOfButtons\Shop %282%29.png" />
     <Content Include="Assets\Buttons\LIstOfButtons\Shop %283%29.png" />
     <Content Include="Assets\Buttons\LIstOfButtons\Shop %284%29.png" />
-    <Content Include="Assets\Buttons\LIstOfButtons\Slider %281%29.png" />
-    <Content Include="Assets\Buttons\LIstOfButtons\Slider %282%29.png" />
     <Content Include="Assets\Buttons\LIstOfButtons\SliderHorizontal %281%29.png" />
     <Content Include="Assets\Buttons\LIstOfButtons\SliderHorizontal %282%29.png" />
     <Content Include="Assets\Buttons\LIstOfButtons\SliderHorizontal %283%29.png" />
@@ -332,6 +330,16 @@
     <Content Include="Assets\Buttons\LIstOfButtons\Upload %282%29.png" />
     <Content Include="Assets\Buttons\LIstOfButtons\Upload %283%29.png" />
     <Content Include="Assets\Buttons\LIstOfButtons\Upload %284%29.png" />
+    <Content Include="Assets\Buttons\UsingButtons\Home %281%29.png" />
+    <Content Include="Assets\Buttons\UsingButtons\Home %282%29.png" />
+    <Content Include="Assets\Buttons\UsingButtons\Message %281%29.png" />
+    <Content Include="Assets\Buttons\UsingButtons\Message %282%29.png" />
+    <Content Include="Assets\Buttons\UsingButtons\Music %281%29.png" />
+    <Content Include="Assets\Buttons\UsingButtons\Music %282%29.png" />
+    <Content Include="Assets\Buttons\UsingButtons\Settings %281%29.png" />
+    <Content Include="Assets\Buttons\UsingButtons\Settings %282%29.png" />
+    <Content Include="Assets\Buttons\UsingButtons\Slider %281%29.png" />
+    <Content Include="Assets\Buttons\UsingButtons\Slider %282%29.png" />
     <Content Include="Assets\Buttons\Wooden_Button_Exit1.png" />
     <Content Include="Assets\Buttons\Wooden_Button_Mute1.png" />
     <Content Include="Assets\Buttons\Wooden_Button_Settings1.png" />
