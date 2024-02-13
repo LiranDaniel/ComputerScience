@@ -344,17 +344,12 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="7" Grid.RowSpan="7"
+        <Button Grid.Row="70" Grid.Column="194" Grid.ColumnSpan="10" Grid.RowSpan="10"
                 PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
-                x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}"
+                x:Name="btn_Pause" Click="btn_Pause_Click" Style="{StaticResource MyButtonStyle}"
                 >
-            <Image x:Name="imgSliderVertical" Source="/Assets\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
+            <Image x:Name="imgPause" Source="/Assets\Buttons\UsingButtons\Pause (2).png"></Image>
         </Button>
 
-        <Grid BorderBrush="White" Background="Black"
-              Grid.Column="35" Grid.Row="20" Grid.ColumnSpan="135" Grid.RowSpan="80">
-            
-            
-        </Grid>
     </Grid>
 </Page>
