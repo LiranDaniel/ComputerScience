@@ -125,6 +125,9 @@
     <Compile Include="Pages\InfoPage.xaml.cs">
       <DependentUpon>InfoPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\LoadingPage.xaml.cs">
+      <DependentUpon>LoadingPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
@@ -424,6 +427,8 @@
     <Content Include="Assets\Images\person_icon.png" />
     <Content Include="Assets\Images\SignInBackGround.png" />
     <Content Include="Assets\Images\woodBackground.jpg" />
+    <Content Include="Assets\Images\WoodLoadingBlank.png" />
+    <Content Include="Assets\Images\WoodLoadingGreen.png" />
     <Content Include="Assets\Music\BusinessTour.wav" />
     <Content Include="Assets\Music\OGBackground.wav" />
     <Content Include="Properties\Default.rd.xml" />
@@ -445,6 +450,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\InfoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LoadingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
