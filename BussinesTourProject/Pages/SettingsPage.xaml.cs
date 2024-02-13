@@ -32,7 +32,7 @@ namespace BussinesTourProject.Pages
         {
             Button btnPlayEnter = (Button)sender;
             ((Image)btnPlayEnter.Content).Source = new BitmapImage(new Uri("ms-appx:/// " +
-                "Assets/Buttons/UsingButtons" + ((Image)btnPlayEnter.Content).Name.Replace("img", "") + " (1).png"));
+                "Assets/Buttons/UsingButtons/" + ((Image)btnPlayEnter.Content).Name.Replace("img", "") + " (1).png"));
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
         }
         private void btn_PointerExited(object sender, PointerRoutedEventArgs e)

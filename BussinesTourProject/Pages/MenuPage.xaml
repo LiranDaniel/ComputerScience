@@ -12,7 +12,7 @@
     <Grid Height="720" Width="1280">
 
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets\Images\BusinessTourMainPage.png" Stretch="Fill">
+                <ImageBrush ImageSource="/Assets\Images\Arkanoid_background.jpg" Stretch="Fill">
             </ImageBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
@@ -42,39 +42,44 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Button x:Name="btnPlay" Grid.Column="3" Grid.Row="6" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                Background="Transparent" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
-                Click="btnPlay_Click" Style="{StaticResource MyButtonStyle}">
-                <Image x:Name="imgPlay" Source="/Assets\Buttons\LIstOfButtons\Play (1).png"></Image>
+        <Button x:Name="btnHome" Grid.Column="3" Grid.Row="6" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                Background="Transparent" PointerEntered="btn_PointerEnteredWood" PointerExited="btn_PointerExitedWood"
+                Click="btnHome_Click" Style="{StaticResource MyButtonStyle}">
+                <Image x:Name="imgHome" Source="/Assets\Buttons\UsingButtons\Home (2).png"></Image>
         </Button>
 
         <Button x:Name="btnExit" Background="Transparent" Style="{StaticResource MyButtonStyle}"
-                PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Click="btnExit_Click">
-                <Image Source="/Assets\Buttons\Wooden_Button_Exit1.png" x:Name="imgExit">
+                PointerEntered="btn_PointerEnteredWood" PointerExited="btn_PointerExitedWood" Click="btnExit_Click">
+                <Image Source="/Assets\Buttons\UsingButtons\Exit (2).png" x:Name="imgExit">
             </Image>
         </Button>
 
         <Button x:Name="btnProfile" Grid.Column="7" Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="Transparent"
-                Click="btnProfile_Click" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
+                Click="btnProfile_Click" PointerEntered="btn_PointerEnteredWood" PointerExited="btn_PointerExitedWood"
                 Style="{StaticResource MyButtonStyle}">
-            <Image x:Name="imgProfile" Source="/Assets\Buttons\LIstOfButtons\Profile (1).png"></Image>
+                <Image x:Name="imgProfile" Source="/Assets\Buttons\UsingButtons\Profile (2).png"></Image>
         </Button>
 
 
         <Button x:Name="btnInfo" Grid.Column="12" Grid.Row="0" Background="Transparent" Style="{StaticResource MyButtonStyle}"
-              Click="btnInfo_Click" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited">
-            <Image x:Name="imgInfo" Source="/Assets\Buttons\LIstOfButtons\Info (1).png"></Image>
+              Click="btnInfo_Click" PointerEntered="btn_PointerEnteredWood" PointerExited="btn_PointerExitedWood">
+                <Image x:Name="imgInfo" Source="/Assets\Buttons\UsingButtons\Info (2).png"></Image>
         </Button>
 
         <Button x:Name="btnMusic" Grid.Column="12" Grid.Row="1" Background="Transparent" Style="{StaticResource MyButtonStyle}"
-                Click="btnMusic_Click" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited">
-            <Image x:Name="imgMusic" Source="/Assets\Buttons\LIstOfButtons\Music (1).png"></Image>
+                Click="btnMusic_Click" PointerEntered="btn_PointerEnteredWood" PointerExited="btn_PointerExitedWood">
+                <Image x:Name="imgMusic" Source="/Assets\Buttons\UsingButtons\Music (2).png"></Image>
         </Button>
 
         <Button x:Name="btnSettings" Grid.Column="12" Grid.Row="2" Background="Transparent" Style="{StaticResource MyButtonStyle}"
-                Click="btnSettings_Click" PointerEntered="btnSettings_PointerEntered" PointerExited="btnSettings_PointerExited">
-                <Image x:Name="imgSettings" Source="/Assets\Buttons\Wooden_Button_Settings1.png"></Image>
+                Click="btnSettings_Click" PointerEntered="btn_PointerEnteredWood" PointerExited="btn_PointerExitedWood">
+                <Image x:Name="imgSettings" Source="/Assets\Buttons\UsingButtons\Settings (2).png"></Image>
         </Button>
+
+            <Image Source="/Assets\Images\BussinesTour Logo.png"
+                   Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="8" Grid.RowSpan="6">
+                
+            </Image>
         
         </Grid>
     </Viewbox>
