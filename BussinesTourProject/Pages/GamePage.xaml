@@ -351,5 +351,22 @@
             <Image x:Name="imgPause" Source="/Assets\Buttons\UsingButtons\Pause (2).png"></Image>
         </Button>
 
+
+        <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer1Bar"
+               Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="40" Grid.RowSpan="11">
+
+        </Image>
+        <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer2Bar"
+               Grid.Row="105" Grid.Column="0" Grid.ColumnSpan="40" Grid.RowSpan="11">
+
+        </Image>
+        <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer3Bar"
+               Grid.Row="105" Grid.Column="171" Grid.ColumnSpan="40" Grid.RowSpan="11">
+
+        </Image>
+        <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer4Bar"
+               Grid.Row="1" Grid.Column="170" Grid.ColumnSpan="40" Grid.RowSpan="11">
+
+        </Image>
     </Grid>
 </Page>
