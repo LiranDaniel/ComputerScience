@@ -427,6 +427,7 @@
     <Content Include="Assets\Images\person_icon.png" />
     <Content Include="Assets\Images\SignInBackGround.png" />
     <Content Include="Assets\Images\woodBackground.jpg" />
+    <Content Include="Assets\Images\WoodBar.png" />
     <Content Include="Assets\Images\WoodLoadingBlank.png" />
     <Content Include="Assets\Images\WoodLoadingGreen.png" />
     <Content Include="Assets\Music\BusinessTour.wav" />
