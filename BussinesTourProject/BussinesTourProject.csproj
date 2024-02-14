@@ -414,6 +414,7 @@
     <Content Include="Assets\Images\GameImages\jelly_green.png" />
     <Content Include="Assets\Images\GameImages\jelly_pink.png" />
     <Content Include="Assets\Images\GameImages\jelly_yellow.png" />
+    <Content Include="Assets\Images\Monopoly_Map.png" />
     <Content Include="Assets\Images\Numbers\Number0.png" />
     <Content Include="Assets\Images\Numbers\Number1.png" />
     <Content Include="Assets\Images\Numbers\Number2.png" />

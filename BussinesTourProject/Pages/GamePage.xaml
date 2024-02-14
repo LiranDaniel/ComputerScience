@@ -352,21 +352,151 @@
         </Button>
 
 
+
+
         <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer1Bar"
-               Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="40" Grid.RowSpan="11">
+               Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="30" Grid.RowSpan="12">
 
         </Image>
         <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer2Bar"
-               Grid.Row="105" Grid.Column="0" Grid.ColumnSpan="40" Grid.RowSpan="11">
+               Grid.Row="105" Grid.Column="1" Grid.ColumnSpan="30" Grid.RowSpan="12">
 
         </Image>
         <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer3Bar"
-               Grid.Row="105" Grid.Column="171" Grid.ColumnSpan="40" Grid.RowSpan="11">
+               Grid.Row="105" Grid.Column="177" Grid.ColumnSpan="30" Grid.RowSpan="12">
 
         </Image>
         <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer4Bar"
-               Grid.Row="1" Grid.Column="170" Grid.ColumnSpan="40" Grid.RowSpan="11">
+               Grid.Row="1" Grid.Column="177" Grid.ColumnSpan="30" Grid.RowSpan="12">
 
         </Image>
+
+
+
+
+
+
+
+
+        <Grid Grid.Row="13" Grid.Column="30" Grid.ColumnSpan="150" Grid.RowSpan="90"
+              BorderBrush="Black" BorderThickness="5" CornerRadius="25">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Assets\Images\Monopoly_Map.png"></ImageBrush>
+            </Grid.Background>
+            
+            
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Viewbox Grid.Row="30">
+                
+            </Viewbox>
+        </Grid>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     </Grid>
 </Page>
