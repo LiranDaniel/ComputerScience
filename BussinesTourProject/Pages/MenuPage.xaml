@@ -8,8 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Viewbox>
-    <Grid Height="720" Width="1280">
+    <Grid>
 
         <Grid.Background>
                 <ImageBrush ImageSource="/Assets\Images\Arkanoid_background.jpg" Stretch="Fill">
@@ -82,5 +81,5 @@
             </Image>
         
         </Grid>
-    </Viewbox>
+
 </Page>
