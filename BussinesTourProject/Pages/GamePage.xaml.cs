@@ -28,7 +28,8 @@ namespace BussinesTourProject.Pages
             this.InitializeComponent();
         }
 
-
+        int row = 30;
+        int col = 3;
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             Button btnPlayEnter = (Button)sender;
@@ -49,6 +50,16 @@ namespace BussinesTourProject.Pages
         {
             Frame.Navigate(typeof(MenuPage));
             
+        }
+
+        private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
+        {
+            Grid.SetRow(imgPlayer, row--);
+        }
+
+        private void btnSettings_Click(object sender, RoutedEventArgs e)
+        {
+            Grid.SetColumn(imgPlayer, col++);
         }
     }
 }
