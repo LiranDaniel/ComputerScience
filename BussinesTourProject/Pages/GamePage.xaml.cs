@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BussinesTourProject.Classes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,10 +24,20 @@ namespace BussinesTourProject.Pages
     /// </summary>
     public sealed partial class GamePage : Page
     {
+
+        Player Player1 = new Player(name: "Player1");
+        Player Player2 = new Player(name: "Player2");
+        Player Player3 = new Player(name: "Player3");
+        Player Player4 = new Player(name: "Player4");
+
         public GamePage()
         {
             this.InitializeComponent();
+
         }
+
+
+
 
         int row = 30;
         int col = 3;
@@ -59,5 +70,15 @@ namespace BussinesTourProject.Pages
         {
             Grid.SetColumn(imgPlayer, col++);
         }
+
+        private void MovingPlayer()
+        {
+            
+        }
+
+
+
+
+
     }
 }

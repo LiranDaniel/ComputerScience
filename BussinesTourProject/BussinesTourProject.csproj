@@ -119,6 +119,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Map.cs" />
+    <Compile Include="Classes\Player.cs" />
     <Compile Include="Pages\GamePage.xaml.cs">
       <DependentUpon>GamePage.xaml</DependentUpon>
     </Compile>
@@ -403,6 +405,12 @@
     <Content Include="Assets\Icons\Wide310x150Logo.scale-400.png" />
     <Content Include="Assets\Images\Arkanoid.jpg" />
     <Content Include="Assets\Images\Arkanoid_background.jpg" />
+    <Content Include="Assets\Images\Avatars\563.jpg" />
+    <Content Include="Assets\Images\Avatars\Avatar_1.png" />
+    <Content Include="Assets\Images\Avatars\Avatar_2.png" />
+    <Content Include="Assets\Images\Avatars\Avatar_3.png" />
+    <Content Include="Assets\Images\Avatars\Avatar_4.png" />
+    <Content Include="Assets\Images\Avatars\Avatar_5.png" />
     <Content Include="Assets\Images\Ball.png" />
     <Content Include="Assets\Images\Bar.png" />
     <Content Include="Assets\Images\BusinessTourMainPage.png" />
