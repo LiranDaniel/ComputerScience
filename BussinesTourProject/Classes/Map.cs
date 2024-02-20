@@ -9,7 +9,6 @@ namespace BussinesTourProject.Classes
     public class Map
     {
 
-
         public Map()
         {
             
