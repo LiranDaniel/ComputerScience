@@ -39,7 +39,6 @@ namespace BussinesTourProject.Pages
         }
         private void btn_PointerExited(object sender, PointerRoutedEventArgs e)
         {
-
             Button btnPlayExit = (Button)sender;
             ((Image)btnPlayExit.Content).Source = new BitmapImage(new Uri("ms-appx:/// " +
                 "Assets/Buttons/UsingButtons/" + ((Image)btnPlayExit.Content).Name.Replace("img", "") + " (2).png"));
@@ -48,8 +47,7 @@ namespace BussinesTourProject.Pages
 
         private void btn_Pause_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MenuPage));
-            
+            Frame.Navigate(typeof(MenuPage));      
         }
 
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
