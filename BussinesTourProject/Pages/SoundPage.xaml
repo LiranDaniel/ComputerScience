@@ -59,8 +59,8 @@
             </Grid.Background>
         </Grid>
         <Button Grid.Row="0" Grid.Column="0" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
-        x:Name="btn_SliderVertical" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}">
-            <Image x:Name="imgSliderVertical" Source="/Assets\Buttons\LIstOfButtons\SliderVertical (1).png"></Image>
+                x:Name="btnSlider" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}">
+            <Image x:Name="imgSlider" Source="/Assets\Buttons\UsingButtons\Slider (2).png"></Image>
         </Button>
 
         <ToggleSwitch OnContent="Music On" OffContent="Music Off" x:Name="backgroundMusicSw" 
