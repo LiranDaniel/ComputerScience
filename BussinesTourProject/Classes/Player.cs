@@ -10,6 +10,7 @@ namespace BussinesTourProject.Classes
     {
         // Matrix.GetLenght(0) == Number of rows
         // Matrix.GetLenght(1) == Number of column 
+        public const int MaxPosition = 30;
         public int[,] PlayerPosition;
         public int currentPosition;
         public int AmountOfMoney;
@@ -29,7 +30,8 @@ namespace BussinesTourProject.Classes
         public void ChangePlayerPosition(int diceResult)
         {
             currentPosition += diceResult;
-            if (currentPosition > PlayerPosition.GetLength(1) -1 ) {
+            if (currentPosition > PlayerPosition.GetLength(1) - 1)
+            {
                 currentPosition = currentPosition - (PlayerPosition.GetLength(1) - 1);
             }
         }

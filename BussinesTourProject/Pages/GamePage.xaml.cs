@@ -30,12 +30,24 @@ namespace BussinesTourProject.Pages
         Player Player3 = new Player(name: "Player3");
         Player Player4 = new Player(name: "Player4");
 
+        
         public GamePage()
         {
             this.InitializeComponent();
 
+            int[,] MatrixPositionPlayer1 = { { 10, 20, 30 }, { 5, 6, 7 } };
+            Player1.SetPlayerPosition(MatrixPositionPlayer1);
         }
 
+        public void ChangePlayerPositionAnimation(Player player, int diceResult)
+        {
+            player.ChangePlayerPosition(diceResult);
+
+            for(int i= 0; i < 10; i++) 
+            {
+                
+            }
+        }
 
 
 
