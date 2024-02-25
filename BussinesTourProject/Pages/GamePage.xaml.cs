@@ -41,7 +41,7 @@ namespace BussinesTourProject.Pages
 
         public void ChangePlayerPositionAnimation(Player player, int diceResult)
         {
-            player.ChangePlayerPosition(diceResult);
+            player.ChangePlayerPosition(diceResult); 
 
             for(int i= 0; i < 10; i++) 
             {
