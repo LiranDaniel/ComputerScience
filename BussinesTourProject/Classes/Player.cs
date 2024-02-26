@@ -15,12 +15,14 @@ namespace BussinesTourProject.Classes
         public int currentPosition;
         public int AmountOfMoney;
         public string name;
+        public List<int> listHouses;
 
         public Player(string name)
         {
             this.name = name;
             this.currentPosition = 0;
             AmountOfMoney = 2_000_000;
+            listHouses = new List<int>();
         }
 
         public void SetPlayerPosition(int[,] PlayerPosition)
