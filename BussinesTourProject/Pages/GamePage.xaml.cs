@@ -44,66 +44,77 @@ namespace BussinesTourProject.Pages
 
         public void ChangePlayer1PositionAnimation(Player player, int diceResult)
         {
-            int currentPosition = player.currentPosition;
-            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
-            for (int i= 0; i < diceResult; i++) 
-            {    
-                if (Player.MaxPosition == currentPosition)
-                {
-                    currentPosition -= Player.MaxPosition;
-                }
-
-
-                currentPosition++;
-            }
-        }
-
-        public void ChangePlayer2PositionAnimation(Player player, int diceResult)
-        {
-            int currentPosition = player.currentPosition;
+            int currentPosition = player.currentPosition + 1;
             player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
             for (int i = 0; i < diceResult; i++)
             {
-                if (Player.MaxPosition == currentPosition)
+
+                while (currentPosition > (player.PlayerPosition.GetLength(1) - 1))
                 {
-                    currentPosition -= Player.MaxPosition;
-                }
-
-
-                currentPosition++;
-            }
-        }
-
-        public void ChangePlayer3PositionAnimation(Player player, int diceResult)
-        {
-            int currentPosition = player.currentPosition;
-            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
-            for (int i = 0; i < diceResult; i++)
-            {
-                if (Player.MaxPosition == currentPosition)
-                {
-                    currentPosition -= Player.MaxPosition;
-                }
-
-
-                currentPosition++;
-            }
-        }
-
-        public void ChangePlayer4PositionAnimation(Player player, int diceResult)
-        {
-            int currentPosition = player.currentPosition;
-            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
-            for (int i = 0; i < diceResult; i++)
-            {
-                if (currentPosition > 4)
-                {
-                    currentPosition -= 1;
+                    currentPosition -= player.PlayerPosition.GetLength(1);
                 }
                 Grid.SetRow(imgPlayer, player.PlayerPosition[0, currentPosition]);
                 Grid.SetColumn(imgPlayer, player.PlayerPosition[1, currentPosition]);
 
                 currentPosition++;
+
+            }
+        }
+
+        public void ChangePlayer2PositionAnimation(Player player, int diceResult)
+        {
+            int currentPosition = player.currentPosition + 1;
+            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
+            for (int i = 0; i < diceResult; i++)
+            {
+
+                while (currentPosition > (player.PlayerPosition.GetLength(1) - 1))
+                {
+                    currentPosition -= player.PlayerPosition.GetLength(1);
+                }
+                Grid.SetRow(imgPlayer, player.PlayerPosition[0, currentPosition]);
+                Grid.SetColumn(imgPlayer, player.PlayerPosition[1, currentPosition]);
+
+                currentPosition++;
+
+            }
+        }
+
+        public void ChangePlayer3PositionAnimation(Player player, int diceResult)
+        {
+            int currentPosition = player.currentPosition + 1;
+            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
+            for (int i = 0; i < diceResult; i++)
+            {
+
+                while (currentPosition > (player.PlayerPosition.GetLength(1) - 1))
+                {
+                    currentPosition -= player.PlayerPosition.GetLength(1);
+                }
+                Grid.SetRow(imgPlayer, player.PlayerPosition[0, currentPosition]);
+                Grid.SetColumn(imgPlayer, player.PlayerPosition[1, currentPosition]);
+
+                currentPosition++;
+
+            }
+        }
+
+        public void ChangePlayer4PositionAnimation(Player player, int diceResult)
+        {
+            int currentPosition = player.currentPosition + 1;
+            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
+            for (int i = 0; i < diceResult; i++)
+            {
+
+                while (currentPosition > (player.PlayerPosition.GetLength(1) - 1))
+                {
+                    currentPosition -= player.PlayerPosition.GetLength(1);
+                }
+                Grid.SetRow(imgPlayer, player.PlayerPosition[0, currentPosition]);
+                Grid.SetColumn(imgPlayer, player.PlayerPosition[1, currentPosition]);
+
+                currentPosition++;
+
             }
         }
 
