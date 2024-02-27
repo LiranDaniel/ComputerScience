@@ -35,9 +35,9 @@ namespace BussinesTourProject.Pages
         Player Player4 = new Player(name: "Player4");
 
 
-        int currentDiceResult = 0;
+        int currentDiceResult = 4;
 
-
+        Thread ThreadPlayer1Moving;
 
         public GamePage()
         {
@@ -47,12 +47,17 @@ namespace BussinesTourProject.Pages
             Player1.SetPlayerPosition(MatrixPositionPlayer1);
             Player1.Img = imgPlayer;
 
-            int firstPlayer = rnd.Next(0, 4);
+            //int firstPlayer = rnd.Next(0, 4);
 
-            Thread ThreadPlayer1Moving = new Thread(() => ChangePlayerPositionAnimation(Player1, currentDiceResult));
-            Thread ThreadPlayer2Moving = new Thread(() => ChangePlayerPositionAnimation(Player2, currentDiceResult));
-            Thread ThreadPlayer3Moving = new Thread(() => ChangePlayerPositionAnimation(Player3, currentDiceResult));
-            Thread ThreadPlayer4Moving = new Thread(() => ChangePlayerPositionAnimation(Player4, currentDiceResult));
+            ThreadPlayer1Moving = new Thread(() => ChangePlayerPositionAnimation(Player1, 4));
+            // Thread ThreadPlayer2Moving = new Thread(() => ChangePlayerPositionAnimation(Player2, currentDiceResult));
+            // Thread ThreadPlayer3Moving = new Thread(() => ChangePlayerPositionAnimation(Player3, currentDiceResult));
+            // Thread ThreadPlayer4Moving = new Thread(() => ChangePlayerPositionAnimation(Player4, currentDiceResult));
+
+            /*Thread[] ThreadsMovingPlayers = { new Thread(() => ChangePlayerPositionAnimation(Player1, currentDiceResult)),
+                                new Thread(() => ChangePlayerPositionAnimation(Player2, currentDiceResult)),
+                                new Thread(() => ChangePlayerPositionAnimation(Player3, currentDiceResult)),
+                                new Thread(() => ChangePlayerPositionAnimation(Player4, currentDiceResult))};*/
         }
 
         public static void ChangePlayerPositionAnimation(Player player, int diceResult)
@@ -71,7 +76,7 @@ namespace BussinesTourProject.Pages
 
                 currentPosition++;
 
-                Thread.Sleep(1000);
+                Thread.Sleep(100);
             }
         }
         
@@ -102,7 +107,7 @@ namespace BussinesTourProject.Pages
 
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
         {
-            ChangePlayerPositionAnimation(Player1, 7);
+            ThreadPlayer1Moving.Start();
         }
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)
