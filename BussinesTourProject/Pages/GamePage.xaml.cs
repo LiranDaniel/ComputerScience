@@ -39,6 +39,13 @@ namespace BussinesTourProject.Pages
 
         Thread ThreadPlayer1Moving;
 
+      /*  private void BackgroundTask()
+        {
+            Thread.Sleep(2000);
+            this.Invoke
+        }*/
+
+
         public GamePage()
         {
             this.InitializeComponent();
