@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using System.Threading;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -24,8 +25,11 @@ namespace BussinesTourProject.Pages
     /// </summary>
     public sealed partial class GamePage : Page
     {
+        Thread mainThread = Thread.CurrentThread;
+      //  Thread ThreadMovingPlayer = new Thread(new ParameterizedThreadStart(ChangePlayer4PositionAnimation));
 
-        
+
+
 
 
         Player Player1 = new Player(name: "Player1");
@@ -33,13 +37,19 @@ namespace BussinesTourProject.Pages
         Player Player3 = new Player(name: "Player3");
         Player Player4 = new Player(name: "Player4");
 
-        
+
+
+
         public GamePage()
         {
             this.InitializeComponent();
 
             int[,] MatrixPositionPlayer1 = { { 10, 20, 30, 40, 50 }, { 5, 5, 5, 5, 5 } };
             Player1.SetPlayerPosition(MatrixPositionPlayer1);
+
+
+            Thread ThreadPlayer1Moving = new Thread(() => ChangePlayer4PositionAnimation(Player1, param2, param3));
+
         }
 
         public void ChangePlayer1PositionAnimation(Player player, int diceResult)
@@ -99,7 +109,7 @@ namespace BussinesTourProject.Pages
             }
         }
 
-        public void ChangePlayer4PositionAnimation(Player player, int diceResult)
+        public static void ChangePlayer4PositionAnimation(Player player, int diceResult, Image imgPlayer)
         {
             int currentPosition = player.currentPosition + 1;
             player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
@@ -115,8 +125,10 @@ namespace BussinesTourProject.Pages
 
                 currentPosition++;
 
+                Thread.Sleep(1000);
             }
         }
+        
 
 
 
@@ -144,7 +156,7 @@ namespace BussinesTourProject.Pages
 
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
         {
-            ChangePlayer4PositionAnimation(Player1, 1);
+            ChangePlayer4PositionAnimation(Player1, 7, imgPlayer);
         }
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)
