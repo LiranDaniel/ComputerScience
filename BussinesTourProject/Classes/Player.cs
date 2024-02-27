@@ -34,7 +34,7 @@ namespace BussinesTourProject.Classes
             currentPosition += diceResult;
             if (currentPosition > PlayerPosition.GetLength(1) - 1)
             {
-                currentPosition = currentPosition - (PlayerPosition.GetLength(1) - 1);
+                currentPosition = currentPosition - PlayerPosition.GetLength(1);
             }
         }
 

@@ -25,6 +25,9 @@ namespace BussinesTourProject.Pages
     public sealed partial class GamePage : Page
     {
 
+        
+
+
         Player Player1 = new Player(name: "Player1");
         Player Player2 = new Player(name: "Player2");
         Player Player3 = new Player(name: "Player3");
@@ -35,20 +38,72 @@ namespace BussinesTourProject.Pages
         {
             this.InitializeComponent();
 
-            int[,] MatrixPositionPlayer1 = { { 10, 20, 30 }, { 5, 6, 7 } };
+            int[,] MatrixPositionPlayer1 = { { 10, 20, 30, 40, 50 }, { 5, 5, 5, 5, 5 } };
             Player1.SetPlayerPosition(MatrixPositionPlayer1);
         }
 
-        public void ChangePlayerPositionAnimation(Player player, int diceResult)
+        public void ChangePlayer1PositionAnimation(Player player, int diceResult)
         {
-            player.ChangePlayerPosition(diceResult); 
-            for(int i= 0; i < diceResult; i++) 
-            {
-                
-                 if (Player.MaxPosition == i)
+            int currentPosition = player.currentPosition;
+            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
+            for (int i= 0; i < diceResult; i++) 
+            {    
+                if (Player.MaxPosition == currentPosition)
                 {
-
+                    currentPosition -= Player.MaxPosition;
                 }
+
+
+                currentPosition++;
+            }
+        }
+
+        public void ChangePlayer2PositionAnimation(Player player, int diceResult)
+        {
+            int currentPosition = player.currentPosition;
+            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
+            for (int i = 0; i < diceResult; i++)
+            {
+                if (Player.MaxPosition == currentPosition)
+                {
+                    currentPosition -= Player.MaxPosition;
+                }
+
+
+                currentPosition++;
+            }
+        }
+
+        public void ChangePlayer3PositionAnimation(Player player, int diceResult)
+        {
+            int currentPosition = player.currentPosition;
+            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
+            for (int i = 0; i < diceResult; i++)
+            {
+                if (Player.MaxPosition == currentPosition)
+                {
+                    currentPosition -= Player.MaxPosition;
+                }
+
+
+                currentPosition++;
+            }
+        }
+
+        public void ChangePlayer4PositionAnimation(Player player, int diceResult)
+        {
+            int currentPosition = player.currentPosition;
+            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
+            for (int i = 0; i < diceResult; i++)
+            {
+                if (currentPosition > 4)
+                {
+                    currentPosition -= 1;
+                }
+                Grid.SetRow(imgPlayer, player.PlayerPosition[0, currentPosition]);
+                Grid.SetColumn(imgPlayer, player.PlayerPosition[1, currentPosition]);
+
+                currentPosition++;
             }
         }
 
@@ -78,7 +133,7 @@ namespace BussinesTourProject.Pages
 
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
         {
-            Grid.SetRow(imgPlayer, row--);
+            ChangePlayer4PositionAnimation(Player1, 1);
         }
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)
