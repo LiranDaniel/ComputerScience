@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 
 namespace BussinesTourProject.Classes
 {
@@ -16,6 +17,7 @@ namespace BussinesTourProject.Classes
         public int AmountOfMoney;
         public string name;
         public List<int> listHouses;
+        public Image Img;
 
         public Player(string name)
         {

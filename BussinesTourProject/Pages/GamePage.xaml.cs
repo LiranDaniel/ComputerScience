@@ -28,15 +28,14 @@ namespace BussinesTourProject.Pages
         Thread mainThread = Thread.CurrentThread;
       //  Thread ThreadMovingPlayer = new Thread(new ParameterizedThreadStart(ChangePlayer4PositionAnimation));
 
-
-
-
-
+        Random rnd = new Random();   
         Player Player1 = new Player(name: "Player1");
         Player Player2 = new Player(name: "Player2");
         Player Player3 = new Player(name: "Player3");
         Player Player4 = new Player(name: "Player4");
 
+
+        int currentDiceResult = 0;
 
 
 
@@ -46,13 +45,17 @@ namespace BussinesTourProject.Pages
 
             int[,] MatrixPositionPlayer1 = { { 10, 20, 30, 40, 50 }, { 5, 5, 5, 5, 5 } };
             Player1.SetPlayerPosition(MatrixPositionPlayer1);
+            Player1.Img = imgPlayer;
 
+            int firstPlayer = rnd.Next(0, 4);
 
-            Thread ThreadPlayer1Moving = new Thread(() => ChangePlayer4PositionAnimation(Player1, param2, param3));
-
+            Thread ThreadPlayer1Moving = new Thread(() => ChangePlayerPositionAnimation(Player1, currentDiceResult));
+            Thread ThreadPlayer2Moving = new Thread(() => ChangePlayerPositionAnimation(Player2, currentDiceResult));
+            Thread ThreadPlayer3Moving = new Thread(() => ChangePlayerPositionAnimation(Player3, currentDiceResult));
+            Thread ThreadPlayer4Moving = new Thread(() => ChangePlayerPositionAnimation(Player4, currentDiceResult));
         }
 
-        public void ChangePlayer1PositionAnimation(Player player, int diceResult)
+        public static void ChangePlayerPositionAnimation(Player player, int diceResult)
         {
             int currentPosition = player.currentPosition + 1;
             player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
@@ -63,65 +66,8 @@ namespace BussinesTourProject.Pages
                 {
                     currentPosition -= player.PlayerPosition.GetLength(1);
                 }
-                Grid.SetRow(imgPlayer, player.PlayerPosition[0, currentPosition]);
-                Grid.SetColumn(imgPlayer, player.PlayerPosition[1, currentPosition]);
-
-                currentPosition++;
-
-            }
-        }
-
-        public void ChangePlayer2PositionAnimation(Player player, int diceResult)
-        {
-            int currentPosition = player.currentPosition + 1;
-            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
-            for (int i = 0; i < diceResult; i++)
-            {
-
-                while (currentPosition > (player.PlayerPosition.GetLength(1) - 1))
-                {
-                    currentPosition -= player.PlayerPosition.GetLength(1);
-                }
-                Grid.SetRow(imgPlayer, player.PlayerPosition[0, currentPosition]);
-                Grid.SetColumn(imgPlayer, player.PlayerPosition[1, currentPosition]);
-
-                currentPosition++;
-
-            }
-        }
-
-        public void ChangePlayer3PositionAnimation(Player player, int diceResult)
-        {
-            int currentPosition = player.currentPosition + 1;
-            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
-            for (int i = 0; i < diceResult; i++)
-            {
-
-                while (currentPosition > (player.PlayerPosition.GetLength(1) - 1))
-                {
-                    currentPosition -= player.PlayerPosition.GetLength(1);
-                }
-                Grid.SetRow(imgPlayer, player.PlayerPosition[0, currentPosition]);
-                Grid.SetColumn(imgPlayer, player.PlayerPosition[1, currentPosition]);
-
-                currentPosition++;
-
-            }
-        }
-
-        public static void ChangePlayer4PositionAnimation(Player player, int diceResult, Image imgPlayer)
-        {
-            int currentPosition = player.currentPosition + 1;
-            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
-            for (int i = 0; i < diceResult; i++)
-            {
-
-                while (currentPosition > (player.PlayerPosition.GetLength(1) - 1))
-                {
-                    currentPosition -= player.PlayerPosition.GetLength(1);
-                }
-                Grid.SetRow(imgPlayer, player.PlayerPosition[0, currentPosition]);
-                Grid.SetColumn(imgPlayer, player.PlayerPosition[1, currentPosition]);
+                Grid.SetRow(player.Img, player.PlayerPosition[0, currentPosition]);
+                Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);
 
                 currentPosition++;
 
@@ -156,7 +102,7 @@ namespace BussinesTourProject.Pages
 
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
         {
-            ChangePlayer4PositionAnimation(Player1, 7, imgPlayer);
+            ChangePlayerPositionAnimation(Player1, 7);
         }
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)
