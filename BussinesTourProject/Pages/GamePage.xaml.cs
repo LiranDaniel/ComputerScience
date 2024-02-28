@@ -85,7 +85,7 @@ namespace BussinesTourProject.Pages
             player.Img = imgPlayer;
             Grid.SetRow(player.Img, player.PlayerPosition[0, 0]);
             Grid.SetColumn(player.Img, player.PlayerPosition[1, 0]);
-
+             
         }
 
 
