@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using System.Threading;
+using GameEngine.GameServices;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -34,6 +35,7 @@ namespace BussinesTourProject.Pages
         Player Player3 = new Player(name: "Player3");
         Player Player4 = new Player(name: "Player4");
 
+        
 
         int currentDiceResult = 4;
 
@@ -54,7 +56,7 @@ namespace BussinesTourProject.Pages
             Player1.SetPlayerPosition(MatrixPositionPlayer1);
             Player1.Img = imgPlayer;
 
-            //int firstPlayer = rnd.Next(0, 4);
+            // int firstPlayer = rnd.Next(0, 4);
 
             ThreadPlayer1Moving = new Thread(() => ChangePlayerPositionAnimation(Player1, 4));
             // Thread ThreadPlayer2Moving = new Thread(() => ChangePlayerPositionAnimation(Player2, currentDiceResult));
@@ -83,7 +85,7 @@ namespace BussinesTourProject.Pages
 
                 currentPosition++;
 
-                Thread.Sleep(100);
+                //Thread.Sleep(100);
             }
         }
         
@@ -114,8 +116,13 @@ namespace BussinesTourProject.Pages
 
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
         {
-            ThreadPlayer1Moving.Start();
+            //  ThreadPlayer1Moving.Start();
+            //  DispatcherTimer timer = new DispatcherTimer();
+            // timer.Interval = TimeSpan.FromMilliseconds(50);
+            // timer.Tick += _runTimer_Tick;
+            ChangePlayerPositionAnimation(Player1, currentDiceResult);
         }
+        
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
