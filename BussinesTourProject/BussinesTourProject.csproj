@@ -434,6 +434,10 @@
     <Content Include="Assets\Images\Numbers\Number8.png" />
     <Content Include="Assets\Images\Numbers\Number9.png" />
     <Content Include="Assets\Images\person_icon.png" />
+    <Content Include="Assets\Images\Players\Player1\RedCarForward.png" />
+    <Content Include="Assets\Images\Players\Player1\‏‏RedCarBackward.png" />
+    <Content Include="Assets\Images\Players\Player1\‏‏RedCarLeft.png" />
+    <Content Include="Assets\Images\Players\Player1\‏‏RedCarRight.png" />
     <Content Include="Assets\Images\RedCarImage.png" />
     <Content Include="Assets\Images\SignInBackGround.png" />
     <Content Include="Assets\Images\woodBackground.jpg" />
@@ -495,6 +499,11 @@
       <Project>{7C0AD823-FAE6-4D0D-AAAD-2B436422F1EC}</Project>
       <Name>GameEngine</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Images\Players\Player2\" />
+    <Folder Include="Assets\Images\Players\Player3\" />
+    <Folder Include="Assets\Images\Players\Player4\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
