@@ -35,7 +35,7 @@ namespace BussinesTourProject.Pages
         Player Player3 = new Player(name: "Player3");
         Player Player4 = new Player(name: "Player4");
 
-
+        
 
         int currentDiceResult = 1;
 
