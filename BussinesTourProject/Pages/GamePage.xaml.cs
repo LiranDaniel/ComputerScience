@@ -68,7 +68,7 @@ namespace BussinesTourProject.Pages
             InitPlayer(Player1, imgPlayer, MatrixPositionPlayer1);
             // int firstPlayer = rnd.Next(0, 4);
 
-            ThreadPlayer1Moving = new Thread(() => ChangePlayerPositionAnimation(Player1, 4));
+             ThreadPlayer1Moving = new Thread(() => ChangePlayerPositionAnimation(Player1, 4));
             // Thread ThreadPlayer2Moving = new Thread(() => ChangePlayerPositionAnimation(Player2, currentDiceResult));
             // Thread ThreadPlayer3Moving = new Thread(() => ChangePlayerPositionAnimation(Player3, currentDiceResult));
             // Thread ThreadPlayer4Moving = new Thread(() => ChangePlayerPositionAnimation(Player4, currentDiceResult));
@@ -106,11 +106,17 @@ namespace BussinesTourProject.Pages
                 currentPosition++;
 
                 //Thread.Sleep(100);
+                // Thread DelayThread = new Thread(Delay);
+                // DelayThread.Start();
+               
             }
         }
         
 
-
+       /* private static void Delay()
+        {
+            Thread.Sleep(1000);
+        }*/
 
         int row = 30;
         int col = 3;
@@ -136,7 +142,7 @@ namespace BussinesTourProject.Pages
 
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
         {
-            //  ThreadPlayer1Moving.Start();
+            // ThreadPlayer1Moving.Start();
             //  DispatcherTimer timer = new DispatcherTimer();
             // timer.Interval = TimeSpan.FromMilliseconds(50);
             // timer.Tick += _runTimer_Tick;
