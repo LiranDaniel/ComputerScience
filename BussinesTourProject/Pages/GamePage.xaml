@@ -591,7 +591,7 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Image x:Name="imgPlayer" Source="/Assets\Images\RedCarImage.png" 
+            <Image x:Name="imgPlayer" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
                    Grid.ColumnSpan="3" Grid.RowSpan="3" Grid.Column="1" Grid.Row="63">
 
             </Image>

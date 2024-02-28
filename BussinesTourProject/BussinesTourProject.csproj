@@ -435,10 +435,9 @@
     <Content Include="Assets\Images\Numbers\Number9.png" />
     <Content Include="Assets\Images\person_icon.png" />
     <Content Include="Assets\Images\Players\Player1\RedCarForward.png" />
-    <Content Include="Assets\Images\Players\Player1\‏‏RedCarBackward.png" />
+    <Content Include="Assets\Images\Players\Player1\RedCarBackward.png" />
     <Content Include="Assets\Images\Players\Player1\‏‏RedCarLeft.png" />
     <Content Include="Assets\Images\Players\Player1\‏‏RedCarRight.png" />
-    <Content Include="Assets\Images\RedCarImage.png" />
     <Content Include="Assets\Images\SignInBackGround.png" />
     <Content Include="Assets\Images\woodBackground.jpg" />
     <Content Include="Assets\Images\WoodBar.png" />

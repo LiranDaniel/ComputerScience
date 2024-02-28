@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using System.Threading;
 using GameEngine.GameServices;
+using Windows.Security.Authentication.OnlineId;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -100,8 +101,9 @@ namespace BussinesTourProject.Pages
                 {
                     currentPosition -= player.PlayerPosition.GetLength(1);
                 }
-                if (currentPosition == 11)
-                    player.Img.Source = new BitmapImage(new Uri("ms-appx:/// "));
+                if (currentPosition >= 11 && currentPosition < 20)
+                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarBackward.png"));
+               // else if (currentPosition >= 20 && currentPosition < 30)
                 Grid.SetRow(player.Img, player.PlayerPosition[0, currentPosition]);
                 Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);
 
