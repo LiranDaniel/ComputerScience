@@ -35,9 +35,9 @@ namespace BussinesTourProject.Pages
         Player Player3 = new Player(name: "Player3");
         Player Player4 = new Player(name: "Player4");
 
-        
 
-        int currentDiceResult = 4;
+
+        int currentDiceResult = 1;
 
         Thread ThreadPlayer1Moving;
 
@@ -52,10 +52,20 @@ namespace BussinesTourProject.Pages
         {
             this.InitializeComponent();
 
-            int[,] MatrixPositionPlayer1 = { { 10, 20, 30, 40, 50 }, { 5, 5, 5, 5, 5 } };
-            Player1.SetPlayerPosition(MatrixPositionPlayer1);
-            Player1.Img = imgPlayer;
+            //int[,] MatrixPositionPlayer1 = { { 10, 20, 30, 40, 50 }, { 5, 5, 5, 5, 5 } };
 
+            int[,] MatrixPositionPlayer1 = { { 65, 65, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                                               11, 12, 13, 14, 15, 16, 17, 18, 19,
+                                               20, 21, 22, 23, 24, 25, 26, 27, 28,
+                                               29, 30, 31, 32, 33, 34, 35, 36 ,37,
+                                               38 ,39},
+                                               { 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+                                               11, 12, 13, 14, 15, 16, 17, 18, 19,
+                                               20, 21, 22, 23, 24, 25, 26, 27, 28,
+                                               29, 30, 31, 32, 33, 34, 35, 36 ,37,
+                                               38 ,39 } };
+
+            InitPlayer(Player1, imgPlayer, MatrixPositionPlayer1);
             // int firstPlayer = rnd.Next(0, 4);
 
             ThreadPlayer1Moving = new Thread(() => ChangePlayerPositionAnimation(Player1, 4));
@@ -68,6 +78,16 @@ namespace BussinesTourProject.Pages
                                 new Thread(() => ChangePlayerPositionAnimation(Player3, currentDiceResult)),
                                 new Thread(() => ChangePlayerPositionAnimation(Player4, currentDiceResult))};*/
         }
+
+        private static void InitPlayer(Player player, Image imgPlayer, int[,] playerMatrixPositions)
+        {
+            player.SetPlayerPosition(playerMatrixPositions);
+            player.Img = imgPlayer;
+            Grid.SetRow(player.Img, player.PlayerPosition[0, 0]);
+            Grid.SetColumn(player.Img, player.PlayerPosition[1, 0]);
+
+        }
+
 
         public static void ChangePlayerPositionAnimation(Player player, int diceResult)
         {
