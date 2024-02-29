@@ -37,7 +37,7 @@ namespace BussinesTourProject.Pages
         Player Player3 = new Player(name: "Player3");
         Player Player4 = new Player(name: "Player4");
 
-        int currentDiceResult = 2;
+        int currentDiceResult = 4;
 
         private DispatcherTimer timer;
         private int secondsElapsed;
@@ -144,7 +144,7 @@ namespace BussinesTourProject.Pages
             Player1.ChangePlayerPosition(2); // changing position of the player, and make sure that there is not overflow
             // Delay for 2 seconds
 
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < currentDiceResult; i++)
             {
 
                 while (currentPosition > (Player1.PlayerPosition.GetLength(1) - 1))
