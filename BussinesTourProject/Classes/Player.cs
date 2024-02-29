@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace BussinesTourProject.Classes
 {
@@ -26,12 +27,28 @@ namespace BussinesTourProject.Classes
             this.currentPosition = 0;
             AmountOfMoney = 2_000_000;
             listHouses = new List<int>();
-            Manager.Events.OnMovingPlayer += MovingPlayerPosition;
+            GameManager.Events.OnMovingPlayer += MovingPlayerPosition;
         }
 
         private void MovingPlayerPosition(int diceResult)
         {
-            throw new NotImplementedException();
+            int currentPosition = this.currentPosition + 1;
+            this.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
+            for (int i = 0; i < diceResult; i++)
+            {
+
+                while (currentPosition > (this.PlayerPosition.GetLength(1) - 1))
+                {
+                    currentPosition -= this.PlayerPosition.GetLength(1);
+                }
+                if (currentPosition >= 11 && currentPosition < 20)
+                    this.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarBackward.png"));
+
+                Grid.SetRow(this.Img, this.PlayerPosition[0, currentPosition]);
+                Grid.SetColumn(this.Img, this.PlayerPosition[1, currentPosition]);
+
+                currentPosition++;
+            }
         }
 
         public void SetPlayerPosition(int[,] PlayerPosition)

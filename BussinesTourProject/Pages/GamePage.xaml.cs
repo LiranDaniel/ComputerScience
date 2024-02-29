@@ -19,6 +19,7 @@ using GameEngine.GameServices;
 using Windows.Security.Authentication.OnlineId;
 using System.Threading.Tasks;
 using Windows.UI.Core;
+using BussinesTourProject.Services;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -29,100 +30,17 @@ namespace BussinesTourProject.Pages
     /// </summary>
     public sealed partial class GamePage : Page
     {
-        Thread mainThread = Thread.CurrentThread;
-      //  Thread ThreadMovingPlayer = new Thread(new ParameterizedThreadStart(ChangePlayer4PositionAnimation));
-
-        Random rnd = new Random();   
+        Random rnd = new Random();
         Player Player1 = new Player(name: "Player1");
         Player Player2 = new Player(name: "Player2");
         Player Player3 = new Player(name: "Player3");
         Player Player4 = new Player(name: "Player4");
 
         int currentDiceResult = 1;
-        // Somewhere in your code where you need to update UI from a separate thread
-         private async void UpdateUIFromBackgroundThread(Player player, int diceResult)
-         {
-            // Do some background work in a separate thread
-            bool IsFirstTime = true;
-            int currentPosition = player.currentPosition + 1;
-            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
-
-            for (int i = 0; i < diceResult; i++)
-            {
-
-                // Now update the UI from the main UI thread
-                await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
-                 () =>
-                 {
-                     // Perform time-consuming operations here
-                     // This part runs on a background thread
-                     if (!IsFirstTime)
-                         Thread.Sleep(1000);
-                     else
-                         IsFirstTime = false;
-                 });
-
-                await Task.Run(() =>
-                {
-
-                    // Update UI elements here
-                    // This part runs on the main UI thread
-
-
-                    while (currentPosition > (player.PlayerPosition.GetLength(1) - 1))
-                    {
-                        currentPosition -= player.PlayerPosition.GetLength(1);
-                    }
-                    if (currentPosition >= 11 && currentPosition < 20)
-                        player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarBackward.png"));
-
-                    Grid.SetRow(player.Img, player.PlayerPosition[0, currentPosition]);
-                    Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);
-
-
-
-
-                });
-            }
-        }
-        Thread ThreadPlayer1Moving;
-
-      /*  private void BackgroundTask()
-        {
-            Thread.Sleep(2000);
-            this.Invoke
-        }*/
-
-
+        private GameManager gameManager;
         public GamePage()
         {
             this.InitializeComponent();
-
-            //int[,] MatrixPositionPlayer1 = { { 10, 20, 30, 40, 50 }, { 5, 5, 5, 5, 5 } };
-
-            int[,] MatrixPositionPlayer1 = { { 81, 70, 63, 56, 50, 43, 37, 30, 24, 17, 9,
-                                               8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
-                                               22, 23, 24, 25, 26, 27, 28,
-                                               29, 30, 31, 32, 33, 34, 35, 36 ,37,
-                                               38 ,39},
-                                               { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 12,
-                                               11, 12, 13, 14, 15, 16, 17, 18, 19,
-                                               20, 21, 22, 23, 24, 25, 26, 27, 28,
-                                               29, 30, 31, 32, 33, 34, 35, 36 ,37,
-                                               38 ,39 } };
-
-            InitPlayer(Player1, imgPlayer, MatrixPositionPlayer1);
-            // int firstPlayer = rnd.Next(0, 4);
-
-              ThreadPlayer1Moving = new Thread(() => ChangePlayerPositionAnimation(Player1, 4));
-            // Thread ThreadPlayer2Moving = new Thread(() => ChangePlayerPositionAnimation(Player2, currentDiceResult));
-            // Thread ThreadPlayer3Moving = new Thread(() => ChangePlayerPositionAnimation(Player3, currentDiceResult));
-            // Thread ThreadPlayer4Moving = new Thread(() => ChangePlayerPositionAnimation(Player4, currentDiceResult));
-
-            /*Thread[] ThreadsMovingPlayers = { new Thread(() => ChangePlayerPositionAnimation(Player1, currentDiceResult)),
-                                new Thread(() => ChangePlayerPositionAnimation(Player2, currentDiceResult)),
-                                new Thread(() => ChangePlayerPositionAnimation(Player3, currentDiceResult)),
-                                new Thread(() => ChangePlayerPositionAnimation(Player4, currentDiceResult))};*/
         }
 
         private static void InitPlayer(Player player, Image imgPlayer, int[,] playerMatrixPositions)
@@ -148,24 +66,15 @@ namespace BussinesTourProject.Pages
                 }
                 if (currentPosition >= 11 && currentPosition < 20)
                     player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarBackward.png"));
-               // else if (currentPosition >= 20 && currentPosition < 30)
+
                 Grid.SetRow(player.Img, player.PlayerPosition[0, currentPosition]);
                 Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);
 
                 currentPosition++;
 
-                //Thread.Sleep(100);
-                // Thread DelayThread = new Thread(Delay);
-                // DelayThread.Start();
-               
             }
         }
-        
-
-       /* private static void Delay()
-        {
-            Thread.Sleep(1000);
-        }*/
+       
 
         int row = 30;
         int col = 3;
@@ -190,13 +99,8 @@ namespace BussinesTourProject.Pages
         }
 
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
-        {
-            // ThreadPlayer1Moving.Start();
-            //  DispatcherTimer timer = new DispatcherTimer();
-            // timer.Interval = TimeSpan.FromMilliseconds(50);
-            // timer.Tick += _runTimer_Tick;
+        {   
              ChangePlayerPositionAnimation(Player1, 1);
-            // UpdateUIFromBackgroundThread(Player1, 3);
         }
         
 
@@ -210,9 +114,23 @@ namespace BussinesTourProject.Pages
             
         }
 
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
 
+            int[,] MatrixPositionPlayer1 = { { 81, 70, 63, 56, 50, 43, 37, 30, 24, 17, 9,
+                                               8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+                                               22, 23, 24, 25, 26, 27, 28,
+                                               29, 30, 31, 32, 33, 34, 35, 36 ,37,
+                                               38 ,39},
+                                               { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 12,
+                                               11, 12, 13, 14, 15, 16, 17, 18, 19,
+                                               20, 21, 22, 23, 24, 25, 26, 27, 28,
+                                               29, 30, 31, 32, 33, 34, 35, 36 ,37,
+                                               38 ,39 } };
 
-
-
+            InitPlayer(Player1, imgPlayer, MatrixPositionPlayer1);
+            gameManager = new GameManager();
+            gameManager.Start();
+        }
     }
 }

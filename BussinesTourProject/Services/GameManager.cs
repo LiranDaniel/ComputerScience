@@ -7,18 +7,22 @@ using Windows.UI.Xaml;
 
 namespace BussinesTourProject.Services
 {
-    public class Manager
+    public class GameManager
     {
 
-        private DispatcherTimer _timer;
+        public DispatcherTimer _timer;
         public static Events Events = new Events();
 
-        public Manager()
+        public GameManager()
         {
-                _timer = new DispatcherTimer();
+            _timer = new DispatcherTimer();
             _timer.Interval = TimeSpan.FromSeconds(1);
-            _timer.Start();
             _timer.Tick += _timer_Tick;
+        }
+
+        public void Start()
+        {
+            _timer.Start();
         }
 
         private void _timer_Tick(object sender, object e)

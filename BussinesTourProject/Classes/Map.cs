@@ -12,6 +12,10 @@ namespace BussinesTourProject.Classes
     public static class Map
     {
         public static DispatcherTimer Timer { get; set; }
+        public static Player player1;
+        public static Player player2;
+        public static Player player3;
+        public static Player player4;
 
 
         public enum Houses
