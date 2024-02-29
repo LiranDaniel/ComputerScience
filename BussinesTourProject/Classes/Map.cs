@@ -11,6 +11,7 @@ namespace BussinesTourProject.Classes
 {
     public static class Map
     {
+        public static Random rnd = new Random();
         public static DispatcherTimer Timer { get; set; }
         public static Player player1;
         public static Player player2;
@@ -23,5 +24,11 @@ namespace BussinesTourProject.Classes
             HomeLevel1, HomeLevel2, HomeLevel3, Hotel
         }
         public static Houses[] HousesPosition;
+
+        public static int[] RollDice()
+        {
+            int[] Result = { rnd.Next(1, 7), rnd.Next(1, 7) };
+            return Result;
+        }
     }
 }

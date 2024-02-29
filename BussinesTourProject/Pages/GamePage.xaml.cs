@@ -20,6 +20,7 @@ using Windows.Security.Authentication.OnlineId;
 using System.Threading.Tasks;
 using Windows.UI.Core;
 using BussinesTourProject.Services;
+using System.Runtime.CompilerServices;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -36,11 +37,31 @@ namespace BussinesTourProject.Pages
         Player Player3 = new Player(name: "Player3");
         Player Player4 = new Player(name: "Player4");
 
-        int currentDiceResult = 1;
+        int currentDiceResult = 2;
+
+        private DispatcherTimer timer;
+        private int secondsElapsed;
+
         private GameManager gameManager;
         public GamePage()
         {
             this.InitializeComponent();
+            InitializeTimer();
+        }
+
+        private void InitializeTimer()
+        {
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1); // Set interval to 1 second
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, object e)
+        {
+            secondsElapsed++;
+            // Update UI with the elapsed time
+            UpdateUITextBlock.Text = $"Seconds Elapsed: {secondsElapsed}";
         }
 
         private static void InitPlayer(Player player, Image imgPlayer, int[,] playerMatrixPositions)
@@ -53,7 +74,7 @@ namespace BussinesTourProject.Pages
         }
 
 
-        public static void ChangePlayerPositionAnimation(Player player, int diceResult)
+        public  static void ChangePlayerPositionAnimation(Player player, int diceResult)
         {
             int currentPosition = player.currentPosition + 1;
             player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
@@ -69,13 +90,13 @@ namespace BussinesTourProject.Pages
 
                 Grid.SetRow(player.Img, player.PlayerPosition[0, currentPosition]);
                 Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);
+                Task.Delay(50000);
 
                 currentPosition++;
 
             }
         }
        
-
         int row = 30;
         int col = 3;
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -100,7 +121,7 @@ namespace BussinesTourProject.Pages
 
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
         {   
-             ChangePlayerPositionAnimation(Player1, 1);
+             ChangePlayerPositionAnimation(Player1, 3);
         }
         
 
@@ -112,6 +133,41 @@ namespace BussinesTourProject.Pages
         private void MovingPlayer()
         {
             
+        }
+
+        private async void DelayCode_Click(object sender, RoutedEventArgs e)
+        {
+
+            // Disable the button during the delay to prevent multiple clicks
+            ((Button)sender).IsEnabled = false;
+            int currentPosition = Player1.currentPosition + 1;
+            Player1.ChangePlayerPosition(2); // changing position of the player, and make sure that there is not overflow
+            // Delay for 2 seconds
+
+            for (int i = 0; i < 2; i++)
+            {
+
+                while (currentPosition > (Player1.PlayerPosition.GetLength(1) - 1))
+                {
+                    currentPosition -= Player1.PlayerPosition.GetLength(1);
+                }
+                if (currentPosition >= 11 && currentPosition < 20)
+                    Player1.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarBackward.png"));
+
+                Grid.SetRow(Player1.Img, Player1.PlayerPosition[0, currentPosition]);
+                Grid.SetColumn(Player1.Img, Player1.PlayerPosition[1, currentPosition]);
+
+                currentPosition++;
+                await Task.Delay(TimeSpan.FromSeconds(1));
+
+            }
+
+            // Code to execute after the delay
+            // For example, show a message box
+
+            // Re-enable the button after the delay
+            ((Button)sender).IsEnabled = true;
+
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -131,5 +187,6 @@ namespace BussinesTourProject.Pages
             //gameManager = new GameManager();
             //gameManager.Start();
         }
+
     }
 }
