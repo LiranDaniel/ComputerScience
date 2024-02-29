@@ -564,6 +564,7 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
 
@@ -598,32 +599,87 @@
 
 
 
-            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png"  Stretch="Fill"
-                   Grid.Row="0" Grid.Column="72" Grid.ColumnSpan="17" Grid.RowSpan="17"></Image>
-
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
                    Grid.Row="0" Grid.Column="17" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
 
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
-                   Grid.Row="0" Grid.Column="17" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+                   Grid.Row="0" Grid.Column="25" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
 
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
-                   Grid.Row="0" Grid.Column="17" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+                   Grid.Row="0" Grid.Column="33" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
 
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
-                   Grid.Row="0" Grid.Column="17" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+                   Grid.Row="0" Grid.Column="41" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
 
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
-                   Grid.Row="0" Grid.Column="17" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+                   Grid.Row="0" Grid.Column="49" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
 
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
-                   Grid.Row="0" Grid.Column="17" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+                   Grid.Row="0" Grid.Column="57" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
 
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
-                   Grid.Row="0" Grid.Column="17" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+                   Grid.Row="0" Grid.Column="65" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
 
-            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" 
-                   Grid.Row="0" Grid.Column="17" Grid.RowSpan="16" Stretch="Fill" Grid.ColumnSpan="17"></Image>
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png"  Stretch="Fill"
+                   Grid.Row="0" Grid.Column="73" Grid.ColumnSpan="17" Grid.RowSpan="17"></Image>
+
+            
+            
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="17" Grid.Column="73" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="25" Grid.Column="73" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="33" Grid.Column="73" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="41" Grid.Column="73" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="49" Grid.Column="73" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="57" Grid.Column="73" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="65" Grid.Column="73" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png"  Stretch="Fill"
+                   Grid.Row="73" Grid.Column="73" Grid.RowSpan="17" Grid.ColumnSpan="17"></Image>
+
+
+
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="73" Grid.Column="17" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="73" Grid.Column="25" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="73" Grid.Column="33" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="73" Grid.Column="41" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="73" Grid.Column="49" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="73" Grid.Column="57" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="73" Grid.Column="65" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png"  Stretch="Fill"
+                   Grid.Row="73" Grid.Column="73" Grid.ColumnSpan="17" Grid.RowSpan="17"></Image>
+
+
+
+
+
 
 
             <Image x:Name="imgPlayer" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
