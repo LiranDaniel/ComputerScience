@@ -605,25 +605,25 @@
                    Grid.Row="0" Grid.Column="17" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
 
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
-                   Grid.Row="0" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+                   Grid.Row="0" Grid.Column="17" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
 
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
-                   Grid.Row="0" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+                   Grid.Row="0" Grid.Column="17" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
 
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
-                   Grid.Row="0" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+                   Grid.Row="0" Grid.Column="17" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
 
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
-                   Grid.Row="0" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+                   Grid.Row="0" Grid.Column="17" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
 
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
-                   Grid.Row="0" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+                   Grid.Row="0" Grid.Column="17" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
 
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
-                   Grid.Row="0" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+                   Grid.Row="0" Grid.Column="17" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
 
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" 
-                   Grid.Row="0" Grid.RowSpan="16" Stretch="Fill" Grid.ColumnSpan="17"></Image>
+                   Grid.Row="0" Grid.Column="17" Grid.RowSpan="16" Stretch="Fill" Grid.ColumnSpan="17"></Image>
 
 
             <Image x:Name="imgPlayer" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
