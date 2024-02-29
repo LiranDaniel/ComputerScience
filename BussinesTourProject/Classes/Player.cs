@@ -1,5 +1,4 @@
-﻿using BussinesTourProject.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +26,6 @@ namespace BussinesTourProject.Classes
             this.currentPosition = 0;
             AmountOfMoney = 2_000_000;
             listHouses = new List<int>();
-            GameManager.Events.OnMovingPlayer += MovingPlayerPosition;
         }
 
         private void MovingPlayerPosition(int diceResult)

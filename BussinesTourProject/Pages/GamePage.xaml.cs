@@ -19,7 +19,6 @@ using GameEngine.GameServices;
 using Windows.Security.Authentication.OnlineId;
 using System.Threading.Tasks;
 using Windows.UI.Core;
-using BussinesTourProject.Services;
 using System.Runtime.CompilerServices;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -42,7 +41,6 @@ namespace BussinesTourProject.Pages
         private DispatcherTimer timer;
         private int secondsElapsed;
 
-        private GameManager gameManager;
         public GamePage()
         {
             this.InitializeComponent();
