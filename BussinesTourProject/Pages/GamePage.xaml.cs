@@ -17,6 +17,8 @@ using Windows.UI.Xaml.Navigation;
 using System.Threading;
 using GameEngine.GameServices;
 using Windows.Security.Authentication.OnlineId;
+using System.Threading.Tasks;
+using Windows.UI.Core;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -36,10 +38,53 @@ namespace BussinesTourProject.Pages
         Player Player3 = new Player(name: "Player3");
         Player Player4 = new Player(name: "Player4");
 
-        
-
         int currentDiceResult = 1;
+        // Somewhere in your code where you need to update UI from a separate thread
+         private async void UpdateUIFromBackgroundThread(Player player, int diceResult)
+         {
+            // Do some background work in a separate thread
+            bool IsFirstTime = true;
+            int currentPosition = player.currentPosition + 1;
+            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
 
+            for (int i = 0; i < diceResult; i++)
+            {
+
+                // Now update the UI from the main UI thread
+                await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                 () =>
+                 {
+                     // Perform time-consuming operations here
+                     // This part runs on a background thread
+                     if (!IsFirstTime)
+                         Thread.Sleep(1000);
+                     else
+                         IsFirstTime = false;
+                 });
+
+                await Task.Run(() =>
+                {
+
+                    // Update UI elements here
+                    // This part runs on the main UI thread
+
+
+                    while (currentPosition > (player.PlayerPosition.GetLength(1) - 1))
+                    {
+                        currentPosition -= player.PlayerPosition.GetLength(1);
+                    }
+                    if (currentPosition >= 11 && currentPosition < 20)
+                        player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarBackward.png"));
+
+                    Grid.SetRow(player.Img, player.PlayerPosition[0, currentPosition]);
+                    Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);
+
+
+
+
+                });
+            }
+        }
         Thread ThreadPlayer1Moving;
 
       /*  private void BackgroundTask()
@@ -69,7 +114,7 @@ namespace BussinesTourProject.Pages
             InitPlayer(Player1, imgPlayer, MatrixPositionPlayer1);
             // int firstPlayer = rnd.Next(0, 4);
 
-             ThreadPlayer1Moving = new Thread(() => ChangePlayerPositionAnimation(Player1, 4));
+              ThreadPlayer1Moving = new Thread(() => ChangePlayerPositionAnimation(Player1, 4));
             // Thread ThreadPlayer2Moving = new Thread(() => ChangePlayerPositionAnimation(Player2, currentDiceResult));
             // Thread ThreadPlayer3Moving = new Thread(() => ChangePlayerPositionAnimation(Player3, currentDiceResult));
             // Thread ThreadPlayer4Moving = new Thread(() => ChangePlayerPositionAnimation(Player4, currentDiceResult));
@@ -150,7 +195,8 @@ namespace BussinesTourProject.Pages
             //  DispatcherTimer timer = new DispatcherTimer();
             // timer.Interval = TimeSpan.FromMilliseconds(50);
             // timer.Tick += _runTimer_Tick;
-            ChangePlayerPositionAnimation(Player1, currentDiceResult);
+             ChangePlayerPositionAnimation(Player1, 1);
+            // UpdateUIFromBackgroundThread(Player1, 3);
         }
         
 

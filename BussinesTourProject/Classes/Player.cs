@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BussinesTourProject.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace BussinesTourProject.Classes
     {
         // Matrix.GetLenght(0) == Number of rows
         // Matrix.GetLenght(1) == Number of column 
-        public const int MaxPosition = 30;
+        public const int MaxPosition = 40;
         public int[,] PlayerPosition;
         public int currentPosition;
         public int AmountOfMoney;
@@ -25,12 +26,19 @@ namespace BussinesTourProject.Classes
             this.currentPosition = 0;
             AmountOfMoney = 2_000_000;
             listHouses = new List<int>();
+            Manager.Events.OnMovingPlayer += MovingPlayerPosition;
+        }
+
+        private void MovingPlayerPosition(int diceResult)
+        {
+            throw new NotImplementedException();
         }
 
         public void SetPlayerPosition(int[,] PlayerPosition)
         {
             this.PlayerPosition = PlayerPosition;
         }
+
         public void ChangePlayerPosition(int diceResult)
         {
             currentPosition += diceResult;
