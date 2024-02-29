@@ -384,32 +384,9 @@
             <Grid.Background>
                 <ImageBrush ImageSource="/Assets\Images\Monopoly_Map.png"></ImageBrush>
             </Grid.Background>
-            
-            
+
+
             <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -482,17 +459,6 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition ></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition ></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -505,7 +471,6 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition ></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -516,22 +481,6 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition ></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition ></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -599,8 +548,6 @@
         </Grid>
 
 
-
-
         <Button x:Name="btnProfile" Grid.Column="2" Grid.Row="60" Grid.ColumnSpan="10" Grid.RowSpan="10"
                 PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Click="btnMovePlayer_Click">
             <Image x:Name="imgProfile" Source="/Assets\Buttons\UsingButtons\Profile (2).png">
@@ -614,19 +561,7 @@
             </Image>
         </Button>
 
-
-
-
         <TextBlock x:Name="UpdateUITextBlock" Grid.ColumnSpan="30" Grid.RowSpan="10" Grid.Row="26" Grid.Column="5"></TextBlock>
-
-
-
-
-
-
-
-
-
 
     </Grid>
 </Page>
