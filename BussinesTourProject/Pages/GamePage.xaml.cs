@@ -171,7 +171,7 @@ namespace BussinesTourProject.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
-            int[,] MatrixPositionPlayer1 = { { 81, 70, 63, 56, 50, 43, 37, 30, 24, 17,
+            int[,] MatrixPositionPlayer1 = { { 70, 60, 50, 40, 30, 20, 10, 30, 24, 17,
                                                9, 8, 8, 8, 8, 8, 8, 8, 8, 8,
                                                17, 24, 30, 37, 43, 50, 56, 63, 70, 81,
                                                81, 81, 81, 81, 81, 81, 81 ,81, 81 ,81},

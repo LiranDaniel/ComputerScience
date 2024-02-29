@@ -381,12 +381,28 @@
 
         <Grid Grid.Row="13" Grid.Column="30" Grid.ColumnSpan="150" Grid.RowSpan="90"
               BorderBrush="Black" BorderThickness="5" CornerRadius="25">
-            <Grid.Background>
-                <ImageBrush ImageSource="/Assets\Images\Monopoly_Map.png"></ImageBrush>
-            </Grid.Background>
+
 
 
             <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -539,11 +555,98 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="0" Grid.RowSpan="17" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="17" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="25" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="33" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="41" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="49" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="57" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="65" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+            
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" 
+                   Grid.Row="73" Grid.RowSpan="17" Stretch="Fill" Grid.ColumnSpan="17"></Image>
+
+
+
+
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png"  Stretch="Fill"
+                   Grid.Row="0" Grid.Column="72" Grid.ColumnSpan="17" Grid.RowSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="0" Grid.Column="17" Grid.RowSpan="17" Grid.ColumnSpan="8"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="0" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="0" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="0" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="0" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="0" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+                   Grid.Row="0" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
+
+            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" 
+                   Grid.Row="0" Grid.RowSpan="16" Stretch="Fill" Grid.ColumnSpan="17"></Image>
+
+
             <Image x:Name="imgPlayer" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="4" Grid.RowSpan="5" Grid.Column="1" Grid.Row="63">
+                   Grid.ColumnSpan="2" Grid.RowSpan="4" Grid.Column="1" Grid.Row="78" Stretch="Fill">
                         
+            </Image>
+
+
+            <Image x:Name="imgPlayer2" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
+                   Grid.ColumnSpan="2" Grid.RowSpan="4" Grid.Column="4" Grid.Row="78" Stretch="Fill">
+
+            </Image>
+
+
+            <Image x:Name="imgPlayer3" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
+                   Grid.ColumnSpan="2" Grid.RowSpan="4" Grid.Column="7" Grid.Row="78" Stretch="Fill">
+
+            </Image>
+
+
+            <Image x:Name="imgPlayer4" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
+                   Grid.ColumnSpan="2" Grid.RowSpan="4" Grid.Column="10" Grid.Row="78" Stretch="Fill">
+
             </Image>
         </Grid>
 
