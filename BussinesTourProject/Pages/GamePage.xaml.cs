@@ -139,7 +139,7 @@ namespace BussinesTourProject.Pages
             // Disable the button during the delay to prevent multiple clicks
             ((Button)sender).IsEnabled = false;
             int currentPosition = Player1.currentPosition + 1;
-            Player1.ChangePlayerPosition(2); // changing position of the player, and make sure that there is not overflow
+            Player1.ChangePlayerPosition(currentDiceResult); // changing position of the player, and make sure that there is not overflow
             // Delay for 2 seconds
 
             for (int i = 0; i < currentDiceResult; i++)
@@ -171,7 +171,7 @@ namespace BussinesTourProject.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
-            int[,] MatrixPositionPlayer1 = { { 70, 60, 50, 40, 30, 20, 10, 30, 24, 17,
+            int[,] MatrixPositionPlayer1 = { { 78, 66, 58, 50, 42, 34, 26, 18, 10, 10,
                                                9, 8, 8, 8, 8, 8, 8, 8, 8, 8,
                                                17, 24, 30, 37, 43, 50, 56, 63, 70, 81,
                                                81, 81, 81, 81, 81, 81, 81 ,81, 81 ,81},

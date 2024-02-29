@@ -627,25 +627,25 @@
 
 
             <Image x:Name="imgPlayer" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="2" Grid.RowSpan="4" Grid.Column="1" Grid.Row="78" Stretch="Fill">
+                   Grid.ColumnSpan="2" Grid.RowSpan="6" Grid.Column="1" Grid.Row="78" Stretch="Fill">
                         
             </Image>
 
 
             <Image x:Name="imgPlayer2" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="2" Grid.RowSpan="4" Grid.Column="4" Grid.Row="78" Stretch="Fill">
+                   Grid.ColumnSpan="2" Grid.RowSpan="6" Grid.Column="4" Grid.Row="78" Stretch="Fill">
 
             </Image>
 
 
             <Image x:Name="imgPlayer3" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="2" Grid.RowSpan="4" Grid.Column="7" Grid.Row="78" Stretch="Fill">
+                   Grid.ColumnSpan="2" Grid.RowSpan="6" Grid.Column="7" Grid.Row="78" Stretch="Fill">
 
             </Image>
 
 
             <Image x:Name="imgPlayer4" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="2" Grid.RowSpan="4" Grid.Column="10" Grid.Row="78" Stretch="Fill">
+                   Grid.ColumnSpan="2" Grid.RowSpan="6" Grid.Column="10" Grid.Row="78" Stretch="Fill">
 
             </Image>
         </Grid>
