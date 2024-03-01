@@ -33,6 +33,7 @@ namespace BussinesTourProject
             this.InitializeComponent();
             this.Suspending += OnSuspending;
             MusicPlayer.LoadMusicPlayer("BusinessTour.wav");
+            MusicPlayer.Stop();
         }
 
         /// <summary>

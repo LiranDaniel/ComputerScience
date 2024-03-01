@@ -171,14 +171,14 @@ namespace BussinesTourProject.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
-            int[,] MatrixPositionPlayer1 = { { 80, 70, 62, 54, 46, 38, 30, 22, 14,
-                                               1, 1, 1, 1, 1, 1, 1, 1, 1,
-                                               14, 22, 30, 38, 46, 54, 62, 70, 80,
-                                               81, 81, 81, 81, 81, 81 ,81, 81 ,81},
-                                               { 2, 2, 2, 2, 2, 2, 2, 2, 2,
-                                                 2, 12, 11, 12, 13, 14, 15, 16, 17,
-                                                 85, 85, 85, 85, 85, 85, 85, 85, 85,
-                                                 28, 29, 30, 31, 32, 33, 34, 18, 35} };
+            int[,] MatrixPositionPlayer1 = { { 80, 70, 62, 54, 46, 38, 30, 22,
+                                               1, 1, 1, 1, 1, 1, 1, 1,
+                                               14, 22, 30, 38, 46, 54, 62, 70,
+                                               81, 81, 81, 81, 81, 81, 81 ,81},
+                                               { 2, 2, 2, 2, 2, 2, 2, 2,
+                                                 14, 18, 26, 34, 42, 50, 58, 66,
+                                                 85, 85, 85, 85, 85, 85, 85, 85,
+                                                 74, 66, 58, 50, 42, 34, 26, 18} };
 
             InitPlayer(Player1, imgPlayer, MatrixPositionPlayer1);
             //gameManager = new GameManager();
