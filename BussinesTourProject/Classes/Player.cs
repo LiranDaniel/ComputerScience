@@ -12,7 +12,7 @@ namespace BussinesTourProject.Classes
     {
         // Matrix.GetLenght(0) == Number of rows
         // Matrix.GetLenght(1) == Number of column 
-        public const int MaxPosition = 40;
+        public const int MaxPosition = 32;
         public int[,] PlayerPosition;
         public int currentPosition;
         public int AmountOfMoney;
