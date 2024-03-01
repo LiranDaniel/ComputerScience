@@ -151,27 +151,33 @@ namespace BussinesTourProject.Pages
                 }
                 if (currentPosition >= 8 && currentPosition < 16)
                 {
-                    Player1.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarRight.png"));
+                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarRight.png"));
+                    Grid.SetColumnSpan(currentPlayer.Img, 5);
+                    Grid.SetRowSpan(currentPlayer.Img, 4);
                 }
                 else if (currentPosition >= 16 && currentPosition < 24)
                 {
-                    Player1.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarBackward.png"));
-                    
+                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarBackward.png"));
+                    Grid.SetColumnSpan(currentPlayer.Img, 2);
+                    Grid.SetRowSpan(currentPlayer.Img, 6);
                 }
                 else if (currentPosition >= 24 && currentPosition < 31)
                 {
-                    Player1.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarLeft.png"));
+                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarLeft.png"));
+                    Grid.SetColumnSpan(currentPlayer.Img, 5);
+                    Grid.SetRowSpan(currentPlayer.Img, 4);
                 }
                 else if (currentPosition >= 0 && currentPosition < 8)
                 {
-                    Player1.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarForward.png"));
+                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarForward.png"));
+                    Grid.SetColumnSpan(currentPlayer.Img, 2);
+                    Grid.SetRowSpan(currentPlayer.Img, 6);
                 }
 
-                Grid.SetRow(Player1.Img, Player1.PlayerPosition[0, currentPosition]);
-                Grid.SetColumn(Player1.Img, Player1.PlayerPosition[1, currentPosition]);
-
+                Grid.SetRow(currentPlayer.Img, currentPlayer.PlayerPosition[0, currentPosition]);
+                Grid.SetColumn(currentPlayer.Img, currentPlayer.PlayerPosition[1, currentPosition]);
                 currentPosition++;
-                await Task.Delay(TimeSpan.FromSeconds(1));
+                await Task.Delay(TimeSpan.FromMilliseconds(200));
 
             }
 
@@ -191,7 +197,7 @@ namespace BussinesTourProject.Pages
                                                14, 22, 30, 38, 46, 54, 62, 70,
                                                93, 93, 93, 93, 93, 93, 93, 93},
                                                { 2, 2, 2, 2, 2, 2, 2, 2,
-                                                 14, 18, 26, 34, 42, 50, 58, 66,
+                                                 10, 18, 26, 34, 42, 50, 58, 66,
                                                  85, 85, 85, 85, 85, 85, 85, 85,
                                                  74, 66, 58, 50, 42, 34, 26, 18} };
 
