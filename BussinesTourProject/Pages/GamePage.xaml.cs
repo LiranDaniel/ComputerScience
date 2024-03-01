@@ -62,12 +62,13 @@ namespace BussinesTourProject.Pages
             UpdateUITextBlock.Text = $"Seconds Elapsed: {secondsElapsed}";
         }
 
-        private static void InitPlayer(Player player, Image imgPlayer, int[,] playerMatrixPositions)
+        private static void InitPlayer(Player player, Image imgPlayer, int[,] playerMatrixPositions, string name)
         {
             player.SetPlayerPosition(playerMatrixPositions);
             player.Img = imgPlayer;
             Grid.SetRow(player.Img, player.PlayerPosition[0, 0]);
             Grid.SetColumn(player.Img, player.PlayerPosition[1, 0]);
+            player.name = name;
             
         }
 
@@ -163,7 +164,7 @@ namespace BussinesTourProject.Pages
                 }
                 else if (currentPosition >= 24 && currentPosition < 31)
                 {
-                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarLeft.png"));
+                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/"+currentPlayer.name+"/RedCarLeft.png"));
                     Grid.SetColumnSpan(currentPlayer.Img, 5);
                     Grid.SetRowSpan(currentPlayer.Img, 4);
                 }
@@ -201,7 +202,7 @@ namespace BussinesTourProject.Pages
                                                  85, 85, 85, 85, 85, 85, 85, 85,
                                                  74, 66, 58, 50, 42, 34, 26, 18} };
 
-            InitPlayer(Player1, imgPlayer, MatrixPositionPlayer1);
+            InitPlayer(Player1, imgPlayer, MatrixPositionPlayer1, "Player1");
             currentPlayer = Player1;
             //gameManager = new GameManager();
             //gameManager.Start();
