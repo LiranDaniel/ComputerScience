@@ -708,7 +708,7 @@
 
             </Image>            
             <Image Source="/Assets\Images\Players\Player1\RedCarRight.png" 
-                   Grid.ColumnSpan="5" Grid.RowSpan="4" Grid.Column="18" Grid.Row="5" Stretch="Fill">
+                   Grid.ColumnSpan="5" Grid.RowSpan="4" Grid.Column="18" Grid.Row="93" Stretch="Fill">
 
             </Image>
             

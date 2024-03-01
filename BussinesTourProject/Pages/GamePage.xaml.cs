@@ -119,7 +119,7 @@ namespace BussinesTourProject.Pages
 
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
         {   
-             ChangePlayerPositionAnimation(Player1, 3);
+             ChangePlayerPositionAnimation(Player1, 1);
         }
         
 
@@ -174,7 +174,7 @@ namespace BussinesTourProject.Pages
             int[,] MatrixPositionPlayer1 = { { 80, 70, 62, 54, 46, 38, 30, 22,
                                                1, 1, 1, 1, 1, 1, 1, 1,
                                                14, 22, 30, 38, 46, 54, 62, 70,
-                                               81, 81, 81, 81, 81, 81, 81 ,81},
+                                               93, 93, 93, 93, 93, 93, 93, 93},
                                                { 2, 2, 2, 2, 2, 2, 2, 2,
                                                  14, 18, 26, 34, 42, 50, 58, 66,
                                                  85, 85, 85, 85, 85, 85, 85, 85,
