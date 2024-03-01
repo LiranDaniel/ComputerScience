@@ -379,7 +379,7 @@
         
         
 
-        <Grid Grid.Row="13" Grid.Column="30" Grid.ColumnSpan="150" Grid.RowSpan="90"
+        <Grid Grid.Row="13" Grid.Column="30" Grid.ColumnSpan="150" Grid.RowSpan="92"
               BorderBrush="Black" BorderThickness="5" CornerRadius="20">
 
 
