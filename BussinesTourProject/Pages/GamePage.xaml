@@ -633,8 +633,9 @@
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png"  Stretch="Fill"
                    Grid.Row="0" Grid.Column="73" Grid.ColumnSpan="17" Grid.RowSpan="21"></Image>
 
-            
-            
+
+
+
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
                    Grid.Row="21" Grid.Column="73" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
 
