@@ -40,7 +40,7 @@ namespace BussinesTourProject.Pages
 
         private DispatcherTimer timer;
         private int secondsElapsed;
-
+        private Player currentPlayer;
         public GamePage()
         {
             this.InitializeComponent();
@@ -68,7 +68,7 @@ namespace BussinesTourProject.Pages
             player.Img = imgPlayer;
             Grid.SetRow(player.Img, player.PlayerPosition[0, 0]);
             Grid.SetColumn(player.Img, player.PlayerPosition[1, 0]);
-             
+            
         }
 
 
@@ -149,8 +149,23 @@ namespace BussinesTourProject.Pages
                 {
                     currentPosition -= Player1.PlayerPosition.GetLength(1);
                 }
-                if (currentPosition >= 11 && currentPosition < 20)
+                if (currentPosition >= 8 && currentPosition < 16)
+                {
+                    Player1.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarRight.png"));
+                }
+                else if (currentPosition >= 16 && currentPosition < 24)
+                {
                     Player1.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarBackward.png"));
+                    
+                }
+                else if (currentPosition >= 24 && currentPosition < 31)
+                {
+                    Player1.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarLeft.png"));
+                }
+                else if (currentPosition >= 0 && currentPosition < 8)
+                {
+                    Player1.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarForward.png"));
+                }
 
                 Grid.SetRow(Player1.Img, Player1.PlayerPosition[0, currentPosition]);
                 Grid.SetColumn(Player1.Img, Player1.PlayerPosition[1, currentPosition]);
@@ -181,6 +196,7 @@ namespace BussinesTourProject.Pages
                                                  74, 66, 58, 50, 42, 34, 26, 18} };
 
             InitPlayer(Player1, imgPlayer, MatrixPositionPlayer1);
+            currentPlayer = Player1;
             //gameManager = new GameManager();
             //gameManager.Start();
         }
