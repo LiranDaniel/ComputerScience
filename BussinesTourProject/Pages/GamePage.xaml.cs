@@ -166,6 +166,9 @@ namespace BussinesTourProject.Pages
             Grid.SetColumnSpan(currentPlayer.Img, 5);
             Grid.SetRowSpan(currentPlayer.Img, 4);
 
+            Grid.SetRow(currentPlayer.Img, currentPlayer.PlayerPosition[0, player.currentPosition]);
+            Grid.SetColumn(currentPlayer.Img, currentPlayer.PlayerPosition[1, player.currentPosition]);
+
         }
         private async void btnRoll_Dice_Click(object sender, RoutedEventArgs e)
         {
