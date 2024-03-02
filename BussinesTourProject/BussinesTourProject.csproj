@@ -416,6 +416,13 @@
     <Content Include="Assets\Images\BusinessTourMainPage.png" />
     <Content Include="Assets\Images\BusinessTourPlay.png" />
     <Content Include="Assets\Images\BussinesTour Logo.png" />
+    <Content Include="Assets\Images\Dice\Dice%281%29.png" />
+    <Content Include="Assets\Images\Dice\Dice%282%29.png" />
+    <Content Include="Assets\Images\Dice\Dice%283%29.png" />
+    <Content Include="Assets\Images\Dice\Dice%284%29.png" />
+    <Content Include="Assets\Images\Dice\Dice%285%29.png" />
+    <Content Include="Assets\Images\Dice\Dice%286%29.png" />
+    <Content Include="Assets\Images\Dice\DiceGif.gif" />
     <Content Include="Assets\Images\GameBackGround.jpg" />
     <Content Include="Assets\Images\GameImages\Bar.jpg" />
     <Content Include="Assets\Images\GameImages\Heart.gif" />
