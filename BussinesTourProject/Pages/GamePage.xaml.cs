@@ -137,70 +137,6 @@ namespace BussinesTourProject.Pages
             
         }
 
-        private async void DelayCode_Click(object sender, RoutedEventArgs e)
-        {
-
-            // Disable the button during the delay to prevent multiple clicks
-            ((Button)sender).IsEnabled = false;
-            int currentPosition = currentPlayer.currentPosition + 1;
-            currentPlayer.ChangePlayerPosition(currentDiceResult); // changing position of the player, and make sure that there is not overflow
-            // Delay for 2 seconds
-
-            for (int i = 0; i < currentDiceResult; i++)
-            {
-
-                while (currentPosition > (currentPlayer.PlayerPosition.GetLength(1) - 1))
-                {
-                    currentPosition -= currentPlayer.PlayerPosition.GetLength(1);
-                }
-                if (currentPosition >= 8 && currentPosition < 16)
-                {
-                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarRight.png"));
-                    Grid.SetColumnSpan(currentPlayer.Img, 5);
-                    Grid.SetRowSpan(currentPlayer.Img, 4);
-                }
-                else if (currentPosition >= 16 && currentPosition < 24)
-                {
-                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarBackward.png"));
-                    Grid.SetColumnSpan(currentPlayer.Img, 2);
-                    Grid.SetRowSpan(currentPlayer.Img, 6);
-                }
-                else if (currentPosition >= 24 && currentPosition < 31)
-                {
-                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarLeft.png"));
-                    Grid.SetColumnSpan(currentPlayer.Img, 5);
-                    Grid.SetRowSpan(currentPlayer.Img, 4);
-                }
-                else if (currentPosition >= 0 && currentPosition < 8)
-                {
-                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarForward.png"));
-                    Grid.SetColumnSpan(currentPlayer.Img, 2);
-                    Grid.SetRowSpan(currentPlayer.Img, 6);
-                }
-
-                Grid.SetRow(currentPlayer.Img, currentPlayer.PlayerPosition[0, currentPosition]);
-                Grid.SetColumn(currentPlayer.Img, currentPlayer.PlayerPosition[1, currentPosition]);
-                currentPosition++;
-                await Task.Delay(TimeSpan.FromMilliseconds(200));
-
-            }
-
-            // Code to execute after the delay
-            // For example, show a message box
-
-            // Re-enable the button after the delay
-            ((Button)sender).IsEnabled = true;
-
-        }
-        private async void RollDice()
-        {
-            int[] Result = Map.RollDice();
-            await Task.Delay(TimeSpan.FromSeconds(3));
-            imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
-            imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[1] + ").png"));
-
-
-        }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
@@ -215,8 +151,6 @@ namespace BussinesTourProject.Pages
 
             InitPlayer(Player1, imgPlayer, MatrixPositionPlayer1, "Player1");
             currentPlayer = Player1;
-            //gameManager = new GameManager();
-            //gameManager.Start();
         }
 
         private async void btnRoll_Dice_Click(object sender, RoutedEventArgs e)
