@@ -21,6 +21,7 @@ using System.Threading.Tasks;
 using Windows.UI.Core;
 using System.Runtime.CompilerServices;
 using Windows.Gaming.Input;
+using System.Reflection.Metadata.Ecma335;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -42,6 +43,8 @@ namespace BussinesTourProject.Pages
         private DispatcherTimer timer;
         private int secondsElapsed;
         private Player currentPlayer;
+        private int currentTimesPlay = 1;
+
         public GamePage()
         {
             this.InitializeComponent();
@@ -274,7 +277,16 @@ namespace BussinesTourProject.Pages
             imgDice1.Visibility = Visibility.Collapsed;
             imgDice2.Visibility = Visibility.Collapsed;
             ((Button)sender).IsEnabled = true;
+            if (Result[0] == Result[1])
+            {
+                currentTimesPlay++;
+                ((Button)sender).Visibility = Visibility.Visible;
+            }
+            else if (currentTimesPlay > 3)
+                currentPlayer = Player1;
 
+            imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
+            imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
         }
 
         private void btnRoll_Dice_PointerEntered(object sender, PointerRoutedEventArgs e)
