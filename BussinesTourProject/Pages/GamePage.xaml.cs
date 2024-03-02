@@ -220,7 +220,8 @@ namespace BussinesTourProject.Pages
         {
             ((Button)sender).IsEnabled = false;
             ((Button)sender).Visibility = Visibility.Collapsed;
-
+            imgDice1.Visibility = Visibility.Visible;
+            imgDice2.Visibility = Visibility.Visible;
             int[] Result = Map.RollDice();
             await Task.Delay(TimeSpan.FromSeconds(2));
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
@@ -270,7 +271,8 @@ namespace BussinesTourProject.Pages
                 await Task.Delay(TimeSpan.FromMilliseconds(200));
 
             }
-
+            imgDice1.Visibility = Visibility.Collapsed;
+            imgDice2.Visibility = Visibility.Collapsed;
             ((Button)sender).IsEnabled = true;
 
         }

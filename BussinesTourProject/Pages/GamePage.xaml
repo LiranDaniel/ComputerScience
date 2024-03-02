@@ -732,11 +732,11 @@
             
             
             <Image x:Name="imgDice1" Grid.Column="37" Grid.Row="40" Grid.ColumnSpan="6" Grid.RowSpan="10" Stretch="Fill"
-                   Source="/Assets\Images\Dice\DiceGif.gif" Visibility="Visible"></Image>
+                   Source="/Assets\Images\Dice\DiceGif.gif" Visibility="Collapsed"></Image>
 
 
             <Image x:Name="imgDice2" Grid.Column="45" Grid.Row="40" Grid.ColumnSpan="6" Grid.RowSpan="10" Stretch="Fill"
-                   Source="/Assets\Images\Dice\DiceGif.gif" Visibility="Visible"></Image>
+                   Source="/Assets\Images\Dice\DiceGif.gif" Visibility="Collapsed"></Image>
         </Grid>
 
 
