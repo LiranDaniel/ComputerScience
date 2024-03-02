@@ -725,6 +725,11 @@
                    Grid.ColumnSpan="2" Grid.RowSpan="6" Grid.Column="10" Grid.Row="78" Stretch="Fill">
 
             </Image>
+
+            <Button x:Name="btnRoll_Dice" Grid.Row="57" Grid.Column="40" Grid.ColumnSpan="7" Grid.RowSpan="6" Content="Roll Dice"
+                    Background="Black" Foreground="White" FontFamily="Ink Draft" CornerRadius="8" FontSize="30" Visibility="Visible"></Button>
+            <Image x:Name="imgDice" Grid.Column="40" Grid.Row="45" Grid.ColumnSpan="7" Grid.RowSpan="10" Stretch="Fill"
+                   Source=""></Image>
         </Grid>
 
 
