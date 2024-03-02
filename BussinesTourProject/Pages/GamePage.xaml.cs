@@ -158,6 +158,11 @@ namespace BussinesTourProject.Pages
         {
 
         }
+
+        private void MoveToJail(Player player)
+        {
+
+        }
         private async void btnRoll_Dice_Click(object sender, RoutedEventArgs e)
         {
             ((Button)sender).IsEnabled = false;
@@ -222,7 +227,13 @@ namespace BussinesTourProject.Pages
                 ((Button)sender).Visibility = Visibility.Visible;
             }
             else if (currentTimesPlay > 3)
+            {
+                MoveToJail(currentPlayer);
+                NextPlayer();
                 currentPlayer = Player1;
+            }
+            else
+                NextPlayer();
 
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
