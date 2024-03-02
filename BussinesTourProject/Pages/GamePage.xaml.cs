@@ -22,6 +22,7 @@ using Windows.UI.Core;
 using System.Runtime.CompilerServices;
 using Windows.Gaming.Input;
 using System.Reflection.Metadata.Ecma335;
+using Windows.ApplicationModel.VoiceCommands;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -151,8 +152,12 @@ namespace BussinesTourProject.Pages
 
             InitPlayer(Player1, imgPlayer, MatrixPositionPlayer1, "Player1");
             currentPlayer = Player1;
+            Player[] arrayPlayers = {Player1, Player2, Player3, Player4};
         }
+        private void NextPlayer()
+        {
 
+        }
         private async void btnRoll_Dice_Click(object sender, RoutedEventArgs e)
         {
             ((Button)sender).IsEnabled = false;
