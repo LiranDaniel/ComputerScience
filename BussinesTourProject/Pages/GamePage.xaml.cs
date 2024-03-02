@@ -20,6 +20,7 @@ using Windows.Security.Authentication.OnlineId;
 using System.Threading.Tasks;
 using Windows.UI.Core;
 using System.Runtime.CompilerServices;
+using Windows.Gaming.Input;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -96,7 +97,6 @@ namespace BussinesTourProject.Pages
             }
         }
        
-        int row = 30;
         int col = 3;
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
@@ -139,38 +139,38 @@ namespace BussinesTourProject.Pages
 
             // Disable the button during the delay to prevent multiple clicks
             ((Button)sender).IsEnabled = false;
-            int currentPosition = Player1.currentPosition + 1;
-            Player1.ChangePlayerPosition(currentDiceResult); // changing position of the player, and make sure that there is not overflow
+            int currentPosition = currentPlayer.currentPosition + 1;
+            currentPlayer.ChangePlayerPosition(currentDiceResult); // changing position of the player, and make sure that there is not overflow
             // Delay for 2 seconds
 
             for (int i = 0; i < currentDiceResult; i++)
             {
 
-                while (currentPosition > (Player1.PlayerPosition.GetLength(1) - 1))
+                while (currentPosition > (currentPlayer.PlayerPosition.GetLength(1) - 1))
                 {
-                    currentPosition -= Player1.PlayerPosition.GetLength(1);
+                    currentPosition -= currentPlayer.PlayerPosition.GetLength(1);
                 }
                 if (currentPosition >= 8 && currentPosition < 16)
                 {
-                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarRight.png"));
+                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarRight.png"));
                     Grid.SetColumnSpan(currentPlayer.Img, 5);
                     Grid.SetRowSpan(currentPlayer.Img, 4);
                 }
                 else if (currentPosition >= 16 && currentPosition < 24)
                 {
-                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarBackward.png"));
+                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarBackward.png"));
                     Grid.SetColumnSpan(currentPlayer.Img, 2);
                     Grid.SetRowSpan(currentPlayer.Img, 6);
                 }
                 else if (currentPosition >= 24 && currentPosition < 31)
                 {
-                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/"+currentPlayer.name+"/RedCarLeft.png"));
+                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarLeft.png"));
                     Grid.SetColumnSpan(currentPlayer.Img, 5);
                     Grid.SetRowSpan(currentPlayer.Img, 4);
                 }
                 else if (currentPosition >= 0 && currentPosition < 8)
                 {
-                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarForward.png"));
+                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarForward.png"));
                     Grid.SetColumnSpan(currentPlayer.Img, 2);
                     Grid.SetRowSpan(currentPlayer.Img, 6);
                 }
@@ -189,7 +189,15 @@ namespace BussinesTourProject.Pages
             ((Button)sender).IsEnabled = true;
 
         }
+        private async void RollDice()
+        {
+            int[] Result = Map.RollDice();
+            await Task.Delay(TimeSpan.FromSeconds(3));
+            imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
+            imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[1] + ").png"));
 
+
+        }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
@@ -208,5 +216,73 @@ namespace BussinesTourProject.Pages
             //gameManager.Start();
         }
 
+        private async void btnRoll_Dice_Click(object sender, RoutedEventArgs e)
+        {
+            ((Button)sender).IsEnabled = false;
+            ((Button)sender).Visibility = Visibility.Collapsed;
+
+            int[] Result = Map.RollDice();
+            await Task.Delay(TimeSpan.FromSeconds(2));
+            imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
+            imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[1] + ").png"));
+
+            int currentDiceResult = Result[0] + Result[1];
+
+            int currentPosition = currentPlayer.currentPosition + 1;
+            currentPlayer.ChangePlayerPosition(currentDiceResult); // changing position of the player, and make sure that there is not overflow
+            // Delay for 2 seconds
+
+            for (int i = 0; i < currentDiceResult; i++)
+            {
+
+                while (currentPosition > (currentPlayer.PlayerPosition.GetLength(1) - 1))
+                {
+                    currentPosition -= currentPlayer.PlayerPosition.GetLength(1);
+                }
+                if (currentPosition >= 8 && currentPosition < 16)
+                {
+                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarRight.png"));
+                    Grid.SetColumnSpan(currentPlayer.Img, 5);
+                    Grid.SetRowSpan(currentPlayer.Img, 4);
+                }
+                else if (currentPosition >= 16 && currentPosition < 24)
+                {
+                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarBackward.png"));
+                    Grid.SetColumnSpan(currentPlayer.Img, 2);
+                    Grid.SetRowSpan(currentPlayer.Img, 6);
+                }
+                else if (currentPosition >= 24 && currentPosition < 31)
+                {
+                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarLeft.png"));
+                    Grid.SetColumnSpan(currentPlayer.Img, 5);
+                    Grid.SetRowSpan(currentPlayer.Img, 4);
+                }
+                else if (currentPosition >= 0 && currentPosition < 8)
+                {
+                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarForward.png"));
+                    Grid.SetColumnSpan(currentPlayer.Img, 2);
+                    Grid.SetRowSpan(currentPlayer.Img, 6);
+                }
+
+                Grid.SetRow(currentPlayer.Img, currentPlayer.PlayerPosition[0, currentPosition]);
+                Grid.SetColumn(currentPlayer.Img, currentPlayer.PlayerPosition[1, currentPosition]);
+                currentPosition++;
+                await Task.Delay(TimeSpan.FromMilliseconds(200));
+
+            }
+
+            ((Button)sender).IsEnabled = true;
+
+        }
+
+        private void btnRoll_Dice_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
+        }
+
+        private void btnRoll_Dice_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
+        }
     }
 }
