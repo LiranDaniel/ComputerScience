@@ -747,7 +747,7 @@
             </Image>
         </Button>
         <Button x:Name="btnSettings" Grid.Column="2" Grid.Row="70" Grid.ColumnSpan="10" Grid.RowSpan="10"
-                PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Click="DelayCode_Click">
+                PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" >
             <Image x:Name="imgSettings" Source="/Assets\Buttons\UsingButtons\Settings (2).png">
 
             </Image>

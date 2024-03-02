@@ -161,6 +161,10 @@ namespace BussinesTourProject.Pages
 
         private void MoveToJail(Player player)
         {
+            player.currentPosition = 8;
+            currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarRight.png"));
+            Grid.SetColumnSpan(currentPlayer.Img, 5);
+            Grid.SetRowSpan(currentPlayer.Img, 4);
 
         }
         private async void btnRoll_Dice_Click(object sender, RoutedEventArgs e)
@@ -172,9 +176,9 @@ namespace BussinesTourProject.Pages
             int[] Result = Map.RollDice();
             await Task.Delay(TimeSpan.FromSeconds(2));
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
-            imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[1] + ").png"));
+            imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
 
-            int currentDiceResult = Result[0] + Result[1];
+            int currentDiceResult = Result[0] + Result[0];
 
             int currentPosition = currentPlayer.currentPosition + 1;
             currentPlayer.ChangePlayerPosition(currentDiceResult); // changing position of the player, and make sure that there is not overflow
@@ -221,17 +225,17 @@ namespace BussinesTourProject.Pages
             imgDice1.Visibility = Visibility.Collapsed;
             imgDice2.Visibility = Visibility.Collapsed;
             ((Button)sender).IsEnabled = true;
-            if (Result[0] == Result[1])
-            {
-                currentTimesPlay++;
-                ((Button)sender).Visibility = Visibility.Visible;
-            }
-            else if (currentTimesPlay > 3)
+            if (currentTimesPlay > 3)
             {
                 MoveToJail(currentPlayer);
                 NextPlayer();
                 currentPlayer = Player1;
             }
+            else if(Result[0] == Result[0])
+            {
+                currentTimesPlay++;
+                ((Button)sender).Visibility = Visibility.Visible;
+            }  
             else
                 NextPlayer();
 
