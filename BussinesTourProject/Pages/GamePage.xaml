@@ -400,11 +400,12 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <TextBlock FontFamily="Ink Draft" FontSize="40" Foreground="White"
-                       Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="5" Grid.RowSpan="2" 
-                       Text="Go to jail &#x0a;" x:Name="txtJailCard"> 
+            <TextBlock FontFamily="Ink Draft" FontSize="30" Foreground="White"
+                       Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" Grid.RowSpan="2" 
+                       Text="You are going to jail &#x0a;you are moving too fast" x:Name="txtJailCard"> 
             </TextBlock>
-            <Image>
+            <Image Source="/Assets\Images\SquareImages\Jailimg.png" Grid.Column="1" Grid.Row="1"
+                   Grid.ColumnSpan="5" Grid.RowSpan="4">
                 
             </Image>
         </Grid>
