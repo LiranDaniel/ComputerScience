@@ -232,7 +232,7 @@ namespace BussinesTourProject.Pages
             imgDice1.Visibility = Visibility.Collapsed;
             imgDice2.Visibility = Visibility.Collapsed;
             ((Button)sender).IsEnabled = true;
-            if (currentTimesPlay > 3)
+            if (currentTimesPlay >= 3)
             {
                 MoveToJail(currentPlayer);
                 NextPlayer();
