@@ -376,8 +376,38 @@
                Grid.Row="1" Grid.Column="177" Grid.ColumnSpan="30" Grid.RowSpan="12">
 
         </Image>
-        
-        
+
+        <Grid Grid.Row="36" Grid.Column="87" Grid.ColumnSpan="40" Grid.RowSpan="47"
+              Opacity=".99" Background="DimGray" CornerRadius="30" BorderBrush="Black" BorderThickness="3"
+              Visibility="Collapsed" x:Name="GridCards">
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock FontFamily="Ink Draft" FontSize="40" Foreground="White"
+                       Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="5" Grid.RowSpan="2" 
+                       Text="Go to jail &#x0a;" x:Name="txtJailCard"> 
+            </TextBlock>
+            <Image>
+                
+            </Image>
+        </Grid>
 
         <Grid Grid.Row="13" Grid.Column="26" Grid.ColumnSpan="156" Grid.RowSpan="92"
               BorderBrush="Black" BorderThickness="5" CornerRadius="20">
