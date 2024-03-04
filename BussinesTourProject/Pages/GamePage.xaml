@@ -353,13 +353,10 @@
         </Button>
 
 
-
-
         <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer1Bar"
                Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="30" Grid.RowSpan="12">
 
         </Image>
-        
         <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer2Bar"
                Grid.Row="105" Grid.Column="1" Grid.ColumnSpan="30" Grid.RowSpan="12">
 
