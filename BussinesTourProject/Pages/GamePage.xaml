@@ -609,25 +609,25 @@
             <Image Source="/Assets\Images\SquareImages\JailimgSquare3.png" Stretch="Fill"
                    Grid.Row="0" Grid.RowSpan="21" Grid.ColumnSpan="17"></Image>
 
-            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+            <Image Source="/Assets\Images\SquareImages\PurpleSquare.png" Stretch="Fill"
                    Grid.Row="21" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
 
-            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+            <Image Source="/Assets\Images\SquareImages\PurpleSquare.png" Stretch="Fill"
                    Grid.Row="29" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
 
-            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+            <Image Source="/Assets\Images\SquareImages\PurpleSquare.png" Stretch="Fill"
                    Grid.Row="37" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
 
-            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+            <Image Source="/Assets\Images\SquareImages\PurpleSquare.png" Stretch="Fill"
                    Grid.Row="45" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
 
-            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+            <Image Source="/Assets\Images\SquareImages\PurpleSquare.png" Stretch="Fill"
                    Grid.Row="53" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
 
-            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+            <Image Source="/Assets\Images\SquareImages\PurpleSquare.png" Stretch="Fill"
                    Grid.Row="61" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
 
-            <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" Stretch="Fill"
+            <Image Source="/Assets\Images\SquareImages\PurpleSquare.png" Stretch="Fill"
                    Grid.Row="69" Grid.RowSpan="8" Grid.ColumnSpan="17"></Image>
             
             <Image Source="/Assets\Images\Screenshot 2024-02-29 232955.png" 
