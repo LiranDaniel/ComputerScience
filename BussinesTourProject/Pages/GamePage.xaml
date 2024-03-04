@@ -10,7 +10,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        
         <Grid.Background>
             <ImageBrush ImageSource="/Assets\Images\GameBackGround.jpg">
             </ImageBrush>
@@ -344,15 +344,15 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-
+        
         <Button Grid.Row="70" Grid.Column="194" Grid.ColumnSpan="10" Grid.RowSpan="10"
                 PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
                 x:Name="btn_Pause" Click="btn_Pause_Click" Style="{StaticResource MyButtonStyle}"
                 >
             <Image x:Name="imgPause" Source="/Assets\Buttons\UsingButtons\Pause (2).png"></Image>
         </Button>
-
-
+        
+        
         <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer1Bar"
                Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="30" Grid.RowSpan="12">
 
