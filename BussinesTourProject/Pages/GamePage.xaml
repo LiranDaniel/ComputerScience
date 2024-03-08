@@ -786,10 +786,10 @@
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
 
-            
 
-            <Image Source="/Assets\Images\SquareImages\JailimgSquare3LeftDown.png" 
-                   Grid.Row="77" Grid.RowSpan="21" Stretch="Fill" Grid.ColumnSpan="34"></Image>
+
+            <Image Source="/Assets\Images\SquareImages\JailimgSquare.png" 
+                   Grid.Row="77" Grid.RowSpan="16" Stretch="Fill" Grid.ColumnSpan="27" Grid.Column="7"></Image>
 
 
 
