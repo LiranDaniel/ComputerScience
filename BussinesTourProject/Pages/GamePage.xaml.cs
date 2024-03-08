@@ -163,8 +163,7 @@ namespace BussinesTourProject.Pages
         {
             GridCards.Visibility = Visibility.Visible;
             await Task.Delay(TimeSpan.FromSeconds(2));
-            GridCards.Visibility = Visibility.Collapsed
-                ;
+            GridCards.Visibility = Visibility.Collapsed;
             player.currentPosition = 8;
             currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarRight.png"));
             Grid.SetColumnSpan(currentPlayer.Img, 5);

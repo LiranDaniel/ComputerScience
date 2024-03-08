@@ -397,7 +397,7 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <TextBlock FontFamily="Ink Draft" FontSize="30" Foreground="White"
+            <TextBlock FontFamily="Ink Draft" FontSize="20" Foreground="White"
                        Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" Grid.RowSpan="2" 
                        Text="You are going to jail &#x0a;you are moving too fast" x:Name="txtJailCard"> 
             </TextBlock>
@@ -757,7 +757,7 @@
 
             </Image>
 
-            <Button x:Name="btnRoll_Dice" Grid.Row="57" Grid.Column="40" Grid.ColumnSpan="7" Grid.RowSpan="6" Content="Roll Dice"
+            <Button x:Name="btnRoll_Dice" Grid.Row="57" Grid.Column="40" Grid.ColumnSpan="10" Grid.RowSpan="8" Content="Roll Dice"
                     Background="Black" Foreground="White" FontFamily="Ink Draft" CornerRadius="8" FontSize="30" Visibility="Visible"
                     Click="btnRoll_Dice_Click" PointerEntered="btnRoll_Dice_PointerEntered" PointerExited="btnRoll_Dice_PointerExited"></Button>
             
