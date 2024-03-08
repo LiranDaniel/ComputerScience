@@ -142,7 +142,7 @@ namespace BussinesTourProject.Pages
         {
 
             int[,] MatrixPositionPlayer1 = { { 79, 69, 61, 53, 45, 37, 29, 21,
-                                               8, 8, 8, 8, 8, 8, 8, 8,
+                                               0, 8, 8, 8, 8, 8, 8, 8,
                                                14, 22, 30, 38, 46, 54, 62, 70,
                                                93, 93, 93, 93, 93, 93, 93, 93},
                                                { 8, 8, 8, 8, 8, 8, 8, 8,
@@ -166,8 +166,8 @@ namespace BussinesTourProject.Pages
             GridCards.Visibility = Visibility.Collapsed;
             player.currentPosition = 8;
             currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarRight.png"));
-            Grid.SetColumnSpan(currentPlayer.Img, 5);
-            Grid.SetRowSpan(currentPlayer.Img, 4);
+            Grid.SetColumnSpan(currentPlayer.Img, 6);
+            Grid.SetRowSpan(currentPlayer.Img, 3);
 
             Grid.SetRow(currentPlayer.Img, currentPlayer.PlayerPosition[0, player.currentPosition]);
             Grid.SetColumn(currentPlayer.Img, currentPlayer.PlayerPosition[1, player.currentPosition]);

@@ -373,38 +373,6 @@
 
         </Image>
 
-        <Grid Grid.Row="36" Grid.Column="87" Grid.ColumnSpan="40" Grid.RowSpan="47"
-              Opacity=".99" Background="DimGray" CornerRadius="30" BorderBrush="Black" BorderThickness="3"
-              Visibility="Collapsed" x:Name="GridCards">
-
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            
-            <TextBlock FontFamily="Ink Draft" FontSize="20" Foreground="White"
-                       Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" Grid.RowSpan="2" 
-                       Text="You are going to jail &#x0a;you are moving too fast" x:Name="txtJailCard"> 
-            </TextBlock>
-            <Image Source="/Assets\Images\SquareImages\Jailimg.png" Grid.Column="1" Grid.Row="1"
-                   Grid.ColumnSpan="5" Grid.RowSpan="4">
-                
-            </Image>
-        </Grid>
 
         <Grid Grid.Row="13" Grid.Column="26" Grid.ColumnSpan="156" Grid.RowSpan="92"
               BorderBrush="Black" BorderThickness="5" CornerRadius="20">
@@ -705,7 +673,7 @@
             <Image Source="/Assets\Images\SquareImages\JailimgSquare.png" Stretch="Fill"
                    Grid.Row="5" Grid.RowSpan="16" Grid.ColumnSpan="27" Grid.Column="7"></Image>
 
-          
+
 
 
             <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="27" Grid.ColumnSpan="28" Background="White"></Border>
@@ -717,77 +685,77 @@
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
 
-            
-            
-            
-            
-            
+
+
+
+
+
             <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="35" Grid.ColumnSpan="28" Background="White"></Border>
 
             <TextBlock Grid.Column="8" Grid.RowSpan="2" Grid.Row="35" Grid.ColumnSpan="10"  FontSize="13"
                        FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
-            
+
             <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="35" Grid.ColumnSpan="12"  FontSize="15"
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
-            
-            
-            
-            
-            
+
+
+
+
+
             <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="43" Grid.ColumnSpan="28" Background="White"></Border>
 
             <TextBlock Grid.Column="8" Grid.RowSpan="2" Grid.Row="43" Grid.ColumnSpan="10"  FontSize="13"
                        FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
-            
+
             <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="43" Grid.ColumnSpan="12"  FontSize="15"
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
-  
-            
+
+
             <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="51" Grid.ColumnSpan="28" Background="White"></Border>
 
             <TextBlock Grid.Column="8" Grid.RowSpan="2" Grid.Row="51" Grid.ColumnSpan="10"  FontSize="13"
                        FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
-            
+
             <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="51" Grid.ColumnSpan="12"  FontSize="15"
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
 
-            
-            
+
+
             <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="59" Grid.ColumnSpan="28" Background="White"></Border>
 
             <TextBlock Grid.Column="8" Grid.RowSpan="2" Grid.Row="59" Grid.ColumnSpan="10"  FontSize="13"
                        FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
-            
+
             <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="59" Grid.ColumnSpan="12"  FontSize="15"
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
 
-               
+
             <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="67" Grid.ColumnSpan="28" Background="White"></Border>
 
             <TextBlock Grid.Column="8" Grid.RowSpan="2" Grid.Row="67" Grid.ColumnSpan="10"  FontSize="13"
                        FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
-            
+
             <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="67" Grid.ColumnSpan="12"  FontSize="15"
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
 
-            
-               
+
+
             <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="75" Grid.ColumnSpan="28" Background="White"></Border>
 
             <TextBlock Grid.Column="8" Grid.RowSpan="2" Grid.Row="75" Grid.ColumnSpan="10"  FontSize="13"
                        FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
-            
+
             <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="75" Grid.ColumnSpan="12"  FontSize="15"
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
@@ -797,7 +765,7 @@
             <Image Source="/Assets\Images\SquareImages\JailimgSquare.png" 
                    Grid.Row="77" Grid.RowSpan="16" Stretch="Fill" Grid.ColumnSpan="27" Grid.Column="7"></Image>
 
-            
+
 
 
             <Border Grid.Column="34" Grid.RowSpan="1" Grid.Row="5" Grid.ColumnSpan="112" Background="White"></Border>
@@ -1081,21 +1049,21 @@
             <Image x:Name="imgPlayer2" Source="/Assets\Images\Players\Player1\RedCarRight.png" 
                    Grid.ColumnSpan="6" Grid.RowSpan="3" Grid.Column="36" Grid.Row="13" Stretch="Fill">
 
-            </Image>            
+            </Image>
             <Image Source="/Assets\Images\Players\Player1\RedCarRight.png" 
                    Grid.ColumnSpan="5" Grid.RowSpan="4" Grid.Column="18" Grid.Row="9" Stretch="Fill">
 
-            </Image>            
+            </Image>
             <Image  Source="/Assets\Images\Players\Player1\RedCarRight.png" 
-                   Grid.ColumnSpan="5" Grid.RowSpan="4" Grid.Column="18" Grid.Row="1" Stretch="Fill">
+                   Grid.ColumnSpan="6" Grid.RowSpan="3" Grid.Column="18" Grid.Row="0" Stretch="Fill">
 
-            </Image>            
+            </Image>
             <Image Source="/Assets\Images\Players\Player1\RedCarRight.png" 
                    Grid.ColumnSpan="5" Grid.RowSpan="4" Grid.Column="18" Grid.Row="93" Stretch="Fill">
 
             </Image>
-            
-            
+
+
 
 
             <Image x:Name="imgPlayer3" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
@@ -1112,8 +1080,8 @@
             <Button x:Name="btnRoll_Dice" Grid.Row="57" Grid.Column="80" Grid.ColumnSpan="20" Grid.RowSpan="8" Content="Roll Dice"
                     Background="Black" Foreground="White" FontFamily="Ink Draft" CornerRadius="8" FontSize="30" Visibility="Visible"
                     Click="btnRoll_Dice_Click" PointerEntered="btnRoll_Dice_PointerEntered" PointerExited="btnRoll_Dice_PointerExited"></Button>
-            
-            
+
+
             <Image x:Name="imgDice1" Grid.Column="74" Grid.Row="40" Grid.ColumnSpan="10" Grid.RowSpan="10" Stretch="Fill"
                    Source="/Assets\Images\Dice\DiceGif.gif" Visibility="Collapsed"></Image>
 
@@ -1123,8 +1091,40 @@
 
 
         </Grid>
+        
+        <Grid Grid.Row="36" Grid.Column="87" Grid.ColumnSpan="40" Grid.RowSpan="47"
+              Opacity=".99" Background="DimGray" CornerRadius="30" BorderBrush="Black" BorderThickness="3"
+              Visibility="Collapsed" x:Name="GridCards">
 
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
 
+            <TextBlock FontFamily="Ink Draft" FontSize="20" Foreground="White"
+                       Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" Grid.RowSpan="2" 
+                       Text="You are going to jail &#x0a;you are moving too fast" x:Name="txtJailCard">
+            </TextBlock>
+            <Image Source="/Assets\Images\SquareImages\Jailimg.png" Grid.Column="1" Grid.Row="1"
+                   Grid.ColumnSpan="5" Grid.RowSpan="4">
+
+            </Image>
+        </Grid>
+        
         <Button x:Name="btnProfile" Grid.Column="2" Grid.Row="60" Grid.ColumnSpan="10" Grid.RowSpan="10"
                 PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Click="btnMovePlayer_Click">
             <Image x:Name="imgProfile" Source="/Assets\Buttons\UsingButtons\Profile (2).png">
