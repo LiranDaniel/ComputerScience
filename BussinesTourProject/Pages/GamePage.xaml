@@ -351,8 +351,7 @@
                 >
             <Image x:Name="imgPause" Source="/Assets\Buttons\UsingButtons\Pause (2).png"></Image>
         </Button>
-        
-        
+            
         <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer1Bar"
                Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="30" Grid.RowSpan="12">
 
@@ -409,8 +408,6 @@
 
         <Grid Grid.Row="13" Grid.Column="26" Grid.ColumnSpan="156" Grid.RowSpan="92"
               BorderBrush="Black" BorderThickness="5" CornerRadius="20">
-
-
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
