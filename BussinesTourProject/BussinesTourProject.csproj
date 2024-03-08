@@ -121,6 +121,9 @@
     </Compile>
     <Compile Include="Classes\Map.cs" />
     <Compile Include="Classes\Player.cs" />
+    <Compile Include="Pages\BlankPage1.xaml.cs">
+      <DependentUpon>BlankPage1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\GamePage.xaml.cs">
       <DependentUpon>GamePage.xaml</DependentUpon>
     </Compile>
@@ -453,6 +456,9 @@
     <Content Include="Assets\Images\SquareImages\JailimgSquare3Down.png" />
     <Content Include="Assets\Images\SquareImages\JailimgSquare3Left.png" />
     <Content Include="Assets\Images\SquareImages\JailimgSquare3LeftDown.png" />
+    <Content Include="Assets\Images\SquareImages\OrangeSquare.png" />
+    <Content Include="Assets\Images\SquareImages\OrangeSquare2.png" />
+    <Content Include="Assets\Images\SquareImages\OrangeSquare3.png" />
     <Content Include="Assets\Images\SquareImages\PurpleSquare.png" />
     <Content Include="Assets\Images\SquareImages\PurpleSquareLeft.png" />
     <Content Include="Assets\Images\woodBackground.jpg" />
@@ -475,6 +481,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Pages\BlankPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\GamePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
