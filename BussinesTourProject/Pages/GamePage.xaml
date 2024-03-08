@@ -1104,6 +1104,10 @@
                    Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
 
             </Image>
+            <Image Source="/Assets\Images\SquareImages\House2.png" Grid.Column="25" Grid.Row="46" 
+                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
+
+            </Image>
 
         </Grid>
         
