@@ -696,13 +696,10 @@
             <Border Grid.Row="0" Grid.ColumnSpan="179" Background="#6E737A"  Grid.RowSpan="98"/>
 
 
-            <Image Source="/Assets\Images\SquareImages\JailimgSquare3.png" Stretch="Fill"
-                   Grid.Row="0" Grid.RowSpan="21" Grid.ColumnSpan="34"></Image>
+            <Image Source="/Assets\Images\SquareImages\JailimgSquare.png" Stretch="Fill"
+                   Grid.Row="5" Grid.RowSpan="16" Grid.ColumnSpan="27" Grid.Column="7"></Image>
 
-            <Image Source="/Assets\Images\SquareImages\OrangeSquare2.png" Stretch="Fill"
-                   Grid.Row="29" Grid.RowSpan="8" Grid.ColumnSpan="34"></Image>
-
-
+          
 
 
             <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="27" Grid.ColumnSpan="28" Background="White"></Border>
@@ -713,30 +710,83 @@
             <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="27" Grid.ColumnSpan="12"  FontSize="15"
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
+
             
             
             
             
             
+            <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="35" Grid.ColumnSpan="28" Background="White"></Border>
+
+            <TextBlock Grid.Column="8" Grid.RowSpan="2" Grid.Row="35" Grid.ColumnSpan="10"  FontSize="13"
+                       FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
+                       VerticalAlignment="Top" ></TextBlock>
             
+            <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="35" Grid.ColumnSpan="12"  FontSize="15"
+                       FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
+                       VerticalAlignment="Top" ></TextBlock>
+            
+            
+            
+            
+            
+            <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="43" Grid.ColumnSpan="28" Background="White"></Border>
 
-            <Image Source="/Assets\Images\SquareImages\OrangeSquare.png" Stretch="Fill"
-                   Grid.Row="29" Grid.RowSpan="8" Grid.ColumnSpan="34"></Image>
+            <TextBlock Grid.Column="8" Grid.RowSpan="2" Grid.Row="43" Grid.ColumnSpan="10"  FontSize="13"
+                       FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
+                       VerticalAlignment="Top" ></TextBlock>
+            
+            <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="43" Grid.ColumnSpan="12"  FontSize="15"
+                       FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
+                       VerticalAlignment="Top" ></TextBlock>
+  
+            
+            <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="51" Grid.ColumnSpan="28" Background="White"></Border>
 
-            <Image Source="/Assets\Images\SquareImages\OrangeSquare3.png" Stretch="Fill"
-                   Grid.Row="37" Grid.RowSpan="8" Grid.ColumnSpan="34"></Image>
+            <TextBlock Grid.Column="8" Grid.RowSpan="2" Grid.Row="51" Grid.ColumnSpan="10"  FontSize="13"
+                       FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
+                       VerticalAlignment="Top" ></TextBlock>
+            
+            <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="51" Grid.ColumnSpan="12"  FontSize="15"
+                       FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
+                       VerticalAlignment="Top" ></TextBlock>
 
-            <Image Source="/Assets\Images\SquareImages\OrangeSquare.png" Stretch="Fill"
-                   Grid.Row="45" Grid.RowSpan="8" Grid.ColumnSpan="34"></Image>
+            
+            
+            <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="59" Grid.ColumnSpan="28" Background="White"></Border>
 
-            <Image Source="/Assets\Images\SquareImages\OrangeSquare2.png" Stretch="Fill"
-                   Grid.Row="53" Grid.RowSpan="8" Grid.ColumnSpan="34"></Image>
+            <TextBlock Grid.Column="8" Grid.RowSpan="2" Grid.Row="59" Grid.ColumnSpan="10"  FontSize="13"
+                       FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
+                       VerticalAlignment="Top" ></TextBlock>
+            
+            <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="59" Grid.ColumnSpan="12"  FontSize="15"
+                       FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
+                       VerticalAlignment="Top" ></TextBlock>
 
-            <Image Source="/Assets\Images\SquareImages\PurpleSquare3.png" Stretch="Fill"
-                   Grid.Row="61" Grid.RowSpan="8" Grid.ColumnSpan="34"></Image>
+               
+            <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="67" Grid.ColumnSpan="28" Background="White"></Border>
 
-            <Image Source="/Assets\Images\SquareImages\PurpleSquare.png" Stretch="Fill"
-                   Grid.Row="69" Grid.RowSpan="8" Grid.ColumnSpan="34"></Image>
+            <TextBlock Grid.Column="8" Grid.RowSpan="2" Grid.Row="67" Grid.ColumnSpan="10"  FontSize="13"
+                       FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
+                       VerticalAlignment="Top" ></TextBlock>
+            
+            <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="67" Grid.ColumnSpan="12"  FontSize="15"
+                       FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
+                       VerticalAlignment="Top" ></TextBlock>
+
+            
+               
+            <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="75" Grid.ColumnSpan="28" Background="White"></Border>
+
+            <TextBlock Grid.Column="8" Grid.RowSpan="2" Grid.Row="75" Grid.ColumnSpan="10"  FontSize="13"
+                       FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
+                       VerticalAlignment="Top" ></TextBlock>
+            
+            <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="75" Grid.ColumnSpan="12"  FontSize="15"
+                       FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
+                       VerticalAlignment="Top" ></TextBlock>
+
+            
 
             <Image Source="/Assets\Images\SquareImages\JailimgSquare3LeftDown.png" 
                    Grid.Row="77" Grid.RowSpan="21" Stretch="Fill" Grid.ColumnSpan="34"></Image>
