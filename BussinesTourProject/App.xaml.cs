@@ -75,7 +75,7 @@ namespace BussinesTourProject
                 // Ensure the current window is active
                 Window.Current.Activate();
             }
-            Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().TryEnterFullScreenMode();
+            //Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().TryEnterFullScreenMode();
         }
 
         /// <summary>
