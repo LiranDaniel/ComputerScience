@@ -1073,13 +1073,13 @@
 
 
             <Image x:Name="imgPlayer" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="2" Grid.RowSpan="6" Grid.Column="1" Grid.Row="70" Stretch="Fill">
+                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="8" Grid.Row="70" Stretch="Fill">
 
             </Image>
 
 
             <Image x:Name="imgPlayer2" Source="/Assets\Images\Players\Player1\RedCarRight.png" 
-                   Grid.ColumnSpan="5" Grid.RowSpan="4" Grid.Column="18" Grid.Row="13" Stretch="Fill">
+                   Grid.ColumnSpan="6" Grid.RowSpan="3" Grid.Column="36" Grid.Row="13" Stretch="Fill">
 
             </Image>            
             <Image Source="/Assets\Images\Players\Player1\RedCarRight.png" 
