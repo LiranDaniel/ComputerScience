@@ -200,8 +200,8 @@ namespace BussinesTourProject.Pages
                 if (currentPosition >= 8 && currentPosition < 16)
                 {
                     currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarRight.png"));
-                    Grid.SetColumnSpan(currentPlayer.Img, 8);
-                    Grid.SetRowSpan(currentPlayer.Img, 4);
+                    Grid.SetColumnSpan(currentPlayer.Img, 6);
+                    Grid.SetRowSpan(currentPlayer.Img, 3);
                 }
                 else if (currentPosition >= 16 && currentPosition < 24)
                 {
@@ -212,8 +212,8 @@ namespace BussinesTourProject.Pages
                 else if (currentPosition >= 24 && currentPosition < 31)
                 {
                     currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarLeft.png"));
-                    Grid.SetColumnSpan(currentPlayer.Img, 8);
-                    Grid.SetRowSpan(currentPlayer.Img, 4);
+                    Grid.SetColumnSpan(currentPlayer.Img, 6);
+                    Grid.SetRowSpan(currentPlayer.Img, 3);
                 }
                 else if (currentPosition >= 0 && currentPosition < 8)
                 {
