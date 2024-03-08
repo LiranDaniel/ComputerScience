@@ -142,7 +142,7 @@ namespace BussinesTourProject.Pages
         {
 
             int[,] MatrixPositionPlayer1 = { { 79, 69, 61, 53, 45, 37, 29, 21,
-                                               0, 0, 0, 0, 0, 0, 0, 0,
+                                               8, 8, 8, 8, 8, 8, 8, 8,
                                                14, 22, 30, 38, 46, 54, 62, 70,
                                                93, 93, 93, 93, 93, 93, 93, 93},
                                                { 8, 8, 8, 8, 8, 8, 8, 8,
@@ -200,26 +200,26 @@ namespace BussinesTourProject.Pages
                 if (currentPosition >= 8 && currentPosition < 16)
                 {
                     currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarRight.png"));
-                    Grid.SetColumnSpan(currentPlayer.Img, 5);
+                    Grid.SetColumnSpan(currentPlayer.Img, 8);
                     Grid.SetRowSpan(currentPlayer.Img, 4);
                 }
                 else if (currentPosition >= 16 && currentPosition < 24)
                 {
                     currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarBackward.png"));
-                    Grid.SetColumnSpan(currentPlayer.Img, 2);
-                    Grid.SetRowSpan(currentPlayer.Img, 6);
+                    Grid.SetColumnSpan(currentPlayer.Img, 3);
+                    Grid.SetRowSpan(currentPlayer.Img, 5);
                 }
                 else if (currentPosition >= 24 && currentPosition < 31)
                 {
                     currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarLeft.png"));
-                    Grid.SetColumnSpan(currentPlayer.Img, 5);
+                    Grid.SetColumnSpan(currentPlayer.Img, 8);
                     Grid.SetRowSpan(currentPlayer.Img, 4);
                 }
                 else if (currentPosition >= 0 && currentPosition < 8)
                 {
                     currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarForward.png"));
-                    Grid.SetColumnSpan(currentPlayer.Img, 2);
-                    Grid.SetRowSpan(currentPlayer.Img, 6);
+                    Grid.SetColumnSpan(currentPlayer.Img, 3);
+                    Grid.SetRowSpan(currentPlayer.Img, 5);
                 }
 
                 Grid.SetRow(currentPlayer.Img, currentPlayer.PlayerPosition[0, currentPosition]);
