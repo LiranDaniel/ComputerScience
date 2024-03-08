@@ -1090,6 +1090,17 @@
                    Source="/Assets\Images\Dice\DiceGif.gif" Visibility="Collapsed"></Image>
 
 
+
+            <Image Source="/Assets\Images\SquareImages\House.png" Grid.Column="25" Grid.Row="30" 
+                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
+                
+            </Image>
+
+            <Image Source="/Assets\Images\SquareImages\House1.jpg" Grid.Column="25" Grid.Row="22" 
+                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
+
+            </Image>
+
         </Grid>
         
         <Grid Grid.Row="36" Grid.Column="87" Grid.ColumnSpan="40" Grid.RowSpan="47"

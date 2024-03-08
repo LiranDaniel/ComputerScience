@@ -448,6 +448,9 @@
     <Content Include="Assets\Images\Players\Player1\RedCarRight.png" />
     <Content Include="Assets\Images\Screenshot 2024-02-29 232955.png" />
     <Content Include="Assets\Images\SignInBackGround.png" />
+    <Content Include="Assets\Images\SquareImages\House.png" />
+    <Content Include="Assets\Images\SquareImages\House1.jpg" />
+    <Content Include="Assets\Images\SquareImages\House2.png" />
     <Content Include="Assets\Images\SquareImages\Jailimg.png" />
     <Content Include="Assets\Images\SquareImages\JailimgSquare.png" />
     <Content Include="Assets\Images\SquareImages\JailimgSquare3.png" />
