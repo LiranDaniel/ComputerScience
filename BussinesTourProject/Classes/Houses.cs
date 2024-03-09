@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace BussinesTourProject.Classes
 {
@@ -21,10 +22,19 @@ namespace BussinesTourProject.Classes
                 { Level.AdvanceHouse, @"/Assets\Images\SquareImages\House2.png"},
                 {Level.villa, @"/Assets\Images\SquareImages\House3.png"},
                 {Level.Hotel, @"/Assets\Images\SquareImages\House4.png" } };
-        public Houses()
-        {
-        }
+
+
         public Image HouseImage;
         public int position;
+
+
+        public Houses()
+        {
+
+        }
+        public void ChangeHouse(int level)
+        {
+            HouseImage.Source = new BitmapImage(new Uri($"ms-appx://" + filePathImages[Level.BasicHouse]));
+        }
     }
 }
