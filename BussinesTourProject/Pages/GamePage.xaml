@@ -936,7 +936,7 @@
                        VerticalAlignment="Top" ></TextBlock>
             <Border Background="Yellow" Grid.Row="69" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Opacity="1"></Border>
-            <Border Background="Yellow" Grid.Row="77" Grid.Column="35" Grid.ColumnSpan="46" Grid.RowSpan="15"
+            <Border Background="Red" Grid.Row="77" Grid.Column="35" Grid.ColumnSpan="46" Grid.RowSpan="15"
                     Opacity=".7"></Border>
 
 
