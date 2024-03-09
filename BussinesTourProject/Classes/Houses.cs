@@ -31,9 +31,10 @@ namespace BussinesTourProject.Classes
         public int position;
 
 
-        public Houses(int basicValue)
+        public Houses(int basicValue, int position)
         {
             this.basicValue = basicValue;
+            this.position = position;
             state = 0;
         }
         public void ChangeHouse(int level)
