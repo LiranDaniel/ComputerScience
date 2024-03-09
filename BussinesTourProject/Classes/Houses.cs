@@ -16,14 +16,13 @@ namespace BussinesTourProject.Classes
             villa = 3, 
             Hotel = 4
         }
-        public static Dictionary<Level, string> filePathImages;// = new Dictionary<Level, Image>();
-        public Houses()
-        {
-            filePathImages = new Dictionary<Level, string>() { 
+        public static Dictionary<Level, string> filePathImages = new Dictionary<Level, string>() {
                 {Level.BasicHouse, @"/Assets\Images\SquareImages\House1.png"},
                 { Level.AdvanceHouse, @"/Assets\Images\SquareImages\House2.png"},
                 {Level.villa, @"/Assets\Images\SquareImages\House3.png"},
                 {Level.Hotel, @"/Assets\Images\SquareImages\House4.png" } };
+        public Houses()
+        {
         }
         public Image HouseImage;
         public int position;
