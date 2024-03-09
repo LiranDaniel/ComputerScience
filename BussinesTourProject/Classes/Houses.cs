@@ -35,7 +35,7 @@ namespace BussinesTourProject.Classes
         }
         public void ChangeHouse(int level)
         {
-            HouseImage.Source = new BitmapImage(new Uri($"ms-appx://" + filePathImages[Level.BasicHouse]));
+            HouseImage.Source = new BitmapImage(new Uri($"ms-appx://" + filePathImages[(Level)level]));
         }
     }
 }
