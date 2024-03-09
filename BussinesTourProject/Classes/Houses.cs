@@ -25,12 +25,13 @@ namespace BussinesTourProject.Classes
 
 
         public Image HouseImage;
+        public int state;
         public int position;
 
 
         public Houses()
         {
-
+            state = 0;
         }
         public void ChangeHouse(int level)
         {
