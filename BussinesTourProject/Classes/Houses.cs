@@ -39,7 +39,7 @@ namespace BussinesTourProject.Classes
             state = 0;
         }
         public void ChangeHouse(int level)
-        {
+        {   
             HouseImage.Source = new BitmapImage(new Uri($"ms-appx://" + filePathImages[(Level)level]));
             state = level;
             currentValue = basicValue * arrayTimesValue[level];
