@@ -1091,20 +1091,20 @@
 
 
 
-            <Image Source="/Assets\Images\SquareImages\House.png" Grid.Column="25" Grid.Row="30" 
+            <Image Source="/Assets\Images\SquareImages\House2.png" Grid.Column="25" Grid.Row="30" 
                    Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
                 
             </Image>
 
-            <Image Source="/Assets\Images\SquareImages\House1.jpg" Grid.Column="25" Grid.Row="22" 
+            <Image Source="/Assets\Images\SquareImages\House1.png" Grid.Column="25" Grid.Row="22" 
                    Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
 
             </Image>
-            <Image Source="/Assets\Images\SquareImages\House1.png" Grid.Column="25" Grid.Row="38" 
+            <Image Source="/Assets\Images\SquareImages\House3.png" Grid.Column="25" Grid.Row="38" 
                    Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
 
             </Image>
-            <Image Source="/Assets\Images\SquareImages\House2.png" Grid.Column="25" Grid.Row="46" 
+            <Image Source="/Assets\Images\SquareImages\House4.png" Grid.Column="25" Grid.Row="46" 
                    Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
 
             </Image>
