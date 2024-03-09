@@ -762,8 +762,8 @@
 
 
 
-            <Image Source="/Assets\Images\SquareImages\JailimgSquare.png" 
-                   Grid.Row="77" Grid.RowSpan="16" Stretch="Fill" Grid.ColumnSpan="27" Grid.Column="7"></Image>
+            <Image Source="/Assets\Images\SquareImages\raceLine.png" 
+                   Grid.Row="80" Grid.RowSpan="2" Stretch="Fill" Grid.ColumnSpan="27" Grid.Column="7"></Image>
 
 
 
@@ -1079,13 +1079,13 @@
 
 
             <Image x:Name="imgPlayer3" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="4" Grid.RowSpan="6" Grid.Column="14" Grid.Row="78" Stretch="Fill">
+                   Grid.ColumnSpan="4" Grid.RowSpan="6" Grid.Column="14" Grid.Row="83" Stretch="Fill">
 
             </Image>
 
 
             <Image x:Name="imgPlayer4" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="4" Grid.RowSpan="6" Grid.Column="20" Grid.Row="78" Stretch="Fill">
+                   Grid.ColumnSpan="4" Grid.RowSpan="6" Grid.Column="20" Grid.Row="83" Stretch="Fill">
 
             </Image>
 
