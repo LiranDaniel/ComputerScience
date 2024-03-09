@@ -12,10 +12,10 @@ namespace BussinesTourProject.Classes
     {
         public enum Level
         {
-            BasicHouse = 1,
-            AdvanceHouse = 2,
-            villa = 3, 
-            Hotel = 4
+            BasicHouse = 0,
+            AdvanceHouse = 1,
+            villa = 2, 
+            Hotel = 3
         }
         public static Dictionary<Level, string> filePathImages = new Dictionary<Level, string>() {
                 {Level.BasicHouse, @"/Assets\Images\SquareImages\House1.png"},
@@ -23,21 +23,24 @@ namespace BussinesTourProject.Classes
                 {Level.villa, @"/Assets\Images\SquareImages\House3.png"},
                 {Level.Hotel, @"/Assets\Images\SquareImages\House4.png" } };
 
-        private static int[] arrayTimesValue = { 1, 2, 3, 4  };
+        private static int[] arrayTimesValue = { 1, 2, 3, 4 };
         public Image HouseImage;
         private int basicValue;
+        private int currentValue;
         public int state;
         public int position;
 
 
-        public Houses()
+        public Houses(int basicValue)
         {
+            this.basicValue = basicValue;
             state = 0;
         }
         public void ChangeHouse(int level)
         {
             HouseImage.Source = new BitmapImage(new Uri($"ms-appx://" + filePathImages[(Level)level]));
             state = level;
+            currentValue = basicValue * arrayTimesValue[level];
         }
     }
 }
