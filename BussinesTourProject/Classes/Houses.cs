@@ -23,8 +23,9 @@ namespace BussinesTourProject.Classes
                 {Level.villa, @"/Assets\Images\SquareImages\House3.png"},
                 {Level.Hotel, @"/Assets\Images\SquareImages\House4.png" } };
 
-
+        private static int[] arrayTimesValue = { 1, 2, 3, 4  };
         public Image HouseImage;
+        private int basicValue;
         public int state;
         public int position;
 
