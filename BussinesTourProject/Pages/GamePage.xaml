@@ -780,7 +780,7 @@
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
 
-            <Border Grid.Column="50" Grid.RowSpan="15" Grid.Row="6" Grid.ColumnSpan="1" Background="White"></Border>
+            <Border Grid.Column="49" Grid.RowSpan="15" Grid.Row="6" Grid.ColumnSpan="2" Background="White"></Border>
 
             <TextBlock Grid.Column="49" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="10"  FontSize="13"
                        FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
@@ -790,7 +790,7 @@
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
 
-            <Border Grid.Column="66" Grid.RowSpan="15" Grid.Row="6" Grid.ColumnSpan="1" Background="White"></Border>
+            <Border Grid.Column="65" Grid.RowSpan="15" Grid.Row="6" Grid.ColumnSpan="2" Background="White"></Border>
 
 
             <TextBlock Grid.Column="65" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="10"  FontSize="13"
@@ -801,7 +801,7 @@
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
 
-            <Border Grid.Column="82" Grid.RowSpan="15" Grid.Row="6" Grid.ColumnSpan="1" Background="White"></Border>
+            <Border Grid.Column="81" Grid.RowSpan="15" Grid.Row="6" Grid.ColumnSpan="2" Background="White"></Border>
 
 
             <TextBlock Grid.Column="81" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="10"  FontSize="13"
@@ -813,7 +813,7 @@
                        VerticalAlignment="Top" ></TextBlock>
 
 
-            <Border Grid.Column="98" Grid.RowSpan="15" Grid.Row="6" Grid.ColumnSpan="1" Background="White"></Border>
+            <Border Grid.Column="97" Grid.RowSpan="15" Grid.Row="6" Grid.ColumnSpan="2" Background="White"></Border>
 
             <TextBlock Grid.Column="97" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="10"  FontSize="13"
                        FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
@@ -824,7 +824,7 @@
                        VerticalAlignment="Top" ></TextBlock>
 
 
-            <Border Grid.Column="114" Grid.RowSpan="15" Grid.Row="6" Grid.ColumnSpan="1" Background="White"></Border>
+            <Border Grid.Column="113" Grid.RowSpan="15" Grid.Row="6" Grid.ColumnSpan="2" Background="White"></Border>
 
             <TextBlock Grid.Column="113" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="10"  FontSize="13"
                        FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
@@ -835,7 +835,7 @@
                        VerticalAlignment="Top" ></TextBlock>
 
 
-            <Border Grid.Column="130" Grid.RowSpan="15" Grid.Row="6" Grid.ColumnSpan="1" Background="White"></Border>
+            <Border Grid.Column="129" Grid.RowSpan="15" Grid.Row="6" Grid.ColumnSpan="2" Background="White"></Border>
 
             <TextBlock Grid.Column="129" Grid.RowSpan="2" Grid.Row="4" Grid.ColumnSpan="10"  FontSize="13"
                        FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
@@ -940,7 +940,7 @@
 
 
             <Border Grid.Column="34" Grid.RowSpan="1" Grid.Row="92" Grid.ColumnSpan="112" Background="White"></Border>
-            <Border Grid.Column="34" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="1" Background="White"></Border>
+            <Border Grid.Column="34" Grid.RowSpan="18" Grid.Row="75" Grid.ColumnSpan="1" Background="White"></Border>
 
 
             <TextBlock Grid.Column="33" Grid.RowSpan="2" Grid.Row="92" Grid.ColumnSpan="10"  FontSize="13"
@@ -951,7 +951,7 @@
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
 
-            <Border Grid.Column="50" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="1" Background="White"></Border>
+            <Border Grid.Column="49" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="2" Background="White"></Border>
 
             <TextBlock Grid.Column="49" Grid.RowSpan="2" Grid.Row="92" Grid.ColumnSpan="10"  FontSize="13"
                        FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
@@ -961,7 +961,7 @@
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
 
-            <Border Grid.Column="66" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="1" Background="White"></Border>
+            <Border Grid.Column="65" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="2" Background="White"></Border>
 
 
             <TextBlock Grid.Column="65" Grid.RowSpan="2" Grid.Row="92" Grid.ColumnSpan="10"  FontSize="13"
@@ -972,7 +972,7 @@
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
 
-            <Border Grid.Column="82" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="1" Background="White"></Border>
+            <Border Grid.Column="81" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="2" Background="White"></Border>
 
 
             <TextBlock Grid.Column="81" Grid.RowSpan="2" Grid.Row="92" Grid.ColumnSpan="10"  FontSize="13"
@@ -984,7 +984,7 @@
                        VerticalAlignment="Top" ></TextBlock>
 
 
-            <Border Grid.Column="98" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="1" Background="White"></Border>
+            <Border Grid.Column="97" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="2" Background="White"></Border>
 
             <TextBlock Grid.Column="97" Grid.RowSpan="2" Grid.Row="92" Grid.ColumnSpan="10"  FontSize="13"
                        FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
@@ -995,7 +995,7 @@
                        VerticalAlignment="Top" ></TextBlock>
 
 
-            <Border Grid.Column="114" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="1" Background="White"></Border>
+            <Border Grid.Column="113" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="2" Background="White"></Border>
 
             <TextBlock Grid.Column="113" Grid.RowSpan="2" Grid.Row="92" Grid.ColumnSpan="10"  FontSize="13"
                        FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
@@ -1006,7 +1006,7 @@
                        VerticalAlignment="Top" ></TextBlock>
 
 
-            <Border Grid.Column="130" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="1" Background="White"></Border>
+            <Border Grid.Column="129" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="2" Background="White"></Border>
 
             <TextBlock Grid.Column="129" Grid.RowSpan="2" Grid.Row="92" Grid.ColumnSpan="10"  FontSize="13"
                        FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
@@ -1016,7 +1016,7 @@
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
 
-            <Border Grid.Column="145" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="1" Background="White"></Border>
+            <Border Grid.Column="145" Grid.RowSpan="17" Grid.Row="75" Grid.ColumnSpan="1" Background="White"></Border>
 
 
 
