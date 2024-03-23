@@ -979,7 +979,7 @@
             <Image  Grid.Row="77" Grid.Column="99" Grid.ColumnSpan="46" Grid.RowSpan="15"
                     Source="/Assets\Images\SquareImages\blockBrick2.png" Stretch="Fill"
                     Opacity=".6"></Image>
-
+ 
 
 
 
