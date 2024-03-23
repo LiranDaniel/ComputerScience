@@ -451,6 +451,10 @@
     <Content Include="Assets\Images\SquareImages\blockBrick.png" />
     <Content Include="Assets\Images\SquareImages\blockBrick2.png" />
     <Content Include="Assets\Images\SquareImages\blockBrick3.png" />
+    <Content Include="Assets\Images\SquareImages\blockBrick4.png" />
+    <Content Include="Assets\Images\SquareImages\blockBrick5.png" />
+    <Content Include="Assets\Images\SquareImages\blockBrick6.png" />
+    <Content Include="Assets\Images\SquareImages\blockBrick7.png" />
     <Content Include="Assets\Images\SquareImages\blockGray.png" />
     <Content Include="Assets\Images\SquareImages\blockSpace1.png" />
     <Content Include="Assets\Images\SquareImages\blockSpace2.png" />
