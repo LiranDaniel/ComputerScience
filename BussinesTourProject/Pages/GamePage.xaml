@@ -967,13 +967,13 @@
                     Source="/Assets\Images\SquareImages\blockGray.png" Stretch="Fill" Opacity=".65"
                     ></Image>
             <Image  Grid.Row="53" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\blockBrick5.png" Stretch="Fill" Opacity=".65"
+                    Source="/Assets\Images\SquareImages\blockBrick11.png" Stretch="Fill" Opacity=".65"
                     ></Image>  
             <Image  Grid.Row="61" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\blockBrick5.png" Stretch="Fill" Opacity=".65"
+                    Source="/Assets\Images\SquareImages\blockBrick11.png" Stretch="Fill" Opacity=".65"
                     ></Image>  
             <Image  Grid.Row="69" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\blockBrick5.png" Stretch="Fill" Opacity=".65"
+                    Source="/Assets\Images\SquareImages\blockBrick11.png" Stretch="Fill" Opacity=".65"
                     ></Image>            
             <Image  Grid.Row="61" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\blockGray.png" Stretch="Fill" Opacity=".65"
