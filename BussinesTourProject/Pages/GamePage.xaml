@@ -694,7 +694,13 @@
             <Image  Grid.Row="21" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="22"
                     Source="/Assets\Images\SquareImages\blockBrick6.png" Stretch="Fill"
                     Opacity=".6"></Image>            
-            <Image  Grid.Row="21" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="22"
+            <Image  Grid.Row="21" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
+                    Source="/Assets\Images\SquareImages\blockBrick7.png" Stretch="Fill"
+                    Opacity=".6"></Image>            
+            <Image  Grid.Row="29" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
+                    Source="/Assets\Images\SquareImages\blockBrick8.png" Stretch="Fill"
+                    Opacity=".6"></Image>            
+            <Image  Grid.Row="37" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\blockBrick7.png" Stretch="Fill"
                     Opacity=".6"></Image>
 
@@ -959,7 +965,7 @@
                        VerticalAlignment="Top" ></TextBlock>
             <Image  Grid.Row="69" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\blockGray.png" Stretch="Fill" Opacity=".65"
-                    ></Image> 
+                    ></Image>
             <Image  Grid.Row="53" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\blockBrick3.png" Stretch="Fill" Opacity=".65"
                     ></Image>  
@@ -984,12 +990,30 @@
             <Image  Grid.Row="77" Grid.Column="67" Grid.ColumnSpan="14" Grid.RowSpan="15"
                     Source="/Assets\Images\SquareImages\blockBrick.png" Stretch="Fill"
                     Opacity=".65"></Image>
+            <Image  Grid.Row="77" Grid.Column="83" Grid.ColumnSpan="14" Grid.RowSpan="15"
+                    Source="/Assets\Images\SquareImages\blockBrick9.png" Stretch="Fill"
+                    Opacity=".65"></Image>
+            <Image  Grid.Row="6" Grid.Column="83" Grid.ColumnSpan="14" Grid.RowSpan="15"
+                    Source="/Assets\Images\SquareImages\blockBrick9.png" Stretch="Fill"
+                    Opacity=".65"></Image>
 
             <Image  Grid.Row="77" Grid.Column="99" Grid.ColumnSpan="14" Grid.RowSpan="15"
                     Source="/Assets\Images\SquareImages\blockBrick2.png" Stretch="Fill"
                     Opacity=".6"></Image>
+            <Image  Grid.Row="77" Grid.Column="115" Grid.ColumnSpan="14" Grid.RowSpan="15"
+                    Source="/Assets\Images\SquareImages\blockBrick8.png" Stretch="Fill"
+                    Opacity=".6"></Image>
+            <Image  Grid.Row="6" Grid.Column="115" Grid.ColumnSpan="14" Grid.RowSpan="15"
+                    Source="/Assets\Images\SquareImages\blockBrick8.png" Stretch="Fill"
+                    Opacity=".6"></Image>
             <Image  Grid.Row="77" Grid.Column="131" Grid.ColumnSpan="14" Grid.RowSpan="15"
                     Source="/Assets\Images\SquareImages\blockBrick2.png" Stretch="Fill"
+                    Opacity=".6"></Image>
+            <Image  Grid.Row="45" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
+                    Source="/Assets\Images\SquareImages\blockBrick9.png" Stretch="Fill"
+                    Opacity=".6"></Image>
+            <Image  Grid.Row="45" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
+                    Source="/Assets\Images\SquareImages\blockBrick8.png" Stretch="Fill"
                     Opacity=".6"></Image>
  
 
