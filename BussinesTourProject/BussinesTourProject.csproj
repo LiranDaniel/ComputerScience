@@ -464,6 +464,8 @@
     <Content Include="Assets\Images\SquareImages\blockGray.png" />
     <Content Include="Assets\Images\SquareImages\blockSpace1.png" />
     <Content Include="Assets\Images\SquareImages\blockSpace2.png" />
+    <Content Include="Assets\Images\SquareImages\FlyingTourBlock1.jpg" />
+    <Content Include="Assets\Images\SquareImages\FlyingTourBlock2.jpg" />
     <Content Include="Assets\Images\SquareImages\House1.png" />
     <Content Include="Assets\Images\SquareImages\House2.png" />
     <Content Include="Assets\Images\SquareImages\House3.png" />

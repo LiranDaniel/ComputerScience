@@ -10,7 +10,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        
+
         <Grid.Background>
             <ImageBrush ImageSource="/Assets\Images\GameBackGround.jpg">
             </ImageBrush>
@@ -344,14 +344,14 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        
+
         <Button Grid.Row="70" Grid.Column="194" Grid.ColumnSpan="10" Grid.RowSpan="10"
                 PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
                 x:Name="btn_Pause" Click="btn_Pause_Click" Style="{StaticResource MyButtonStyle}"
                 >
             <Image x:Name="imgPause" Source="/Assets\Buttons\UsingButtons\Pause (2).png"></Image>
         </Button>
-            
+
         <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer1Bar"
                Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="30" Grid.RowSpan="12">
 
@@ -362,7 +362,7 @@
         </Image>
         <Image Source="/Assets\Images\Avatars\Avatar_2.png" x:Name="imgAvatar2"
                Grid.Row="107" Grid.Column="3" Grid.ColumnSpan="8" Grid.RowSpan="7">
-            
+
         </Image>
         <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer3Bar"
                Grid.Row="105" Grid.Column="177" Grid.ColumnSpan="30" Grid.RowSpan="12">
@@ -660,7 +660,7 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            
+
 
 
             <Border Grid.Row="0" Grid.ColumnSpan="180" Background="#6E737A"  Grid.RowSpan="98"/>
@@ -681,25 +681,25 @@
             <Image  Grid.Row="6" Grid.Column="131" Grid.ColumnSpan="14" Grid.RowSpan="15"
                     Source="/Assets\Images\SquareImages\blockBrick4.png" Stretch="Fill"
                     Opacity=".6"></Image>
-            
+
             <Image  Grid.Row="6" Grid.Column="35" Grid.ColumnSpan="14" Grid.RowSpan="15"
                     Source="/Assets\Images\SquareImages\blockBrick10.png" Stretch="Fill"
-                    Opacity=".6"></Image>   
+                    Opacity=".6"></Image>
             <Image  Grid.Row="6" Grid.Column="51" Grid.ColumnSpan="14" Grid.RowSpan="15"
                     Source="/Assets\Images\SquareImages\blockBrick10.png" Stretch="Fill"
-                    Opacity=".6"></Image>   
+                    Opacity=".6"></Image>
             <Image  Grid.Row="6" Grid.Column="67" Grid.ColumnSpan="14" Grid.RowSpan="15"
                     Source="/Assets\Images\SquareImages\blockBrick10.png" Stretch="Fill"
-                    Opacity=".6"></Image>            
+                    Opacity=".6"></Image>
             <Image  Grid.Row="21" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="22"
                     Source="/Assets\Images\SquareImages\blockBrick6.png" Stretch="Fill"
-                    Opacity=".6"></Image>            
+                    Opacity=".6"></Image>
             <Image  Grid.Row="21" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\blockBrick7.png" Stretch="Fill"
-                    Opacity=".6"></Image>            
+                    Opacity=".6"></Image>
             <Image  Grid.Row="29" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\blockBrick8.png" Stretch="Fill"
-                    Opacity=".6"></Image>            
+                    Opacity=".6"></Image>
             <Image  Grid.Row="37" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\blockBrick7.png" Stretch="Fill"
                     Opacity=".6"></Image>
@@ -955,7 +955,7 @@
 
 
             <Border Grid.Column="146" Grid.RowSpan="2" Grid.Row="75" Grid.ColumnSpan="28" Background="White"></Border>
-        
+
             <TextBlock Grid.Column="148" Grid.RowSpan="2" Grid.Row="75" Grid.ColumnSpan="10"  FontSize="11"
                        FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
@@ -968,13 +968,13 @@
                     ></Image>
             <Image  Grid.Row="53" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\blockBrick11.png" Stretch="Fill" Opacity=".65"
-                    ></Image>  
+                    ></Image>
             <Image  Grid.Row="61" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\blockBrick11.png" Stretch="Fill" Opacity=".65"
-                    ></Image>  
+                    ></Image>
             <Image  Grid.Row="69" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\blockBrick11.png" Stretch="Fill" Opacity=".65"
-                    ></Image>            
+                    ></Image>
             <Image  Grid.Row="61" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\blockBrick12.jpg" Stretch="Fill" Opacity=".65"
                     ></Image>
@@ -1015,7 +1015,7 @@
             <Image  Grid.Row="45" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\blockBrick8.png" Stretch="Fill"
                     Opacity=".6"></Image>
- 
+
 
 
 
@@ -1116,7 +1116,7 @@
                    Grid.Row="5" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="16"></Image>
 
 
-            <Image Source="/Assets\Images\SquareImages\RouteRace.png"  Stretch="Fill"
+            <Image Source="/Assets\Images\SquareImages\FlyingTourBlock2.jpg"  Stretch="Fill"
                    Grid.Row="77" Grid.Column="146" Grid.RowSpan="16" Grid.ColumnSpan="27"></Image>
 
 
@@ -1152,9 +1152,7 @@
 
             </Image>
             <Image Source="/Assets\Images\Players\Player1\RedCarRight.png" 
-                   Grid.ColumnSpan="5" Grid.RowSpan="4" Grid.Column="18" Grid.Row="93" Stretch="Fill">
-
-            </Image>
+                   Grid.ColumnSpan="5" Grid.RowSpan="4" Grid.Column="20" Grid.Row="94" Stretch="Fill" Margin="0,5,0,-5"/>
 
 
 
@@ -1186,7 +1184,7 @@
 
             <Image Source="/Assets\Images\SquareImages\House2.png" Grid.Column="25" Grid.Row="30" 
                    Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
-                
+
             </Image>
 
             <Image Source="/Assets\Images\SquareImages\House1.png" Grid.Column="25" Grid.Row="22" 
@@ -1201,19 +1199,19 @@
                    Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
 
             </Image>
-            
+
             <Image Source="/Assets\Images\SquareImages\House4.png" Grid.Column="38" Grid.Row="87" 
                    Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill">
 
-            </Image>            
+            </Image>
             <Image Source="/Assets\Images\SquareImages\House3.png" Grid.Column="54" Grid.Row="87" 
                    Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill">
 
-            </Image>            
+            </Image>
             <Image Source="/Assets\Images\SquareImages\House2.png" Grid.Column="70" Grid.Row="87" 
                    Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill">
 
-            </Image>            
+            </Image>
             <Image Source="/Assets\Images\SquareImages\House1.png" Grid.Column="86" Grid.Row="87" 
                    Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill">
 
@@ -1224,7 +1222,7 @@
             <Border Grid.Row="21" Grid.Column="34" Grid.ColumnSpan="1" Background="White" Grid.RowSpan="56"></Border>
             <Border Grid.Row="21" Grid.Column="145" Grid.ColumnSpan="1" Background="White" Grid.RowSpan="56"></Border>
         </Grid>
-        
+
         <Grid Grid.Row="36" Grid.Column="87" Grid.ColumnSpan="40" Grid.RowSpan="47"
               Opacity=".99" Background="DimGray" CornerRadius="30" BorderBrush="Black" BorderThickness="3"
               Visibility="Collapsed" x:Name="GridCards">
@@ -1257,7 +1255,7 @@
 
             </Image>
         </Grid>
-        
+
         <Button x:Name="btnProfile" Grid.Column="2" Grid.Row="60" Grid.ColumnSpan="10" Grid.RowSpan="10"
                 PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Click="btnMovePlayer_Click">
             <Image x:Name="imgProfile" Source="/Assets\Buttons\UsingButtons\Profile (2).png">
