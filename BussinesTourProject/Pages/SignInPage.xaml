@@ -99,8 +99,8 @@
 
         <Viewbox x:Name="vboxPassword" Grid.Column="15" Grid.Row="9" Grid.ColumnSpan="10" Grid.RowSpan="2"
                  HorizontalAlignment="Left" VerticalAlignment="Top">
-            <TextBox x:Name="tboxPassword" Height="447"  Width="3700" FontSize="260"
-                     PlaceholderText="  Type Password" CornerRadius="100"></TextBox>
+            <PasswordBox x:Name="tboxPassword" Height="447"  Width="3700" FontSize="260"
+                     PlaceholderText="  Type Password" CornerRadius="100"></PasswordBox>
         </Viewbox>
 
         <Button x:Name="btnSignIn" Style="{StaticResource MyButtonStyle}" Grid.Row="11" Grid.Column="17"

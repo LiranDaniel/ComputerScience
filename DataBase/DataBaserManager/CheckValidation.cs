@@ -20,7 +20,7 @@ namespace DataBase.DataBaserManager
             return false;
         }
 
-        public static bool  IsMailValid(string mail)
+        public static bool IsMailValid(string mail)
         {
             if((mail.IndexOf("@") == -1) || (mail.IndexOf(".") < mail.IndexOf("@")) ||
                 (mail.IndexOf("@") != 0) || (mail.IndexOf(".") < mail.Length) ||

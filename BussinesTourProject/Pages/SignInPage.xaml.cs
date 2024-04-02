@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -13,7 +14,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
-
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace BussinesTourProject.Pages
@@ -51,12 +51,22 @@ namespace BussinesTourProject.Pages
 
         private void btnSignIn_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(GamePage));
         }
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(GamePage));
+        }
+
+
+
+        private async void LogInImage_PointerOressed(object sender, PointerRoutedEventArgs e)
+        {
+            if (tboxPassword.Password == "" || tboxMail.Text == "")
+                await new MessageDialog("Data is missing!", "Tennis").ShowAsync();
+            else
+                // validate
+                await Console.Out.WriteLineAsync(   );
         }
     }
 }
