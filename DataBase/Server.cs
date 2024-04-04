@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using DataBase.Models;
+using Microsoft.Data.Sqlite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,21 @@ namespace DataBase
             }
         }
 
-
+        public static User AddNewUser(string name, string password, string mail)
+        {
+            int? userId = ValidateUser(name, password); // בדיקה אם המשתמש כבר נמצא במאגר
+            if (userId != null) // המשתמש כבר קיים - לשלוח להתחברות במקום הרשמה
+                return null;
+            // אם המשכנו, זאת אומרת המשתמש בעל הנתונים שהזין לא נמצא במאגר
+            //User מסיפים את נתוניו האישיים של המשתמש שהזין לטבלת 
+            string query = $"INSERT INTO [User] (UserName,UserPassword,UserMail) VALUES ('{name}','{password}','{mail}')";
+            Execute(query);
+            userId = ValidateUser(name, password); //User של המשתמש לאחר הוספתו לטבלת UserId קבלת 
+                                                   //-------------------------------------------
+            AddGameData(userId.Value); //הוספת נתוני ברירת מחדל 
+            AddUserProduct(userId.Value);
+            return GetUser(userId.Value);
+        }
 
 
     }
