@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BussinesTourProject.Classes
+{
+    public class GameManager
+    {
+        public static DataBase.Models.User User { get; set; }
+    }
+}

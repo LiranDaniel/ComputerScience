@@ -119,6 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Classes\GameManager.cs" />
     <Compile Include="Classes\Houses.cs" />
     <Compile Include="Classes\Map.cs" />
     <Compile Include="Classes\Player.cs" />
@@ -529,6 +530,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataBase\DataBase.csproj">
+      <Project>{eabd91f9-0dd1-4f0d-9948-db92dc993bb8}</Project>
+      <Name>DataBase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GameEngine\GameEngine.csproj">
       <Project>{7C0AD823-FAE6-4D0D-AAAD-2B436422F1EC}</Project>
       <Name>GameEngine</Name>
