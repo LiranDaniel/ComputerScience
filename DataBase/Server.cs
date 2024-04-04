@@ -14,6 +14,18 @@ namespace DataBase
         private static string dbPath = ApplicationData.Current.LocalFolder.Path;
         private static string connectString = "Filename=" + dbPath + "\\DBGame.db";
 
+
+        //הפעולה מבצעת שאילתה
+        private static void Execute(string query)
+        {
+            using (SqliteConnection connection = new SqliteConnection(connectionString))
+            {
+                connection.Open();
+                SqliteCommand command = new SqliteCommand(query, connection);
+                command.ExecuteNonQuery();
+            }
+        }
+
         public static int? ValidateUser(string userName, string userPassword)
         {
             string query = $"SELECT UserId FROM [User] WHERE UserName='{userName}' AND UserPassword='{userPassword}'";
