@@ -54,11 +54,10 @@ namespace BussinesTourProject.Classes
 
         public static void InitPlayers()
         {
-            arrayPlayers  = new Player[] {new Player(name: "MainPlayer"),
-            new Player(name: "Player2"),
-            new Player(name: "Player3"),
-            new Player(name: "Player4")};
-        
+            arrayPlayers  = new Player[] {new Player(imgName: "Player1"),
+            new Player(imgName: "Player1"),
+            new Player(imgName: "Player1"),
+            new Player(imgName: "Player1")};
         }
 
 

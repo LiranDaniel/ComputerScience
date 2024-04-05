@@ -57,13 +57,12 @@ namespace BussinesTourProject.Pages
             UpdateUITextBlock.Text = $"Seconds Elapsed: {secondsElapsed}";
         }
 
-        private static void InitPlayer(Player player, Image imgPlayer, int[,] playerMatrixPositions, string name)
+        private static void InitPlayer(Player player, Image imgPlayer, int[,] playerMatrixPositions)
         {
             player.SetPlayerPosition(playerMatrixPositions);
             player.Img = imgPlayer;
             Grid.SetRow(player.Img, player.PlayerPosition[0, 0]);
             Grid.SetColumn(player.Img, player.PlayerPosition[1, 0]);
-            player.name = name;    
         }
 
         public  static void ChangePlayerPositionAnimation(Player player, int diceResult)
@@ -128,9 +127,13 @@ namespace BussinesTourProject.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             GameManager.InitPlayers();
-            GameManager.currentPlayer = GameManager.arrayPlayers[0];
-            InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
-            InitPlayer(GameManager.arrayPlayers[1], imgPlayer2, GameManager.MatrixPositionPlayer2, "Player2") ;
+            GameManager.NextPlayer();
+
+            InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer1) ;
+            InitPlayer(GameManager.arrayPlayers[1], imgPlayer2, GameManager.MatrixPositionPlayer2) ;
+            InitPlayer(GameManager.arrayPlayers[2], imgPlayer3, GameManager.MatrixPositionPlayer3) ;
+            InitPlayer(GameManager.arrayPlayers[3], imgPlayer4, GameManager.MatrixPositionPlayer4) ;
+
         }
         
 
@@ -140,7 +143,7 @@ namespace BussinesTourProject.Pages
             await Task.Delay(TimeSpan.FromSeconds(2));
             GridCards.Visibility = Visibility.Collapsed;
             player.currentPosition = 8;
-            GameManager.currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.name + "/RedCarRight.png"));
+            GameManager.currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarRight.png"));
             Grid.SetColumnSpan(player.Img, 6);
             Grid.SetRowSpan(player.Img, 3);
 
@@ -178,25 +181,25 @@ namespace BussinesTourProject.Pages
                 }
                 if (currentPosition >= 8 && currentPosition < 16)
                 {
-                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.name + "/RedCarRight.png"));
+                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarRight.png"));
                     Grid.SetColumnSpan(player.Img, 6);
                     Grid.SetRowSpan(player.Img, 3);
                 }
                 else if (currentPosition >= 16 && currentPosition < 24)
                 {
-                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.name + "/RedCarBackward.png"));
+                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarBackward.png"));
                     Grid.SetColumnSpan(player.Img, 3);
                     Grid.SetRowSpan(player.Img, 5);
                 }
                 else if (currentPosition >= 24 && currentPosition < 31)
                 {
-                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.name + "/RedCarLeft.png"));
+                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarLeft.png"));
                     Grid.SetColumnSpan(player.Img, 6);
                     Grid.SetRowSpan(player.Img, 3);
                 }
                 else if (currentPosition >= 0 && currentPosition < 8)
                 {
-                        player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.name + "/RedCarForward.png"));
+                        player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarForward.png"));
                     Grid.SetColumnSpan(player.Img, 3);
                     Grid.SetRowSpan(player.Img, 5);
                 }
@@ -222,7 +225,7 @@ namespace BussinesTourProject.Pages
                 GameManager.currentTimesPlay++;
             }  
             else
-                GameManager.currentPlayer = GameManager.arrayPlayers[1];
+                GameManager.NextPlayer();
 
             ((Button)sender).Visibility = Visibility.Visible;
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));

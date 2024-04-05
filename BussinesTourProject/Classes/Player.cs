@@ -17,12 +17,14 @@ namespace BussinesTourProject.Classes
         public int currentPosition;
         public int AmountOfMoney;
         public string name;
+        public string imgName;
         public List<int> listHouses;
         public Image Img;
 
-        public Player(string name)
+        public Player( string imgName)
         {
-            this.name = name;
+            this.imgName = imgName;
+            this.name = "Admin";
             this.currentPosition = 0;
             AmountOfMoney = 2_000_000;
             listHouses = new List<int>();
