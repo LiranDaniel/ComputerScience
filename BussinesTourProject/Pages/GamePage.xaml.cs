@@ -148,6 +148,8 @@ namespace BussinesTourProject.Pages
             Grid.SetColumn(GameManager.currentPlayer.Img, GameManager.currentPlayer.PlayerPosition[1, player.currentPosition]);
         }
 
+
+
         private async void btnRoll_Dice_Click(object sender, RoutedEventArgs e)
         {
             ((Button)sender).IsEnabled = false;
