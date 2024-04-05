@@ -57,12 +57,13 @@ namespace BussinesTourProject.Pages
             UpdateUITextBlock.Text = $"Seconds Elapsed: {secondsElapsed}";
         }
 
-        private static void InitPlayer(Player player, Image imgPlayer, int[,] playerMatrixPositions)
+        private static void InitPlayer(Player player, Image imgPlayer, int[,] playerMatrixPositions, string name)
         {
             player.SetPlayerPosition(playerMatrixPositions);
             player.Img = imgPlayer;
             Grid.SetRow(player.Img, player.PlayerPosition[0, 0]);
             Grid.SetColumn(player.Img, player.PlayerPosition[1, 0]);
+            player.name = name;
             
         }
 
@@ -127,13 +128,11 @@ namespace BussinesTourProject.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer1);
-            InitPlayer(GameManager.arrayPlayers[1], imgPlayer2, GameManager.MatrixPositionPlayer2);
-            InitPlayer(GameManager.arrayPlayers[2], imgPlayer3, GameManager.MatrixPositionPlayer3);
-            InitPlayer(GameManager.arrayPlayers[3], imgPlayer4, GameManager.MatrixPositionPlayer4);
-            GameManager.currentPlayer = GameManager.arrayPlayers[0];
+            GameManager.InitPlayers();
+            GameManager.currentPlayer = GameManager.arrayPlayers[2];
+            InitPlayer(GameManager.arrayPlayers[2], imgPlayer2, GameManager.MatrixPositionPlayer2, "Player1") ;
         }
-
+        
 
         private async void MoveToJail(Player player)
         {

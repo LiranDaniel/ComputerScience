@@ -13,10 +13,7 @@ namespace BussinesTourProject.Classes
         public static Player currentPlayer;
         public static int currentTimesPlay = 1;
         private static int IndexPlayers = rnd.Next(0, 4);
-        public static Player[] arrayPlayers = { new Player(name: "MainPlayer"),
-            new Player(name: "Player2"),
-            new Player(name: "Player3"),
-            new Player(name: "Player4")};
+        public static Player[] arrayPlayers;
 
         public static int[,] MatrixPositionPlayer1 = { { 79, 69, 61, 53, 45, 37, 29, 21,
                                                          0, 8, 8, 8, 8, 8, 8, 8,
@@ -53,6 +50,18 @@ namespace BussinesTourProject.Classes
                                                          20, 36, 52, 68, 84, 100, 116, 132,
                                                          175, 169, 169, 169, 169, 169, 169, 169,
                                                          148, 132, 116, 100, 84, 68, 52, 36} };
+
+
+        public static void InitPlayers()
+        {
+            arrayPlayers  = new Player[] {new Player(name: "MainPlayer"),
+            new Player(name: "Player2"),
+            new Player(name: "Player3"),
+            new Player(name: "Player4")};
+        
+        }
+
+
 
         public static void NextPlayer()
         {
