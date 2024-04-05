@@ -32,8 +32,6 @@ namespace BussinesTourProject.Pages
     /// </summary>
     public sealed partial class GamePage : Page
     {
-        int currentDiceResult = 4;
-
         private DispatcherTimer timer;
         private int secondsElapsed;
 
