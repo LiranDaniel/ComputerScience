@@ -23,6 +23,7 @@ using System.Runtime.CompilerServices;
 using Windows.Gaming.Input;
 using System.Reflection.Metadata.Ecma335;
 using Windows.ApplicationModel.VoiceCommands;
+using Windows.UI.Xaml.Media.Animation;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace BussinesTourProject.Pages
@@ -34,7 +35,6 @@ namespace BussinesTourProject.Pages
     {
         private DispatcherTimer timer;
         private int secondsElapsed;
-        int col = 3;
 
         public GamePage()
         {
@@ -63,8 +63,7 @@ namespace BussinesTourProject.Pages
             player.Img = imgPlayer;
             Grid.SetRow(player.Img, player.PlayerPosition[0, 0]);
             Grid.SetColumn(player.Img, player.PlayerPosition[1, 0]);
-            player.name = name;
-            
+            player.name = name;    
         }
 
         public  static void ChangePlayerPositionAnimation(Player player, int diceResult)
@@ -114,11 +113,11 @@ namespace BussinesTourProject.Pages
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
         {   
              ChangePlayerPositionAnimation(GameManager.currentPlayer, 1);
-        }  
-        
+        }
+
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
-            Grid.SetColumn(imgPlayer, col++);
+
         }
 
         private void MovingPlayer()
