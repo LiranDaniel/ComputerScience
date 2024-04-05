@@ -168,7 +168,7 @@ namespace BussinesTourProject.Pages
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[1] + ").png"));
 
-            int currentDiceResult = Result[0] + Result[1];
+            int currentDiceResult = Result[0] + Result[1];  
 
             int currentPosition = GameManager.currentPlayer.currentPosition + 1;
             GameManager.currentPlayer.ChangePlayerPosition(currentDiceResult); // changing position of the player, and make sure that there is not overflow
