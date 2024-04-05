@@ -1164,7 +1164,7 @@
 
 
             <Image x:Name="imgPlayer4" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="4" Grid.RowSpan="6" Grid.Column="20" Grid.Row="82" Stretch="Fill">
+                   Grid.ColumnSpan="5" Grid.RowSpan="7" Grid.Column="20" Grid.Row="82" Stretch="Fill" HorizontalAlignment="Left" Margin="5,5,0,4" Width="32">
 
             </Image>
 
