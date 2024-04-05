@@ -129,9 +129,9 @@ namespace BussinesTourProject.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             GameManager.InitPlayers();
-            GameManager.currentPlayer = GameManager.arrayPlayers[1];
+            GameManager.currentPlayer = GameManager.arrayPlayers[0];
             InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
-            InitPlayer(GameManager.arrayPlayers[1], imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
+            InitPlayer(GameManager.arrayPlayers[1], imgPlayer2, GameManager.MatrixPositionPlayer2, "Player2") ;
         }
         
 
@@ -221,7 +221,7 @@ namespace BussinesTourProject.Pages
                 GameManager.currentTimesPlay++;
             }  
             else
-                GameManager.currentPlayer = GameManager.arrayPlayers[0];
+                GameManager.currentPlayer = GameManager.arrayPlayers[1];
 
             ((Button)sender).Visibility = Visibility.Visible;
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
