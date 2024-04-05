@@ -1114,14 +1114,7 @@
                    Grid.ColumnSpan="7" Grid.RowSpan="4" Grid.Column="150" Grid.Row="13" Stretch="Fill">
 
             </Image>
-            <Image Source="/Assets\Images\Players\Player1\RedCarRight.png" 
-                   Grid.ColumnSpan="6" Grid.RowSpan="3" Grid.Column="160" Grid.Row="13" Stretch="Fill">
-
-            </Image>
-            <Image Source="/Assets\Images\Players\Player1\RedCarLeft.png" 
-                   Grid.ColumnSpan="6" Grid.RowSpan="3" Grid.Column="36" Grid.Row="83" Stretch="Fill">
-
-            </Image>
+            
 
             <Button x:Name="btnRoll_Dice" Grid.Row="57" Grid.Column="80" Grid.ColumnSpan="20" Grid.RowSpan="8" Content="Roll Dice"
                     Background="Black" Foreground="White" FontFamily="Ink Draft" CornerRadius="8" FontSize="30" Visibility="Visible"
