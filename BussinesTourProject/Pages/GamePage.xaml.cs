@@ -129,17 +129,8 @@ namespace BussinesTourProject.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
 
-            int[,] MatrixPositionPlayer1 = { { 79, 69, 61, 53, 45, 37, 29, 21,
-                                               0, 8, 8, 8, 8, 8, 8, 8,
-                                               14, 22, 30, 38, 46, 54, 62, 70,
-                                               94, 83, 83, 83, 83, 83, 83, 83},
-                                               { 8, 8, 8, 8, 8, 8, 8, 8,
-                                                 20, 36, 52, 68, 84, 100, 116, 132,
-                                                 175, 169, 169, 169, 169, 169, 169, 169,
-                                                 148, 132, 116, 100, 84, 68, 52, 36} };
-
             GameManager.NextPlayer();
-            InitPlayer(GameManager.currentPlayer, imgPlayer, MatrixPositionPlayer1, "Player1") ;
+            InitPlayer(GameManager.currentPlayer, imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
         }
         
 
