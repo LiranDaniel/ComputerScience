@@ -34,12 +34,14 @@ namespace BussinesTourProject.Pages
     {
         private DispatcherTimer timer;
         private int secondsElapsed;
+        int col = 3;
 
         public GamePage()
         {
             this.InitializeComponent();
             InitializeTimer();
         }
+
         private void InitializeTimer()
         {
             timer = new DispatcherTimer();
@@ -47,12 +49,14 @@ namespace BussinesTourProject.Pages
             timer.Tick += Timer_Tick;
             timer.Start();
         }
+
         private void Timer_Tick(object sender, object e)
         {
             secondsElapsed++;
             // Update UI with the elapsed time
             UpdateUITextBlock.Text = $"Seconds Elapsed: {secondsElapsed}";
         }
+
         private static void InitPlayer(Player player, Image imgPlayer, int[,] playerMatrixPositions, string name)
         {
             player.SetPlayerPosition(playerMatrixPositions);
@@ -62,6 +66,7 @@ namespace BussinesTourProject.Pages
             player.name = name;
             
         }
+
         public  static void ChangePlayerPositionAnimation(Player player, int diceResult)
         {
             int currentPosition = player.currentPosition + 1;
@@ -84,8 +89,7 @@ namespace BussinesTourProject.Pages
 
             }
         }
-       
-        int col = 3;
+      
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             Button btnPlayEnter = (Button)sender;
@@ -93,6 +97,7 @@ namespace BussinesTourProject.Pages
                 "Assets/Buttons/UsingButtons/" + ((Image)btnPlayEnter.Content).Name.Replace("img", "") + " (1).png"));
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
         }
+
         private void btn_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             Button btnPlayExit = (Button)sender;
@@ -100,14 +105,17 @@ namespace BussinesTourProject.Pages
                 "Assets/Buttons/UsingButtons/" + ((Image)btnPlayExit.Content).Name.Replace("img", "") + " (2).png"));
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
+
         private void btn_Pause_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MenuPage));      
         }
+
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
         {   
              ChangePlayerPositionAnimation(GameManager.currentPlayer, 1);
-        }   
+        }  
+        
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
             Grid.SetColumn(imgPlayer, col++);
