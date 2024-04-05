@@ -129,9 +129,9 @@ namespace BussinesTourProject.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             GameManager.InitPlayers();
-            GameManager.currentPlayer = GameManager.arrayPlayers[0];
-            InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer2, "Player1") ;
-            InitPlayer(GameManager.arrayPlayers[1], imgPlayer2, GameManager.MatrixPositionPlayer1, "Player2") ;
+            GameManager.currentPlayer = GameManager.arrayPlayers[1];
+            InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
+            InitPlayer(GameManager.arrayPlayers[1], imgPlayer2, GameManager.MatrixPositionPlayer2, "Player2") ;
         }
         
 
@@ -199,9 +199,11 @@ namespace BussinesTourProject.Pages
                     Grid.SetColumnSpan(GameManager.currentPlayer.Img, 3);
                     Grid.SetRowSpan(GameManager.currentPlayer.Img, 5);
                 }
-
-                Grid.SetRow(GameManager.currentPlayer.Img, GameManager.currentPlayer.PlayerPosition[0, currentPosition]);
-                Grid.SetColumn(GameManager.currentPlayer.Img, GameManager.currentPlayer.PlayerPosition[1, currentPosition]);
+                await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+                {
+                    Grid.SetRow(GameManager.currentPlayer.Img, GameManager.currentPlayer.PlayerPosition[0, currentPosition]);
+                    Grid.SetColumn(GameManager.currentPlayer.Img, GameManager.currentPlayer.PlayerPosition[1, currentPosition]);
+                });
                 currentPosition++;
                 await Task.Delay(TimeSpan.FromMilliseconds(300));
 
@@ -219,7 +221,7 @@ namespace BussinesTourProject.Pages
                 GameManager.currentTimesPlay++;
             }  
             else
-                GameManager.NextPlayer();
+                GameManager.currentPlayer = GameManager.arrayPlayers[0];
 
             ((Button)sender).Visibility = Visibility.Visible;
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
