@@ -14,7 +14,7 @@ namespace DataBase
         private static string dbPath = ApplicationData.Current.LocalFolder.Path;
         private static string connectString = "Filename=" + dbPath + "\\DBGame.db";
 
-
+        /*
         //הפעולה מבצעת שאילתה
         private static void Execute(string query)
         {
@@ -59,6 +59,6 @@ namespace DataBase
             return GetUser(userId.Value);
         }
 
-
+        */
     }
 }

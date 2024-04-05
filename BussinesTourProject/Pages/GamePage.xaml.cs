@@ -36,14 +36,12 @@ namespace BussinesTourProject.Pages
 
         private DispatcherTimer timer;
         private int secondsElapsed;
-        private int currentTimesPlay = 1;
 
         public GamePage()
         {
             this.InitializeComponent();
             InitializeTimer();
         }
-
         private void InitializeTimer()
         {
             timer = new DispatcherTimer();
@@ -51,14 +49,12 @@ namespace BussinesTourProject.Pages
             timer.Tick += Timer_Tick;
             timer.Start();
         }
-
         private void Timer_Tick(object sender, object e)
         {
             secondsElapsed++;
             // Update UI with the elapsed time
             UpdateUITextBlock.Text = $"Seconds Elapsed: {secondsElapsed}";
         }
-
         private static void InitPlayer(Player player, Image imgPlayer, int[,] playerMatrixPositions, string name)
         {
             player.SetPlayerPosition(playerMatrixPositions);
@@ -68,8 +64,6 @@ namespace BussinesTourProject.Pages
             player.name = name;
             
         }
-
-
         public  static void ChangePlayerPositionAnimation(Player player, int diceResult)
         {
             int currentPosition = player.currentPosition + 1;
@@ -215,14 +209,14 @@ namespace BussinesTourProject.Pages
             imgDice1.Visibility = Visibility.Collapsed;
             imgDice2.Visibility = Visibility.Collapsed;
             ((Button)sender).IsEnabled = true;
-            if (currentTimesPlay >= 3)
+            if (GameManager.currentTimesPlay >= 3)
             {
                 MoveToJail(GameManager.currentPlayer);
                 GameManager.NextPlayer();
             }
             else if(Result[0] == Result[1])
             {
-                currentTimesPlay++;
+                GameManager.currentTimesPlay++;
                 ((Button)sender).Visibility = Visibility.Visible;
             }  
             else
