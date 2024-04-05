@@ -114,7 +114,7 @@ namespace BussinesTourProject.Pages
         }
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
         {   
-             ChangePlayerPositionAnimation(Player1, 1);
+             ChangePlayerPositionAnimation(GameManager.currentPlayer, 1);
         }   
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
@@ -231,6 +231,7 @@ namespace BussinesTourProject.Pages
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
         }
+
 
         private void btnRoll_Dice_PointerEntered(object sender, PointerRoutedEventArgs e)
         {

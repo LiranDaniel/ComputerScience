@@ -13,7 +13,7 @@ namespace BussinesTourProject.Classes
         public static Player Player2 = new Player(name: "Player2");
         public static Player Player3 = new Player(name: "Player3");
         public static Player Player4 = new Player(name: "Player4");
-     
+
         public static int currentDiceResult = 4;
 
         public static Player currentPlayer;
@@ -30,5 +30,6 @@ namespace BussinesTourProject.Classes
             currentPlayer = arrayPlayers[IndexPlayers];
             currentTimesPlay = 1;
         }
+        public static DataBase.Models.User User { get; set; }
     }
 }
