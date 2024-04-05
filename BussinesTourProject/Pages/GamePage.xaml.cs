@@ -71,20 +71,52 @@ namespace BussinesTourProject.Pages
         public  static void ChangePlayerPositionAnimation(Player player, int diceResult)
         {
             int currentPosition = player.currentPosition + 1;
-            player.ChangePlayerPosition(diceResult); // changing position of the player, and make sure that there is not overflow
-            for (int i = 0; i < diceResult; i++)
+            player.ChangePlayerPosition(1); // changing position of the player, and make sure that there is not overflow
+            for (int i = 0; i < 1; i++)
             {
 
                 while (currentPosition > (player.PlayerPosition.GetLength(1) - 1))
                 {
                     currentPosition -= player.PlayerPosition.GetLength(1);
                 }
-                if (currentPosition >= 11 && currentPosition < 20)
-                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/Player1/RedCarBackward.png"));
+                if (currentPosition == 8)
+                {
+                    player.ChangePlayerImageByEnumValue(1);
+                }
+                else if (currentPosition > 8 && currentPosition < 16)
+                {
+                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarRight.png"));
+                    Grid.SetColumnSpan(player.Img, 6);
+                    Grid.SetRowSpan(player.Img, 3);
+                }
+                else if (currentPosition == 16)
+                    player.ChangePlayerImageByEnumValue(2);
+                else if (currentPosition > 16 && currentPosition < 24)
+                {
+                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarBackward.png"));
+                    Grid.SetColumnSpan(player.Img, 3);
+                    Grid.SetRowSpan(player.Img, 5);
+                }
+                else if (currentPosition == 24)
+                    player.ChangePlayerImageByEnumValue(3);
+                else if (currentPosition > 24 && currentPosition < 31)
+                {
+                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarLeft.png"));
+                    Grid.SetColumnSpan(player.Img, 6);
+                    Grid.SetRowSpan(player.Img, 3);
+                }
+                else if (currentPosition == 0)
+                    player.ChangePlayerImageByEnumValue(0);
+                else if (currentPosition > 0 && currentPosition < 8)
+                {
+                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarForward.png"));
+                    Grid.SetColumnSpan(player.Img, 3);
+                    Grid.SetRowSpan(player.Img, 5);
+                }
 
                 Grid.SetRow(player.Img, player.PlayerPosition[0, currentPosition]);
                 Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);
-                Task.Delay(50000);
+                Task.Delay(5000);
 
                 currentPosition++;
 
@@ -113,13 +145,13 @@ namespace BussinesTourProject.Pages
         }
 
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
-        {   
-             ChangePlayerPositionAnimation(GameManager.currentPlayer, 1);
+        {
+            ChangePlayerPositionAnimation(GameManager.arrayPlayers[0], 1);
         }
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
-
+            ChangePlayerPositionAnimation(GameManager.arrayPlayers[1], 1);
         }
 
         private void MovingPlayer()
@@ -182,38 +214,41 @@ namespace BussinesTourProject.Pages
                 {
                     currentPosition -= player.PlayerPosition.GetLength(1);
                 }
-                if (currentPosition == 8)
-                {
-                }
+                if (currentPosition == 0)
+                    player.ChangePlayerImageByEnumValue(0);
+                else if (currentPosition == 8)
+                    player.ChangePlayerImageByEnumValue(1);
+                else if (currentPosition == 16)
+                    player.ChangePlayerImageByEnumValue(2);
+                else if (currentPosition == 24)
+                    player.ChangePlayerImageByEnumValue(3);
                 else if (currentPosition > 8 && currentPosition < 16)
                 {
                     player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarRight.png"));
                     Grid.SetColumnSpan(player.Img, 6);
                     Grid.SetRowSpan(player.Img, 3);
                 }
-                else if (currentPosition >= 16 && currentPosition < 24)
+                else if (currentPosition > 16 && currentPosition < 24)
                 {
                     player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarBackward.png"));
                     Grid.SetColumnSpan(player.Img, 3);
                     Grid.SetRowSpan(player.Img, 5);
                 }
-                else if (currentPosition >= 24 && currentPosition < 31)
+                else if (currentPosition > 24 && currentPosition < 31)
                 {
                     player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarLeft.png"));
                     Grid.SetColumnSpan(player.Img, 6);
                     Grid.SetRowSpan(player.Img, 3);
                 }
-                else if (currentPosition >= 0 && currentPosition < 8)
+                else if (currentPosition > 0 && currentPosition < 8)
                 {
-                        player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarForward.png"));
+                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarForward.png"));
                     Grid.SetColumnSpan(player.Img, 3);
                     Grid.SetRowSpan(player.Img, 5);
                 }
-                await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
-                {
-                    Grid.SetRow(player.Img, player.PlayerPosition[0, currentPosition]);
-                    Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);
-                });
+
+                Grid.SetRow(player.Img, player.PlayerPosition[0, currentPosition]);
+                Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);
                 currentPosition++;
                 await Task.Delay(TimeSpan.FromMilliseconds(500));
 
@@ -227,9 +262,7 @@ namespace BussinesTourProject.Pages
                 GameManager.NextPlayer();
             }
             else if(Result[0] == Result[1])
-            {
-                GameManager.currentTimesPlay++;
-            }  
+                GameManager.currentTimesPlay++; 
             else
                 GameManager.NextPlayer();
 

@@ -72,22 +72,38 @@ namespace BussinesTourProject.Classes
             }
         }
 
-        public void ChangePlayerImageByEnumValue(state state)
+        public void ChangePlayerImageByEnumValue(int stateIndex)
         {
 
-            switch (state)
+            switch (playerState[stateIndex])
             {
                 case Player.state.left:
-                    Console.WriteLine();
+
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + imgName + "/RedCarLeft.png"));
+                    Grid.SetColumnSpan(Img, 6);
+                    Grid.SetRowSpan(Img, 3);
                     break;
+
                 case Player.state.right:
-                    Console.WriteLine();
+
+
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + imgName + "/RedCarRight.png"));
+                    Grid.SetColumnSpan(Img, 6);
+                    Grid.SetRowSpan(Img, 3);
                     break;
+
                 case Player.state.forward:
-                    Console.WriteLine();
+
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + imgName + "/RedCarForward.png"));
+                    Grid.SetColumnSpan(Img, 3);
+                    Grid.SetRowSpan(Img, 5);
                     break;
+
                 case Player.state.backward:
-                    Console.WriteLine();
+
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + imgName + "/RedCarBackward.png"));
+                    Grid.SetColumnSpan(Img, 3);
+                    Grid.SetRowSpan(Img, 5);
                     break;
             }
         }
