@@ -9,7 +9,6 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace BussinesTourProject.Classes
 {
-
     public class Player
     {
         // Matrix.GetLenght(0) == Number of rows
@@ -22,15 +21,20 @@ namespace BussinesTourProject.Classes
         public string imgName;
         public List<int> listHouses;
         public Image Img;
-        
+        public state[] playerState;
 
-        public Player( string imgName)
+        public enum state
+        {
+            forward, backward, right, left
+        }
+        public Player( string imgName, state[] playerState)
         {
             this.imgName = imgName;
             this.name = "Admin";
             this.currentPosition = 0;
             AmountOfMoney = 2_000_000;
             listHouses = new List<int>();
+            this.playerState = playerState;
         }
 
         private void MovingPlayerPosition(int diceResult)

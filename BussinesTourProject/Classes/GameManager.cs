@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static BussinesTourProject.Classes.Player;
 
 namespace BussinesTourProject.Classes
 {
@@ -54,10 +55,10 @@ namespace BussinesTourProject.Classes
 
         public static void InitPlayers()
         {
-            arrayPlayers  = new Player[] {new Player(imgName: "Player1"),
-            new Player(imgName: "Player1"),
-            new Player(imgName: "Player1"),
-            new Player(imgName: "Player1")};
+            arrayPlayers  = new Player[] {new Player(imgName: "Player1", playerState: new state[4]{state.forward, state.right, state.left, state.backward}),
+            new Player(imgName: "Player1", playerState: new state[4]{state.forward, state.right, state.left, state.backward} ),
+            new Player(imgName: "Player1", playerState: new state[4]{state.forward, state.right, state.left, state.backward} ),
+            new Player(imgName: "Player1", playerState: new state[4]{state.forward, state.right, state.left, state.backward} )};
         }
 
 
