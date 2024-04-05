@@ -57,13 +57,12 @@ namespace BussinesTourProject.Pages
             UpdateUITextBlock.Text = $"Seconds Elapsed: {secondsElapsed}";
         }
 
-        private static void InitPlayer(Player player, Image imgPlayer, int[,] playerMatrixPositions, string name)
+        private static void InitPlayer(Player player, Image imgPlayer, int[,] playerMatrixPositions)
         {
             player.SetPlayerPosition(playerMatrixPositions);
             player.Img = imgPlayer;
             Grid.SetRow(player.Img, player.PlayerPosition[0, 0]);
             Grid.SetColumn(player.Img, player.PlayerPosition[1, 0]);
-            player.name = name;
             
         }
 
@@ -128,10 +127,10 @@ namespace BussinesTourProject.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
-            InitPlayer(GameManager.arrayPlayers[1], imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
-            InitPlayer(GameManager.arrayPlayers[2], imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
-            InitPlayer(GameManager.arrayPlayers[3], imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
+            InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer1);
+            InitPlayer(GameManager.arrayPlayers[1], imgPlayer2, GameManager.MatrixPositionPlayer1);
+            InitPlayer(GameManager.arrayPlayers[2], imgPlayer3, GameManager.MatrixPositionPlayer1);
+            InitPlayer(GameManager.arrayPlayers[3], imgPlayer4, GameManager.MatrixPositionPlayer1);
             GameManager.NextPlayer();
         }
 
