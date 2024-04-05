@@ -129,9 +129,9 @@ namespace BussinesTourProject.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             GameManager.InitPlayers();
-            GameManager.currentPlayer = GameManager.arrayPlayers[2];
-            InitPlayer(GameManager.arrayPlayers[2], imgPlayer2, GameManager.MatrixPositionPlayer2, "Player1") ;
-            InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer1, "Player2") ;
+            GameManager.currentPlayer = GameManager.arrayPlayers[0];
+            InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer2, "Player1") ;
+            InitPlayer(GameManager.arrayPlayers[1], imgPlayer2, GameManager.MatrixPositionPlayer1, "Player2") ;
         }
         
 
