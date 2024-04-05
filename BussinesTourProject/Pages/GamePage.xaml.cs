@@ -209,7 +209,7 @@ namespace BussinesTourProject.Pages
                     Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);
                 });
                 currentPosition++;
-                await Task.Delay(TimeSpan.FromMilliseconds(300));
+                await Task.Delay(TimeSpan.FromMilliseconds(500));
 
             }
             imgDice1.Visibility = Visibility.Collapsed;

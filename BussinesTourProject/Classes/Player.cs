@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Imaging;
 
+
 namespace BussinesTourProject.Classes
 {
+
     public class Player
     {
         // Matrix.GetLenght(0) == Number of rows
@@ -20,6 +22,7 @@ namespace BussinesTourProject.Classes
         public string imgName;
         public List<int> listHouses;
         public Image Img;
+        
 
         public Player( string imgName)
         {
@@ -65,5 +68,9 @@ namespace BussinesTourProject.Classes
             }
         }
 
+
+
     }
+
+    
 }
