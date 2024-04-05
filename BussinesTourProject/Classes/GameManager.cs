@@ -14,13 +14,39 @@ namespace BussinesTourProject.Classes
         public static Player Player3 = new Player(name: "Player3");
         public static Player Player4 = new Player(name: "Player4");
 
-        public static int currentDiceResult = 4;
-
         public static Player currentPlayer;
-        public static int currentTimesPlay = 1;
-        private static int IndexPlayers = rnd.Next(0, 4);
+        public static int currentTimesPlay;
+        private static int IndexPlayers;
         public static Player[] arrayPlayers = { Player1, Player2, Player3, Player4 };
 
+        public static int[,] MatrixPositionPlayer1 = { { 79, 69, 61, 53, 45, 37, 29, 21,
+                                                         0, 8, 8, 8, 8, 8, 8, 8,
+                                                         14, 22, 30, 38, 46, 54, 62, 70,
+                                                         94, 83, 83, 83, 83, 83, 83, 83},
+                                                       { 8, 8, 8, 8, 8, 8, 8, 8,
+                                                         20, 36, 52, 68, 84, 100, 116, 132,
+                                                         175, 169, 169, 169, 169, 169, 169, 169,
+                                                         148, 132, 116, 100, 84, 68, 52, 36} };
+        public static int[,] MatrixPositionPlayer2;
+        public static int[,] MatrixPositionPlayer3;
+        public static int[,] MatrixPositionPlayer4;
+
+        public static void InitPlayers()
+        {
+            IndexPlayers = rnd.Next(0, 4);
+            currentTimesPlay = 1;
+
+
+            int[,] MatrixPositionPlayer1 = { { 79, 69, 61, 53, 45, 37, 29, 21,
+                                               0, 8, 8, 8, 8, 8, 8, 8,
+                                               14, 22, 30, 38, 46, 54, 62, 70,
+                                               94, 83, 83, 83, 83, 83, 83, 83},
+                                               { 8, 8, 8, 8, 8, 8, 8, 8,
+                                                 20, 36, 52, 68, 84, 100, 116, 132,
+                                                 175, 169, 169, 169, 169, 169, 169, 169,
+                                                 148, 132, 116, 100, 84, 68, 52, 36} };
+
+        }
 
         public static void NextPlayer()
         {
