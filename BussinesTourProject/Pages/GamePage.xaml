@@ -1151,8 +1151,6 @@
                    Grid.ColumnSpan="6" Grid.RowSpan="3" Grid.Column="18" Grid.Row="0" Stretch="Fill">
 
             </Image>
-            <Image Source="/Assets\Images\Players\Player1\RedCarRight.png" 
-                   Grid.ColumnSpan="5" Grid.RowSpan="4" Grid.Column="20" Grid.Row="94" Stretch="Fill" Margin="0,5,0,-5"/>
 
 
 
