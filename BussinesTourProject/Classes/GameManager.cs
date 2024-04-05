@@ -34,7 +34,7 @@ namespace BussinesTourProject.Classes
         public static void NextPlayer()
         {
             IndexPlayers++;
-            if (IndexPlayers > 4)
+            if (IndexPlayers >= 4)
                 IndexPlayers = 0;
             currentPlayer = arrayPlayers[IndexPlayers];
             currentTimesPlay = 1;
