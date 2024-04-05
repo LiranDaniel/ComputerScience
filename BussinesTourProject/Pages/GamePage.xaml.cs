@@ -131,7 +131,7 @@ namespace BussinesTourProject.Pages
             GameManager.InitPlayers();
             GameManager.currentPlayer = GameManager.arrayPlayers[1];
             InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
-            InitPlayer(GameManager.arrayPlayers[1], imgPlayer2, GameManager.MatrixPositionPlayer2, "Player2") ;
+            InitPlayer(GameManager.arrayPlayers[1], imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
         }
         
 
