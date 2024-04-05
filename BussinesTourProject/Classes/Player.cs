@@ -72,7 +72,25 @@ namespace BussinesTourProject.Classes
             }
         }
 
+        public void ChangePlayerImageByEnumValue(state state)
+        {
 
+            switch (state)
+            {
+                case Player.state.left:
+                    Console.WriteLine();
+                    break;
+                case Player.state.right:
+                    Console.WriteLine();
+                    break;
+                case Player.state.forward:
+                    Console.WriteLine();
+                    break;
+                case Player.state.backward:
+                    Console.WriteLine();
+                    break;
+            }
+        }
 
     }
 

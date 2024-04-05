@@ -182,7 +182,10 @@ namespace BussinesTourProject.Pages
                 {
                     currentPosition -= player.PlayerPosition.GetLength(1);
                 }
-                if (currentPosition >= 8 && currentPosition < 16)
+                if (currentPosition == 8)
+                {
+                }
+                else if (currentPosition > 8 && currentPosition < 16)
                 {
                     player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarRight.png"));
                     Grid.SetColumnSpan(player.Img, 6);
@@ -214,8 +217,8 @@ namespace BussinesTourProject.Pages
                 currentPosition++;
                 await Task.Delay(TimeSpan.FromMilliseconds(500));
 
-            }
-            imgDice1.Visibility = Visibility.Collapsed;
+                }
+                imgDice1.Visibility = Visibility.Collapsed;
             imgDice2.Visibility = Visibility.Collapsed;
             ((Button)sender).IsEnabled = true;
             if (GameManager.currentTimesPlay >= 3)
@@ -233,9 +236,9 @@ namespace BussinesTourProject.Pages
             ((Button)sender).Visibility = Visibility.Visible;
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
-        }
+            }
 
-        private void btnRoll_Dice_PointerEntered(object sender, PointerRoutedEventArgs e)
+            private void btnRoll_Dice_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
         }
@@ -244,5 +247,5 @@ namespace BussinesTourProject.Pages
         {
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
+        }
     }
-}
