@@ -213,11 +213,11 @@ namespace BussinesTourProject.Pages
             else if(Result[0] == Result[1])
             {
                 GameManager.currentTimesPlay++;
-                ((Button)sender).Visibility = Visibility.Visible;
             }  
             else
                 GameManager.NextPlayer();
 
+            ((Button)sender).Visibility = Visibility.Visible;
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
         }
