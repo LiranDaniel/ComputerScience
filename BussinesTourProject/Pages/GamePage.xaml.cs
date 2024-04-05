@@ -128,7 +128,6 @@ namespace BussinesTourProject.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-
             GameManager.NextPlayer();
             InitPlayer(GameManager.currentPlayer, imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
         }
