@@ -128,10 +128,13 @@ namespace BussinesTourProject.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
+            InitPlayer(GameManager.arrayPlayers[1], imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
+            InitPlayer(GameManager.arrayPlayers[2], imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
+            InitPlayer(GameManager.arrayPlayers[3], imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
             GameManager.NextPlayer();
-            InitPlayer(GameManager.currentPlayer, imgPlayer, GameManager.MatrixPositionPlayer1, "Player1") ;
         }
-        
+
 
         private async void MoveToJail(Player player)
         {
