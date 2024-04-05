@@ -23,7 +23,6 @@ using System.Runtime.CompilerServices;
 using Windows.Gaming.Input;
 using System.Reflection.Metadata.Ecma335;
 using Windows.ApplicationModel.VoiceCommands;
-
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace BussinesTourProject.Pages
@@ -33,17 +32,10 @@ namespace BussinesTourProject.Pages
     /// </summary>
     public sealed partial class GamePage : Page
     {
-        Random rnd = new Random();
-        Player Player1 = new Player(name: "Player1");
-        Player Player2 = new Player(name: "Player2");
-        Player Player3 = new Player(name: "Player3");
-        Player Player4 = new Player(name: "Player4");
-
         int currentDiceResult = 4;
 
         private DispatcherTimer timer;
         private int secondsElapsed;
-        private Player currentPlayer;
         private int currentTimesPlay = 1;
 
         public GamePage()
@@ -116,18 +108,14 @@ namespace BussinesTourProject.Pages
                 "Assets/Buttons/UsingButtons/" + ((Image)btnPlayExit.Content).Name.Replace("img", "") + " (2).png"));
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
-
         private void btn_Pause_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MenuPage));      
         }
-
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
         {   
              ChangePlayerPositionAnimation(Player1, 1);
-        }
-        
-
+        }   
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
             Grid.SetColumn(imgPlayer, col++);
@@ -144,20 +132,16 @@ namespace BussinesTourProject.Pages
             int[,] MatrixPositionPlayer1 = { { 79, 69, 61, 53, 45, 37, 29, 21,
                                                0, 8, 8, 8, 8, 8, 8, 8,
                                                14, 22, 30, 38, 46, 54, 62, 70,
-                                               89, 89, 89, 89, 89, 89, 89, 89},
+                                               94, 83, 83, 83, 83, 83, 83, 83},
                                                { 8, 8, 8, 8, 8, 8, 8, 8,
                                                  20, 36, 52, 68, 84, 100, 116, 132,
-                                                 175, 170, 170, 170, 170, 170, 170, 170,
+                                                 175, 169, 169, 169, 169, 169, 169, 169,
                                                  148, 132, 116, 100, 84, 68, 52, 36} };
 
-            InitPlayer(Player1, imgPlayer, MatrixPositionPlayer1, "Player1");
-            currentPlayer = Player1;
-            Player[] arrayPlayers = {Player1, Player2, Player3, Player4};
+            GameManager.NextPlayer();
+            InitPlayer(GameManager.currentPlayer, imgPlayer, MatrixPositionPlayer1, "Player1") ;
         }
-        private void NextPlayer()
-        {
-
-        }
+        
 
         private async void MoveToJail(Player player)
         {
@@ -165,14 +149,14 @@ namespace BussinesTourProject.Pages
             await Task.Delay(TimeSpan.FromSeconds(2));
             GridCards.Visibility = Visibility.Collapsed;
             player.currentPosition = 8;
-            currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarRight.png"));
-            Grid.SetColumnSpan(currentPlayer.Img, 6);
-            Grid.SetRowSpan(currentPlayer.Img, 3);
+            GameManager.currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + GameManager.currentPlayer.name + "/RedCarRight.png"));
+            Grid.SetColumnSpan(GameManager.currentPlayer.Img, 6);
+            Grid.SetRowSpan(GameManager.currentPlayer.Img, 3);
 
-            Grid.SetRow(currentPlayer.Img, currentPlayer.PlayerPosition[0, player.currentPosition]);
-            Grid.SetColumn(currentPlayer.Img, currentPlayer.PlayerPosition[1, player.currentPosition]);
-
+            Grid.SetRow(GameManager.currentPlayer.Img, GameManager.currentPlayer.PlayerPosition[0, player.currentPosition]);
+            Grid.SetColumn(GameManager.currentPlayer.Img, GameManager.currentPlayer.PlayerPosition[1, player.currentPosition]);
         }
+
         private async void btnRoll_Dice_Click(object sender, RoutedEventArgs e)
         {
             ((Button)sender).IsEnabled = false;
@@ -182,50 +166,50 @@ namespace BussinesTourProject.Pages
             int[] Result = Map.RollDice();
             await Task.Delay(TimeSpan.FromSeconds(2));
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
-            imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
+            imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[1] + ").png"));
 
-            int currentDiceResult = Result[0] + Result[0];
+            int currentDiceResult = Result[0] + Result[1];
 
-            int currentPosition = currentPlayer.currentPosition + 1;
-            currentPlayer.ChangePlayerPosition(currentDiceResult); // changing position of the player, and make sure that there is not overflow
+            int currentPosition = GameManager.currentPlayer.currentPosition + 1;
+            GameManager.currentPlayer.ChangePlayerPosition(currentDiceResult); // changing position of the player, and make sure that there is not overflow
             // Delay for 2 seconds
 
             for (int i = 0; i < currentDiceResult; i++)
             {
 
-                while (currentPosition > (currentPlayer.PlayerPosition.GetLength(1) - 1))
+                while (currentPosition > (GameManager.currentPlayer.PlayerPosition.GetLength(1) - 1))
                 {
-                    currentPosition -= currentPlayer.PlayerPosition.GetLength(1);
+                    currentPosition -= GameManager.currentPlayer.PlayerPosition.GetLength(1);
                 }
                 if (currentPosition >= 8 && currentPosition < 16)
                 {
-                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarRight.png"));
-                    Grid.SetColumnSpan(currentPlayer.Img, 6);
-                    Grid.SetRowSpan(currentPlayer.Img, 3);
+                    GameManager.currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + GameManager.currentPlayer.name + "/RedCarRight.png"));
+                    Grid.SetColumnSpan(GameManager.currentPlayer.Img, 6);
+                    Grid.SetRowSpan(GameManager.currentPlayer.Img, 3);
                 }
                 else if (currentPosition >= 16 && currentPosition < 24)
                 {
-                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarBackward.png"));
-                    Grid.SetColumnSpan(currentPlayer.Img, 3);
-                    Grid.SetRowSpan(currentPlayer.Img, 5);
+                    GameManager.currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + GameManager.currentPlayer.name + "/RedCarBackward.png"));
+                    Grid.SetColumnSpan(GameManager.currentPlayer.Img, 3);
+                    Grid.SetRowSpan(GameManager.currentPlayer.Img, 5);
                 }
                 else if (currentPosition >= 24 && currentPosition < 31)
                 {
-                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarLeft.png"));
-                    Grid.SetColumnSpan(currentPlayer.Img, 6);
-                    Grid.SetRowSpan(currentPlayer.Img, 3);
+                    GameManager.currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + GameManager.currentPlayer.name + "/RedCarLeft.png"));
+                    Grid.SetColumnSpan(GameManager.currentPlayer.Img, 6);
+                    Grid.SetRowSpan(GameManager.currentPlayer.Img, 3);
                 }
                 else if (currentPosition >= 0 && currentPosition < 8)
                 {
-                    currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + currentPlayer.name + "/RedCarForward.png"));
-                    Grid.SetColumnSpan(currentPlayer.Img, 3);
-                    Grid.SetRowSpan(currentPlayer.Img, 5);
+                        GameManager.currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + GameManager.currentPlayer.name + "/RedCarForward.png"));
+                    Grid.SetColumnSpan(GameManager.currentPlayer.Img, 3);
+                    Grid.SetRowSpan(GameManager.currentPlayer.Img, 5);
                 }
 
-                Grid.SetRow(currentPlayer.Img, currentPlayer.PlayerPosition[0, currentPosition]);
-                Grid.SetColumn(currentPlayer.Img, currentPlayer.PlayerPosition[1, currentPosition]);
+                Grid.SetRow(GameManager.currentPlayer.Img, GameManager.currentPlayer.PlayerPosition[0, currentPosition]);
+                Grid.SetColumn(GameManager.currentPlayer.Img, GameManager.currentPlayer.PlayerPosition[1, currentPosition]);
                 currentPosition++;
-                await Task.Delay(TimeSpan.FromMilliseconds(200));
+                await Task.Delay(TimeSpan.FromMilliseconds(300));
 
             }
             imgDice1.Visibility = Visibility.Collapsed;
@@ -233,17 +217,16 @@ namespace BussinesTourProject.Pages
             ((Button)sender).IsEnabled = true;
             if (currentTimesPlay >= 3)
             {
-                MoveToJail(currentPlayer);
-                NextPlayer();
-                currentPlayer = Player1;
+                MoveToJail(GameManager.currentPlayer);
+                GameManager.NextPlayer();
             }
-            else if(Result[0] == Result[0])
+            else if(Result[0] == Result[1])
             {
                 currentTimesPlay++;
                 ((Button)sender).Visibility = Visibility.Visible;
             }  
             else
-                NextPlayer();
+                GameManager.NextPlayer();
 
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
