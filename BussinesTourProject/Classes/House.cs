@@ -25,10 +25,10 @@ namespace BussinesTourProject.Classes
                 {HouseState.villa, @"/Assets\Images\SquareImages\House3.png"},
                 {HouseState.Hotel, @"/Assets\Images\SquareImages\House4.png" } };
 
-        private static int[] arrayTimesValue = { 0, 1, 2, 3, 4 };
+        public static int[] arrayTimesValue = { 0, 1, 2, 3, 4 };
         public Image HouseImage;
-        private int basicValue;
-        private int currentValue;
+        public int basicValue;
+        public int currentValue;
         public HouseState houseCurrentState;
         public Player playerOwnerHouse;
 
