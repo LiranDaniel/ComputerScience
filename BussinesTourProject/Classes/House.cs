@@ -29,7 +29,7 @@ namespace BussinesTourProject.Classes
         public Image HouseImage;
         private int basicValue;
         private int currentValue;
-        public HouseState da;
+        public HouseState houseCurrentState;
 
         public Houses(int basicValue)
         {
