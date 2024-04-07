@@ -178,12 +178,12 @@ namespace BussinesTourProject.Pages
             await Task.Delay(TimeSpan.FromSeconds(2));
             GridCards.Visibility = Visibility.Collapsed;
             player.currentPosition = 8;
-            GameManager.currentPlayer.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarRight.png"));
+            player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarRight.png"));
             Grid.SetColumnSpan(player.Img, 6);
             Grid.SetRowSpan(player.Img, 3);
 
-            Grid.SetRow(GameManager.currentPlayer.Img, player.PlayerPosition[0, player.currentPosition]);
-            Grid.SetColumn(GameManager.currentPlayer.Img, player.PlayerPosition[1, player.currentPosition]);
+            Grid.SetRow(player.Img, player.PlayerPosition[0, player.currentPosition]);
+            Grid.SetColumn(player.Img, player.PlayerPosition[1, player.currentPosition]);
         }
 
 
