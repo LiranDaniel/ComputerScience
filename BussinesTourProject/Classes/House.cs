@@ -8,7 +8,7 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace BussinesTourProject.Classes
 {
-    public class Houses
+    public class House
     {
         public enum HouseState
         {
@@ -30,15 +30,18 @@ namespace BussinesTourProject.Classes
         private int basicValue;
         private int currentValue;
         public HouseState houseCurrentState;
+        public Player playerOwnerHouse;
 
-        public Houses(int basicValue)
+        public House(int basicValue)
         {
             this.basicValue = basicValue;
+            this.currentValue = 0;
         }
         public void ChangeHouse(int houseUpgradeState)
         {   
             HouseImage.Source = new BitmapImage(new Uri($"ms-appx://" + filePathImages[(HouseState)houseUpgradeState]));
             currentValue = basicValue * arrayTimesValue[houseUpgradeState];
         }
+        
     }
 }

@@ -16,7 +16,7 @@ namespace BussinesTourProject.Classes
         {
             HomeLevel1, HomeLevel2, HomeLevel3, Hotel
         }
-        public static Houses[] HousesPosition;
+        public static House[] HousesPosition;
 
     }
 }
