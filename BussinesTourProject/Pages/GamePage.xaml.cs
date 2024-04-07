@@ -196,7 +196,7 @@ namespace BussinesTourProject.Pages
             ((Button)sender).Visibility = Visibility.Collapsed;
             imgDice1.Visibility = Visibility.Visible;
             imgDice2.Visibility = Visibility.Visible;
-            int[] Result = Map.RollDice();
+            int[] Result = GameManager.RollDice();
             await Task.Delay(TimeSpan.FromSeconds(2));
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[1] + ").png"));

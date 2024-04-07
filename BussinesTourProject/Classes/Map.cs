@@ -11,13 +11,6 @@ namespace BussinesTourProject.Classes
 {
     public static class Map
     {
-        public static Random rnd = new Random();
-        public static DispatcherTimer Timer { get; set; }
-        public static Player player1;
-        public static Player player2;
-        public static Player player3;
-        public static Player player4;
-
 
         public enum Houses
         {
@@ -25,10 +18,5 @@ namespace BussinesTourProject.Classes
         }
         public static Houses[] HousesPosition;
 
-        public static int[] RollDice()
-        {
-            int[] Result = { rnd.Next(1, 7), rnd.Next(1, 7) };
-            return Result;
-        }
     }
 }

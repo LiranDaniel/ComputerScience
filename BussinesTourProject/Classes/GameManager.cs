@@ -63,6 +63,11 @@ namespace BussinesTourProject.Classes
 
 
 
+        public static int[] RollDice()
+        {
+            int[] Result = { rnd.Next(1, 7), rnd.Next(1, 7) };
+            return Result;
+        }
         public static void NextPlayer()
         {
             IndexPlayers++;
