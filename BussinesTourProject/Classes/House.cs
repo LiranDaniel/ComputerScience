@@ -30,6 +30,7 @@ namespace BussinesTourProject.Classes
         public Image HouseImage;
         public int basicValue;
         public int currentValue;
+        public int costToBuy;
         public HouseState houseCurrentState;
         public Player playerOwnerHouse;
 
@@ -37,6 +38,7 @@ namespace BussinesTourProject.Classes
         {
             this.basicValue = basicValue;
             this.currentValue = 0;
+            this.houseCurrentState = HouseState.None;
         }
         public void ChangeHouse(int houseUpgradeState)
         {   
