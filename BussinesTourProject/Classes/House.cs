@@ -23,7 +23,8 @@ namespace BussinesTourProject.Classes
                 {HouseState.BasicHouse, @"/Assets\Images\SquareImages\House1.png"},
                 {HouseState.AdvanceHouse, @"/Assets\Images\SquareImages\House2.png"},
                 {HouseState.villa, @"/Assets\Images\SquareImages\House3.png"},
-                {HouseState.Hotel, @"/Assets\Images\SquareImages\House4.png" } };
+                {HouseState.Hotel, @"/Assets\Images\SquareImages\House4.png"}
+        };
 
         public static int[] arrayTimesValue = { 0, 1, 2, 3, 4 };
         public Image HouseImage;
