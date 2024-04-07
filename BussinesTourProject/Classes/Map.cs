@@ -12,7 +12,7 @@ namespace BussinesTourProject.Classes
     public static class Map
     {
 
-        public enum Houses
+        public enum HouseState
         {
             HomeLevel1, HomeLevel2, HomeLevel3, Hotel
         }

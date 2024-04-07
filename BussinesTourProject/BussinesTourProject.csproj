@@ -120,7 +120,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\GameManager.cs" />
-    <Compile Include="Classes\Houses.cs" />
+    <Compile Include="Classes\House.cs" />
     <Compile Include="Classes\Map.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Pages\GamePage.xaml.cs">
