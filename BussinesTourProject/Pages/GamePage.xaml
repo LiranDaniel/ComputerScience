@@ -1110,12 +1110,6 @@
                    Grid.Row="77" Grid.Column="146" Grid.RowSpan="16" Grid.ColumnSpan="27"></Image>
 
 
-            <Image Source="/Assets\Images\Players\Player1\RedCarRight.png" 
-                   Grid.ColumnSpan="7" Grid.RowSpan="4" Grid.Column="150" Grid.Row="13" Stretch="Fill">
-
-            </Image>
-            
-
             <Button x:Name="btnRoll_Dice" Grid.Row="57" Grid.Column="80" Grid.ColumnSpan="20" Grid.RowSpan="8" Content="Roll Dice"
                     Background="Black" Foreground="White" FontFamily="Ink Draft" CornerRadius="8" FontSize="30" Visibility="Visible"
                     Click="btnRoll_Dice_Click" PointerEntered="btnRoll_Dice_PointerEntered" PointerExited="btnRoll_Dice_PointerExited"></Button>
