@@ -19,7 +19,7 @@ namespace BussinesTourProject.Classes
             Hotel = 4
         }
         public static Dictionary<HouseState, string> filePathImages = new Dictionary<HouseState, string>() {
-                {HouseState.None, @"None"},
+                {HouseState.None, null},
                 {HouseState.BasicHouse, @"/Assets\Images\SquareImages\House1.png"},
                 {HouseState.AdvanceHouse, @"/Assets\Images\SquareImages\House2.png"},
                 {HouseState.villa, @"/Assets\Images\SquareImages\House3.png"},
