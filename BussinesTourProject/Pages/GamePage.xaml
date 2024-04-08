@@ -672,36 +672,36 @@
             <Border Grid.Column="6" Grid.RowSpan="1" Grid.Row="93" Grid.ColumnSpan="167" Background="White"></Border>
 
 
-            <Image Source="/Assets\Images\SquareImages\JailimgSquare.png" Stretch="Fill"
+            <Image Source="/Assets\Images\SquareImages\SpecialIcon\JailimgSquare.png" Stretch="Fill"
                    Grid.Row="5" Grid.RowSpan="16" Grid.ColumnSpan="27" Grid.Column="7"></Image>
 
             <Image  Grid.Row="6" Grid.Column="99" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\blockBrick4.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick4.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="6" Grid.Column="131" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\blockBrick4.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick4.png" Stretch="Fill"
                     Opacity=".6"></Image>
 
             <Image  Grid.Row="6" Grid.Column="35" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\blockBrick10.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick10.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="6" Grid.Column="51" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\blockBrick10.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick10.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="6" Grid.Column="67" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\blockBrick10.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick10.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="21" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="22"
-                    Source="/Assets\Images\SquareImages\blockBrick6.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick6.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="21" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\blockBrick7.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick7.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="29" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\blockBrick8.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick8.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="37" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\blockBrick7.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick7.png" Stretch="Fill"
                     Opacity=".6"></Image>
 
 
@@ -791,7 +791,7 @@
 
 
 
-            <Image Source="/Assets\Images\SquareImages\raceLine.png" 
+            <Image Source="/Assets\Images\SquareImages\SpecialIcon\raceLine.png" 
                    Grid.Row="79" Grid.RowSpan="2" Stretch="Fill" Grid.ColumnSpan="27" Grid.Column="7"></Image>
 
 
@@ -964,56 +964,56 @@
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
             <Image  Grid.Row="69" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\blockBrick12.jpg" Stretch="Fill" Opacity=".65"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick12.jpg" Stretch="Fill" Opacity=".65"
                     ></Image>
             <Image  Grid.Row="53" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\blockBrick11.png" Stretch="Fill" Opacity=".65"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick11.png" Stretch="Fill" Opacity=".65"
                     ></Image>
             <Image  Grid.Row="61" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\blockBrick11.png" Stretch="Fill" Opacity=".65"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick11.png" Stretch="Fill" Opacity=".65"
                     ></Image>
             <Image  Grid.Row="69" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\blockBrick11.png" Stretch="Fill" Opacity=".65"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick11.png" Stretch="Fill" Opacity=".65"
                     ></Image>
             <Image  Grid.Row="61" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\blockBrick12.jpg" Stretch="Fill" Opacity=".65"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick12.jpg" Stretch="Fill" Opacity=".65"
                     ></Image>
             <Image  Grid.Row="53" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\blockBrick12.jpg" Stretch="Fill" Opacity=".65"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick12.jpg" Stretch="Fill" Opacity=".65"
                     ></Image>
             <Image  Grid.Row="77" Grid.Column="35" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\blockBrick13.jpg" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick13.jpg" Stretch="Fill"
                     Opacity=".65"></Image>
             <Image  Grid.Row="77" Grid.Column="51" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\blockBrick13.jpg" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick13.jpg" Stretch="Fill"
                     Opacity=".65"></Image>
             <Image  Grid.Row="77" Grid.Column="67" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\blockBrick13.jpg" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick13.jpg" Stretch="Fill"
                     Opacity=".65"></Image>
             <Image  Grid.Row="77" Grid.Column="83" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\blockBrick9.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick9.png" Stretch="Fill"
                     Opacity=".65"></Image>
             <Image  Grid.Row="6" Grid.Column="83" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\blockBrick9.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick9.png" Stretch="Fill"
                     Opacity=".65"></Image>
 
             <Image  Grid.Row="77" Grid.Column="99" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\blockGray.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockGray.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="77" Grid.Column="115" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\blockBrick8.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick8.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="6" Grid.Column="115" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\blockBrick8.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick8.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="77" Grid.Column="131" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\blockGray.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockGray.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="45" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\blockBrick9.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick9.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="45" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\blockBrick8.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick8.png" Stretch="Fill"
                     Opacity=".6"></Image>
 
 
@@ -1102,11 +1102,11 @@
 
 
 
-            <Image Source="/Assets\Images\SquareImages\RouteRace.png"  Stretch="Fill"
+            <Image Source="/Assets\Images\SquareImages\SpecialIcon\RouteRace.png"  Stretch="Fill"
                    Grid.Row="5" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="16"></Image>
 
 
-            <Image Source="/Assets\Images\SquareImages\FlyingTourBlock2.jpg"  Stretch="Fill"
+            <Image Source="/Assets\Images\SquareImages\SpecialIcon\FlyingTourBlock2.jpg"  Stretch="Fill"
                    Grid.Row="77" Grid.Column="146" Grid.RowSpan="16" Grid.ColumnSpan="27"></Image>
 
 
@@ -1124,37 +1124,37 @@
 
 
 
-            <Image Source="/Assets\Images\SquareImages\House2.png" Grid.Column="25" Grid.Row="30" 
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Grid.Column="25" Grid.Row="30" 
                    Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
 
             </Image>
 
-            <Image Source="/Assets\Images\SquareImages\House1.png" Grid.Column="25" Grid.Row="22" 
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House1.png" Grid.Column="25" Grid.Row="22" 
                    Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
 
             </Image>
-            <Image Source="/Assets\Images\SquareImages\House3.png" Grid.Column="25" Grid.Row="38" 
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Grid.Column="25" Grid.Row="38" 
                    Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
 
             </Image>
-            <Image Source="/Assets\Images\SquareImages\House4.png" Grid.Column="25" Grid.Row="46" 
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House4.png" Grid.Column="25" Grid.Row="46" 
                    Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
 
             </Image>
 
-            <Image Source="/Assets\Images\SquareImages\House4.png" Grid.Column="38" Grid.Row="87" 
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House4.png" Grid.Column="38" Grid.Row="87" 
                    Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill">
 
             </Image>
-            <Image Source="/Assets\Images\SquareImages\House3.png" Grid.Column="54" Grid.Row="87" 
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Grid.Column="54" Grid.Row="87" 
                    Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill">
 
             </Image>
-            <Image Source="/Assets\Images\SquareImages\House2.png" Grid.Column="70" Grid.Row="87" 
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Grid.Column="70" Grid.Row="87" 
                    Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill">
 
             </Image>
-            <Image Source="/Assets\Images\SquareImages\House1.png" Grid.Column="86" Grid.Row="87" 
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House1.png" Grid.Column="86" Grid.Row="87" 
                    Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill">
 
             </Image>
@@ -1228,7 +1228,7 @@
                        Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" Grid.RowSpan="2" 
                        Text="You are going to jail &#x0a;you are moving too fast" x:Name="txtJailCard">
             </TextBlock>
-            <Image Source="/Assets\Images\SquareImages\Jailimg.png" Grid.Column="1" Grid.Row="1"
+            <Image Source="/Assets\Images\SquareImages\SpecialIcon\Jailimg.png" Grid.Column="1" Grid.Row="1"
                    Grid.ColumnSpan="5" Grid.RowSpan="4">
 
             </Image>
