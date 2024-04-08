@@ -129,7 +129,7 @@
 
         <Image Source="/Assets\Images\person_icon.png" Grid.Column="7" Grid.Row="12" 
                Grid.ColumnSpan="3" Grid.RowSpan="3" Stretch="Fill">
-
+ 
         </Image>
 
         <Button Grid.Row="0" Grid.Column="0" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
