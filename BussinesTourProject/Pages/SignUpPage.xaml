@@ -125,7 +125,7 @@
 
         <Button x:Name="btnSignUp" Style="{StaticResource MyButtonStyle}" Grid.Row="12" Grid.Column="17"
                 Grid.ColumnSpan="5" Click="btnSignUp_Click" Foreground="Blue" FontSize="50"
-                Grid.RowSpan="2" FontFamily="Cascadia code">Sign Up</Button>
+                Grid.RowSpan="2" FontFamily="Cascadia code" Background="Black" >Sign Up</Button>
 
         <Image Source="/Assets\Images\person_icon.png" Grid.Column="7" Grid.Row="12" 
                Grid.ColumnSpan="3" Grid.RowSpan="3" Stretch="Fill">
