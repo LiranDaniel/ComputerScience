@@ -1154,8 +1154,8 @@
                    Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill">
 
             </Image>
-            <Image Source="/Assets\Images\SquareImages\HousesIcons\House1.png" Grid.Column="86" Grid.Row="87" 
-                   Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill">
+            <Image Source="/Assets\Images\SquareImages\SpecialIcon\RegularPrizeWheel.png" Grid.Column="87" Grid.Row="86" 
+                   Grid.ColumnSpan="6" Grid.RowSpan="5" Stretch="Fill">
 
             </Image>
 
