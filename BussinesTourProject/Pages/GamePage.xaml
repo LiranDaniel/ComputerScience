@@ -978,7 +978,7 @@
                     Source="/Assets\Images\SquareImages\BlockImages\blockBrick13.jpg" Stretch="Fill"
                     Opacity=".65"></Image>
             <Image  Grid.Row="77" Grid.Column="51" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick13.jpg" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick9.png" Stretch="Fill"
                     Opacity=".65"></Image>
             <Image  Grid.Row="77" Grid.Column="67" Grid.ColumnSpan="14" Grid.RowSpan="15"
                     Source="/Assets\Images\SquareImages\BlockImages\blockBrick13.jpg" Stretch="Fill"
