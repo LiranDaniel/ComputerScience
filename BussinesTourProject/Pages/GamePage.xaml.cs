@@ -64,8 +64,6 @@ namespace BussinesTourProject.Pages
             Grid.SetRow(player.Img, player.PlayerPosition[0, 0]);
             Grid.SetColumn(player.Img, player.PlayerPosition[1, 0]);
             player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarForward.png"));
-
-
         }
 
         public static void ChangePlayerPositionAnimation(Player player, int diceResult)
@@ -176,7 +174,6 @@ namespace BussinesTourProject.Pages
             player.currentPosition = 8;
             player.ChangePlayerImageByEnumValue(1);
 
-
             Grid.SetRow(player.Img, player.PlayerPosition[0, player.currentPosition]);
             Grid.SetColumn(player.Img, player.PlayerPosition[1, player.currentPosition]);
         }
@@ -195,7 +192,6 @@ namespace BussinesTourProject.Pages
             await Task.Delay(TimeSpan.FromSeconds(2));
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[1] + ").png"));
-
 
             if (player.turnsStackJail != 0)
             {
@@ -227,7 +223,6 @@ namespace BussinesTourProject.Pages
 
             for (int i = 0; i < currentDiceResult; i++)
             {
-
                 while (currentPosition > (player.PlayerPosition.GetLength(1) - 1))
                 {
                     currentPosition -= player.PlayerPosition.GetLength(1);
@@ -283,7 +278,6 @@ namespace BussinesTourProject.Pages
 
         private void ResetTheButtons(object sender, RoutedEventArgs e)
         {
-
             imgDice1.Visibility = Visibility.Collapsed;
             imgDice2.Visibility = Visibility.Collapsed;
 
