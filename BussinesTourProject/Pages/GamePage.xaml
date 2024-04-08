@@ -1137,9 +1137,16 @@
                    Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
 
             </Image>
-            <Image Source="/Assets\Images\SquareImages\HousesIcons\House4.png" Grid.Column="25" Grid.Row="46" 
-                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
+            <Image Source="/Assets\Images\SquareImages\SpecialIcon\RedCarTrafficLight.png" Grid.Column="26" Grid.Row="46" 
+                   Grid.ColumnSpan="5" Grid.RowSpan="4" Stretch="Fill">
+            </Image>
 
+            <Image Source="/Assets\Images\SquareImages\SpecialIcon\RedCarGasStation.png" Grid.Column="148" Grid.Row="30" 
+                   Grid.ColumnSpan="5" Grid.RowSpan="4" Stretch="Fill">
+            </Image>
+
+            <Image Source="/Assets\Images\SquareImages\SpecialIcon\RegularPrizeWheel.png" Grid.Column="148" Grid.Row="46" 
+                   Grid.ColumnSpan="5" Grid.RowSpan="4" Stretch="Fill">
             </Image>
 
             <Image Source="/Assets\Images\SquareImages\HousesIcons\House4.png" Grid.Column="38" Grid.Row="87" 
@@ -1156,7 +1163,16 @@
             </Image>
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\RegularPrizeWheel.png" Grid.Column="87" Grid.Row="86" 
                    Grid.ColumnSpan="6" Grid.RowSpan="5" Stretch="Fill">
-
+            </Image>
+            <Image Source="/Assets\Images\SquareImages\SpecialIcon\RegularPrizeWheel.png" Grid.Column="87" Grid.Row="15" 
+                   Grid.ColumnSpan="6" Grid.RowSpan="5" Stretch="Fill">
+            </Image>
+            
+            <Image Source="/Assets\Images\SquareImages\SpecialIcon\BusStopStation.png" Grid.Column="119" Grid.Row="86" 
+                   Grid.ColumnSpan="6" Grid.RowSpan="5" Stretch="Fill">
+            </Image>
+            <Image Source="/Assets\Images\SquareImages\SpecialIcon\TaxiStopStation.png" Grid.Column="119" Grid.Row="15" 
+                   Grid.ColumnSpan="6" Grid.RowSpan="5" Stretch="Fill">
             </Image>
 
 
