@@ -22,6 +22,7 @@ namespace BussinesTourProject.Classes
         public List<int> listHouses;
         public Image Img;
         public state[] playerState;
+        public int turnsStackJail;
 
         public enum state
         {
@@ -35,6 +36,7 @@ namespace BussinesTourProject.Classes
             AmountOfMoney = 2_000_000;
             listHouses = new List<int>();
             this.playerState = playerState;
+            this.turnsStackJail = 0;
         }
 
         public void SetPlayerPosition(int[,] PlayerPosition)
@@ -49,6 +51,8 @@ namespace BussinesTourProject.Classes
             {
                 currentPosition = currentPosition - PlayerPosition.GetLength(1);
             }
+            if (currentPosition == 8)
+                this.turnsStackJail = 3;
         }
 
         public void ChangePlayerImageByEnumValue(int stateIndex)
@@ -64,7 +68,6 @@ namespace BussinesTourProject.Classes
                     break;
 
                 case Player.state.right:
-
 
                     Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + imgName + "/RedCarRight.png"));
                     Grid.SetColumnSpan(Img, 6);

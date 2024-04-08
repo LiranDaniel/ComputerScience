@@ -68,7 +68,7 @@ namespace BussinesTourProject.Pages
 
         }
 
-        public  static void ChangePlayerPositionAnimation(Player player, int diceResult)
+        public static void ChangePlayerPositionAnimation(Player player, int diceResult)
         {
             int currentPosition = player.currentPosition + 1;
             player.ChangePlayerPosition(1); // changing position of the player, and make sure that there is not overflow
@@ -122,7 +122,7 @@ namespace BussinesTourProject.Pages
 
             }
         }
-      
+
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             Button btnPlayEnter = (Button)sender;
@@ -141,7 +141,7 @@ namespace BussinesTourProject.Pages
 
         private void btn_Pause_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MenuPage));      
+            Frame.Navigate(typeof(MenuPage));
         }
 
         private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
@@ -156,7 +156,7 @@ namespace BussinesTourProject.Pages
 
         private void MovingPlayer()
         {
-            
+
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -164,13 +164,13 @@ namespace BussinesTourProject.Pages
             GameManager.InitPlayers();
             GameManager.NextPlayer();
 
-            InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer1) ;
-            InitPlayer(GameManager.arrayPlayers[1], imgPlayer2, GameManager.MatrixPositionPlayer2) ;
-            InitPlayer(GameManager.arrayPlayers[2], imgPlayer3, GameManager.MatrixPositionPlayer3) ;
-            InitPlayer(GameManager.arrayPlayers[3], imgPlayer4, GameManager.MatrixPositionPlayer4) ;
+            InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer1);
+            InitPlayer(GameManager.arrayPlayers[1], imgPlayer2, GameManager.MatrixPositionPlayer2);
+            InitPlayer(GameManager.arrayPlayers[2], imgPlayer3, GameManager.MatrixPositionPlayer3);
+            InitPlayer(GameManager.arrayPlayers[3], imgPlayer4, GameManager.MatrixPositionPlayer4);
 
         }
-        
+
 
         private async void MoveToJail(Player player)
         {
@@ -178,9 +178,8 @@ namespace BussinesTourProject.Pages
             await Task.Delay(TimeSpan.FromSeconds(2));
             GridCards.Visibility = Visibility.Collapsed;
             player.currentPosition = 8;
-            player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarRight.png"));
-            Grid.SetColumnSpan(player.Img, 6);
-            Grid.SetRowSpan(player.Img, 3);
+            player.ChangePlayerImageByEnumValue(1);
+
 
             Grid.SetRow(player.Img, player.PlayerPosition[0, player.currentPosition]);
             Grid.SetColumn(player.Img, player.PlayerPosition[1, player.currentPosition]);
@@ -190,8 +189,8 @@ namespace BussinesTourProject.Pages
 
         private async void btnRoll_Dice_Click(object sender, RoutedEventArgs e)
         {
+            Player player = GameManager.currentPlayer;
 
-            Player player = GameManager.currentPlayer;  
             ((Button)sender).IsEnabled = false;
             ((Button)sender).Visibility = Visibility.Collapsed;
             imgDice1.Visibility = Visibility.Visible;
@@ -201,7 +200,31 @@ namespace BussinesTourProject.Pages
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[1] + ").png"));
 
-            int currentDiceResult = Result[0] + Result[1];  
+
+            if (player.turnsStackJail != 0)
+            {
+                ResetTheButtons(sender, e);
+                if (Result[0] == Result[1])
+                {
+                    player.turnsStackJail = 0;
+                }
+                else
+                {
+                    player.turnsStackJail--;
+                    GameManager.NextPlayer();
+                    return;
+                }
+            }
+            if (GameManager.currentTimesPlay == 3 && (Result[0] == Result[1]))
+            {
+                MoveToJail(GameManager.currentPlayer);
+                GameManager.NextPlayer();
+                ResetTheButtons(sender, e);
+
+                return;
+            }
+
+            int currentDiceResult = Result[0] + Result[1];
 
             int currentPosition = player.currentPosition + 1;
             player.ChangePlayerPosition(currentDiceResult); // changing position of the player, and make sure that there is not overflow
@@ -252,26 +275,36 @@ namespace BussinesTourProject.Pages
                 currentPosition++;
                 await Task.Delay(TimeSpan.FromMilliseconds(500));
 
-                }
-                imgDice1.Visibility = Visibility.Collapsed;
-            imgDice2.Visibility = Visibility.Collapsed;
-            ((Button)sender).IsEnabled = true;
-            if (GameManager.currentTimesPlay >= 3)
+            }
+
+            if (GameManager.currentTimesPlay == 3)
             {
                 MoveToJail(GameManager.currentPlayer);
                 GameManager.NextPlayer();
             }
-            else if(Result[0] == Result[1])
-                GameManager.currentTimesPlay++; 
+            else if (Result[0] == Result[1])
+                GameManager.currentTimesPlay++;
             else
                 GameManager.NextPlayer();
 
+            ResetTheButtons(sender, e);
+
+        }
+
+        private void ResetTheButtons(object sender, RoutedEventArgs e)
+        {
+
+            imgDice1.Visibility = Visibility.Collapsed;
+            imgDice2.Visibility = Visibility.Collapsed;
+
+            ((Button)sender).IsEnabled = true;
             ((Button)sender).Visibility = Visibility.Visible;
+
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
-            }
+        }
 
-            private void btnRoll_Dice_PointerEntered(object sender, PointerRoutedEventArgs e)
+        private void btnRoll_Dice_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
         }
@@ -280,5 +313,7 @@ namespace BussinesTourProject.Pages
         {
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
-        }
+
+
     }
+}
