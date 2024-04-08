@@ -1052,13 +1052,10 @@
             <Border Grid.Column="81" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="2" Background="White"></Border>
 
 
-            <TextBlock Grid.Column="81" Grid.RowSpan="2" Grid.Row="92" Grid.ColumnSpan="10"  FontSize="11"
-                       FontFamily="Cascadia code" Foreground="Black" Text="Tokyo" FontWeight="Bold" HorizontalAlignment="Center"
+            <TextBlock Grid.Column="85" Grid.RowSpan="2" Grid.Row="92" Grid.ColumnSpan="10"  FontSize="11"
+                       FontFamily="Cascadia code" Foreground="Black" Text="Chance" FontWeight="Bold" HorizontalAlignment="Center"
                        VerticalAlignment="Top" ></TextBlock>
 
-            <TextBlock Grid.Column="88" Grid.RowSpan="2" Grid.Row="92" Grid.ColumnSpan="12"  FontSize="11"
-                       FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
-                       VerticalAlignment="Top" ></TextBlock>
 
 
             <Border Grid.Column="97" Grid.RowSpan="15" Grid.Row="77" Grid.ColumnSpan="2" Background="White"></Border>
