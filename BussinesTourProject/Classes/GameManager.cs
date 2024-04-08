@@ -16,7 +16,6 @@ namespace BussinesTourProject.Classes
         private static int IndexPlayers = rnd.Next(0, 4);
         public static Player[] arrayPlayers;
 
-
         public enum HouseState
         {
             HomeLevel1, HomeLevel2, HomeLevel3, Hotel
