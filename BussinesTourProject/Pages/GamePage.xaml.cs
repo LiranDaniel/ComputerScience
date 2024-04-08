@@ -203,7 +203,6 @@ namespace BussinesTourProject.Pages
 
             if (player.turnsStackJail != 0)
             {
-                ResetTheButtons(sender, e);
                 if (Result[0] == Result[1])
                 {
                     player.turnsStackJail = 0;
@@ -212,6 +211,7 @@ namespace BussinesTourProject.Pages
                 {
                     player.turnsStackJail--;
                     GameManager.NextPlayer();
+                    ResetTheButtons(sender, e);
                     return;
                 }
             }
@@ -220,7 +220,6 @@ namespace BussinesTourProject.Pages
                 MoveToJail(GameManager.currentPlayer);
                 GameManager.NextPlayer();
                 ResetTheButtons(sender, e);
-
                 return;
             }
 
@@ -277,12 +276,7 @@ namespace BussinesTourProject.Pages
 
             }
 
-            if (GameManager.currentTimesPlay == 3)
-            {
-                MoveToJail(GameManager.currentPlayer);
-                GameManager.NextPlayer();
-            }
-            else if (Result[0] == Result[1])
+            if (Result[0] == Result[1])
                 GameManager.currentTimesPlay++;
             else
                 GameManager.NextPlayer();
