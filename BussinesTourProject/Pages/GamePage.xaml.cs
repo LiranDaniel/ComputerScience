@@ -154,10 +154,6 @@ namespace BussinesTourProject.Pages
             ChangePlayerPositionAnimation(GameManager.arrayPlayers[1], 1);
         }
 
-        private void MovingPlayer()
-        {
-
-        }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
