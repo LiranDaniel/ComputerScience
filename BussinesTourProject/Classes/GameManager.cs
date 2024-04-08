@@ -16,6 +16,14 @@ namespace BussinesTourProject.Classes
         private static int IndexPlayers = rnd.Next(0, 4);
         public static Player[] arrayPlayers;
 
+
+        public enum HouseState
+        {
+            HomeLevel1, HomeLevel2, HomeLevel3, Hotel
+        }
+        public static House[] HousesPosition;
+
+
         public static int[,] MatrixPositionPlayer1 = { { 82, 70, 62, 54, 46, 38, 30, 22,
                                                          0, 7, 7, 7, 7, 7, 7, 7,
                                                          14, 22, 30, 38, 46, 54, 62, 70,
