@@ -55,7 +55,7 @@ namespace BussinesTourProject.Pages
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(GamePage));
+            Frame.Navigate(typeof(SignUpPage));
         }
 
 

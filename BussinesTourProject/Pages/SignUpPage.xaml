@@ -80,51 +80,52 @@
         </Grid>
 
         <TextBlock x:Name="blockName" Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="7" Grid.RowSpan="3"
-                   FontSize="50" FontFamily="Ink Draft" Foreground="Black" HorizontalAlignment="Left"
+                   FontSize="25" FontFamily="Cascadia code" Foreground="Black" HorizontalAlignment="Left"
                    VerticalAlignment="Top">
                 Name:
         </TextBlock>
 
-        <TextBlock x:Name="blockMail" Grid.Row="6" Grid.Column="7" Grid.ColumnSpan="8" Grid.RowSpan="2"
-                   FontSize="40" FontFamily="Ink Draft" Foreground="Black">
+        <TextBlock x:Name="blockMail" Grid.Row="6" Grid.Column="7" Grid.ColumnSpan="3" Grid.RowSpan="2"
+                   FontSize="25" FontFamily="Cascadia code" Foreground="Black">
                 Mail:
         </TextBlock>
-        <TextBlock x:Name="blockPassword" Grid.Row="8" Grid.Column="7" Grid.ColumnSpan="8" Grid.RowSpan="2"
-                   FontSize="40" FontFamily="Ink Draft" Foreground="Black">
+        <TextBlock x:Name="blockPassword" Grid.Row="8" Grid.Column="7" Grid.ColumnSpan="4" Grid.RowSpan="2"
+                   FontSize="25" FontFamily="Cascadia code" Foreground="Black">
                 Password:
         </TextBlock>
-        <TextBlock x:Name="blockPasswordCheck" Grid.Row="10" Grid.Column="7" Grid.ColumnSpan="8" Grid.RowSpan="2"
-                   FontSize="40" FontFamily="Ink Draft" Foreground="Black">
+        <TextBlock x:Name="blockPasswordCheck" Grid.Row="10" Grid.Column="7" Grid.ColumnSpan="6" Grid.RowSpan="2"
+                   FontSize="25" FontFamily="Cascadia code" Foreground="Black">
                 Confirm Password:
         </TextBlock>
 
-        <Viewbox x:Name="vboxMail" Grid.Column="15" Grid.Row="4" Grid.ColumnSpan="10" Grid.RowSpan="2" 
-                 HorizontalAlignment="Left" VerticalAlignment="Bottom">
-            <TextBox x:Name="tboxMail" Height="470"  Width="3700" FontSize="260"
-                     PlaceholderText="  Type Address" CornerRadius="100" TextChanged="tboxMail_TextChanged">
+        <Viewbox x:Name="vboxMail" Grid.Column="14" Grid.Row="4" Grid.ColumnSpan="11" Grid.RowSpan="2" 
+                 HorizontalAlignment="Left" VerticalAlignment="Top">
+            <TextBox x:Name="tboxMail" Height="450"  Width="5500" FontSize="260"
+                     PlaceholderText="  Type Name" CornerRadius="100" FontFamily="Cascadia code">
             </TextBox>
         </Viewbox>
 
-        <Viewbox x:Name="vboxPassword" Grid.Column="15" Grid.Row="7" Grid.ColumnSpan="10" Grid.RowSpan="2"
+        <Viewbox x:Name="vboxPassword" Grid.Column="14" Grid.Row="6" Grid.ColumnSpan="11" Grid.RowSpan="2"
                  HorizontalAlignment="Left" VerticalAlignment="Top">
-            <PasswordBox x:Name="tboxPassword" Height="470"  Width="3700" FontSize="260"
-                     PlaceholderText="  Type Password" CornerRadius="100"></PasswordBox>
+            <PasswordBox x:Name="tboxPassword" Height="450"  Width="5500" FontSize="260"
+                     PlaceholderText="  Type Mail" CornerRadius="100" FontFamily="Cascadia code"></PasswordBox>
         </Viewbox>
-        <Viewbox x:Name="vboxPasword" Grid.Column="15" Grid.Row="9" Grid.ColumnSpan="10" Grid.RowSpan="2"
+        
+        <Viewbox x:Name="vboxPasword" Grid.Column="14" Grid.Row="8" Grid.ColumnSpan="11" Grid.RowSpan="2"
                  HorizontalAlignment="Left" VerticalAlignment="Top">
-            <PasswordBox x:Name="tboxPssword" Height="470"  Width="3700" FontSize="260"
-                     PlaceholderText="  Type Password" CornerRadius="100"></PasswordBox>
+            <PasswordBox x:Name="tboxPssword" Height="450"  Width="5500" FontSize="260"
+                     PlaceholderText="  Type Password" CornerRadius="100" FontFamily="Cascadia code"></PasswordBox>
         </Viewbox>
-        <Viewbox x:Name="vboxPassord" Grid.Column="15" Grid.Row="11" Grid.ColumnSpan="10" Grid.RowSpan="2"
+        <Viewbox x:Name="vboxPassord" Grid.Column="14" Grid.Row="10" Grid.ColumnSpan="11" Grid.RowSpan="2"
                  HorizontalAlignment="Left" VerticalAlignment="Top">
-            <PasswordBox x:Name="tbxPassword" Height="470"  Width="3700" FontSize="260"
-                     PlaceholderText="  Type Password" CornerRadius="100"></PasswordBox>
+            <PasswordBox x:Name="tbxPassword" Height="470"  Width="5500" FontSize="260"
+                     PlaceholderText="  Type Password Again" CornerRadius="100" FontFamily="Cascadia code"></PasswordBox>
         </Viewbox>
 
 
-        <Button x:Name="btnSignUp" Style="{StaticResource MyButtonStyle}" Grid.Row="13" Grid.Column="18"
-                Grid.ColumnSpan="3" Click="btnSignUp_Click" Foreground="Blue" FontSize="50"
-                Grid.RowSpan="2" FontFamily="Ink Draft">Sign Up</Button>
+        <Button x:Name="btnSignUp" Style="{StaticResource MyButtonStyle}" Grid.Row="12" Grid.Column="17"
+                Grid.ColumnSpan="5" Click="btnSignUp_Click" Foreground="Blue" FontSize="50"
+                Grid.RowSpan="2" FontFamily="Cascadia code">Sign Up</Button>
 
         <Image Source="/Assets\Images\person_icon.png" Grid.Column="7" Grid.Row="12" 
                Grid.ColumnSpan="3" Grid.RowSpan="3" Stretch="Fill">
