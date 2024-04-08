@@ -1202,6 +1202,12 @@
             <Border Grid.Row="21" Grid.Column="35" Grid.ColumnSpan="110" Background="White" Grid.RowSpan="1"></Border>
             <Border Grid.Row="21" Grid.Column="34" Grid.ColumnSpan="1" Background="White" Grid.RowSpan="56"></Border>
             <Border Grid.Row="21" Grid.Column="145" Grid.ColumnSpan="1" Background="White" Grid.RowSpan="56"></Border>
+
+            <Image Grid.Row="87" Grid.Column="25" Source="/Assets\Images\SquareImages\SpecialIcon\Flags.png"
+                   Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill"></Image>
+
+            <Image Grid.Row="82" Grid.Column="26" Source="/Assets\Images\SquareImages\SpecialIcon\TrafficLights.png"
+                   Grid.ColumnSpan="6" Grid.RowSpan="4" Stretch="Fill"></Image>
         </Grid>
 
         <Grid Grid.Row="36" Grid.Column="87" Grid.ColumnSpan="40" Grid.RowSpan="47"

@@ -476,6 +476,7 @@
     <Content Include="Assets\Images\SquareImages\HousesIcons\House6.png" />
     <Content Include="Assets\Images\SquareImages\HousesIcons\HouseTemplate.png" />
     <Content Include="Assets\Images\SquareImages\SpecialIcon\BusStopStation.png" />
+    <Content Include="Assets\Images\SquareImages\SpecialIcon\Flags.png" />
     <Content Include="Assets\Images\SquareImages\SpecialIcon\FlyingTourBlock1.jpg" />
     <Content Include="Assets\Images\SquareImages\SpecialIcon\FlyingTourBlock2.jpg" />
     <Content Include="Assets\Images\SquareImages\SpecialIcon\Jailimg.png" />
@@ -488,6 +489,7 @@
     <Content Include="Assets\Images\SquareImages\SpecialIcon\RouteRace.png" />
     <Content Include="Assets\Images\SquareImages\SpecialIcon\TaxIcon.png" />
     <Content Include="Assets\Images\SquareImages\SpecialIcon\TaxiStopStation.png" />
+    <Content Include="Assets\Images\SquareImages\SpecialIcon\TrafficLights.png" />
     <Content Include="Assets\Images\woodBackground.jpg" />
     <Content Include="Assets\Images\WoodBar.png" />
     <Content Include="Assets\Images\WoodLoadingBlank.png" />

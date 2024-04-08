@@ -121,12 +121,9 @@
                      PlaceholderText="  Type Password" CornerRadius="100"></PasswordBox>
         </Viewbox>
 
-        <Button x:Name="btnSignIn" Style="{StaticResource MyButtonStyle}" Grid.Row="11" Grid.Column="17"
-                Grid.ColumnSpan="6" Click="btnSignIn_Click" Grid.RowSpan="2" FontSize="30"
-                FontFamily="Ink Draft" >Sign in</Button>
 
-        <Button x:Name="btnSignUp" Style="{StaticResource MyButtonStyle}" Grid.Row="11" Grid.Column="21"
-                Grid.ColumnSpan="3" Click="btnSignUp_Click" Foreground="Blue" FontSize="30"
+        <Button x:Name="btnSignUp" Style="{StaticResource MyButtonStyle}" Grid.Row="13" Grid.Column="18"
+                Grid.ColumnSpan="3" Click="btnSignUp_Click" Foreground="Blue" FontSize="50"
                 Grid.RowSpan="2" FontFamily="Ink Draft">Sign Up</Button>
 
         <Image Source="/Assets\Images\person_icon.png" Grid.Column="7" Grid.Row="12" 
