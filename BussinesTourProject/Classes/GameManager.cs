@@ -21,7 +21,7 @@ namespace BussinesTourProject.Classes
         {
             HomeLevel1, HomeLevel2, HomeLevel3, Hotel
         }
-        public static House[] HousesPosition;
+        public static House[] arrayHouses;
 
 
         public static int[,] MatrixPositionPlayer1 = { { 82, 70, 62, 54, 46, 38, 30, 22,
@@ -69,7 +69,10 @@ namespace BussinesTourProject.Classes
             new Player(imgName: "Player1", playerState: new state[4]{state.forward, state.forward, state.right, state.backward} )};
         }
 
+        public static void InitHouses()
+        {
 
+        }
 
         public static int[] RollDice()
         {
