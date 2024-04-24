@@ -1,4 +1,4 @@
-﻿using GameEngine.GameServices;
+﻿using BussinesTourProject.Classes;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,15 +24,10 @@ namespace BussinesTourProject.Pages
     /// </summary>
     public sealed partial class SoundPage : Page
     {
+       
         public SoundPage()
         {
             this.InitializeComponent();
-            sldVolume.Value = MusicPlayer.Volume;
-            backgroundMusicSw.IsOn = MusicPlayer.IsOn;
-            sldVolume.ValueChanged += Slider_ValueChanged;
-            backgroundMusicSw.Toggled += backgroundMusicSw_Toggled;
-            SoundEffectSw.IsOn = SoundPlayer.IsOn;
-            SoundEffectSw.Toggled += SoundEffectSw_Toggled;
         }
 
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -58,25 +53,29 @@ namespace BussinesTourProject.Pages
 
         private void SoundEffectSw_Toggled(object sender, RoutedEventArgs e)
         {
-            SoundPlayer.IsOn = SoundEffectSw.IsOn;
+            GameSounds.IsOn = SoundEffectSw.IsOn;
         }
 
         private void backgroundMusicSw_Toggled(object sender, RoutedEventArgs e)
         {
             if (backgroundMusicSw.IsOn)
-                MusicPlayer.Play();
+                Music.Play();
             else
-                MusicPlayer.Stop();
+                Music.Stop();
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            sldVolume.SetValue(TagProperty, 3);
+            sldVolume.Value = Music.Volume;
+            backgroundMusicSw.IsOn = Music.IsOn;
+            sldVolume.ValueChanged += Slider_ValueChanged;
+            backgroundMusicSw.Toggled += backgroundMusicSw_Toggled;
+            SoundEffectSw.IsOn = GameSounds.IsOn;
+            SoundEffectSw.Toggled += SoundEffectSw_Toggled;
         }
-
         private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
         {
-            MusicPlayer.ChangeVolume(sldVolume.Value);
+            Music._mediaPlayer.Volume = 0;
         }
     }
 }

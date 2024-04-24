@@ -15,7 +15,6 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using System.Threading;
-using GameEngine.GameServices;
 using Windows.Security.Authentication.OnlineId;
 using System.Threading.Tasks;
 using Windows.UI.Core;
