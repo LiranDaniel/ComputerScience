@@ -12,12 +12,14 @@ namespace BussinesTourProject.Classes
     {
         public static MediaPlayer _mediaPlayer = new MediaPlayer();
         public static bool IsOn { get; set; } = true;
-        public static double Volume { get; private set; } = 0;
+        public static double Volume { get; private set; } = 100;
 
         public static void LoadMusicPlayer(string fileName)
         {
+            _mediaPlayer.Volume = Volume;
+            _mediaPlayer.AutoPlay = true;
+            _mediaPlayer.IsLoopingEnabled = true;
             _mediaPlayer.Source = MediaSource.CreateFromUri(new Uri($"ms-appx:///Assets/Music/{fileName}")); // OGBackground.wav
-            _mediaPlayer.Volume = 1;
 
         }
         public static void Play()

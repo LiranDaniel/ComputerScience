@@ -66,16 +66,17 @@ namespace BussinesTourProject.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            sldVolume.Value = Music.Volume;
-            backgroundMusicSw.IsOn = Music.IsOn;
-            sldVolume.ValueChanged += Slider_ValueChanged;
-            backgroundMusicSw.Toggled += backgroundMusicSw_Toggled;
-            SoundEffectSw.IsOn = GameSounds.IsOn;
-            SoundEffectSw.Toggled += SoundEffectSw_Toggled;
+            /* sldVolume.Value = Music.Volume;
+             backgroundMusicSw.IsOn = Music.IsOn;
+             sldVolume.ValueChanged += Slider_ValueChanged;
+             backgroundMusicSw.Toggled += backgroundMusicSw_Toggled;
+             SoundEffectSw.IsOn = GameSounds.IsOn;
+             SoundEffectSw.Toggled += SoundEffectSw_Toggled;*/
+            sldVolume.SetValue(TagProperty, 3);
         }
         private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
         {
-            Music._mediaPlayer.Volume = 0;
+            Music.ChangeVolume(sldVolume.Value);
         }
     }
 }
