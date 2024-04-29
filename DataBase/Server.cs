@@ -21,7 +21,7 @@ namespace DataBase
         private static string connectString = "Filename=" + dbPath + "\\DBGame.db";
 
 
-        private async static void PlayErrorSound()
+        private static void PlayErrorSound()
         {
             MediaElement soundPlayer = new MediaElement();
             soundPlayer.Source = new Uri("ms-appx:///Assets/Music/sad-hamster.wav"); // Replace with your audio file path
