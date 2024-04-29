@@ -498,6 +498,7 @@
     <Content Include="Assets\Images\WoodLoadingGreen.png" />
     <Content Include="Assets\Music\BusinessTour.wav" />
     <Content Include="Assets\Music\OGBackground.wav" />
+    <Content Include="Assets\Music\sad-hamster.wav" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="App\LockScreenLogo.scale-200.png" />
     <Content Include="App\SplashScreen.scale-200.png" />
@@ -547,7 +548,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.Sqlite">
-      <Version>8.0.3</Version>
+      <Version>8.0.4</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.14</Version>
@@ -563,6 +564,9 @@
     <Folder Include="Assets\Images\Players\Player2\" />
     <Folder Include="Assets\Images\Players\Player3\" />
     <Folder Include="Assets\Images\Players\Player4\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DBGame.db" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

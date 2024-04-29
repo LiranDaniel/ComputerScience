@@ -100,25 +100,25 @@
 
         <Viewbox x:Name="vboxMail" Grid.Column="14" Grid.Row="4" Grid.ColumnSpan="11" Grid.RowSpan="2" 
                  HorizontalAlignment="Left" VerticalAlignment="Top">
-            <TextBox x:Name="tboxMail" Height="450"  Width="5500" FontSize="260"
+            <TextBox x:Name="tboxName" Height="450"  Width="5500" FontSize="260"
                      PlaceholderText="  Type Name" CornerRadius="100" FontFamily="Cascadia code">
             </TextBox>
         </Viewbox>
 
         <Viewbox x:Name="vboxPassword" Grid.Column="14" Grid.Row="6" Grid.ColumnSpan="11" Grid.RowSpan="2"
                  HorizontalAlignment="Left" VerticalAlignment="Top">
-            <PasswordBox x:Name="tboxPassword" Height="450"  Width="5500" FontSize="260"
-                     PlaceholderText="  Type Mail" CornerRadius="100" FontFamily="Cascadia code"></PasswordBox>
+            <TextBox x:Name="tboxMail" Height="450"  Width="5500" FontSize="260"
+                     PlaceholderText="  Type Mail" CornerRadius="100" FontFamily="Cascadia code"></TextBox>
         </Viewbox>
         
         <Viewbox x:Name="vboxPasword" Grid.Column="14" Grid.Row="8" Grid.ColumnSpan="11" Grid.RowSpan="2"
                  HorizontalAlignment="Left" VerticalAlignment="Top">
-            <PasswordBox x:Name="tboxPssword" Height="450"  Width="5500" FontSize="260"
+            <PasswordBox x:Name="tboxPassword" Height="450"  Width="5500" FontSize="260"
                      PlaceholderText="  Type Password" CornerRadius="100" FontFamily="Cascadia code"></PasswordBox>
         </Viewbox>
         <Viewbox x:Name="vboxPassord" Grid.Column="14" Grid.Row="10" Grid.ColumnSpan="11" Grid.RowSpan="2"
                  HorizontalAlignment="Left" VerticalAlignment="Top">
-            <PasswordBox x:Name="tbxPassword" Height="470"  Width="5500" FontSize="260"
+            <PasswordBox x:Name="tboxPasswordConfirm" Height="470"  Width="5500" FontSize="260"
                      PlaceholderText="  Type Password Again" CornerRadius="100" FontFamily="Cascadia code"></PasswordBox>
         </Viewbox>
 
