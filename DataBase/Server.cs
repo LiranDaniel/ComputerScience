@@ -82,7 +82,39 @@ namespace DataBase
 
 
 
+        public static bool IsConnected(TextBox mailTestBlox, PasswordBox passwordTextBlox)
+        {
+            string email = mailTestBlox.Text;
+            string password = passwordTextBlox.Password;
 
+            // Connect to SQLite database
+            using (SqliteConnection connection = new SqliteConnection(connectString))
+            {
+                connection.Open();
+
+                // Query to check if user exists and password is correct
+                string query = "SELECT COUNT(*) FROM User WHERE UserMail = @Email AND UserPassword = @Password";
+                using (SqliteCommand command = new SqliteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Email", email);
+                    command.Parameters.AddWithValue("@Password", password);
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+
+                    if (count > 0)
+                    {
+                        // User authenticated successfully, proceed with your action
+                        // For example, navigate to another page
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                        // Invalid credentials, show error message to the user
+                        // For example: ErrorMessageTextBlock.Text = "Invalid email or password.";
+                    }
+                }
+            }
+        }
 
 
         /*
