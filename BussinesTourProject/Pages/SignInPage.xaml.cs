@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataBase;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -49,8 +50,19 @@ namespace BussinesTourProject.Pages
             Frame.Navigate(typeof(MenuPage));
         }
 
-        private void btnSignIn_Click(object sender, RoutedEventArgs e)
+        private async void btnSignIn_Click(object sender, RoutedEventArgs e)
         {
+            if(Server.IsConnected(tboxMail, tboxPassword))
+            {
+                Frame.Navigate(typeof(MenuPage));
+            }
+            else
+            {
+                var dialog = new MessageDialog("Could not connect to your account!");
+                await dialog.ShowAsync();
+            }
+
+
         }
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
