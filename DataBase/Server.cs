@@ -30,36 +30,36 @@ namespace DataBase
         }
 
 
-        private async static void ErrorMessage(string message)
+        private async static void PopUpMessage(string message)
         {
             var dialog = new MessageDialog(message);
             PlayErrorSound();
             await dialog.ShowAsync();
         }
 
-        public async static void SignUp(string email,string name,
+        public  static void SignUp(string email,string name,
             string password, string passwordConfirm)
         {
             // Connect to SQLite database
 
             if(password != passwordConfirm)
             {
-                ErrorMessage("Password do not match");
+                PopUpMessage("Password do not match");
                 return;
             }
             else if (!CheckValidation.IsMailValid(email))
             {
-                ErrorMessage("Your mail is not valid");
+                PopUpMessage("Your mail is not valid");
                 return; // Exit the method
             }
             else if(!CheckValidation.IsPasswordValid(password))
             {
-                ErrorMessage("Your password is not valid");
+                PopUpMessage("Your password is not valid");
                 return; // Exit the method
             }
             else if (name == "")
             {
-                ErrorMessage("User name can not be null");
+                PopUpMessage("User name can not be null");
                 return;
             }
 
@@ -80,7 +80,7 @@ namespace DataBase
                         if (count > 0)
                         {
                             // User already exists, show error message
-                            ErrorMessage("User with this email already exists.");
+                            PopUpMessage("User with this email already exists.");
                             return; // Exit the method
                         }
                     }
@@ -94,12 +94,12 @@ namespace DataBase
                 catch (SqliteException ex)
                 {
                     // Handle SQLite exceptions
-                    ErrorMessage("SQLite Error: " + ex.Message);
+                    PopUpMessage("SQLite Error: " + ex.Message);
                 }
                 catch (Exception ex)
                 {
                     // Handle other exceptions
-                    ErrorMessage("Error: " + ex.Message);
+                    PopUpMessage("Error: " + ex.Message);
                 }
             }
         }

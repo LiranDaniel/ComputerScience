@@ -54,7 +54,7 @@ namespace BussinesTourProject.Pages
 
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
-            Server.SignUp(tboxMail, tboxName, tboxPassword);
+            Server.SignUp(tboxMail.Text, tboxName.Text, tboxPassword.Password, tboxPasswordConfirm.Password);
         }
 
 
