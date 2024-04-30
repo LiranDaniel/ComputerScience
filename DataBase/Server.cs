@@ -42,9 +42,9 @@ namespace DataBase
 
         private async static void PopUpMessage(string message)
         {
-            //var dialog = new MessageDialog(message);
+            var dialog = new MessageDialog(message);
             PlaySoundForDuration(TimeSpan.FromSeconds(5));
-           // await dialog.ShowAsync();
+            await dialog.ShowAsync();
         }
 
         public  static void SignUp(string email,string name,
