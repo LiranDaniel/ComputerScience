@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Media.Core;
+using Windows.Media.Playback;
 using Windows.Storage;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
@@ -21,20 +23,28 @@ namespace DataBase
         private static string dbPath = ApplicationData.Current.LocalFolder.Path;
         private static string connectString = "Filename=" + dbPath + "\\DBGame.db";
 
-
-        private static void PlayErrorSound()
+        
+        // Method to play the sound for a specific duration
+        static async void PlaySoundForDuration(TimeSpan duration)
         {
-            MediaElement soundPlayer = new MediaElement();
-            soundPlayer.Source = new Uri("ms-appx:///Assets/Music/sad-hamster.wav"); // Replace with your audio file path
-            soundPlayer.Play();
+            MediaPlayer mediaPlayer = new MediaPlayer();
+            mediaPlayer.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Assets/sad-hamster.wav")); // Replace with your audio file path
+            mediaPlayer.Play();
+
+            // Wait for the specified duration
+            await Task.Delay(duration);
+
+            // Stop the playback after the specified duration
+            mediaPlayer.Pause();
+            mediaPlayer.Dispose(); // Dispose the MediaPlayer instance
         }
 
 
         private async static void PopUpMessage(string message)
         {
-            var dialog = new MessageDialog(message);
-            PlayErrorSound();
-            await dialog.ShowAsync();
+            //var dialog = new MessageDialog(message);
+            PlaySoundForDuration(TimeSpan.FromSeconds(5));
+           // await dialog.ShowAsync();
         }
 
         public  static void SignUp(string email,string name,
@@ -89,6 +99,7 @@ namespace DataBase
                     string insertCommand = $"INSERT INTO [User] (UserName,UserPassword,UserMail) VALUES ('{name}','{password}','{email}')";
                     using (SqliteCommand command = new SqliteCommand(insertCommand, connection))
                         command.ExecuteNonQuery();
+
                     PopUpMessage("Account have been created");
 
                 }
