@@ -57,6 +57,11 @@ namespace DataBase
                 ErrorMessage("Your password is not valid");
                 return; // Exit the method
             }
+            else if (name == "")
+            {
+                ErrorMessage("User name can not be null");
+                return;
+            }
 
 
             using (SqliteConnection connection = new SqliteConnection(connectString))
@@ -75,9 +80,7 @@ namespace DataBase
                         if (count > 0)
                         {
                             // User already exists, show error message
-                            var dialog = new MessageDialog("User with this email already exists.");
-                            PlayErrorSound();
-                            await dialog.ShowAsync();
+                            ErrorMessage("User with this email already exists.");
                             return; // Exit the method
                         }
                     }
@@ -91,16 +94,12 @@ namespace DataBase
                 catch (SqliteException ex)
                 {
                     // Handle SQLite exceptions
-                    var dialog = new MessageDialog("SQLite Error: " + ex.Message);
-                    PlayErrorSound();
-                    await dialog.ShowAsync();
+                    ErrorMessage("SQLite Error: " + ex.Message);
                 }
                 catch (Exception ex)
                 {
                     // Handle other exceptions
-                    var dialog = new MessageDialog("Error: " + ex.Message);
-                    PlayErrorSound();
-                    await dialog.ShowAsync();
+                    ErrorMessage("Error: " + ex.Message);
                 }
             }
         }
