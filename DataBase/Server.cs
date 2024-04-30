@@ -29,27 +29,35 @@ namespace DataBase
             soundPlayer.Play();
         }
 
-        public async static void SignUp(TextBox mailTestBlox,TextBox nameTestBlox, PasswordBox passwordTextBlox)
+
+        private async static void ErrorMessage(string message)
         {
-            string email = mailTestBlox.Text;
-            string password = passwordTextBlox.Password;
-            string name = nameTestBlox.Text;
+            var dialog = new MessageDialog(message);
+            PlayErrorSound();
+            await dialog.ShowAsync();
+        }
+
+        public async static void SignUp(string email,string name,
+            string password, string passwordConfirm)
+        {
             // Connect to SQLite database
 
-            if (!CheckValidation.IsMailValid(email))
+            if(password != passwordConfirm)
             {
-                var dialog = new MessageDialog("Your mail is not valid");
-                PlayErrorSound();
-                await dialog.ShowAsync();
+                ErrorMessage("Password do not match");
+                return;
+            }
+            else if (!CheckValidation.IsMailValid(email))
+            {
+                ErrorMessage("Your mail is not valid");
                 return; // Exit the method
             }
             else if(!CheckValidation.IsPasswordValid(password))
             {
-                var dialog = new MessageDialog("Your password is not valid");
-                PlayErrorSound();
-                await dialog.ShowAsync();
+                ErrorMessage("Your password is not valid");
                 return; // Exit the method
             }
+
 
             using (SqliteConnection connection = new SqliteConnection(connectString))
             {

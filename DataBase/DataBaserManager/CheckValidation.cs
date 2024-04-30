@@ -22,9 +22,9 @@ namespace DataBase.DataBaserManager
 
         public static bool IsMailValid(string mail)
         {
-            if((mail.IndexOf("@") == -1) || (mail.IndexOf(".") < mail.IndexOf("@")) ||
-                (mail.IndexOf("@") != 0) || (mail.IndexOf(".") < mail.Length) ||
-                (mail.Length > 12) || (IsIncludeDigit(mail)))
+            if((mail.IndexOf("@") < 0) || (mail.IndexOf(".") < mail.IndexOf("@")) ||
+                (mail.IndexOf(".") == mail.Length -1) ||
+                (mail.Length < 12) || !IsIncludeDigit(mail))
                 return false;
 
             return true;
@@ -33,7 +33,7 @@ namespace DataBase.DataBaserManager
         public static bool IsPasswordValid(string password) 
         {
             if ((password.Length < 8) || (password.ToUpper() == password) ||
-                (password.ToLower() == password) || (IsIncludeDigit(password)))
+                (password.ToLower() == password) || !IsIncludeDigit(password))
                 return false;
 
             return true;
