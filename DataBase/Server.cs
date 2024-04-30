@@ -89,6 +89,7 @@ namespace DataBase
                     string insertCommand = $"INSERT INTO [User] (UserName,UserPassword,UserMail) VALUES ('{name}','{password}','{email}')";
                     using (SqliteCommand command = new SqliteCommand(insertCommand, connection))
                         command.ExecuteNonQuery();
+                    PopUpMessage("Account have been created");
 
                 }
                 catch (SqliteException ex)
