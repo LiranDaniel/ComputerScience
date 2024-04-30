@@ -58,8 +58,17 @@ namespace BussinesTourProject.Classes
                                                          2, 36, 52, 68, 84, 100, 116, 132,
                                                          150, 169, 169, 169, 169, 169, 169, 169,
                                                          175, 139, 123, 107, 91, 75, 59, 43} };
+        public static House[] ArrayOfHouses = {
+        
+        };
+        public static double WorldChampionTimes = 1.5;
 
 
+        public static void IncreaseWorldChampion()
+        {
+            WorldChampionTimes += .5;
+        }
+        
         public static void InitPlayers()
         {
             arrayPlayers  = new Player[] {new Player(imgName: "Player1", playerState: new state[4]{state.forward, state.right, state.backward, state.left}),
