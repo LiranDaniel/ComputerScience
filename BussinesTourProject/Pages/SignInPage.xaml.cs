@@ -55,10 +55,13 @@ namespace BussinesTourProject.Pages
             if(Server.IsConnected(tboxMail, tboxPassword))
             {
                 Frame.Navigate(typeof(MenuPage));
+
+                var dialog = new MessageDialog("You have successfully logged in");
+                await dialog.ShowAsync();
             }
             else
             {
-                var dialog = new MessageDialog("Could not connect to your account!");
+                var dialog = new MessageDialog("You have entered an invalid username or password");
                 await dialog.ShowAsync();
             }
 

@@ -1,4 +1,5 @@
-﻿using DataBase.Models;
+﻿using DataBase.DataBaserManager;
+using DataBase.Models;
 using Microsoft.Data.Sqlite;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,22 @@ namespace DataBase
             string password = passwordTextBlox.Password;
             string name = nameTestBlox.Text;
             // Connect to SQLite database
+
+            if (!CheckValidation.IsMailValid(email))
+            {
+                var dialog = new MessageDialog("Your mail is not valid");
+                PlayErrorSound();
+                await dialog.ShowAsync();
+                return; // Exit the method
+            }
+            else if(!CheckValidation.IsPasswordValid(password))
+            {
+                var dialog = new MessageDialog("Your password is not valid");
+                PlayErrorSound();
+                await dialog.ShowAsync();
+                return; // Exit the method
+            }
+
             using (SqliteConnection connection = new SqliteConnection(connectString))
             {
                 try
@@ -104,10 +121,12 @@ namespace DataBase
                     {
                         // User authenticated successfully, proceed with your action
                         // For example, navigate to another page
+
                         return true;
                     }
                     else
                     {
+
                         return false;
                         // Invalid credentials, show error message to the user
                         // For example: ErrorMessageTextBlock.Text = "Invalid email or password.";
