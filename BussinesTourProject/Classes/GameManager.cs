@@ -81,7 +81,30 @@ namespace BussinesTourProject.Classes
         {
 
         }
+        public static void Land()
+        {
+           
+            if (ArrayOfHouses[currentPlayer.currentPosition] == null)
+            {
 
+            }
+        }
+        public static void Jail()
+        {
+
+        }
+        public static void WorldChampionShip()
+        {
+
+        }
+        public static void WorldTour()
+        {
+
+        }
+        public static void CheckOwner(Player player)
+        {
+
+        }
         public static int[] RollDice()
         {
             int[] Result = { rnd.Next(1, 7), rnd.Next(1, 7) };

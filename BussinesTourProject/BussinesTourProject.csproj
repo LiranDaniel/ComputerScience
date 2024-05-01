@@ -124,6 +124,7 @@
     <Compile Include="Classes\House.cs" />
     <Compile Include="Classes\Music.cs" />
     <Compile Include="Classes\Player.cs" />
+    <Compile Include="Classes\Station.cs" />
     <Compile Include="Pages\GamePage.xaml.cs">
       <DependentUpon>GamePage.xaml</DependentUpon>
     </Compile>
