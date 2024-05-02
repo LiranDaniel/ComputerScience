@@ -32,7 +32,7 @@ namespace BussinesTourProject.Classes
             currentCostToPayRent += level * basicCostToPayRent;
             currentCostToBuy = level * basicCostToBuy;
 
-            int txtDisplay = currentCostToPayRent;
+            double txtDisplay = currentCostToPayRent;
             int times = 0;
 
             while (txtDisplay < 1000)
