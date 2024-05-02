@@ -27,6 +27,25 @@ namespace BussinesTourProject.Classes
             this.currentCostToBuy = basicCostToBuy;
             this.currentCostToPayRent = basicCostToPayRent;
         }
+        public void PropertyUpgrade(int level)
+        {
+            currentCostToPayRent += level * basicCostToPayRent;
+            currentCostToBuy = level * basicCostToBuy;
+
+            int txtDisplay = currentCostToPayRent;
+            int times = 0;
+
+            while (txtDisplay < 1000)
+            {
+                txtDisplay /= 1000;
+                times++;
+            }
+            if (times == 1) 
+                txtOfMoneyDisplayRent.Text = $"{txtDisplay}K";
+            else
+                txtOfMoneyDisplayRent.Text = $"{txtDisplay}M";
+
+        }
 
 
 
