@@ -14,10 +14,10 @@ namespace BussinesTourProject.Classes
         public int value;
         public Player playerOwnerStation;
 
-        public Station(Image StationImagem, int costToBut)
+        public Station(Image StationImage, int costToBuy)
         {
-            this.StationImage = StationImagem;
-            this.costToBuy = costToBut;
+            this.StationImage = StationImage;
+            this.costToBuy = costToBuy;
             this.value = 0;
         }
 
