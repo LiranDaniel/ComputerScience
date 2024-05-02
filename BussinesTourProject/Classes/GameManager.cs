@@ -36,8 +36,8 @@ namespace BussinesTourProject.Classes
             new House(90_000, 100_000, 35_000, 150_000), new Chance(), new House(90_000, 100_000, 35_000, 150_000),
             new House(90_000, 100_000, 35_000, 150_000), new House(90_000, 100_000, 35_000, 150_000), // Third line
 
-            null, new Station(), new House(90_000, 100_000, 35_000, 150_000), new House(90_000, 100_000, 35_000, 150_000),
-            new Chance(), new House(90_000, 100_000, 35_000, 150_000), 
+            null, new Station(), new House(90_000, 100_000, 35_000, 200_000), new House(90_000, 100_000, 35_000, 200_000),
+            new Chance(), new House(90_000, 100_000, 35_000, 200_000), new Tax(), new House(90_000, 100_000, 35_000, 200_000)
 
         };
 
