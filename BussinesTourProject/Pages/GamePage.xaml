@@ -1194,20 +1194,18 @@
 
             <Image Grid.Column="38" Grid.Row="16" Grid.ColumnSpan="8" Grid.RowSpan="4"
                    Stretch="Fill" x:Name="imgVeniceHouse"></Image>
-            
+
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\RegularPrizeWheel.png" Grid.Column="87" Grid.Row="86" 
-                   Grid.ColumnSpan="6" Grid.RowSpan="5" >
-            </Image>
+                   Grid.ColumnSpan="6" Grid.RowSpan="5" ></Image>
+
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\RegularPrizeWheel.png" Grid.Column="87" Grid.Row="15" 
-                   Grid.ColumnSpan="6" Grid.RowSpan="5">
-            </Image>
-            
+                   Grid.ColumnSpan="6" Grid.RowSpan="5"></Image>
+
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\BusStopStation.png" Grid.Column="135" Grid.Row="86" 
-                   Grid.ColumnSpan="6" Grid.RowSpan="5" Stretch="Fill" x:Name="imgStation">
-            </Image>
+                   Grid.ColumnSpan="6" Grid.RowSpan="5" Stretch="Fill" x:Name="imgStation"></Image>
+
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\TaxiStopStation.png" Grid.Column="119" Grid.Row="15" 
-                   Grid.ColumnSpan="6" Grid.RowSpan="5" Stretch="Fill" x:Name="imgParking">
-            </Image>
+                   Grid.ColumnSpan="6" Grid.RowSpan="5" Stretch="Fill" x:Name="imgParking"></Image>
 
 
 
@@ -1222,26 +1220,16 @@
 
 
             <Image x:Name="imgPlayer" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="22" Grid.Row="82" Stretch="Fill">
-
-            </Image>
-
+                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="22" Grid.Row="82" Stretch="Fill"></Image>
 
             <Image x:Name="imgPlayer2" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="18" Grid.Row="82" Stretch="Fill">
-
-            </Image>
+                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="18" Grid.Row="82" Stretch="Fill"></Image>
 
             <Image x:Name="imgPlayer3" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="14" Grid.Row="82" Stretch="Fill">
-
-            </Image>
-
+                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="14" Grid.Row="82" Stretch="Fill"></Image>
 
             <Image x:Name="imgPlayer4" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="10" Grid.Row="82" Stretch="Fill">
-
-            </Image>
+                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="10" Grid.Row="82" Stretch="Fill"></Image>
 
 
 
