@@ -204,7 +204,11 @@ namespace BussinesTourProject.Pages
             ((Property)GameManager.ArrayMap[22]).SetImageAndTxt(imgLasVegasHouse, txtRentLasVegas);
             ((Property)GameManager.ArrayMap[23]).SetImageAndTxt(imgNewYorkHouse, txtRentNewYork);
 
-            ((Property)GameManager.ArrayMap[23]).SetImageAndTxt(imgStation, txtRentStation);
+            ((Property)GameManager.ArrayMap[25]).SetImageAndTxt(imgStation, txtRentStation);
+            ((Property)GameManager.ArrayMap[26]).SetImageAndTxt(imgLyonHouse, txtRentLyon);
+            ((Property)GameManager.ArrayMap[27]).SetImageAndTxt(imgParisHouse, txtRentParis);
+            ((Property)GameManager.ArrayMap[29]).SetImageAndTxt(imgOsakaHouse, txtRentOsaka);
+            ((Property)GameManager.ArrayMap[31]).SetImageAndTxt(imgTokyoHouse, txtRentTokyo);
 
 
         }
