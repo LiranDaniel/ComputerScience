@@ -47,7 +47,11 @@ namespace BussinesTourProject.Classes
 
         }
 
-
+        public void SetImageAndTxt(Image imageOfProperty, TextBlock txtOfMoneyDisplayRent)
+        {
+            this.txtOfMoneyDisplayRent = txtOfMoneyDisplayRent;
+            this.imageOfProperty = imageOfProperty;
+        }
 
 
 

@@ -177,7 +177,11 @@ namespace BussinesTourProject.Pages
             InitPlayer(GameManager.arrayPlayers[1], imgPlayer2, GameManager.MatrixPositionPlayer2);
             InitPlayer(GameManager.arrayPlayers[2], imgPlayer3, GameManager.MatrixPositionPlayer3);
             InitPlayer(GameManager.arrayPlayers[3], imgPlayer4, GameManager.MatrixPositionPlayer4);
-            SetPropertyXamlObjects();
+
+            
+
+
+
         }
 
 
@@ -311,10 +315,6 @@ namespace BussinesTourProject.Pages
         private void btnRoll_Dice_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
-        }
-        private void SetPropertyXamlObjects()
-        {
-            
         }
     }
 }
