@@ -21,7 +21,11 @@ namespace BussinesTourProject.Classes
         {
             HomeLevel1, HomeLevel2, HomeLevel3, Hotel
         }
-        public static object[] ArrayMap = { new House(14_000, 50_000)};
+        public static object[] ArrayMap = { null, new House(14_000, 50_000),
+            new House(14_000, 50_000), new House(14_000, 50_000), new Chance(),
+            new House(14_000, 50_000), new House(14_000, 50_000), // first Line
+            null, new House(14_000, 50_000), new House(14_000, 50_000),
+            new House(14_000, 50_000), };
 
         
 
