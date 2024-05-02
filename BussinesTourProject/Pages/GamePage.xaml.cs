@@ -313,6 +313,9 @@ namespace BussinesTourProject.Pages
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
 
-
+        private void SetPropertyTextBlockPrices()
+        {
+            GameManager.ArrayMap[0]
+        }
     }
 }
