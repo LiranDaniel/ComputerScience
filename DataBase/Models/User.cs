@@ -12,7 +12,6 @@ namespace DataBase.Models
         public int Id { get; set; }
         public string Name { get; set; } = "Anonymous";
         public string Email { get; set; }
-        public string Password { get; set; }
         public int Money { get; set; } = 100;
         public string CurrentSkin { get; set; } = "Defulte";
         public string CurrentAvatar { get; set; } = "Defulte";
@@ -24,14 +23,15 @@ namespace DataBase.Models
                 {"CoolCar1", @"/Assets\Images\SquareImages\House2.png"},
                 {"RaceCar", @"/Assets\Images\SquareImages\House3.png"}
         };
+
         private static Dictionary<string, string> filePathAvatars = new Dictionary<string, string>() {
                 {"Defulte", @"/Assets\Images\SquareImages\House1.png"},
                 {"CoolCar1", @"/Assets\Images\SquareImages\House2.png"},
                 {"RaceCar", @"/Assets\Images\SquareImages\House3.png"}
         };
-        public string GetSkinPath(string skinName){
-            return filePathSkins[skinName];
-        }
+
+        public string GetSkinPath(string skinName) {return filePathSkins[skinName];}
+
         public string GetAvatarPath(string avatarName) {  return filePathAvatars[avatarName]; }        
     }
 }
