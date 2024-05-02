@@ -14,10 +14,10 @@ namespace BussinesTourProject.Classes
         public int levelUpgradeRent;        // If the property level has upgraded then between every upgrade level this is the jump of the rent price
         public int currentCostToBuy;
         public int currentCostToPayRent;
-        public TextBlock txtOfMoneyDisplayRent;
+        private TextBlock _txtOfMoneyDisplayRent;
 
         public Player ownerOfTheProperty;   // This is the owner of the property
-        public Image imageOfProperty;
+        private Image _imageOfProperty;
 
         public Property(int basicCostToBuy, int basicCostToPayRent, int levelUpgradeRent)
         {
@@ -41,16 +41,16 @@ namespace BussinesTourProject.Classes
                 times++;
             }
             if (times == 1) 
-                txtOfMoneyDisplayRent.Text = $"{txtDisplay}K";
+                _txtOfMoneyDisplayRent.Text = $"{txtDisplay}K";
             else
-                txtOfMoneyDisplayRent.Text = $"{txtDisplay}M";
+                _txtOfMoneyDisplayRent.Text = $"{txtDisplay}M";
 
         }
 
         public void SetImageAndTxt(Image imageOfProperty, TextBlock txtOfMoneyDisplayRent)
         {
-            this.txtOfMoneyDisplayRent = txtOfMoneyDisplayRent;
-            this.imageOfProperty = imageOfProperty;
+            this._txtOfMoneyDisplayRent = txtOfMoneyDisplayRent;
+            this._imageOfProperty = imageOfProperty;
         }
 
 
