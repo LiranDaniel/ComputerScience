@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Devices.Bluetooth.Advertisement;
 using static BussinesTourProject.Classes.Player;
 
 namespace BussinesTourProject.Classes
@@ -78,10 +79,57 @@ namespace BussinesTourProject.Classes
         
         public static void Land()
         {
+            
            
             if (ArrayMap[currentPlayer.currentPosition] == null)
             {
 
+            }
+            else if (ArrayMap[currentPlayer.currentPosition] is House)
+            {
+
+            }
+            else if (ArrayMap[currentPlayer.currentPosition] is Station)
+            {
+
+            }
+            else if (ArrayMap[currentPlayer.currentPosition] is Chance) {
+                TakeCardChance();
+            }
+        }
+        public static void TakeCardChance()
+        {
+
+        }
+        public static void LandingHouse()
+        {
+            if (ArrayMap[currentPlayer.currentPosition] is House ) {
+                House LandHouse = (House)ArrayMap[currentPlayer.currentPosition];
+                if (LandHouse.playerOwnerHouse == null)
+                {
+                    //Show the interface to buy house
+                }
+                else
+                {
+                    if(LandHouse.playerOwnerHouse == currentPlayer)
+                    {
+                        //Show Upgrade InterFace
+                    }
+                    else
+                    {
+                        if(LandHouse.currentValue > currentPlayer.AmountOfMoney)
+                        {
+                            if (LandHouse.currentValue > (currentPlayer.CalculatePropertyValue + currentPlayer.AmountOfMoney))
+                            {
+
+                            }
+                        }
+                        else
+                        {
+                            currentPlayer.AmountOfMoney -= LandHouse.currentValue;
+                        }
+                    }
+                }
             }
         }
         public static void Jail()

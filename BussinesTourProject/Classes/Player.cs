@@ -19,7 +19,6 @@ namespace BussinesTourProject.Classes
         public int AmountOfMoney;
         public string name;
         public string imgName;
-        public List<int> listHouses;
         public Image Img;
         public state[] playerState;
         public int turnsStackJail;
@@ -34,7 +33,6 @@ namespace BussinesTourProject.Classes
             this.name = "Admin";
             this.currentPosition = 0;
             AmountOfMoney = 2_000_000;
-            listHouses = new List<int>();
             this.playerState = playerState;
             this.turnsStackJail = 0;
         }
@@ -88,6 +86,25 @@ namespace BussinesTourProject.Classes
                     Grid.SetRowSpan(Img, 5);
                     break;
             }
+        }
+
+
+        public int CalculatePropertyValue()
+        {
+            int value = 0;
+
+            foreach (object obj in GameManager.ArrayMap )
+            {
+                if( obj != null )
+                {
+                    if ( obj is House ) {
+                        if (((House)obj).playerOwnerHouse == GameManager.currentPlayer)
+                            value += ((House)obj).currentValue;
+                    }
+                    else if ( obj is Station ) { }
+                }
+            }
+            return value;
         }
 
     }

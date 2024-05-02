@@ -18,7 +18,7 @@ namespace BussinesTourProject.Classes
             villa = 3, 
             Hotel = 4
         }
-        public static Dictionary<HouseState, string> filePathImages = new Dictionary<HouseState, string>() {
+        public static Dictionary<HouseState, string> filePathImageHouses = new Dictionary<HouseState, string>() {
                 {HouseState.None, null},
                 {HouseState.BasicHouse, @"/Assets\Images\SquareImages\House1.png"},
                 {HouseState.AdvanceHouse, @"/Assets\Images\SquareImages\House2.png"},
@@ -26,7 +26,7 @@ namespace BussinesTourProject.Classes
                 {HouseState.Hotel, @"/Assets\Images\SquareImages\House4.png"}
         };
 
-        public static int[] arrayTimesValue = { 0, 1, 2, 3, 4 };
+        public int LevelUpgradePrice;
         public Image HouseImage;
         public int basicValue;
         public int currentValue;
@@ -34,16 +34,17 @@ namespace BussinesTourProject.Classes
         public HouseState houseCurrentState;
         public Player playerOwnerHouse;
 
-        public House(int basicValue)
+        public House(int basicValue, int levelUpgradePrice)
         {
+            this.LevelUpgradePrice = levelUpgradePrice;
             this.basicValue = basicValue;
             this.currentValue = 0;
             this.houseCurrentState = HouseState.None;
         }
-        public void ChangeHouse(int houseUpgradeState)
+        public void ChangeHouse(int houseUpgradeLevel)
         {   
-            HouseImage.Source = new BitmapImage(new Uri($"ms-appx://" + filePathImages[(HouseState)houseUpgradeState]));
-            currentValue = basicValue * arrayTimesValue[houseUpgradeState];
+            HouseImage.Source = new BitmapImage(new Uri($"ms-appx://" + filePathImageHouses[(HouseState)houseUpgradeLevel]));
+            currentValue = basicValue + LevelUpgradePrice;
         }
         
     }

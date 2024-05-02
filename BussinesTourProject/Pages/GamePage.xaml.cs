@@ -34,6 +34,7 @@ namespace BussinesTourProject.Pages
     {
         private DispatcherTimer timer;
         private int secondsElapsed;
+        private int minutes;
 
         public GamePage()
         {
@@ -52,8 +53,23 @@ namespace BussinesTourProject.Pages
         private void Timer_Tick(object sender, object e)
         {
             secondsElapsed++;
+
+            if (secondsElapsed == 60)
+            {
+                minutes++;
+                secondsElapsed = 0;
+            }
             // Update UI with the elapsed time
-            UpdateUITextBlock.Text = $"Seconds Elapsed: {secondsElapsed}";
+            if (secondsElapsed < 10)
+                UpdateUITextBlock.Text = $"Timer : {minutes}:0{secondsElapsed}";
+            else 
+                UpdateUITextBlock.Text = $"Timer : {minutes}:{secondsElapsed}";
+            if (minutes == 1 && secondsElapsed == 20)
+                GameOver();
+        }
+        private void GameOver()
+        {
+            Frame.Navigate(typeof(SignInPage));
         }
 
         private static void InitPlayer(Player player, Image imgPlayer, int[,] playerMatrixPositions)
