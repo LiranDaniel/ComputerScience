@@ -315,7 +315,10 @@ namespace BussinesTourProject.Pages
             if (Result[0] == Result[1])
                 GameManager.currentTimesPlay++;
             else
+            {
+                GameManager.Land();
                 GameManager.NextPlayer();
+            }
 
             ResetTheButtons(sender, e);
         }
