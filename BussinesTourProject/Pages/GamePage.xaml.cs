@@ -318,7 +318,6 @@ namespace BussinesTourProject.Pages
                 GameManager.NextPlayer();
 
             ResetTheButtons(sender, e);
-
         }
 
         private void ResetTheButtons(object sender, RoutedEventArgs e)
