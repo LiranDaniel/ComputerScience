@@ -28,7 +28,6 @@ namespace BussinesTourProject.Classes
 
         public HouseState houseCurrentState;
         public int levelUpgradePrice; // If you upgrade your house then you need to pay that amount of money between every level upgrade
-        public int currentCostToPayRent;
 
         public House(int basicCostToBuy, int basicCostToPayRent, int levelUpgradeRent, int levelUpgradePrice) : 
             base(basicCostToBuy, basicCostToPayRent, levelUpgradeRent)
