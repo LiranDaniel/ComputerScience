@@ -67,6 +67,7 @@ namespace BussinesTourProject.Pages
             if (minutes == 1 && secondsElapsed == 20)
                 GameOver();
         }
+
         private void GameOver()
         {
             Frame.Navigate(typeof(SignInPage));
@@ -180,6 +181,7 @@ namespace BussinesTourProject.Pages
 
             SetImageAndTextBlockForProperty();
         }
+
         private void SetImageAndTextBlockForProperty()
         {
             ((Property)GameManager.ArrayMap[1]).SetImageAndTxt(imgGranadaHouse, txtRentGranada);
@@ -222,8 +224,6 @@ namespace BussinesTourProject.Pages
             Grid.SetRow(player.Img, player.PlayerPosition[0, player.currentPosition]);
             Grid.SetColumn(player.Img, player.PlayerPosition[1, player.currentPosition]);
         }
-
-
 
         private async void btnRoll_Dice_Click(object sender, RoutedEventArgs e)
         {
