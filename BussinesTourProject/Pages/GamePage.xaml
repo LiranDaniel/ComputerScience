@@ -994,13 +994,13 @@
                     Source="/Assets\Images\SquareImages\BlockImages\blockGray.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="77" Grid.Column="115" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick8.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockGray.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="6" Grid.Column="115" Grid.ColumnSpan="14" Grid.RowSpan="15"
                     Source="/Assets\Images\SquareImages\BlockImages\blockBrick8.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="77" Grid.Column="131" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\BlockImages\blockGray.png" Stretch="Fill"
+                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick8.png" Stretch="Fill"
                     Opacity=".6"></Image>
             <Image  Grid.Row="45" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\BlockImages\blockBrick9.png" Stretch="Fill"
@@ -1155,7 +1155,7 @@
                    Grid.ColumnSpan="6" Grid.RowSpan="5">
             </Image>
             
-            <Image Source="/Assets\Images\SquareImages\SpecialIcon\BusStopStation.png" Grid.Column="119" Grid.Row="86" 
+            <Image Source="/Assets\Images\SquareImages\SpecialIcon\BusStopStation.png" Grid.Column="135" Grid.Row="86" 
                    Grid.ColumnSpan="6" Grid.RowSpan="5" Stretch="Fill">
             </Image>
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\TaxiStopStation.png" Grid.Column="119" Grid.Row="15" 
