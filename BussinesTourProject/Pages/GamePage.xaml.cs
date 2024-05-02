@@ -182,7 +182,14 @@ namespace BussinesTourProject.Pages
         }
         private void SetImageAndTextBlockForProperty()
         {
-            GameManager.ArrayMap[1]
+            ((Property)GameManager.ArrayMap[1]).SetImageAndTxt(imgGranadaHouse, txtRentGranada);
+            ((Property)GameManager.ArrayMap[2]).SetImageAndTxt(imgSevilleHouse, txtRentSeville);
+            ((Property)GameManager.ArrayMap[3]).SetImageAndTxt(imgMadridHouse, txtRentMadrid);
+            ((Property)GameManager.ArrayMap[4]).SetImageAndTxt(imgTrafficLight, txtRentTrafficLight);
+            ((Property)GameManager.ArrayMap[5]).SetImageAndTxt(imgHongKongHouse, txtRentHongKong);
+            ((Property)GameManager.ArrayMap[6]).SetImageAndTxt(imgBeijingHouse, txtRentBeijing);
+            ((Property)GameManager.ArrayMap[7]).SetImageAndTxt(imgShanghaiHouse, txtRentShanghai);
+
 
         }
 
