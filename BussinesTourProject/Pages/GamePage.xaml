@@ -1113,24 +1113,56 @@
 
 
             <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Grid.Column="25" Grid.Row="30" 
-                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
+                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill" x:Name="imgBeijingHouse">
 
             </Image>
 
             <Image Source="/Assets\Images\SquareImages\HousesIcons\House1.png" Grid.Column="25" Grid.Row="22" 
-                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
+                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill" x:Name="imgShanghaiHouse">
 
             </Image>
             <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Grid.Column="25" Grid.Row="38" 
-                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill">
+                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill" x:Name="imgHongKongHouse">
 
             </Image>
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\RedCarTrafficLight.png" Grid.Column="26" Grid.Row="46" 
-                   Grid.ColumnSpan="5" Grid.RowSpan="4" Stretch="Fill">
+                   Grid.ColumnSpan="5" Grid.RowSpan="4" Stretch="Fill" x:Name="imgTrafficLight">
+            </Image>
+
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Grid.Column="25" Grid.Row="54" 
+                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill" x:Name="imgMadridHouse">
+
+            </Image>
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Grid.Column="25" Grid.Row="62" 
+                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill" x:Name="imgSevilleHouse">
+
+            </Image>
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Grid.Column="25" Grid.Row="70" 
+                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill" x:Name="imgGranadaHouse">
+
+            </Image><Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Grid.Column="148" Grid.Row="54" 
+                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill" x:Name="imgChicagoHouse">
+
+            </Image>
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Grid.Column="148" Grid.Row="62" 
+                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill" x:Name="imgLasVegasHouse">
+
+            </Image>
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Grid.Column="148" Grid.Row="70" 
+                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill" x:Name="imgNewYorkHouse">
+
+            </Image>
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Grid.Column="148" Grid.Row="22" 
+                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill" x:Name="imgLondonHouse">
+
+            </Image>
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Grid.Column="148" Grid.Row="38" 
+                   Grid.ColumnSpan="7" Grid.RowSpan="4" Stretch="Fill" x:Name="imgSydneyHouse">
+
             </Image>
 
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\RedCarGasStation.png" Grid.Column="148" Grid.Row="30" 
-                   Grid.ColumnSpan="5" Grid.RowSpan="4" Stretch="Fill">
+                   Grid.ColumnSpan="5" Grid.RowSpan="4" Stretch="Fill" x:Name="imgGasStation">
             </Image>
 
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\RegularPrizeWheel.png" Grid.Column="148" Grid.Row="46" 
@@ -1138,7 +1170,7 @@
             </Image>
 
             <Image Source="/Assets\Images\SquareImages\HousesIcons\House4.png" Grid.Column="38" Grid.Row="87" 
-                   Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill">
+                   Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill" x:Name="imgTokyoHouse">
 
             </Image>
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\TaxIcon.png" Grid.Column="54" Grid.Row="86" 
@@ -1146,7 +1178,35 @@
 
             </Image>
             <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Grid.Column="70" Grid.Row="87" 
-                   Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill">
+                   Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill" x:Name="imgOsakaHouse">
+
+            </Image>
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Grid.Column="102" Grid.Row="87" 
+                   Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill" x:Name="imgParisHouse">
+
+            </Image>
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Grid.Column="118" Grid.Row="87" 
+                   Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill" x:Name="imgLyonHouse">
+
+            </Image>
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Grid.Column="134" Grid.Row="16" 
+                   Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill" x:Name="imgBerlinHouse">
+
+            </Image>
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Grid.Column="102" Grid.Row="16" 
+                   Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill" x:Name="imgHamburgHouse">
+
+            </Image>
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Grid.Column="70" Grid.Row="16" 
+                   Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill" x:Name="imgRomeHouse">
+
+            </Image>
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Grid.Column="54" Grid.Row="16" 
+                   Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill" x:Name="imgMilanHouse">
+
+            </Image>
+            <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Grid.Column="38" Grid.Row="16" 
+                   Grid.ColumnSpan="8" Grid.RowSpan="4" Stretch="Fill" x:Name="imgVeniceHouse">
 
             </Image>
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\RegularPrizeWheel.png" Grid.Column="87" Grid.Row="86" 
@@ -1157,10 +1217,10 @@
             </Image>
             
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\BusStopStation.png" Grid.Column="135" Grid.Row="86" 
-                   Grid.ColumnSpan="6" Grid.RowSpan="5" Stretch="Fill">
+                   Grid.ColumnSpan="6" Grid.RowSpan="5" Stretch="Fill" x:Name="imgStation">
             </Image>
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\TaxiStopStation.png" Grid.Column="119" Grid.Row="15" 
-                   Grid.ColumnSpan="6" Grid.RowSpan="5" Stretch="Fill">
+                   Grid.ColumnSpan="6" Grid.RowSpan="5" Stretch="Fill" x:Name="imgParking">
             </Image>
 
 
