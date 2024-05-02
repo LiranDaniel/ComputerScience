@@ -23,13 +23,16 @@ namespace BussinesTourProject.Classes
             this.basicCostToPayRent = basicCostToPayRent; 
             this.levelUpgradeRent = levelUpgradeRent;
         }
-        public Property(int basicCostToBuy, int basicCostToPayRent, int levelUpgradeRent, Image imageOfProperty)
-        {
-            this.basicCostToBuy = basicCostToBuy;
-            this.basicCostToPayRent = basicCostToPayRent; 
-            this.levelUpgradeRent = levelUpgradeRent;
-            this.imageOfProperty = imageOfProperty;
-        }
+
+
+
+        //public Property(int basicCostToBuy, int basicCostToPayRent, int levelUpgradeRent, Image imageOfProperty)
+        //{
+        //    this.basicCostToBuy = basicCostToBuy;
+        //    this.basicCostToPayRent = basicCostToPayRent; 
+        //    this.levelUpgradeRent = levelUpgradeRent;
+        //    this.imageOfProperty = imageOfProperty;
+        //}
 
         public void BuyProperty(Player player)
         {
