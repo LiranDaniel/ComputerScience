@@ -16,7 +16,7 @@ namespace BussinesTourProject.Classes
         public const int MaxPosition = 32;
         public int[,] PlayerPosition;
         public int currentPosition;
-        public int AmountOfMoney;
+        public int amountOfMoney;
         public string name;
         public string imgName;
         public Image Img;
@@ -32,7 +32,7 @@ namespace BussinesTourProject.Classes
             this.imgName = imgName;
             this.name = "Admin";
             this.currentPosition = 0;
-            AmountOfMoney = 2_000_000;
+            amountOfMoney = 2_000_000;
             this.playerState = playerState;
             this.turnsStackJail = 0;
         }

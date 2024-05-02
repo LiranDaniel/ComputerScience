@@ -137,16 +137,16 @@ namespace BussinesTourProject.Classes
                     }
                     else // he is not the owner which means that he have to pay the rent
                     {
-                        if(LandHouse.currentCostToPayRent > currentPlayer.AmountOfMoney)
+                        if(LandHouse.currentCostToPayRent > currentPlayer.amountOfMoney)
                         {
-                            if (LandHouse.currentCostToPayRent > (currentPlayer.CalculatePropertyValue() + currentPlayer.AmountOfMoney))
+                            if (LandHouse.currentCostToPayRent > (currentPlayer.CalculatePropertyValue() + currentPlayer.amountOfMoney))
                             {
 
                             }
                         }
                         else
                         {
-                            currentPlayer.AmountOfMoney -= LandHouse.currentCostToPayRent;
+                            currentPlayer.amountOfMoney -= LandHouse.currentCostToPayRent;
                         }
                     }
                 }
