@@ -178,12 +178,13 @@ namespace BussinesTourProject.Pages
             InitPlayer(GameManager.arrayPlayers[2], imgPlayer3, GameManager.MatrixPositionPlayer3);
             InitPlayer(GameManager.arrayPlayers[3], imgPlayer4, GameManager.MatrixPositionPlayer4);
 
-            
-
-
+            SetImageAndTextBlockForProperty();
+        }
+        private void SetImageAndTextBlockForProperty()
+        {
+            GameManager.ArrayMap[1]
 
         }
-
 
         private async void MoveToJail(Player player)
         {
