@@ -18,25 +18,5 @@ namespace BussinesTourProject.Classes
         
         }
 
-
-       /* public void StationBought(Player player)
-        {
-            
-        }
-        public static void ManyStation(Player player)
-        {
-
-            foreach(object obj in GameManager.ArrayMap)
-            {
-                if (obj is Station)
-                {
-                    if(((Station)obj).playerOwnerStation == player)
-                        
-                }
-            }
-           
-
-        }
-       */
     }
 }
