@@ -68,7 +68,7 @@ namespace BussinesTourProject.Classes
 
         public void BuyProperty(Player player)
         {
-            player.AmountOfMoney -= basicCostToBuy;
+            player.amountOfMoney -= basicCostToBuy;
             ownerOfTheProperty = player;
         }
     }

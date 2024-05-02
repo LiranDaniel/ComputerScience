@@ -10,7 +10,7 @@ namespace BussinesTourProject.Classes
     {
         public static int CalculateTaxes(Player player)
         {
-            int taxes = player.AmountOfMoney;
+            int taxes = player.amountOfMoney;
 
             foreach(object obj in GameManager.ArrayMap)
             {
