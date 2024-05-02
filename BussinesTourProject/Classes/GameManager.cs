@@ -17,10 +17,6 @@ namespace BussinesTourProject.Classes
         private static int IndexPlayers = rnd.Next(0, 4);
         public static Player[] arrayPlayers;
 
-        public enum HouseState
-        {
-            HomeLevel1, HomeLevel2, HomeLevel3, Hotel
-        }
         public static object[] ArrayMap = {
 
             null, new House(basicCostToBuy:60_000, basicCostToPayRent:15_000, levelUpgradeRent:35_000, levelUpgradePrice:50_000),
@@ -39,9 +35,7 @@ namespace BussinesTourProject.Classes
             null, new Station(), new House(90_000, 100_000, 35_000, 200_000), new House(90_000, 100_000, 35_000, 200_000),
             new Chance(), new House(90_000, 100_000, 35_000, 200_000), new Tax(), new House(90_000, 100_000, 35_000, 200_000) //fourth line
 
-        };
-
-        
+        };    
 
         public static int[,] MatrixPositionPlayer1 = { { 82, 70, 62, 54, 46, 38, 30, 22,
                                                          0, 7, 7, 7, 7, 7, 7, 7,
@@ -97,19 +91,17 @@ namespace BussinesTourProject.Classes
         
         public static void Land()
         {
-            
-           
             if (ArrayMap[currentPlayer.currentPosition] == null)
             {
-
+               
             }
             else if (ArrayMap[currentPlayer.currentPosition] is House)
             {
-
+                LandingHouse();
             }
             else if (ArrayMap[currentPlayer.currentPosition] is Station)
             {
-
+                LandingStation();
             }
             else if (ArrayMap[currentPlayer.currentPosition] is Chance) {
                 TakeCardChance();
@@ -121,6 +113,39 @@ namespace BussinesTourProject.Classes
         }
 
         public static void LandingHouse()
+        {
+            if (ArrayMap[currentPlayer.currentPosition] is House ) 
+            {
+                House LandHouse = (House)ArrayMap[currentPlayer.currentPosition];
+                if (LandHouse.ownerOfTheProperty == null)
+                {
+                    //Show the interface to buy house
+                }
+                else // owned by some player
+                {
+                    if(LandHouse.ownerOfTheProperty == currentPlayer) // if the ownder of the house is the current player that plays
+                    {
+                        //Show Upgrade InterFace House
+                    }
+                    else // he is not the owner which means that he have to pay the rent
+                    {
+                        if(LandHouse.currentCostToPayRent > currentPlayer.amountOfMoney)
+                        {
+                            if (LandHouse.currentCostToPayRent > (currentPlayer.CalculatePropertyValue() + currentPlayer.amountOfMoney))
+                            {
+
+                            }
+                        }
+                        else
+                        {
+                            currentPlayer.amountOfMoney -= LandHouse.currentCostToPayRent;
+                        }
+                    }
+                }
+            }
+        } 
+        
+        public static void LandingStation()
         {
             if (ArrayMap[currentPlayer.currentPosition] is House ) 
             {
