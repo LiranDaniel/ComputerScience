@@ -209,8 +209,6 @@ namespace BussinesTourProject.Pages
             ((Property)GameManager.ArrayMap[27]).SetImageAndTxt(imgParisHouse, txtRentParis);
             ((Property)GameManager.ArrayMap[29]).SetImageAndTxt(imgOsakaHouse, txtRentOsaka);
             ((Property)GameManager.ArrayMap[31]).SetImageAndTxt(imgTokyoHouse, txtRentTokyo);
-
-
         }
 
         private async void MoveToJail(Player player)
