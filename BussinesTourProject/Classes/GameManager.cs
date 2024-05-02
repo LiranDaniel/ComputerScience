@@ -20,8 +20,9 @@ namespace BussinesTourProject.Classes
         {
             HomeLevel1, HomeLevel2, HomeLevel3, Hotel
         }
-        public static House[] arrayHouses;
+        public static object[] ArrayMap = { new House(1)};
 
+        
 
         public static int[,] MatrixPositionPlayer1 = { { 82, 70, 62, 54, 46, 38, 30, 22,
                                                          0, 7, 7, 7, 7, 7, 7, 7,
@@ -58,9 +59,7 @@ namespace BussinesTourProject.Classes
                                                          2, 36, 52, 68, 84, 100, 116, 132,
                                                          150, 169, 169, 169, 169, 169, 169, 169,
                                                          175, 139, 123, 107, 91, 75, 59, 43} };
-        public static House[] ArrayOfHouses = {
         
-        };
         public static double WorldChampionTimes = 1.5;
 
 
@@ -76,15 +75,11 @@ namespace BussinesTourProject.Classes
             new Player(imgName: "Player1", playerState: new state[4]{state.forward, state.forward, state.right, state.backward} ),
             new Player(imgName: "Player1", playerState: new state[4]{state.forward, state.forward, state.right, state.backward} )};
         }
-
-        public static void InitHouses()
-        {
-
-        }
+        
         public static void Land()
         {
            
-            if (ArrayOfHouses[currentPlayer.currentPosition] == null)
+            if (ArrayMap[currentPlayer.currentPosition] == null)
             {
 
             }
