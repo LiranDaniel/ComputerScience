@@ -14,7 +14,7 @@ namespace BussinesTourProject.Classes
         public int levelUpgradeRent;        // If the property level has upgraded then between every upgrade level this is the jump of the rent price
         public int currentCostToBuy;
         public int currentCostToPayRent;
-        //public int currentCostToPayRent; 
+        public TextBlock txtOfMoneyDisplayRent;
 
         public Player ownerOfTheProperty;   // This is the owner of the property
         public Image imageOfProperty;
