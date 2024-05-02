@@ -25,14 +25,19 @@ namespace BussinesTourProject.Classes
 
             null, new House(basicCostToBuy:60_000, basicCostToPayRent:15_000, levelUpgradeRent:35_000, levelUpgradePrice:50_000),
             new House(60_000, 16_000, 35_000, 50_000), new House(60_000, 17_000, 35_000, 50_000), new Station(),
-            new House(70_000, 50_000, 35_000, 50_000), new House(70_000, 50_000, 35_000, 50_000), new House(70_000, 50_000, 35_000, 50_000), // first Line
+            new House(70_000, 50_000, 35_000, 50_000), new House(70_000, 50_000, 35_000, 50_000),
+            new House(70_000, 50_000, 35_000, 50_000), // first Line
 
             null, new House(90_000, 100_000, 35_000, 100_000), new House(90_000, 100_000, 35_000, 100_000),
             new House(90_000, 100_000, 35_000, 100_000), new Chance(), new House(100_000, 100_000, 35_000, 100_000),
             new Station(), new House(105_000, 100_000, 35_000, 100_000), // Second line
 
             null, new House(90_000, 100_000, 35_000, 150_000), new Station(),
-            new House(90_000, 100_000, 35_000, 150_000), new Chance(), 
+            new House(90_000, 100_000, 35_000, 150_000), new Chance(), new House(90_000, 100_000, 35_000, 150_000),
+            new House(90_000, 100_000, 35_000, 150_000), new House(90_000, 100_000, 35_000, 150_000), // Third line
+
+            null, new Station(), new House(90_000, 100_000, 35_000, 150_000), new House(90_000, 100_000, 35_000, 150_000),
+            new Chance(), new House(90_000, 100_000, 35_000, 150_000), 
 
         };
 
