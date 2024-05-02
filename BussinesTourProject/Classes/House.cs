@@ -8,7 +8,7 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace BussinesTourProject.Classes
 {
-    public class House
+    public class House : Property
     {
         public enum HouseState
         {
@@ -26,26 +26,22 @@ namespace BussinesTourProject.Classes
                 {HouseState.Hotel, @"/Assets\Images\SquareImages\House4.png"}
         };
 
-        public int LevelUpgradePrice;
-        public Image HouseImage;
-        public int basicValue;
-        public int currentValue;
-        public int costToBuy;
         public HouseState houseCurrentState;
-        public Player playerOwnerHouse;
+        public int LevelUpgradePrice; // If you upgrade your house then you need to pay that amount of money between every level upgrade
 
-        public House(int basicValue, int levelUpgradePrice)
+
+        public House(int BasicCostToBuy, int BasicCostToPayRent, int LevelUpgradeRent, int LevelUpgradePrice) : 
+            base(BasicCostToBuy, BasicCostToPayRent, LevelUpgradeRent)
         {
-            this.LevelUpgradePrice = levelUpgradePrice;
-            this.basicValue = basicValue;
-            this.currentValue = 0;
+            this.LevelUpgradePrice = LevelUpgradePrice;
             this.houseCurrentState = HouseState.None;
         }
-        public void ChangeHouse(int houseUpgradeLevel)
-        {   
-            HouseImage.Source = new BitmapImage(new Uri($"ms-appx://" + filePathImageHouses[(HouseState)houseUpgradeLevel]));
-            currentValue = basicValue + LevelUpgradePrice;
-        }
+        //public void ChangeHouse(int houseUpgradeLevel)
+        //{
+        //    imageOfProperty.Source = new BitmapImage(new Uri($"ms-appx://" + filePathImageHouses[(HouseState)houseUpgradeLevel]));
+        //    houseCurrentState = (HouseState)houseUpgradeLevel;
+        //    currentValue = basicValue + LevelUpgradePrice;
+        //}
         
     }
 }
