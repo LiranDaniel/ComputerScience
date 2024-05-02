@@ -190,6 +190,22 @@ namespace BussinesTourProject.Pages
             ((Property)GameManager.ArrayMap[6]).SetImageAndTxt(imgBeijingHouse, txtRentBeijing);
             ((Property)GameManager.ArrayMap[7]).SetImageAndTxt(imgShanghaiHouse, txtRentShanghai);
 
+            ((Property)GameManager.ArrayMap[9]).SetImageAndTxt(imgVeniceHouse, txtRentVenice);
+            ((Property)GameManager.ArrayMap[10]).SetImageAndTxt(imgMilanHouse, txtRentMilan);
+            ((Property)GameManager.ArrayMap[11]).SetImageAndTxt(imgRomeHouse, txtRentRome);
+            ((Property)GameManager.ArrayMap[13]).SetImageAndTxt(imgHamburgHouse, txtRentHamburg);
+            ((Property)GameManager.ArrayMap[14]).SetImageAndTxt(imgParking, txtRentParking);
+            ((Property)GameManager.ArrayMap[15]).SetImageAndTxt(imgBerlinHouse, txtRentBerlin);
+
+            ((Property)GameManager.ArrayMap[17]).SetImageAndTxt(imgLondonHouse, txtRentLondon);
+            ((Property)GameManager.ArrayMap[18]).SetImageAndTxt(imgGasStation, txtRentGasStation);
+            ((Property)GameManager.ArrayMap[19]).SetImageAndTxt(imgSydneyHouse, txtRentSydney);
+            ((Property)GameManager.ArrayMap[21]).SetImageAndTxt(imgChicagoHouse, txtRentChicago);
+            ((Property)GameManager.ArrayMap[22]).SetImageAndTxt(imgLasVegasHouse, txtRentLasVegas);
+            ((Property)GameManager.ArrayMap[23]).SetImageAndTxt(imgNewYorkHouse, txtRentNewYork);
+
+            ((Property)GameManager.ArrayMap[23]).SetImageAndTxt(imgStation, txtRentStation);
+
 
         }
 
