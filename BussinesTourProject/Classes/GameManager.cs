@@ -21,7 +21,7 @@ namespace BussinesTourProject.Classes
         {
             HomeLevel1, HomeLevel2, HomeLevel3, Hotel
         }
-        public static object[] ArrayMap = { new House(1)};
+        public static object[] ArrayMap = { new House(14_000, 50_000)};
 
         
 
@@ -119,7 +119,7 @@ namespace BussinesTourProject.Classes
                     {
                         if(LandHouse.currentValue > currentPlayer.AmountOfMoney)
                         {
-                            if (LandHouse.currentValue > (currentPlayer.CalculatePropertyValue + currentPlayer.AmountOfMoney))
+                            if (LandHouse.currentValue > (currentPlayer.CalculatePropertyValue() + currentPlayer.AmountOfMoney))
                             {
 
                             }
