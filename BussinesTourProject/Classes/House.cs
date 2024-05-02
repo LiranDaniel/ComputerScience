@@ -36,6 +36,14 @@ namespace BussinesTourProject.Classes
             this.levelUpgradePrice = levelUpgradePrice;
             this.houseCurrentState = HouseState.None;
         }
+
+
+
+
+
+
+
+
         //public void ChangeHouse(int houseUpgradeLevel)
         //{
         //    imageOfProperty.Source = new BitmapImage(new Uri($"ms-appx://" + filePathImageHouses[(HouseState)houseUpgradeLevel]));
