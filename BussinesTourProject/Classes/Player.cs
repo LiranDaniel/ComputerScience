@@ -98,8 +98,8 @@ namespace BussinesTourProject.Classes
                 if( obj != null )
                 {
                     if ( obj is House ) {
-                        if (((House)obj).playerOwnerHouse == GameManager.currentPlayer)
-                            value += ((House)obj).currentValue;
+                        if (((House)obj).ownerOfTheProperty == GameManager.currentPlayer)
+                            value += ((House)obj).currentCostToPayRent;
                     }
                     else if ( obj is Station ) { }
                 }

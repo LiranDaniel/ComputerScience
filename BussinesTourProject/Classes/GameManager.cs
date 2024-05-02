@@ -21,15 +21,15 @@ namespace BussinesTourProject.Classes
         {
             HomeLevel1, HomeLevel2, HomeLevel3, Hotel
         }
-        public static object[] ArrayMap = { 
-            
-            null, new House(60_000, 15_000, ),
-            new House(60_000, 16_000), new House(60_000, 17_000), new Station(),
-            new House(70_000, 50_000), new House(70_000, 50_000), new House(70_000, 50_000), // first Line
+        public static object[] ArrayMap = {
 
-            null, new House(90_000, 100_000), new House(90_000, 100_000),
-            new House(90_000, 100_000), new Chance(), new House(100_000, 100_000),
-            new Station(), new House(105_000, 100_000)
+            null, new House(basicCostToBuy:60_000, basicCostToPayRent:15_000, levelUpgradeRent:35_000, levelUpgradePrice:50_000),
+            new House(60_000, 16_000, 35_000, 50_000), new House(60_000, 17_000, 35_000, 50_000), new Station(),
+            new House(70_000, 50_000, 35_000, 50_000), new House(70_000, 50_000, 35_000, 50_000), new House(70_000, 50_000, 35_000, 50_000), // first Line
+
+            null, new House(90_000, 100_000, 35_000, 50_000), new House(90_000, 100_000, 35_000, 50_000),
+            new House(90_000, 100_000, 35_000, 50_000), new Chance(), new House(100_000, 100_000, 35_000, 50_000),
+            new Station(), new House(105_000, 100_000, 35_000, 50_000)
         
         };
 
@@ -111,37 +111,40 @@ namespace BussinesTourProject.Classes
         {
 
         }
+
         public static void LandingHouse()
         {
-            if (ArrayMap[currentPlayer.currentPosition] is House ) {
+            if (ArrayMap[currentPlayer.currentPosition] is House ) 
+            {
                 House LandHouse = (House)ArrayMap[currentPlayer.currentPosition];
-                if (LandHouse.playerOwnerHouse == null)
+                if (LandHouse.ownerOfTheProperty == null)
                 {
                     //Show the interface to buy house
                 }
-                else
+                else // owned by some player
                 {
-                    if(LandHouse.playerOwnerHouse == currentPlayer)
+                    if(LandHouse.ownerOfTheProperty == currentPlayer) // if the ownder of the house is the current player that plays
                     {
-                        //Show Upgrade InterFace
+                        //Show Upgrade InterFace House
                     }
-                    else
+                    else // he is not the owner which means that he have to pay the rent
                     {
-                        if(LandHouse.currentValue > currentPlayer.AmountOfMoney)
+                        if(LandHouse.currentCostToPayRent > currentPlayer.AmountOfMoney)
                         {
-                            if (LandHouse.currentValue > (currentPlayer.CalculatePropertyValue() + currentPlayer.AmountOfMoney))
+                            if (LandHouse.currentCostToPayRent > (currentPlayer.CalculatePropertyValue() + currentPlayer.AmountOfMoney))
                             {
 
                             }
                         }
                         else
                         {
-                            currentPlayer.AmountOfMoney -= LandHouse.currentValue;
+                            currentPlayer.AmountOfMoney -= LandHouse.currentCostToPayRent;
                         }
                     }
                 }
             }
         }
+
         public static void Jail()
         {
 
