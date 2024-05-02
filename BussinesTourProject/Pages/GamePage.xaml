@@ -741,7 +741,7 @@
 
             <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="43" Grid.ColumnSpan="12"  FontSize="10"
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
-                       VerticalAlignment="Top" ></TextBlock>
+                       VerticalAlignment="Top"  x:Name="txtRentHongKong"></TextBlock>
 
 
             <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="51" Grid.ColumnSpan="28" Background="White"></Border>
@@ -752,7 +752,7 @@
 
             <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="51" Grid.ColumnSpan="12"  FontSize="10"
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
-                       VerticalAlignment="Top" ></TextBlock>
+                       VerticalAlignment="Top" x:Name="txtRentTrafficLight" ></TextBlock>
 
 
 
@@ -764,7 +764,7 @@
 
             <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="59" Grid.ColumnSpan="12"  FontSize="10"
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
-                       VerticalAlignment="Top" ></TextBlock>
+                       VerticalAlignment="Top" x:Name="txtRentMadrid"></TextBlock>
 
 
             <Border Grid.Column="6" Grid.RowSpan="2" Grid.Row="67" Grid.ColumnSpan="28" Background="White"></Border>
@@ -775,7 +775,7 @@
 
             <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="67" Grid.ColumnSpan="12"  FontSize="10"
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
-                       VerticalAlignment="Top" ></TextBlock>
+                       VerticalAlignment="Top" x:Name="txtRentSeville"></TextBlock>
 
 
 
@@ -787,7 +787,7 @@
 
             <TextBlock Grid.Column="20" Grid.RowSpan="2" Grid.Row="75" Grid.ColumnSpan="12"  FontSize="10"
                        FontFamily="Cascadia code" Foreground="Black" Text="150K" FontWeight="Bold" HorizontalAlignment="Center"
-                       VerticalAlignment="Top" ></TextBlock>
+                       VerticalAlignment="Top" x:Name="txtRentGranada"></TextBlock>
 
 
 
