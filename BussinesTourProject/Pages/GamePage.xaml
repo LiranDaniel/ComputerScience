@@ -1272,8 +1272,7 @@
                    Grid.ColumnSpan="5" Grid.RowSpan="4"></Image>
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="38"
-              Background="Black" CornerRadius="30" BorderBrush="Black" BorderThickness="3"
-              Visibility="Visible" x:Name="IFBuyingHouse">
+              Background="Black" CornerRadius="30" Visibility="Visible" x:Name="IFBuyingHouse">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
