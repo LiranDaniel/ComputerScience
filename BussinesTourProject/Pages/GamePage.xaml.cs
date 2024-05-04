@@ -34,11 +34,9 @@ namespace BussinesTourProject.Pages
     public sealed partial class GamePage : Page
     {
         private DispatcherTimer timerGame;
-        private DispatcherTimer timerPlayers;
         private int secondsElapsed;
         private int minutes;
         private int currentPositionPlayer;
-        private bool IsDouble = false;
 
         public GamePage()
         {
@@ -53,9 +51,9 @@ namespace BussinesTourProject.Pages
             timerGame.Tick += TimerGame_Tick;
             timerGame.Start();
 
-            timerPlayers = new DispatcherTimer();
-            timerPlayers.Interval = TimeSpan.FromSeconds(5);
-            timerPlayers.Tick += TimerPlayers_Tick;
+            GameManager.timerPlayers = new DispatcherTimer();
+            GameManager.timerPlayers.Interval = TimeSpan.FromSeconds(5);
+            GameManager.timerPlayers.Tick += TimerPlayers_Tick;
         }
         private void TimerGame_Tick(object sender, object e)
         {
@@ -76,11 +74,8 @@ namespace BussinesTourProject.Pages
         }
         private void TimerPlayers_Tick(object sender, object e)
         {
-            timerPlayers.Stop();
             GameManager.UIBuyingHouseGrid.Visibility = Visibility.Collapsed;
-
-            if (!IsDouble)
-                GameManager.NextPlayer();
+            GameManager.CheckIfDouble();
         }
 
         private void GameOver()
@@ -260,6 +255,8 @@ namespace BussinesTourProject.Pages
 
         private async void btnRoll_Dice_Click(object sender, RoutedEventArgs e)
         {
+            GameManager.timerPlayers.Stop();
+            GameManager.IsDouble = false;
             Player player = GameManager.currentPlayer;
 
             ((Button)sender).IsEnabled = false;
@@ -350,14 +347,14 @@ namespace BussinesTourProject.Pages
             if (Result[0] == Result[1])
             {
                 GameManager.currentTimesPlay++;
-                IsDouble = true;
+                GameManager.IsDouble = true;
             }
             else
-                IsDouble = false;
+                GameManager.IsDouble = false;
 
             ResetTheButtons(sender, e);
 
-            timerPlayers.Start();
+            GameManager.timerPlayers.Start();
         }
 
         private void ResetTheButtons(object sender, RoutedEventArgs e)
@@ -408,15 +405,9 @@ namespace BussinesTourProject.Pages
                     optionHouse1RadioButton.IsChecked = false;
 
             }
-            else
-                return;
             
             UIBuyingHouse.Visibility = Visibility.Collapsed;
-            timerPlayers.Stop();
-            if (IsDouble)
-                GameManager.currentTimesPlay++;
-            else
-                GameManager.NextPlayer();
+            GameManager.CheckIfDouble();
         }
     }
 }

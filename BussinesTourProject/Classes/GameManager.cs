@@ -7,18 +7,21 @@ using Windows.Devices.Bluetooth.Advertisement;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml;
 using static BussinesTourProject.Classes.Player;
+using Windows.Perception.Spatial;
 
 namespace BussinesTourProject.Classes
 {
     public static class GameManager
     {
-        
+        public static DispatcherTimer timerPlayers;
+
         public static Random rnd = new Random();
         public static Grid UIBuyingHouseGrid { get; set; }
         public static Player currentPlayer;
         public static int currentTimesPlay = 1;
         private static int IndexPlayers = rnd.Next(0, 4);
         public static Player[] arrayPlayers;
+        public static bool IsDouble;
 
         public static object[] ArrayMap = {
 
@@ -100,7 +103,7 @@ namespace BussinesTourProject.Classes
         {
             if (ArrayMap[currentPlayer.currentPosition] == null)
             {
-               
+                CheckIfDouble();
             }
             else if (ArrayMap[currentPlayer.currentPosition] is House)
             {
@@ -108,8 +111,11 @@ namespace BussinesTourProject.Classes
             }
             else if (ArrayMap[currentPlayer.currentPosition] is Station)
             {
+                CheckIfDouble();
             }
-            else if (ArrayMap[currentPlayer.currentPosition] is Chance) {
+            else if (ArrayMap[currentPlayer.currentPosition] is Chance)
+            {
+                CheckIfDouble();
             }
         }
         public static void TakeCardChance()
@@ -126,13 +132,17 @@ namespace BussinesTourProject.Classes
                 if (LandHouse.basicCostToBuy <= currentPlayer.amountOfMoney)
                     ShowUIBuyingHouse();  
                 else
-                    Console.WriteLine(  ); //Show you dont have enough money Ui
+                {
+                    //Show you dont have enough money Ui
+                    CheckIfDouble();
+                }
             }
             else // owned by some player
             {
                 if(LandHouse.ownerOfTheProperty == currentPlayer) // if the ownder of the house is the current player that plays
                 {
-                     //Show Upgrade InterFace House
+                    //Show Upgrade InterFace House
+
                 }
                 else // he is not the owner which means that he have to pay the rent
                 {   
@@ -147,12 +157,21 @@ namespace BussinesTourProject.Classes
                     {   
                         currentPlayer.amountOfMoney -= LandHouse.currentCostToPayRent;
                         string formattedNumber = currentPlayer.amountOfMoney.ToString("N0"); // adding 
-                        currentPlayer.txtMoney.Text = $"{formattedNumber}";
+                        currentPlayer.txtMoney.Text = $"{formattedNumber}"; 
+                        
                     }
                 }
-            }     
-        } 
-        
+                CheckIfDouble();
+            }
+        }
+
+        public static void CheckIfDouble()
+        {
+            timerPlayers.Stop();
+            if (!GameManager.IsDouble)
+                GameManager.NextPlayer();
+            IsDouble = false;
+        }
         private static void ShowUIBuyingHouse()
         {
             UIBuyingHouseGrid.Visibility = Visibility.Visible;
