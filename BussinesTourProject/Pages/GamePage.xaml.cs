@@ -411,10 +411,11 @@ namespace BussinesTourProject.Pages
 
             }
             else
-            {
                 return;
-            }
-
+            
+            UIBuyingHouse.Visibility = Visibility.Collapsed;
+            GameManager.NextPlayer();
+            timerPlayers.Stop();
         }
     }
 }
