@@ -353,15 +353,15 @@
         </Button>
 
         <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer1Bar"
-               Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="30" Grid.RowSpan="12"></Image>
-        
-        <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer2Bar"
+               Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="30" Grid.RowSpan="12" Stretch="Fill"></Image>
+
+        <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer2Bar" Stretch="Fill"
                Grid.Row="105" Grid.Column="1" Grid.ColumnSpan="30" Grid.RowSpan="12"></Image>
 
-        <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer3Bar"
+        <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer3Bar" Stretch="Fill"
                Grid.Row="105" Grid.Column="177" Grid.ColumnSpan="30" Grid.RowSpan="12"></Image>
 
-        <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer4Bar"
+        <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer4Bar" Stretch="Fill"
                Grid.Row="1" Grid.Column="177" Grid.ColumnSpan="30" Grid.RowSpan="12"></Image>
 
         <Image Source="/Assets\Images\Avatars\Avatar_2.png" x:Name="imgAvatar3"
@@ -376,26 +376,38 @@
         <Image Source="/Assets\Images\Avatars\Avatar_2.png" x:Name="imgAvatar4"
                Grid.Row="107" Grid.Column="196" Grid.ColumnSpan="8" Grid.RowSpan="7"></Image>
         
-        <TextBlock Grid.Row="3" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer1Name"
-                   Text="Liran Daniel" FontFamily="Aharoni" FontSize="20"></TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer1Name"
+                   Text="Liran Daniel" FontFamily="Aharoni" FontSize="20" Foreground="Black"></TextBlock>
+        
+        <TextBlock Grid.Row="8" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer1Status"
+                   Text="Playing..." FontFamily="Aharoni" FontSize="20" Foreground="White"></TextBlock>
+        
+        <TextBlock Grid.Row="8" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer2Status"
+                   Text="Playing..." FontFamily="Aharoni" FontSize="20" Foreground="White"></TextBlock>
+        
+        <TextBlock Grid.Row="112" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer3Status"
+                   Text="Playing..." FontFamily="Aharoni" FontSize="20" Foreground="White"></TextBlock>
+        
+        <TextBlock Grid.Row="112" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer4Status"
+                   Text="Playing..." FontFamily="Aharoni" FontSize="20" Foreground="White"></TextBlock>
         
         <TextBlock Grid.Row="6" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer1Money"
                    Text="2,000,000$" FontFamily="Aharoni" FontSize="20" Foreground="Green"></TextBlock>
         
-        <TextBlock Grid.Row="3" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer2Name"
-                   Text="Liran Daniel" FontFamily="Aharoni" FontSize="20"></TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer2Name"
+                   Text="Liran Daniel" FontFamily="Aharoni" FontSize="20" Foreground="Black"></TextBlock>
 
         <TextBlock Grid.Row="6" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer2Money"
                    Text="2,000,000$" FontFamily="Aharoni" FontSize="20" Foreground="Green"></TextBlock>
 
-        <TextBlock Grid.Row="107" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer3Name"
-                   Text="Liran Daniel" FontFamily="Aharoni" FontSize="20"></TextBlock>
+        <TextBlock Grid.Row="108" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer3Name"
+                   Text="Liran Daniel" FontFamily="Aharoni" FontSize="20" Foreground="Black"></TextBlock>
 
         <TextBlock Grid.Row="110" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer3Money"
                    Text="2,000,000$" FontFamily="Aharoni" FontSize="20" Foreground="Green"></TextBlock>
         
-        <TextBlock Grid.Row="107" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer4Name"
-                   Text="Liran Daniel" FontFamily="Aharoni" FontSize="20"></TextBlock>
+        <TextBlock Grid.Row="108" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer4Name"
+                   Text="Liran Daniel" FontFamily="Aharoni" FontSize="20" Foreground="Black"></TextBlock>
         
         <TextBlock Grid.Row="110" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer4Money"
                    Text="2,000,000$" FontFamily="Aharoni" FontSize="20" Foreground="Green"></TextBlock>
