@@ -381,7 +381,7 @@ namespace BussinesTourProject.Pages
 
         private void ButtonBuyHouse_Click(object sender, RoutedEventArgs e)
         {
-            House currentHouse = (House)(GameManager.ArrayMap[currentPositionPlayer]);
+            House currentHouse = (House)GameManager.ArrayMap[currentPositionPlayer];
             if (optionHouse1RadioButton.IsChecked == true)
             {
                if(GameManager.currentPlayer.amountOfMoney >= currentHouse.basicCostToBuy)
