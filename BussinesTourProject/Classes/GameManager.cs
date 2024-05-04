@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Devices.Bluetooth.Advertisement;
+using Windows.UI.Xaml.Controls;
 using static BussinesTourProject.Classes.Player;
 
 namespace BussinesTourProject.Classes
@@ -11,7 +12,7 @@ namespace BussinesTourProject.Classes
     public static class GameManager
     {
         public static Random rnd = new Random();
-
+        public static Grid UIBuyingHouseGrid { get; set; }
         public static Player currentPlayer;
         public static int currentTimesPlay = 1;
         private static int IndexPlayers = rnd.Next(0, 4);
@@ -89,6 +90,91 @@ namespace BussinesTourProject.Classes
             new Player(imgName: "Player1", playerState: new state[4]{state.forward, state.forward, state.right, state.backward} )};
         }
         
+        public static void Land()
+        {
+            if (ArrayMap[currentPlayer.currentPosition] == null)
+            {
+               
+            }
+            else if (ArrayMap[currentPlayer.currentPosition] is House)
+            {
+                LandingHouse();
+            }
+            else if (ArrayMap[currentPlayer.currentPosition] is Station)
+            {
+                LandingStation();
+            }
+            else if (ArrayMap[currentPlayer.currentPosition] is Chance) {
+                TakeCardChance();
+            }
+        }
+        public static void TakeCardChance()
+        {
+
+        }
+
+        public static void LandingHouse()
+        {
+            House LandHouse = (House)ArrayMap[currentPlayer.currentPosition];
+            if (LandHouse.ownerOfTheProperty == null)
+            {
+               //Show the interface to buy house
+            }
+            else // owned by some player
+            {
+                if(LandHouse.ownerOfTheProperty == currentPlayer) // if the ownder of the house is the current player that plays
+                {
+                     //Show Upgrade InterFace House
+                }
+                else // he is not the owner which means that he have to pay the rent
+                {
+                     if(LandHouse.currentCostToPayRent > currentPlayer.amountOfMoney)
+                     {
+                        if (LandHouse.currentCostToPayRent > (currentPlayer.CalculatePropertyValue() + currentPlayer.amountOfMoney))
+                        {
+
+                        }
+                     }
+                     else
+                     {
+                         currentPlayer.amountOfMoney -= LandHouse.currentCostToPayRent;
+                     }
+                }
+            }     
+        } 
+        
+        public static void LandingStation()
+        {
+            if (ArrayMap[currentPlayer.currentPosition] is House ) 
+            {
+                House LandHouse = (House)ArrayMap[currentPlayer.currentPosition];
+                if (LandHouse.ownerOfTheProperty == null)
+                {
+                    //Show the interface to buy house
+                }
+                else // owned by some player
+                {
+                    if(LandHouse.ownerOfTheProperty == currentPlayer) // if the ownder of the house is the current player that plays
+                    {
+                        //Show Upgrade InterFace House
+                    }
+                    else // he is not the owner which means that he have to pay the rent
+                    {
+                        if(LandHouse.currentCostToPayRent > currentPlayer.amountOfMoney)
+                        {
+                            if (LandHouse.currentCostToPayRent > (currentPlayer.CalculatePropertyValue() + currentPlayer.amountOfMoney))
+                            {
+
+                            }
+                        }
+                        else
+                        {
+                            currentPlayer.amountOfMoney -= LandHouse.currentCostToPayRent;
+                        }
+                    }
+                }
+            }
+        }
 
         public static void Jail()
         {
