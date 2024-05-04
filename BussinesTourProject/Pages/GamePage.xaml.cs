@@ -351,11 +351,10 @@ namespace BussinesTourProject.Pages
             if (Result[0] == Result[1])
             {
                 GameManager.currentTimesPlay++;
-                timerPlayers.Start();
             }
             else
             {
-                timerPlayers.Start();
+                GameManager.NextPlayer();
             }
 
 
