@@ -18,7 +18,7 @@ namespace BussinesTourProject.Classes
         public static int currentTimesPlay = 1;
         private static int IndexPlayers = rnd.Next(0, 4);
         public static Player[] arrayPlayers;
-        
+
         public static object[] ArrayMap = {
 
             null, new House(basicCostToBuy:60_000, basicCostToPayRent:15_000, levelUpgradeRent:35_000, levelUpgradePrice:50_000),
@@ -38,11 +38,6 @@ namespace BussinesTourProject.Classes
             new Chance(), new House(90_000, 100_000, 35_000, 200_000), new Tax(), new House(90_000, 100_000, 35_000, 200_000) //fourth line
 
         };
-        public static object[] Array =
-        {
-            new House(basicCostToBuy:60_000, basicCostToPayRent: 25_000, levelUpgradePrice: 50_000, levelUpgradeRent: 25000)
-        };
-
         public static int[,] MatrixPositionPlayer1 = { { 82, 70, 62, 54, 46, 38, 30, 22,
                                                          0, 7, 7, 7, 7, 7, 7, 7,
                                                          14, 22, 30, 38, 46, 54, 62, 70,
@@ -51,7 +46,6 @@ namespace BussinesTourProject.Classes
                                                          20, 43, 59, 75, 91, 107, 123, 139,
                                                          175, 157, 157, 157, 157, 157, 157, 157,
                                                          150, 132, 116, 100, 84, 68, 52, 36} };
-
         public static int[,] MatrixPositionPlayer2 = { { 82, 70, 62, 54, 46, 38, 30, 22,
                                                          0, 7, 7, 7, 7, 7, 7, 7,
                                                          6, 22, 30, 38, 46, 54, 62, 70,
@@ -60,7 +54,6 @@ namespace BussinesTourProject.Classes
                                                          8, 36, 52, 68, 84, 100, 116, 132,
                                                          175, 161, 161, 161, 161, 161, 161, 161,
                                                          160, 139, 123, 107, 91, 75, 59, 43} };
-
         public static int[,] MatrixPositionPlayer3 = { { 82, 70, 62, 54, 46, 38, 30, 22,
                                                          7, 11, 11, 11, 11, 11, 11, 11,
                                                          0, 22, 30, 38, 46, 54, 62, 70,
@@ -69,7 +62,6 @@ namespace BussinesTourProject.Classes
                                                          2, 43, 59, 75, 91, 107, 123, 139,
                                                          160, 165, 165, 165, 165, 165, 165, 165,
                                                          175, 132, 116, 100, 84, 68, 52, 36} };
-
         public static int[,] MatrixPositionPlayer4 = { { 82, 70, 62, 54, 46, 38, 30, 22,
                                                          14, 11, 11, 11, 11, 11, 11, 11,
                                                          0, 22, 30, 38, 46, 54, 62, 70,
@@ -78,7 +70,7 @@ namespace BussinesTourProject.Classes
                                                          2, 36, 52, 68, 84, 100, 116, 132,
                                                          150, 169, 169, 169, 169, 169, 169, 169,
                                                          175, 139, 123, 107, 91, 75, 59, 43} };
-        
+
         public static double WorldChampionTimes = 1.5;
 
 
