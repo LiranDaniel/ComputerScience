@@ -103,10 +103,8 @@ namespace BussinesTourProject.Classes
             }
             else if (ArrayMap[currentPlayer.currentPosition] is Station)
             {
-                LandingStation();
             }
             else if (ArrayMap[currentPlayer.currentPosition] is Chance) {
-                TakeCardChance();
             }
         }
         public static void TakeCardChance()
@@ -120,7 +118,7 @@ namespace BussinesTourProject.Classes
             if (LandHouse.ownerOfTheProperty == null)
             {
                 //Show the interface to buy house
-                UIBuyingHouseGrid.Visibility = Visibility.Visible;
+                ShowUIBuyingHouse();          
             }
             else // owned by some player
             {
@@ -145,6 +143,12 @@ namespace BussinesTourProject.Classes
             }     
         } 
         
+        private static void ShowUIBuyingHouse()
+        {
+            UIBuyingHouseGrid.Visibility = Visibility.Visible;
+
+        }
+
         public static void LandingStation()
         {
             if (ArrayMap[currentPlayer.currentPosition] is House ) 
