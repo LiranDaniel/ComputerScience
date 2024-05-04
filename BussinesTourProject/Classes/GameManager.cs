@@ -223,10 +223,6 @@ namespace BussinesTourProject.Classes
         {
 
         }
-        public static void CheckOwner(Player player)
-        {
-
-        }
         public static int[] RollDice()
         {
             int[] Result = { rnd.Next(1, 7), rnd.Next(1, 7) };
