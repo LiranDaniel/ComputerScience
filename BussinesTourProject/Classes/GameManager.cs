@@ -12,6 +12,7 @@ namespace BussinesTourProject.Classes
 {
     public static class GameManager
     {
+        
         public static Random rnd = new Random();
         public static Grid UIBuyingHouseGrid { get; set; }
         public static Player currentPlayer;

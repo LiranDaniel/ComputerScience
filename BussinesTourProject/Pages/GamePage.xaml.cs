@@ -38,6 +38,7 @@ namespace BussinesTourProject.Pages
         private int secondsElapsed;
         private int minutes;
         private int currentPositionPlayer;
+        private bool IsDouble = false;
 
         public GamePage()
         {
@@ -54,6 +55,7 @@ namespace BussinesTourProject.Pages
 
             timerPlayers = new DispatcherTimer();
             timerPlayers.Interval = TimeSpan.FromSeconds(5);
+            timerPlayers.Tick += TimerPlayers_Tick;
         }
         private void TimerGame_Tick(object sender, object e)
         {
@@ -75,13 +77,10 @@ namespace BussinesTourProject.Pages
         private void TimerPlayers_Tick(object sender, object e)
         {
             timerPlayers.Stop();
-            GameManager.NextPlayer();
             GameManager.UIBuyingHouseGrid.Visibility = Visibility.Collapsed;
-        }
-        private void TimerPlayersDouble_Tick(object sender, object e)
-        {
-            timerPlayers.Stop();
-            GameManager.UIBuyingHouseGrid.Visibility = Visibility.Collapsed;
+
+            if (!IsDouble)
+                GameManager.NextPlayer();
         }
 
         private void GameOver()
@@ -351,15 +350,14 @@ namespace BussinesTourProject.Pages
             if (Result[0] == Result[1])
             {
                 GameManager.currentTimesPlay++;
+                IsDouble = true;
             }
             else
-            {
-                GameManager.NextPlayer();
-            }
-
-
+                IsDouble = false;
 
             ResetTheButtons(sender, e);
+
+            timerPlayers.Start();
         }
 
         private void ResetTheButtons(object sender, RoutedEventArgs e)
@@ -414,8 +412,11 @@ namespace BussinesTourProject.Pages
                 return;
             
             UIBuyingHouse.Visibility = Visibility.Collapsed;
-            GameManager.NextPlayer();
             timerPlayers.Stop();
+            if (IsDouble)
+                GameManager.currentTimesPlay++;
+            else
+                GameManager.NextPlayer();
         }
     }
 }
