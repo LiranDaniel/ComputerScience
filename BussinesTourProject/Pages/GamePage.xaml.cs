@@ -65,7 +65,7 @@ namespace BussinesTourProject.Pages
                 UpdateUITextBlock.Text = $"Timer : {minutes}:0{secondsElapsed}";
             else 
                 UpdateUITextBlock.Text = $"Timer : {minutes}:{secondsElapsed}";
-            if (minutes == 1 && secondsElapsed == 20)
+            if (minutes == 20 && secondsElapsed == 0)
                 GameOver();
         }
 
@@ -350,7 +350,7 @@ namespace BussinesTourProject.Pages
 
         private void ButtonBuyHouse_Click(object sender, RoutedEventArgs e)
         {
-            House currentHouse = (House)(GameManager.ArrayMap[2]);
+            House currentHouse = (House)(GameManager.ArrayMap[1]);
             if (optionHouse1RadioButton.IsChecked == true)
             {
                if(GameManager.currentPlayer.amountOfMoney >= currentHouse.basicCostToBuy)
