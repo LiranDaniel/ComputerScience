@@ -130,7 +130,10 @@ namespace BussinesTourProject.Classes
             if (LandHouse.ownerOfTheProperty == null)
             {
                 //Show the interface to buy house
-                ShowUIBuyingHouse();          
+                if (LandHouse.basicCostToBuy <= currentPlayer.amountOfMoney)
+                    ShowUIBuyingHouse();  
+                else
+                    Console.WriteLine(  ); //Show you dont have enough money 
             }
             else // owned by some player
             {
@@ -140,7 +143,7 @@ namespace BussinesTourProject.Classes
                 }
                 else // he is not the owner which means that he have to pay the rent
                 {
-                     if(LandHouse.currentCostToPayRent > currentPlayer.amountOfMoney)
+                     if(LandHouse.currentCostToPayRent > currentPlayer.amountOfMoney) // doesnot have enough money
                      {
                         if (LandHouse.currentCostToPayRent > (currentPlayer.CalculatePropertyValue() + currentPlayer.amountOfMoney))
                         {
