@@ -17,6 +17,7 @@ namespace BussinesTourProject.Classes
 
         public static Random rnd = new Random();
         public static Grid UIBuyingHouseGrid { get; set; }
+        public static Grid UIJailOptions {  get; set; }
         public static Player currentPlayer;
         public static int currentTimesPlay = 1;
         private static int IndexPlayers = rnd.Next(0, 4);
