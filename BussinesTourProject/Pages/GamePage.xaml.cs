@@ -316,7 +316,7 @@ namespace BussinesTourProject.Pages
                 GameManager.currentTimesPlay++;
             else
             {
-                GameManager.Land();
+                Land();
                 GameManager.NextPlayer();
             }
 
@@ -344,5 +344,95 @@ namespace BussinesTourProject.Pages
         {
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
+
+
+
+        public static void Land()
+        {
+            if (GameManager.ArrayMap[GameManager.currentPlayer.currentPosition] == null)
+            {
+
+            }
+            else if (GameManager.ArrayMap[GameManager.currentPlayer.currentPosition] is House)
+            {
+                LandingHouse();
+            }
+            else if (GameManager.ArrayMap[GameManager.currentPlayer.currentPosition] is Station)
+            {
+                LandingStation();
+            }
+            else if (GameManager.ArrayMap[GameManager.currentPlayer.currentPosition] is Chance)
+            {
+                TakeCardChance();
+            }
+        }
+        public static void TakeCardChance()
+        {
+
+        }
+
+        public static void LandingHouse()
+        {
+            House LandHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
+            if (LandHouse.ownerOfTheProperty == null)
+            {
+                //Show the interface to buy house
+            }
+            else // owned by some player
+            {
+                if (LandHouse.ownerOfTheProperty == GameManager.currentPlayer) // if the ownder of the house is the current player that plays
+                {
+                    //Show Upgrade InterFace House
+                }
+                else // he is not the owner which means that he have to pay the rent
+                {
+                    if (LandHouse.currentCostToPayRent > GameManager.currentPlayer.amountOfMoney)
+                    {
+                        if (LandHouse.currentCostToPayRent > (GameManager.currentPlayer.CalculatePropertyValue() + GameManager.currentPlayer.amountOfMoney))
+                        {
+
+                        }
+                    }
+                    else
+                    {
+                        GameManager.currentPlayer.amountOfMoney -= LandHouse.currentCostToPayRent;
+                    }
+                }
+            }
+        }
+
+        public static void LandingStation()
+        {
+            if (GameManager.ArrayMap[GameManager.currentPlayer.currentPosition] is House)
+            {
+                House LandHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
+                if (LandHouse.ownerOfTheProperty == null)
+                {
+                    //Show the interface to buy house
+                }
+                else // owned by some player
+                {
+                    if (LandHouse.ownerOfTheProperty == GameManager.currentPlayer) // if the ownder of the house is the current player that plays
+                    {
+                        //Show Upgrade InterFace House
+                    }
+                    else // he is not the owner which means that he have to pay the rent
+                    {
+                        if (LandHouse.currentCostToPayRent > GameManager.currentPlayer.amountOfMoney)
+                        {
+                            if (LandHouse.currentCostToPayRent > (GameManager.currentPlayer.CalculatePropertyValue() + GameManager.currentPlayer.amountOfMoney))
+                            {
+
+                            }
+                        }
+                        else
+                        {
+                            GameManager.currentPlayer.amountOfMoney -= LandHouse.currentCostToPayRent;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
