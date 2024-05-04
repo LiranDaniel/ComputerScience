@@ -194,6 +194,7 @@ namespace BussinesTourProject.Pages
             txtPlayer3Name.Text = GameManager.arrayPlayers[2].name;
             txtPlayer4Name.Text = GameManager.arrayPlayers[3].name;
         }
+
         private void SetImageAndTextBlockForProperty()
         {
             ((Property)GameManager.ArrayMap[1]).SetImageAndTxt(imgGranadaHouse, txtRentGranada);
