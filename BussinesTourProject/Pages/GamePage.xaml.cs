@@ -33,7 +33,8 @@ namespace BussinesTourProject.Pages
     /// </summary>
     public sealed partial class GamePage : Page
     {
-        private DispatcherTimer timer;
+        private DispatcherTimer timerGame;
+        private DispatcherTimer timerPlayers;
         private int secondsElapsed;
         private int minutes;
         private int currentPositionPlayer;
@@ -41,18 +42,20 @@ namespace BussinesTourProject.Pages
         public GamePage()
         {
             this.InitializeComponent();
-            InitializeTimer();
+            InitializeTimers();
         }
 
-        private void InitializeTimer()
+        private void InitializeTimers()
         {
-            timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(1); // Set interval to 1 second
-            timer.Tick += Timer_Tick;
-            timer.Start();
-        }
+            timerGame = new DispatcherTimer();
+            timerGame.Interval = TimeSpan.FromSeconds(1); // Set interval to 1 second
+            timerGame.Tick += TimerGame_Tick;
+            timerGame.Start();
 
-        private void Timer_Tick(object sender, object e)
+            timerPlayers = new DispatcherTimer();
+            timerPlayers.Interval = TimeSpan.FromSeconds(5);
+        }
+        private void TimerGame_Tick(object sender, object e)
         {
             secondsElapsed++;
 
@@ -68,6 +71,17 @@ namespace BussinesTourProject.Pages
                 UpdateUITextBlock.Text = $"Timer : {minutes}:{secondsElapsed}";
             if (minutes == 20 && secondsElapsed == 0)
                 GameOver();
+        }
+        private void TimerPlayers_Tick(object sender, object e)
+        {
+            timerPlayers.Stop();
+            GameManager.NextPlayer();
+            GameManager.UIBuyingHouseGrid.Visibility = Visibility.Collapsed;
+        }
+        private void TimerPlayersDouble_Tick(object sender, object e)
+        {
+            timerPlayers.Stop();
+            GameManager.UIBuyingHouseGrid.Visibility = Visibility.Collapsed;
         }
 
         private void GameOver()
@@ -335,10 +349,20 @@ namespace BussinesTourProject.Pages
             GameManager.Land();
 
             if (Result[0] == Result[1])
+            {
                 GameManager.currentTimesPlay++;
+                timerPlayers.Tick += TimerPlayersDouble_Tick;
+                timerPlayers.Start();
+                timerPlayers.Tick -= TimerPlayersDouble_Tick;
+            }
             else
-                GameManager.NextPlayer();
-            
+            {
+                timerPlayers.Tick += TimerPlayers_Tick;
+                timerPlayers.Start();
+                timerPlayers.Tick -= TimerPlayers_Tick;
+            }
+
+
 
             ResetTheButtons(sender, e);
         }
@@ -392,6 +416,7 @@ namespace BussinesTourProject.Pages
 
             }
             UIBuyingHouse.Visibility = Visibility.Collapsed;
+            timerPlayers.Stop();
         }
     }
 }
