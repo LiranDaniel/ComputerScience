@@ -18,7 +18,7 @@ namespace BussinesTourProject.Classes
         public static int currentTimesPlay = 1;
         private static int IndexPlayers = rnd.Next(0, 4);
         public static Player[] arrayPlayers;
-
+        
         public static object[] ArrayMap = {
 
             null, new House(basicCostToBuy:60_000, basicCostToPayRent:15_000, levelUpgradeRent:35_000, levelUpgradePrice:50_000),
@@ -37,7 +37,11 @@ namespace BussinesTourProject.Classes
             null, new Station(), new House(90_000, 100_000, 35_000, 200_000), new House(90_000, 100_000, 35_000, 200_000),
             new Chance(), new House(90_000, 100_000, 35_000, 200_000), new Tax(), new House(90_000, 100_000, 35_000, 200_000) //fourth line
 
-        };    
+        };
+        public static object[] Array =
+        {
+            new House(basicCostToBuy:60_000, basicCostToPayRent: 25_000, levelUpgradePrice: 50_000, levelUpgradeRent: 25000)
+        };
 
         public static int[,] MatrixPositionPlayer1 = { { 82, 70, 62, 54, 46, 38, 30, 22,
                                                          0, 7, 7, 7, 7, 7, 7, 7,

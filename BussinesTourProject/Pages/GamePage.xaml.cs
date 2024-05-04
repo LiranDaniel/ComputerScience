@@ -23,6 +23,7 @@ using Windows.Gaming.Input;
 using System.Reflection.Metadata.Ecma335;
 using Windows.ApplicationModel.VoiceCommands;
 using Windows.UI.Xaml.Media.Animation;
+using static BussinesTourProject.Classes.House;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace BussinesTourProject.Pages
@@ -180,6 +181,7 @@ namespace BussinesTourProject.Pages
             InitPlayer(GameManager.arrayPlayers[3], imgPlayer4, GameManager.MatrixPositionPlayer4);
 
             SetImageAndTextBlockForProperty();
+            ((Property)GameManager.Array[0]).SetImageAndTxt(imgGranadaHouse, txtRentGranada);
             GameManager.UIBuyingHouseGrid = UIBuyingHouse;
         }
 
@@ -346,7 +348,34 @@ namespace BussinesTourProject.Pages
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
 
+        private void ButtonBuyHouse_Click(object sender, RoutedEventArgs e)
+        {
+            House currentHouse = (House)(GameManager.ArrayMap[2]);
+            if (optionHouse1RadioButton.IsChecked == true)
+            {
+               if(GameManager.currentPlayer.amountOfMoney >= currentHouse.basicCostToBuy)
+               {
+                    //  currentHouse.ownerOfTheProperty = GameManager.currentPlayer;
+                    //currentHouse.currentCostToBuy = currentHouse.basicCostToBuy;
+                    //  currentHouse.currentCostToPayRent = currentHouse.basicCostToPayRent;
+                    //   GameManager.currentPlayer.amountOfMoney -= currentHouse.basicCostToBuy;
+                    //currentHouse.txtOfMoneyDisplayRent.Text = $"{currentHouse.currentCostToPayRent}";
+                    //  currentHouse.houseCurrentState = House.HouseState.BasicHouse;
+                    //  currentHouse.imageOfProperty.Source = new BitmapImage(new Uri($"ms-appx://{House.filePathImageHouses[currentHouse.houseCurrentState]}"));
 
+                    currentHouse.BuyProperty(1);
+                }
+               else
+                    optionHouse1RadioButton.IsChecked = false;
+            }
+            else if (optionHouse2RadioButton.IsChecked == true)
+            {
+                 
+            }
+            else if (optionHouse3RadioButton.IsChecked == true)
+            {
 
+            }
+        }
     }
 }

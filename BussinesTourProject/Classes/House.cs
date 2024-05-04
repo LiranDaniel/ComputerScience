@@ -37,8 +37,34 @@ namespace BussinesTourProject.Classes
         }
 
 
+        public void PropertyUpgrade(int level)
+        {
+            houseCurrentState = (HouseState)level;
+            int LastCostToBuy = currentCostToBuy;
+            currentCostToPayRent = (level * levelUpgradeRent) + basicCostToPayRent;
+            currentCostToBuy = basicCostToBuy + (level * levelUpgradePrice);
+            ownerOfTheProperty.amountOfMoney -= (currentCostToBuy - LastCostToBuy);
+            double txtDisplay = currentCostToPayRent;
+            int times = 0;
 
-
+            while (txtDisplay > 1000)
+            {
+                txtDisplay = txtDisplay / 1000;
+                times++;
+            }
+            if (times == 1)
+                txtOfMoneyDisplayRent.Text = $"{txtDisplay}K";
+            else if (times == 2)
+                txtOfMoneyDisplayRent.Text = $"{txtDisplay}M";
+            else
+                txtOfMoneyDisplayRent.Text = $"{txtDisplay}";
+            imageOfProperty.Source = new BitmapImage(new Uri($"ms-appx://{House.filePathImageHouses[houseCurrentState]}"));
+        }
+        public void BuyProperty(int level)
+        {
+            ownerOfTheProperty = GameManager.currentPlayer;
+            PropertyUpgrade(level);
+        }
 
 
 
@@ -49,6 +75,6 @@ namespace BussinesTourProject.Classes
         //    houseCurrentState = (HouseState)houseUpgradeLevel;
         //    currentValue = basicValue + LevelUpgradePrice;
         //}
-        
+
     }
 }

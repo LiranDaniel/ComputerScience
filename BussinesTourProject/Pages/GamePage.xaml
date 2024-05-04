@@ -1302,9 +1302,10 @@
             </Grid.ColumnDefinitions>
 
             <Button FontFamily="Aharoni" Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="3"
-                    Content="Buy House" Style="{StaticResource MyButtonStyle}" FontSize="30"></Button>
+                    Content="Buy House" Style="{StaticResource MyButtonStyle}" FontSize="30"
+                    Click="ButtonBuyHouse_Click"></Button>
 
-            <RadioButton x:Name="option1RadioButton" GroupName="Options" Grid.Column="1" Grid.Row="2"
+            <RadioButton x:Name="optionHouse1RadioButton" GroupName="Options" Grid.Column="1" Grid.Row="2"
                    Grid.ColumnSpan="2" Grid.RowSpan="2">
                 <Image Source="/Assets\Images\SquareImages\HousesIcons\House1.png" Stretch="Fill"  ></Image>
             </RadioButton>
@@ -1312,7 +1313,7 @@
             <TextBlock Grid.Column="1" Grid.Row="4" FontFamily="Cascadia code" Grid.ColumnSpan="2"
                        HorizontalAlignment="Right" VerticalAlignment="Center">House Level 1</TextBlock>
             
-            <RadioButton x:Name="option2RadioButton" GroupName="Options" Grid.Column="5" Grid.Row="2"
+            <RadioButton x:Name="optionHouse2RadioButton" GroupName="Options" Grid.Column="5" Grid.Row="2"
                    Grid.ColumnSpan="2" Grid.RowSpan="2">
                 <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Stretch="Fill"></Image>
             </RadioButton>
@@ -1320,7 +1321,7 @@
             <TextBlock Grid.Column="5" Grid.Row="4" FontFamily="Cascadia code" Grid.ColumnSpan="2"
                        HorizontalAlignment="Right" VerticalAlignment="Center">House Level 2</TextBlock>
             
-            <RadioButton x:Name="option3RadioButton" GroupName="Options"  Grid.Column="9" Grid.Row="2"
+            <RadioButton x:Name="optionHouse3RadioButton" GroupName="Options"  Grid.Column="9" Grid.Row="2"
                    Grid.ColumnSpan="2" Grid.RowSpan="2" >
                 <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Stretch="Fill"></Image>
             </RadioButton>

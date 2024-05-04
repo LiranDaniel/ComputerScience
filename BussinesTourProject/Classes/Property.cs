@@ -14,10 +14,10 @@ namespace BussinesTourProject.Classes
         public int levelUpgradeRent;        // If the property level has upgraded then between every upgrade level this is the jump of the rent price
         public int currentCostToBuy;
         public int currentCostToPayRent;
-        private TextBlock _txtOfMoneyDisplayRent;
+        public TextBlock txtOfMoneyDisplayRent;
 
         public Player ownerOfTheProperty;   // This is the owner of the property
-        private Image _imageOfProperty;
+        public Image imageOfProperty;
 
         public Property(int basicCostToBuy, int basicCostToPayRent, int levelUpgradeRent)
         {
@@ -27,30 +27,11 @@ namespace BussinesTourProject.Classes
             this.currentCostToBuy = basicCostToBuy;
             this.currentCostToPayRent = basicCostToPayRent;
         }
-        public void PropertyUpgrade(int level)
-        {
-            currentCostToPayRent += level * basicCostToPayRent;
-            currentCostToBuy = level * basicCostToBuy;
-
-            double txtDisplay = currentCostToPayRent;
-            int times = 0;
-
-            while (txtDisplay < 1000)
-            {
-                txtDisplay /= 1000;
-                times++;
-            }
-            if (times == 1) 
-                _txtOfMoneyDisplayRent.Text = $"{txtDisplay}K";
-            else
-                _txtOfMoneyDisplayRent.Text = $"{txtDisplay}M";
-
-        }
 
         public void SetImageAndTxt(Image imageOfProperty, TextBlock txtOfMoneyDisplayRent)
         {
-            this._txtOfMoneyDisplayRent = txtOfMoneyDisplayRent;
-            this._imageOfProperty = imageOfProperty;
+            this.txtOfMoneyDisplayRent = txtOfMoneyDisplayRent;
+            this.imageOfProperty = imageOfProperty;
         }
 
 
@@ -70,10 +51,5 @@ namespace BussinesTourProject.Classes
         //    this.imageOfProperty = imageOfProperty;
         //}
 
-        public void BuyProperty(Player player)
-        {
-            player.amountOfMoney -= basicCostToBuy;
-            ownerOfTheProperty = player;
-        }
     }
 }
