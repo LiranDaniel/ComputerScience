@@ -354,28 +354,27 @@ namespace BussinesTourProject.Pages
             if (optionHouse1RadioButton.IsChecked == true)
             {
                if(GameManager.currentPlayer.amountOfMoney >= currentHouse.basicCostToBuy)
-               {
-                    //  currentHouse.ownerOfTheProperty = GameManager.currentPlayer;
-                    //currentHouse.currentCostToBuy = currentHouse.basicCostToBuy;
-                    //  currentHouse.currentCostToPayRent = currentHouse.basicCostToPayRent;
-                    //   GameManager.currentPlayer.amountOfMoney -= currentHouse.basicCostToBuy;
-                    //currentHouse.txtOfMoneyDisplayRent.Text = $"{currentHouse.currentCostToPayRent}";
-                    //  currentHouse.houseCurrentState = House.HouseState.BasicHouse;
-                    //  currentHouse.imageOfProperty.Source = new BitmapImage(new Uri($"ms-appx://{House.filePathImageHouses[currentHouse.houseCurrentState]}"));
-
-                    currentHouse.BuyProperty(1);
-                }
+                    currentHouse.BuyProperty(1); 
                else
                     optionHouse1RadioButton.IsChecked = false;
             }
             else if (optionHouse2RadioButton.IsChecked == true)
             {
-                 
+                if (GameManager.currentPlayer.amountOfMoney >= currentHouse.levelUpgradePrice + currentHouse.basicCostToBuy)
+                    currentHouse.BuyProperty(2);
+                else
+                    optionHouse1RadioButton.IsChecked = false;
+
             }
             else if (optionHouse3RadioButton.IsChecked == true)
             {
+                if (GameManager.currentPlayer.amountOfMoney >= (currentHouse.levelUpgradePrice * 2)+ currentHouse.basicCostToBuy)
+                    currentHouse.BuyProperty(3);
+                else
+                    optionHouse1RadioButton.IsChecked = false;
 
             }
+            UIBuyingHouse.Visibility = Visibility.Collapsed;
         }
     }
 }
