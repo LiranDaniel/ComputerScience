@@ -261,8 +261,6 @@ namespace BussinesTourProject.Pages
 
         private async void btnRoll_Dice_Click(object sender, RoutedEventArgs e)
         {
-            timerPlayers.Stop();
-            
             Player player = GameManager.currentPlayer;
 
             ((Button)sender).IsEnabled = false;
@@ -353,15 +351,11 @@ namespace BussinesTourProject.Pages
             if (Result[0] == Result[1])
             {
                 GameManager.currentTimesPlay++;
-                timerPlayers.Tick += TimerPlayersDouble_Tick;
                 timerPlayers.Start();
-                timerPlayers.Tick -= TimerPlayersDouble_Tick;
             }
             else
             {
-                timerPlayers.Tick += TimerPlayers_Tick;
                 timerPlayers.Start();
-                timerPlayers.Tick -= TimerPlayers_Tick;
             }
 
 
