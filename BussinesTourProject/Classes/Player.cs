@@ -28,10 +28,10 @@ namespace BussinesTourProject.Classes
         {
             forward, backward, right, left
         }
-        public Player( string imgName, state[] playerState)
+        public Player(string imgName, state[] playerState, string name)
         {
             this.imgName = imgName;
-            this.name = "Admin";
+            this.name = name;
             this.currentPosition = 0;
             amountOfMoney = 2_000_000;
             this.playerState = playerState;

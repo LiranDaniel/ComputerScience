@@ -184,8 +184,16 @@ namespace BussinesTourProject.Pages
             SetImageAndTextBlockForProperty();
             ((Property)GameManager.Array[0]).SetImageAndTxt(imgGranadaHouse, txtRentGranada);
             GameManager.UIBuyingHouseGrid = UIBuyingHouse;
+            SetPlayerTxtBlocks();
         }
 
+        private void SetPlayerTxtBlocks()
+        {
+            txtPlayer1Name.Text = GameManager.arrayPlayers[0].name;
+            txtPlayer2Name.Text = GameManager.arrayPlayers[1].name;
+            txtPlayer3Name.Text = GameManager.arrayPlayers[2].name;
+            txtPlayer4Name.Text = GameManager.arrayPlayers[3].name;
+        }
         private void SetImageAndTextBlockForProperty()
         {
             ((Property)GameManager.ArrayMap[1]).SetImageAndTxt(imgGranadaHouse, txtRentGranada);

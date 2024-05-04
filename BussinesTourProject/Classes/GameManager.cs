@@ -89,10 +89,18 @@ namespace BussinesTourProject.Classes
         
         public static void InitPlayers()
         {
-            arrayPlayers  = new Player[] {new Player(imgName: "Player1", playerState: new state[4]{state.forward, state.right, state.backward, state.left}),
-            new Player(imgName: "Player1", playerState: new state[4]{state.forward, state.right, state.backward, state.left} ),
-            new Player(imgName: "Player1", playerState: new state[4]{state.forward, state.forward, state.right, state.backward} ),
-            new Player(imgName: "Player1", playerState: new state[4]{state.forward, state.forward, state.right, state.backward} )};
+            arrayPlayers  = 
+            new Player[] {new Player(playerState: new state[4]{state.forward, state.right,
+            state.backward, state.left}, name:"Alex", imgName: "Player1"),
+
+            new Player(playerState: new state[4]{state.forward, state.right, state.backward,
+            state.left}, name:"Alex", imgName: "Player1"),
+
+            new Player(playerState: new state[4]{state.forward, state.forward, state.right,
+            state.backward}, name:"Alex", imgName: "Player1"),
+
+            new Player(playerState: new state[4]{state.forward, state.forward, state.right,
+                state.backward}, name:"Alex", imgName: "Player1")};
         }
         
         public static void Land()
