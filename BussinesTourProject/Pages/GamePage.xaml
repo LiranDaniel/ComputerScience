@@ -379,17 +379,17 @@
         <TextBlock Grid.Row="4" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer1Name"
                    Text="Liran Daniel" FontFamily="Aharoni" FontSize="20" Foreground="Black"></TextBlock>
         
-        <TextBlock Grid.Row="8" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer1Status"
-                   Text="Playing..." FontFamily="Aharoni" FontSize="20" Foreground="White"></TextBlock>
+        <TextBlock Grid.Row="9" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer1Status"
+                   Text="Playing..." FontFamily="Aharoni" FontSize="15" Foreground="White" Visibility="Collapsed"></TextBlock>
         
-        <TextBlock Grid.Row="8" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer2Status"
-                   Text="Playing..." FontFamily="Aharoni" FontSize="20" Foreground="White"></TextBlock>
+        <TextBlock Grid.Row="9" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer2Status"
+                   Text="Playing..." FontFamily="Aharoni" FontSize="15" Foreground="White" Visibility="Collapsed"></TextBlock>
         
-        <TextBlock Grid.Row="112" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer3Status"
-                   Text="Playing..." FontFamily="Aharoni" FontSize="20" Foreground="White"></TextBlock>
+        <TextBlock Grid.Row="113" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer3Status"
+                   Text="Playing..." FontFamily="Aharoni" FontSize="15" Foreground="White" Visibility="Collapsed"></TextBlock>
         
-        <TextBlock Grid.Row="112" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer4Status"
-                   Text="Playing..." FontFamily="Aharoni" FontSize="20" Foreground="White"></TextBlock>
+        <TextBlock Grid.Row="113" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer4Status"
+                   Text="Playing..." FontFamily="Aharoni" FontSize="15" Foreground="White" Visibility="Collapsed"></TextBlock>
         
         <TextBlock Grid.Row="6" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer1Money"
                    Text="2,000,000$" FontFamily="Aharoni" FontSize="20" Foreground="Green"></TextBlock>
