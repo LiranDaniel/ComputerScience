@@ -410,6 +410,11 @@ namespace BussinesTourProject.Pages
                     optionHouse1RadioButton.IsChecked = false;
 
             }
+            else
+            {
+                return;
+            }
+
         }
     }
 }
