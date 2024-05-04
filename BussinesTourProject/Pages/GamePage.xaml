@@ -392,25 +392,25 @@
                    Text="Playing..." FontFamily="Aharoni" FontSize="15" Foreground="White" Visibility="Collapsed"></TextBlock>
         
         <TextBlock Grid.Row="6" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer1Money"
-                   Text="2,000,000$" FontFamily="Aharoni" FontSize="20" Foreground="Green"></TextBlock>
+                   Text="2,000,000$" FontFamily="Aharoni" FontSize="20" Foreground="Red"></TextBlock>
         
         <TextBlock Grid.Row="4" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer2Name"
                    Text="Liran Daniel" FontFamily="Aharoni" FontSize="20" Foreground="Black"></TextBlock>
 
         <TextBlock Grid.Row="6" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer2Money"
-                   Text="2,000,000$" FontFamily="Aharoni" FontSize="20" Foreground="Green"></TextBlock>
+                   Text="2,000,000$" FontFamily="Aharoni" FontSize="20" Foreground="Red"></TextBlock>
 
         <TextBlock Grid.Row="108" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer3Name"
                    Text="Liran Daniel" FontFamily="Aharoni" FontSize="20" Foreground="Black"></TextBlock>
 
         <TextBlock Grid.Row="110" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer3Money"
-                   Text="2,000,000$" FontFamily="Aharoni" FontSize="20" Foreground="Green"></TextBlock>
+                   Text="2,000,000$" FontFamily="Aharoni" FontSize="20" Foreground="Red"></TextBlock>
         
         <TextBlock Grid.Row="108" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer4Name"
                    Text="Liran Daniel" FontFamily="Aharoni" FontSize="20" Foreground="Black"></TextBlock>
         
         <TextBlock Grid.Row="110" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer4Money"
-                   Text="2,000,000$" FontFamily="Aharoni" FontSize="20" Foreground="Green"></TextBlock>
+                   Text="2,000,000$" FontFamily="Aharoni" FontSize="20" Foreground="Red"></TextBlock>
 
 
         <Grid Grid.Row="13" Grid.Column="26" Grid.ColumnSpan="156" Grid.RowSpan="92"
