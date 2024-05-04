@@ -36,6 +36,7 @@ namespace BussinesTourProject.Pages
         private DispatcherTimer timer;
         private int secondsElapsed;
         private int minutes;
+        private int currentPositionPlayer;
 
         public GamePage()
         {
@@ -314,6 +315,7 @@ namespace BussinesTourProject.Pages
                 await Task.Delay(TimeSpan.FromMilliseconds(500));
 
             }
+            currentPositionPlayer = GameManager.currentPlayer.currentPosition;
 
             if (Result[0] == Result[1])
                 GameManager.currentTimesPlay++;
@@ -350,7 +352,7 @@ namespace BussinesTourProject.Pages
 
         private void ButtonBuyHouse_Click(object sender, RoutedEventArgs e)
         {
-            House currentHouse = (House)(GameManager.ArrayMap[1]);
+            House currentHouse = (House)(GameManager.ArrayMap[currentPositionPlayer]);
             if (optionHouse1RadioButton.IsChecked == true)
             {
                if(GameManager.currentPlayer.amountOfMoney >= currentHouse.basicCostToBuy)
