@@ -413,7 +413,6 @@ namespace BussinesTourProject.Pages
             }
             UIBuyingHouse.Visibility = Visibility.Collapsed;
             timerPlayers.Stop();
-            GameManager.NextPlayer();
         }
     }
 }
