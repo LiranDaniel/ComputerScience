@@ -133,7 +133,7 @@ namespace BussinesTourProject.Classes
                 if (LandHouse.basicCostToBuy <= currentPlayer.amountOfMoney)
                     ShowUIBuyingHouse();  
                 else
-                    Console.WriteLine(  ); //Show you dont have enough money 
+                    Console.WriteLine(  ); //Show you dont have enough money Ui
             }
             else // owned by some player
             {
