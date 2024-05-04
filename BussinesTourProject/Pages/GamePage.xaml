@@ -1272,7 +1272,7 @@
                    Grid.ColumnSpan="5" Grid.RowSpan="4"></Image>
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="38"
-              Background="Black" CornerRadius="30" Visibility="Visible" x:Name="IFBuyingHouse">
+              Background="Black" CornerRadius="30" x:Name="IFBuyingHouse">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -1300,18 +1300,33 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Image Source="/Assets\Images\SquareImages\HousesIcons\House1.png" Grid.Column="1" Grid.Row="2"
-                   Grid.ColumnSpan="2" Grid.RowSpan="4" Stretch="Fill"></Image>
-
-            <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Grid.Column="5" Grid.Row="2"
-                   Grid.ColumnSpan="2" Grid.RowSpan="4" Stretch="Fill"></Image>
-
-            <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Grid.Column="9" Grid.Row="2"
-                   Grid.ColumnSpan="2" Grid.RowSpan="4" Stretch="Fill"></Image>
 
             <Button FontFamily="Aharoni" Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="3"
                     Content="Buy House" Style="{StaticResource MyButtonStyle}" FontSize="30"></Button>
+
+            <RadioButton x:Name="option1RadioButton" GroupName="Options" Grid.Column="1" Grid.Row="2"
+                   Grid.ColumnSpan="2" Grid.RowSpan="3">
+                <Image Source="/Assets\Images\SquareImages\HousesIcons\House1.png" Stretch="Fill"  ></Image>
+            </RadioButton>
+
+            <TextBlock Grid.Column="1" Grid.Row="5" FontFamily="Cascadia code" Grid.ColumnSpan="2"
+                       HorizontalAlignment="Center" VerticalAlignment="Center">House Level 1</TextBlock>
             
+            <RadioButton x:Name="option2RadioButton" GroupName="Options" Grid.Column="5" Grid.Row="2"
+                   Grid.ColumnSpan="2" Grid.RowSpan="3">
+                <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Stretch="Fill"></Image>
+            </RadioButton>
+
+            <TextBlock Grid.Column="5" Grid.Row="5" FontFamily="Cascadia code" Grid.ColumnSpan="2"
+                       HorizontalAlignment="Center" VerticalAlignment="Center">House Level 2</TextBlock>
+            
+            <RadioButton x:Name="option3RadioButton" GroupName="Options"  Grid.Column="9" Grid.Row="2"
+                   Grid.ColumnSpan="2" Grid.RowSpan="3" >
+                <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Stretch="Fill"></Image>
+            </RadioButton>
+
+            <TextBlock Grid.Column="9" Grid.Row="5" FontFamily="Cascadia code" Grid.ColumnSpan="2"
+                       HorizontalAlignment="Center" VerticalAlignment="Center">House Level 3</TextBlock>
         </Grid>
 
         <Button x:Name="btnProfile" Grid.Column="2" Grid.Row="60" Grid.ColumnSpan="10" Grid.RowSpan="10"
