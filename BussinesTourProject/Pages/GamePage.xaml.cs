@@ -193,6 +193,10 @@ namespace BussinesTourProject.Pages
             txtPlayer2Name.Text = GameManager.arrayPlayers[1].name;
             txtPlayer3Name.Text = GameManager.arrayPlayers[2].name;
             txtPlayer4Name.Text = GameManager.arrayPlayers[3].name;
+            GameManager.arrayPlayers[0].txtMoney = txtPlayer1Money; 
+            GameManager.arrayPlayers[1].txtMoney = txtPlayer2Money; 
+            GameManager.arrayPlayers[2].txtMoney = txtPlayer3Money; 
+            GameManager.arrayPlayers[3].txtMoney = txtPlayer4Money; 
         }
 
         private void SetImageAndTextBlockForProperty()
