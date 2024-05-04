@@ -22,6 +22,7 @@ namespace BussinesTourProject.Classes
         public Image Img;
         public state[] playerState;
         public int turnsStackJail;
+        public TextBlock txtMoney;
 
         public enum state
         {
