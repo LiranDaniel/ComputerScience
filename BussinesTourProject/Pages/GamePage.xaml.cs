@@ -329,14 +329,13 @@ namespace BussinesTourProject.Pages
 
             }
             currentPositionPlayer = GameManager.currentPlayer.currentPosition;
+            GameManager.Land();
 
             if (Result[0] == Result[1])
                 GameManager.currentTimesPlay++;
             else
-            {
-                GameManager.Land();
                 GameManager.NextPlayer();
-            }
+            
 
             ResetTheButtons(sender, e);
         }
