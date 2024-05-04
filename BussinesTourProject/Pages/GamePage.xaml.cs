@@ -262,6 +262,7 @@ namespace BussinesTourProject.Pages
         private async void btnRoll_Dice_Click(object sender, RoutedEventArgs e)
         {
             timerPlayers.Stop();
+            
             Player player = GameManager.currentPlayer;
 
             ((Button)sender).IsEnabled = false;
