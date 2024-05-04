@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Devices.Bluetooth.Advertisement;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml;
 using static BussinesTourProject.Classes.Player;
 
 namespace BussinesTourProject.Classes
@@ -118,7 +119,8 @@ namespace BussinesTourProject.Classes
             House LandHouse = (House)ArrayMap[currentPlayer.currentPosition];
             if (LandHouse.ownerOfTheProperty == null)
             {
-               //Show the interface to buy house
+                //Show the interface to buy house
+                UIBuyingHouseGrid.Visibility = Visibility.Visible;
             }
             else // owned by some player
             {
