@@ -1121,7 +1121,7 @@
             
             <Button x:Name="btnRoll_Dice" Grid.Row="57" Grid.Column="80" Grid.ColumnSpan="20" Grid.RowSpan="8" Content="Roll Dice"
                     Background="Black" Foreground="White" FontFamily="Ink Draft" CornerRadius="8" FontSize="30" Visibility="Visible"
-                    Click="btnRoll_Dice_Click" PointerEntered="btnRoll_Dice_PointerEntered" PointerExited="btnRoll_Dice_PointerExited"></Button>
+                    Click="btnRoll_Dice_Click" PointerEntered="btn_PointerEnteredRegular" PointerExited="btn_PointerExitedRegular"></Button>
 
             <Image x:Name="imgDice1" Grid.Column="74" Grid.Row="40" Grid.ColumnSpan="10" Grid.RowSpan="10" Stretch="Fill"
                    Source="/Assets\Images\Dice\DiceGif.gif" Visibility="Collapsed"></Image>
@@ -1303,7 +1303,8 @@
 
             <Button FontFamily="Aharoni" Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="3"
                     Content="Buy House" Style="{StaticResource MyButtonStyle}" FontSize="30"
-                    Click="ButtonBuyHouse_Click"></Button>
+                    Click="ButtonBuyHouse_Click" PointerEntered="btn_PointerEnteredRegular" 
+                    PointerExited="btn_PointerExitedRegular"></Button>
 
             <RadioButton x:Name="optionHouse1RadioButton" GroupName="Options" Grid.Column="1" Grid.Row="2"
                    Grid.ColumnSpan="2" Grid.RowSpan="2">

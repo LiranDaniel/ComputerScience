@@ -352,12 +352,12 @@ namespace BussinesTourProject.Pages
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
         }
 
-        private void btnRoll_Dice_PointerEntered(object sender, PointerRoutedEventArgs e)
+        private void btn_PointerEnteredRegular(object sender, PointerRoutedEventArgs e)
         {
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
         }
 
-        private void btnRoll_Dice_PointerExited(object sender, PointerRoutedEventArgs e)
+        private void btn_PointerExitedRegular(object sender, PointerRoutedEventArgs e)
         {
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
