@@ -182,7 +182,6 @@ namespace BussinesTourProject.Pages
             InitPlayer(GameManager.arrayPlayers[3], imgPlayer4, GameManager.MatrixPositionPlayer4);
 
             SetImageAndTextBlockForProperty();
-            ((Property)GameManager.Array[0]).SetImageAndTxt(imgGranadaHouse, txtRentGranada);
             GameManager.UIBuyingHouseGrid = UIBuyingHouse;
             SetPlayerTxtBlocks();
         }
