@@ -53,11 +53,11 @@ namespace BussinesTourProject.Classes
                 times++;
             }
             if (times == 1)
-                txtOfMoneyDisplayRent.Text = $"{GameManager.currentPlayer.currentPosition}K";
+                txtOfMoneyDisplayRent.Text = $"{txtDisplay}K";
             else if (times == 2)
-                txtOfMoneyDisplayRent.Text = $"{GameManager.currentPlayer.currentPosition}M";
+                txtOfMoneyDisplayRent.Text = $"{txtDisplay}M";
             else
-                txtOfMoneyDisplayRent.Text = $"{GameManager.currentPlayer.currentPosition}";
+                txtOfMoneyDisplayRent.Text = $"{txtDisplay}";
             imageOfProperty.Source = new BitmapImage(new Uri($"ms-appx://{House.filePathImageHouses[houseCurrentState]}"));
         }
         public void BuyProperty(int level)
