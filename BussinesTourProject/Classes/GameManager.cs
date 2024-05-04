@@ -219,7 +219,7 @@ namespace BussinesTourProject.Classes
             if (IndexPlayers > 3)
                 IndexPlayers = 0;
             currentPlayer = arrayPlayers[IndexPlayers];
-            arrayPlayers[IndexPlayers].txtState.Visibility = Visibility.Visible;
+            currentPlayer.txtState.Visibility = Visibility.Visible;
             currentTimesPlay = 1;
         }
         public static DataBase.Models.User User { get; set; }
