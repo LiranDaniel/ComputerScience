@@ -16,7 +16,7 @@ namespace BussinesTourProject.Classes
         public Station() : base (basicCostToBuy: 200_000, basicCostToPayRent: 50_000,
             levelUpgradeRent: 50_000) { }
 
-        private void IncreaseValue()
+        private void IncreaseValuesStation()
         {
             foreach(object obj in GameManager.ArrayMap)
             {
