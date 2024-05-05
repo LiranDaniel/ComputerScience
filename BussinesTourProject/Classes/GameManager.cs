@@ -88,16 +88,16 @@ namespace BussinesTourProject.Classes
         {
             arrayPlayers  = 
             new Player[] {new Player(playerState: new state[4]{state.forward, state.right,
-            state.backward, state.left}, name:"Alex", imgName: "Player1"),
+            state.backward, state.left}, name:"Alexander Yanai", imgName: "Player1"),
 
             new Player(playerState: new state[4]{state.forward, state.right, state.backward,
-            state.left}, name:"Daniel", imgName: "Player1"),
+            state.left}, name:"Daniel Shlomo", imgName: "Player1"),
 
             new Player(playerState: new state[4]{state.forward, state.forward, state.right,
-            state.backward}, name:"Liran", imgName: "Player1"),
+            state.backward}, name:"Liran Daniel", imgName: "Player1"),
 
             new Player(playerState: new state[4]{state.forward, state.forward, state.right,
-                state.backward}, name:"Oleg", imgName: "Player1")};
+                state.backward}, name:"Oleg woller", imgName: "Player1")};
         }
         
         public static void Land()
