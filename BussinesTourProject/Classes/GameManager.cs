@@ -186,11 +186,7 @@ namespace BussinesTourProject.Classes
                 }
                 else // owned by some player
                 {
-                    if(LandStation.ownerOfTheProperty == currentPlayer) // if the ownder of the house is the current player that plays
-                    {
-                        //Show Upgrade InterFace House
-                    }
-                    else // he is not the owner which means that he have to pay the rent
+                    if(LandStation.ownerOfTheProperty != currentPlayer) // if the ownder of the house is the current player that plays// he is not the owner which means that he have to pay the rent
                     {
                         if(LandStation.currentCostToPayRent > currentPlayer.amountOfMoney)
                         {
@@ -204,6 +200,7 @@ namespace BussinesTourProject.Classes
                             currentPlayer.amountOfMoney -= LandStation.currentCostToPayRent;
                         }
                     }
+                    CheckIfDouble();
                 }
             }
         }
