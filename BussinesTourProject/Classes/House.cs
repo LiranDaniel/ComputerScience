@@ -60,7 +60,7 @@ namespace BussinesTourProject.Classes
                 txtOfMoneyDisplayRent.Text = $"{txtDisplay}";
             imageOfProperty.Source = new BitmapImage(new Uri($"ms-appx://{House.filePathImageHouses[houseCurrentState]}"));
             string formattedNumber = ownerOfTheProperty.amountOfMoney.ToString("N0"); // adding 
-            ownerOfTheProperty.txtMoney.Text = $"{formattedNumber}";
+            ownerOfTheProperty.txtMoney.Text = $"{formattedNumber}$";
         }
         public void BuyProperty(int level)
         {
