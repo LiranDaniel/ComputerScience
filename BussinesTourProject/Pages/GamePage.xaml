@@ -1348,7 +1348,7 @@
 
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
-              Background="Black" CornerRadius="30" x:Name="UIJailOptions" >
+              Background="Black" CornerRadius="30" x:Name="UIJailOptions" Visibility="Collapsed">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
