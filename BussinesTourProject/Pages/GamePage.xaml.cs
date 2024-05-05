@@ -270,6 +270,7 @@ namespace BussinesTourProject.Pages
 
             if (player.turnsStackJail != 0)
             {
+                UIJailOptions.Visibility = Visibility.Visible;
                 if (Result[0] == Result[1])
                 {
                     player.turnsStackJail = 0;
@@ -407,6 +408,43 @@ namespace BussinesTourProject.Pages
             
             UIBuyingHouse.Visibility = Visibility.Collapsed;
             GameManager.CheckIfDouble();
+        }
+
+        private void btnJailPay_Click(object sender, RoutedEventArgs e)
+        {
+            if (GameManager.currentPlayer.amountOfMoney >= 200_000)
+            {
+                GameManager.currentPlayer.amountOfMoney -= 200_000;
+                GameManager.currentPlayer.turnsStackJail = 0;
+                UIJailOptions.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                txtJailErrorMoney.Visibility = Visibility.Visible;
+            }
+        }
+
+        private async void btnJailDiceRoll_Click(object sender, RoutedEventArgs e)
+        {
+            btnRoll_Dice.Visibility = Visibility.Collapsed;
+            UIJailOptions.Visibility = Visibility.Collapsed;
+            btnJailDiceRoll.Visibility = Visibility.Collapsed;
+            GameManager.currentPlayer.turnsStackJail--;
+
+            imgDice1.Visibility = Visibility.Visible;
+            imgDice2.Visibility = Visibility.Visible;
+            int[] Result = GameManager.RollDice();
+            await Task.Delay(TimeSpan.FromSeconds(2));
+            imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
+            imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[1] + ").png"));
+
+            GameManager.NextPlayer();
+            btnRoll_Dice.Visibility = Visibility.Visible;
+        }
+
+        private void CollapsedObjects()
+        {
+
         }
     }
 }

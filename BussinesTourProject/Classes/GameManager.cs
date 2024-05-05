@@ -176,7 +176,6 @@ namespace BussinesTourProject.Classes
         private static void ShowUIBuyingHouse()
         {
             UIBuyingHouseGrid.Visibility = Visibility.Visible;
-
         }
 
         public static void LandingStation()
@@ -212,9 +211,9 @@ namespace BussinesTourProject.Classes
             }
         }
 
-        public static void Jail()
+        public static void ShowUIJail()
         {
-
+            UIJailOptions.Visibility = Visibility.Visible;
         }
         public static void WorldChampionShip()
         {
@@ -238,6 +237,9 @@ namespace BussinesTourProject.Classes
             currentPlayer = arrayPlayers[IndexPlayers];
             currentPlayer.txtState.Visibility = Visibility.Visible;
             currentTimesPlay = 1;
+
+            if (currentPlayer.turnsStackJail != 0)
+                ShowUIJail();
         }
         public static DataBase.Models.User User { get; set; }
     }

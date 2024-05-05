@@ -123,6 +123,7 @@
     <Compile Include="Classes\GameManager.cs" />
     <Compile Include="Classes\GameSounds.cs" />
     <Compile Include="Classes\House.cs" />
+    <Compile Include="Classes\Jail.cs" />
     <Compile Include="Classes\Music.cs" />
     <Compile Include="Classes\Player.cs" />
     <Compile Include="Classes\Property.cs" />

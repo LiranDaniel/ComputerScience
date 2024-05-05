@@ -1395,13 +1395,23 @@
                     FontSize="25" HorizontalAlignment="Center" Style="{StaticResource MyButtonStyle}"
                     Background="White" VerticalAlignment="Center" FontFamily="Cascadia code"
                     Content="Roll The Same Number On Both Dice" PointerEntered="btn_PointerEnteredRegular"
-                    PointerExited="btn_PointerExitedRegular"></Button>
+                    PointerExited="btn_PointerExitedRegular" x:Name="btnJailDiceRoll" Click="btnJailDiceRoll_Click"></Button>
             
-            <Button Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="2" 
+            <TextBlock Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="1" 
+                       FontSize="15" HorizontalAlignment="Center" Foreground="Red" Visibility="Collapsed"
+                       Text="You Doesn't Have Enough Money" FontFamily="Cascadia code" 
+                       VerticalAlignment="Center" x:Name="txtJailErrorMoney"></TextBlock>
+            
+            <TextBlock Grid.Row="10" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="1" 
+                       FontSize="15" HorizontalAlignment="Center" Foreground="Red" 
+                       Text="You Doesn't Have The Card" FontFamily="Cascadia code" Visibility="Collapsed"
+                       VerticalAlignment="Center" x:Name="txtJailErrorCard"></TextBlock>
+
+                <Button Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="2" 
                     FontSize="25" HorizontalAlignment="Center" Style="{StaticResource MyButtonStyle}"
                     Background="White" VerticalAlignment="Center" FontFamily="Cascadia code"
                     Content="Pay The Bank: 200K" PointerEntered="btn_PointerEnteredRegular"
-                    PointerExited="btn_PointerExitedRegular"></Button>
+                    PointerExited="btn_PointerExitedRegular" x:Name="btnJailPay" Click="btnJailPay_Click"></Button>
 
             
         </Grid>
