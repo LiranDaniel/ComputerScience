@@ -212,6 +212,7 @@ namespace BussinesTourProject.Classes
         public static void ShowUIJail()
         {
             UIJailOptions.Visibility = Visibility.Visible;
+            Jail.txtRemaningRoundJail.Text = $"Remaning Rounds In jail:{currentPlayer.turnsStackJail}";
         }
         public static void WorldChampionShip()
         {

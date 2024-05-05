@@ -192,6 +192,8 @@ namespace BussinesTourProject.Pages
             GameManager.UIJailOptions = UIJailOptions;
             SetPlayerTxtBlocks();
             GameManager.NextPlayer();
+
+            Jail.txtRemaningRoundJail = txtRemaningRoundJail;
         }
 
         private void SetPlayerTxtBlocks()
