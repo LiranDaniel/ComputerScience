@@ -180,7 +180,10 @@ namespace BussinesTourProject.Classes
                 if (LandStation.ownerOfTheProperty == null)
                 {
                     //Show the interface to buy house
-                    UIBuyingStation.Visibility = Visibility.Visible;
+                    if (LandStation.basicCostToBuy <= currentPlayer.amountOfMoney)
+                        UIBuyingStation.Visibility = Visibility.Visible;
+                    else
+                        Console.WriteLine(); // Show Doesnt Have Enough money
                 }
                 else // owned by some player
                 {
