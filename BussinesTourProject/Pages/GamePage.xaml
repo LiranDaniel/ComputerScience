@@ -1414,6 +1414,44 @@
 
             
         </Grid>
+        <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
+              Background="Black" CornerRadius="30" x:Name="UIBuyingStation">
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="5" Grid.RowSpan="6"></Image>
+            <Button FontFamily="Aharoni" Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="3"
+                    Content="Buy Station" Style="{StaticResource MyButtonStyle}" FontSize="30"
+                    Click="ButtonBuyingStation_Click" PointerEntered="btn_PointerEnteredRegular" 
+                    PointerExited="btn_PointerExitedRegular"></Button>
+
+        </Grid>
 
         <Button x:Name="btnProfile" Grid.Column="2" Grid.Row="60" Grid.ColumnSpan="10" Grid.RowSpan="10"
                 PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Click="btnMovePlayer_Click">
@@ -1424,6 +1462,7 @@
                 PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Click="btnSettings_Click">
             <Image x:Name="imgSettings" Source="/Assets\Buttons\UsingButtons\Settings (2).png"></Image>
         </Button>
+
 
         <TextBlock x:Name="UpdateUITextBlock" Grid.ColumnSpan="30" Grid.RowSpan="10" Grid.Row="26" Grid.Column="5"></TextBlock>
 

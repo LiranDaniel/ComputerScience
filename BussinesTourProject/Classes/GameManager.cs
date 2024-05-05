@@ -107,7 +107,7 @@ namespace BussinesTourProject.Classes
              else if (ArrayMap[currentPlayer.currentPosition] is House)
                  LandingHouse();
              else if (ArrayMap[currentPlayer.currentPosition] is Station)
-                 CheckIfDouble();
+                 LandingStation();
              else if (ArrayMap[currentPlayer.currentPosition] is Chance)
                  CheckIfDouble();
              else if (ArrayMap[currentPlayer.currentPosition] is Jail)
@@ -177,31 +177,31 @@ namespace BussinesTourProject.Classes
 
         public static void LandingStation()
         {
-            if (ArrayMap[currentPlayer.currentPosition] is House ) 
+            if (ArrayMap[currentPlayer.currentPosition] is Station ) 
             {
-                House LandHouse = (House)ArrayMap[currentPlayer.currentPosition];
-                if (LandHouse.ownerOfTheProperty == null)
+                Station LandStation = (Station)ArrayMap[currentPlayer.currentPosition];
+                if (LandStation.ownerOfTheProperty == null)
                 {
                     //Show the interface to buy house
                 }
                 else // owned by some player
                 {
-                    if(LandHouse.ownerOfTheProperty == currentPlayer) // if the ownder of the house is the current player that plays
+                    if(LandStation.ownerOfTheProperty == currentPlayer) // if the ownder of the house is the current player that plays
                     {
                         //Show Upgrade InterFace House
                     }
                     else // he is not the owner which means that he have to pay the rent
                     {
-                        if(LandHouse.currentCostToPayRent > currentPlayer.amountOfMoney)
+                        if(LandStation.currentCostToPayRent > currentPlayer.amountOfMoney)
                         {
-                            if (LandHouse.currentCostToPayRent > (currentPlayer.CalculatePropertyValue() + currentPlayer.amountOfMoney))
+                            if (LandStation.currentCostToPayRent > (currentPlayer.CalculatePropertyValue() + currentPlayer.amountOfMoney))
                             {
 
                             }
                         }
                         else
                         {
-                            currentPlayer.amountOfMoney -= LandHouse.currentCostToPayRent;
+                            currentPlayer.amountOfMoney -= LandStation.currentCostToPayRent;
                         }
                     }
                 }

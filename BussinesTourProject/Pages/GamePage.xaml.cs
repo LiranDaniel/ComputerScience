@@ -470,5 +470,10 @@ namespace BussinesTourProject.Pages
             House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
             txtBuyingPrice.Text = $"Buy For: {(currentHouse.basicCostToBuy + (currentHouse.levelUpgradePrice * 2)).ToString("N0")}";
         }
+
+        private void ButtonBuyingStation_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
