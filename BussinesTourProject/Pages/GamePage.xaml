@@ -1379,8 +1379,8 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock x:Name="txtRemaningRoundJail" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="8"
-                       Text="Remaning Rounds In jail:" FontSize="30" HorizontalAlignment="Center"
-                       VerticalAlignment="Center" FontFamily="Cascadia code"></TextBlock>
+                       Text="Remaning Rounds In jail:" FontSize="20" HorizontalAlignment="Center"
+                       VerticalAlignment="Top"  FontFamily="Cascadia code"></TextBlock>
             
             <Image Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="2" 
                    Source="/Assets\Images\WoodBar.png" Stretch="Fill"></Image>
