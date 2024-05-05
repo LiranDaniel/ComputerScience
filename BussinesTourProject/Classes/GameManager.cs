@@ -190,8 +190,10 @@ namespace BussinesTourProject.Classes
                         {
                             if (LandStation.currentCostToPayRent > (currentPlayer.CalculatePropertyValue() + currentPlayer.amountOfMoney))
                             {
-
+                                //Show sell HouseOptions
                             }
+                            else
+                                Console.WriteLine(); // BunkRupt Giving all the money to the owner and losing the game
                         }
                         else
                         {
