@@ -456,19 +456,19 @@ namespace BussinesTourProject.Pages
         private void optionHouse2RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
-            txtBuyingPrice.Text = $"Buy For: {currentHouse.basicCostToBuy + currentHouse.levelUpgradePrice}";
+            txtBuyingPrice.Text = $"Buy For: {(currentHouse.basicCostToBuy + currentHouse.levelUpgradePrice).ToString("N0")}";
         }
 
         private void optionHouse1RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
-            txtBuyingPrice.Text = $"Buy For: {currentHouse.basicCostToBuy}";
+            txtBuyingPrice.Text = $"Buy For: {currentHouse.basicCostToBuy.ToString("N0")}";
         }
 
         private void optionHouse3RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
-            txtBuyingPrice.Text = $"Buy For:  {currentHouse.basicCostToBuy + (currentHouse.levelUpgradePrice * 2)}";
+            txtBuyingPrice.Text = $"Buy For: {(currentHouse.basicCostToBuy + (currentHouse.levelUpgradePrice * 2)).ToString("N0")}";
         }
     }
 }
