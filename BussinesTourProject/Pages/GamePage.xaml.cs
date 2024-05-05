@@ -336,6 +336,7 @@ namespace BussinesTourProject.Pages
                     player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarForward.png"));
                     Grid.SetColumnSpan(player.Img, 3);
                     Grid.SetRowSpan(player.Img, 5);
+                    player.amountOfMoney += 300_000;
                 }
 
                 Grid.SetRow(player.Img, player.PlayerPosition[0, currentPosition]);
