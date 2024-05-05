@@ -191,6 +191,7 @@ namespace BussinesTourProject.Pages
             GameManager.UIBuyingHouseGrid = UIBuyingHouse;
             GameManager.UIJailOptions = UIJailOptions;
             GameManager.UIBuyingStation = UIBuyingStation;
+            GameManager.ImgBuyingStation = imgBuyingStation;
             SetPlayerTxtBlocks();
             GameManager.NextPlayer();
 
@@ -474,10 +475,7 @@ namespace BussinesTourProject.Pages
 
         private void ButtonBuyingStation_Click(object sender, RoutedEventArgs e)
         {
-            Station currentStation = (Station)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
-            GameManager.currentPlayer.amountOfMoney -= currentStation.basicCostToBuy;
-            currentStation.ownerOfTheProperty = GameManager.currentPlayer;
-
+            ((Station)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition]).BuyProperty();
         }
     }
 }

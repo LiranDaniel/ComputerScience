@@ -1415,7 +1415,7 @@
             
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
-              Background="Black" CornerRadius="30" x:Name="UIBuyingStation">
+              Background="Black" CornerRadius="30" x:Name="UIBuyingStation" Visibility="Collapsed">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -1445,7 +1445,7 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Image Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="5" Grid.RowSpan="6"></Image>
+            <Image Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="5" Grid.RowSpan="6" x:Name="imgBuyingStation"></Image>
             <Button FontFamily="Aharoni" Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="3"
                     Content="Buy Station" Style="{StaticResource MyButtonStyle}" FontSize="30"
                     Click="ButtonBuyingStation_Click" PointerEntered="btn_PointerEnteredRegular" 
