@@ -476,6 +476,7 @@ namespace BussinesTourProject.Pages
         private void ButtonBuyingStation_Click(object sender, RoutedEventArgs e)
         {
             ((Station)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition]).BuyProperty();
+            UIBuyingStation.Visibility = Visibility.Collapsed;
         }
     }
 }
