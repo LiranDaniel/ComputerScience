@@ -49,6 +49,8 @@ namespace BussinesTourProject.Classes
                 txtOfMoneyDisplayRent.Text = $"{txtDisplay}";
             string formattedNumber = ownerOfTheProperty.amountOfMoney.ToString("N0"); // adding 
             ownerOfTheProperty.txtMoney.Text = $"{formattedNumber}$";
+
+            IncreaseValuesStation();
         }
         public void BuyProperty()
         {
