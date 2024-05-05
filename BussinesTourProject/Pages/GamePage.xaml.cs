@@ -259,6 +259,7 @@ namespace BussinesTourProject.Pages
 
             Grid.SetRow(player.Img, player.PlayerPosition[0, player.currentPosition]);
             Grid.SetColumn(player.Img, player.PlayerPosition[1, player.currentPosition]);
+            GameManager.IsDouble = false;
         }
 
         private async void btnRoll_Dice_Click(object sender, RoutedEventArgs e)
@@ -343,8 +344,11 @@ namespace BussinesTourProject.Pages
                     Grid.SetColumnSpan(player.Img, 3);
                     Grid.SetRowSpan(player.Img, 5);
                 }
-                else if(currentPosition == 0)
+                if (currentPosition == 0)
+                {
                     player.amountOfMoney += 300_000;
+                    player.txtMoney.Text = player.amountOfMoney.ToString("N0");
+                }
 
                 Grid.SetRow(player.Img, player.PlayerPosition[0, currentPosition]);
                 Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);

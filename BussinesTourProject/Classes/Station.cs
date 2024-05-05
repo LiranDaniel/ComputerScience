@@ -19,11 +19,12 @@ namespace BussinesTourProject.Classes
 
         public void PropertyUpgrade()
         {
+            int LastCostToBuy = currentCostToBuy;
             currentCostToBuy = basicCostToBuy * ownerOfTheProperty.playerStations;
             currentCostToPayRent = basicCostToPayRent + ((ownerOfTheProperty.playerStations - 1) * levelUpgradeRent);
             double txtDisplay = currentCostToPayRent;
             int times = 0;
-            ownerOfTheProperty.amountOfMoney -= currentCostToBuy;
+            ownerOfTheProperty.amountOfMoney -= (currentCostToBuy - LastCostToBuy);
             while (txtDisplay > 1000)
             {
                 txtDisplay = txtDisplay / 1000;
