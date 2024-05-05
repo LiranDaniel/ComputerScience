@@ -16,7 +16,18 @@ namespace BussinesTourProject.Classes
         public Station() : base (basicCostToBuy: 200_000, basicCostToPayRent: 50_000,
             levelUpgradeRent: 50_000) { }
 
-
+        private void IncreaseValue()
+        {
+            foreach(object obj in GameManager.ArrayMap)
+            {
+                if (obj is Station & obj != null)
+                    if(((Station)obj).ownerOfTheProperty == GameManager.currentPlayer)
+                    {
+                        ((Station)obj).currentCostToPayRent = currentCostToPayRent;
+                        ((Station)obj).currentCostToBuy = currentCostToBuy;
+                    }    
+            }
+        }
         public void PropertyUpgrade()
         {
             int LastCostToBuy = currentCostToBuy;
