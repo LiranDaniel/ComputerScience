@@ -273,7 +273,7 @@ namespace BussinesTourProject.Pages
             imgDice1.Visibility = Visibility.Visible;
             imgDice2.Visibility = Visibility.Visible;
             int[] Result = GameManager.RollDice();
-           // await Task.Delay(TimeSpan.FromSeconds(2));
+            await Task.Delay(TimeSpan.FromSeconds(2));
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[1] + ").png"));
 
@@ -303,7 +303,6 @@ namespace BussinesTourProject.Pages
             int currentDiceResult = Result[0] + Result[1];
 
             int currentPosition = player.currentPosition + 1;
-            currentDiceResult = 1;
             player.ChangePlayerPosition(currentDiceResult); // changing position of the player, and make sure that there is not overflow
             // Delay for 2 seconds
 
@@ -354,7 +353,7 @@ namespace BussinesTourProject.Pages
                 Grid.SetRow(player.Img, player.PlayerPosition[0, currentPosition]);
                 Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);
                 currentPosition++;
-               // await Task.Delay(TimeSpan.FromMilliseconds(500));
+                await Task.Delay(TimeSpan.FromMilliseconds(500));
 
             }
 

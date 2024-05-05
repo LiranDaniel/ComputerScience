@@ -107,20 +107,20 @@ namespace BussinesTourProject.Classes
         
         public static void Land()
         {
-             if (ArrayMap[currentPlayer.currentPosition] == null)
-                 CheckIfDouble();
-             else if (ArrayMap[currentPlayer.currentPosition] is House)
-                 LandingHouse();
-             else if (ArrayMap[currentPlayer.currentPosition] is Station)
-                 LandingStation();
-             else if (ArrayMap[currentPlayer.currentPosition] is Chance)
-                 CheckIfDouble();
-             else if (ArrayMap[currentPlayer.currentPosition] is Jail)
-                 ShowUIJail();
-             else if (ArrayMap[currentPlayer.currentPosition] is Tax)
-                 CheckIfDouble();
-             else
-                 CheckIfDouble();
+            if (ArrayMap[currentPlayer.currentPosition] == null)
+                CheckIfDouble();
+            else if (ArrayMap[currentPlayer.currentPosition] is House)
+                LandingHouse();
+            else if (ArrayMap[currentPlayer.currentPosition] is Station)
+                LandingStation();
+            else if (ArrayMap[currentPlayer.currentPosition] is Chance)
+                CheckIfDouble();
+            else if (ArrayMap[currentPlayer.currentPosition] is Jail)
+                ShowUIJail();
+            else if (ArrayMap[currentPlayer.currentPosition] is Tax)
+                CheckIfDouble();
+            else
+                CheckIfDouble();
         }
         public static void TakeCardChance()
         {

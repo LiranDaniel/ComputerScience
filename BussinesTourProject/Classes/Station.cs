@@ -21,10 +21,26 @@ namespace BussinesTourProject.Classes
             foreach(object obj in GameManager.ArrayMap)
             {
                 if (obj is Station & obj != null)
-                    if(((Station)obj).ownerOfTheProperty == GameManager.currentPlayer)
+                {
+                    if (((Station)obj).ownerOfTheProperty == GameManager.currentPlayer)
                     {
                         ((Station)obj).currentCostToPayRent = currentCostToPayRent;
-                    }    
+                        double txtDisplay = ((Station)obj).currentCostToPayRent;
+                        int times = 0;
+                        ownerOfTheProperty.amountOfMoney -= currentCostToBuy;
+                        while (txtDisplay > 1000)
+                        {
+                            txtDisplay = txtDisplay / 1000;
+                            times++;
+                        }
+                        if (times == 1)
+                            ((Station)obj).txtOfMoneyDisplayRent.Text = $"{txtDisplay}K";
+                        else if (times == 2)
+                            ((Station)obj).txtOfMoneyDisplayRent.Text = $"{txtDisplay}M";
+                        else
+                            ((Station)obj).txtOfMoneyDisplayRent.Text = $"{txtDisplay}";
+                    }
+                }
             }
         }
         public void PropertyUpgrade()
