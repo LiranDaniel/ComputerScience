@@ -395,14 +395,14 @@ namespace BussinesTourProject.Pages
             if (optionHouse1RadioButton.IsChecked == true)
             {
                if(GameManager.currentPlayer.amountOfMoney >= currentHouse.basicCostToBuy)
-                    currentHouse.BuyProperty(1); 
+                    currentHouse.BuyProperty(0); 
                else
                     optionHouse1RadioButton.IsChecked = false;
             }
             else if (optionHouse2RadioButton.IsChecked == true)
             {
                 if (GameManager.currentPlayer.amountOfMoney >= currentHouse.levelUpgradePrice + currentHouse.basicCostToBuy)
-                    currentHouse.BuyProperty(2);
+                    currentHouse.BuyProperty(1);
                 else
                     optionHouse1RadioButton.IsChecked = false;
 
@@ -410,7 +410,7 @@ namespace BussinesTourProject.Pages
             else if (optionHouse3RadioButton.IsChecked == true)
             {
                 if (GameManager.currentPlayer.amountOfMoney >= (currentHouse.levelUpgradePrice * 2)+ currentHouse.basicCostToBuy)
-                    currentHouse.BuyProperty(3);
+                    currentHouse.BuyProperty(2);
                 else
                     optionHouse1RadioButton.IsChecked = false;
 
@@ -462,7 +462,7 @@ namespace BussinesTourProject.Pages
         private void optionHouse2RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
-            txtBuyingPrice.Text = $"Buy For: {(currentHouse.basicCostToBuy + currentHouse.levelUpgradePrice).ToString("N0")}";
+            txtBuyingPrice.Text = $"Buy For: {(currentHouse.basicCostToBuy + currentHouse.levelUpgradePrice)}";
         }
 
         private void optionHouse1RadioButton_Checked(object sender, RoutedEventArgs e)

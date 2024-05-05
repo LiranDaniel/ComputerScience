@@ -24,8 +24,8 @@ namespace BussinesTourProject.Classes
             this.basicCostToBuy = basicCostToBuy;
             this.basicCostToPayRent = basicCostToPayRent; 
             this.levelUpgradeRent = levelUpgradeRent;
-            this.currentCostToBuy = basicCostToBuy;
-            this.currentCostToPayRent = basicCostToPayRent;
+            this.currentCostToBuy = 0;
+            this.currentCostToPayRent = 0;
         }
 
         public void SetImageAndTxt(Image imageOfProperty, TextBlock txtOfMoneyDisplayRent)
