@@ -346,7 +346,6 @@ namespace BussinesTourProject.Pages
                 await Task.Delay(TimeSpan.FromMilliseconds(500));
 
             }
-            GameManager.Land();
 
             if (Result[0] == Result[1])
             {
@@ -359,6 +358,7 @@ namespace BussinesTourProject.Pages
             ResetTheButtons(sender, e);
 
             GameManager.timerPlayers.Start();
+            GameManager.Land();
         }
 
         private void ResetTheButtons(object sender, RoutedEventArgs e)
