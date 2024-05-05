@@ -75,7 +75,11 @@ namespace BussinesTourProject.Pages
         {
             GameManager.UIBuyingHouseGrid.Visibility = Visibility.Collapsed;
             GameManager.UIBuyingStation.Visibility = Visibility.Collapsed;
-            GameManager.UIJailOptions.Visibility = Visibility.Collapsed;
+            if (GameManager.UIJailOptions.Visibility == Visibility.Visible)
+            {
+                GameManager.UIJailOptions.Visibility = Visibility.Collapsed;
+                GameManager.currentPlayer.turnsStackJail--;
+            }
             GameManager.CheckIfDouble();
         }
 
