@@ -462,7 +462,7 @@ namespace BussinesTourProject.Pages
         private void optionHouse2RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
-            txtBuyingPrice.Text = $"Buy For: {(currentHouse.basicCostToBuy + currentHouse.levelUpgradePrice)}";
+            txtBuyingPrice.Text = $"Buy For: {(currentHouse.basicCostToBuy + currentHouse.levelUpgradePrice).ToString("N0")}";
         }
 
         private void optionHouse1RadioButton_Checked(object sender, RoutedEventArgs e)
