@@ -23,7 +23,7 @@ namespace BussinesTourProject.Classes
             currentCostToPayRent = basicCostToPayRent + ((ownerOfTheProperty.playerStations - 1) * levelUpgradeRent);
             double txtDisplay = currentCostToPayRent;
             int times = 0;
-
+            ownerOfTheProperty.amountOfMoney -= currentCostToBuy;
             while (txtDisplay > 1000)
             {
                 txtDisplay = txtDisplay / 1000;
