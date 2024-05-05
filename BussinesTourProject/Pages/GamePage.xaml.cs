@@ -445,6 +445,8 @@ namespace BussinesTourProject.Pages
 
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
+            imgDice1.Visibility = Visibility.Collapsed;
+            imgDice2.Visibility = Visibility.Collapsed;
         }
 
         private void CollapsedObjects()
