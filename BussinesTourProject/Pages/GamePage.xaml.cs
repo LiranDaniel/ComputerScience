@@ -459,16 +459,16 @@ namespace BussinesTourProject.Pages
             imgDice2.Visibility = Visibility.Collapsed;
         }
 
-        private void optionHouse2RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
-            txtBuyingPrice.Text = $"Buy For: {(currentHouse.basicCostToBuy + currentHouse.levelUpgradePrice).ToString("N0")}";
-        }
-
         private void optionHouse1RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
             txtBuyingPrice.Text = $"Buy For: {currentHouse.basicCostToBuy.ToString("N0")}";
+        }
+
+        private void optionHouse2RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
+            txtBuyingPrice.Text = $"Buy For: {(currentHouse.basicCostToBuy + currentHouse.levelUpgradePrice).ToString("N0")}";
         }
 
         private void optionHouse3RadioButton_Checked(object sender, RoutedEventArgs e)
