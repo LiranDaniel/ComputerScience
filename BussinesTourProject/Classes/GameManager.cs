@@ -116,6 +116,10 @@ namespace BussinesTourProject.Classes
 
             else if (ArrayMap[currentPlayer.currentPosition] is Jail)
                 ShowUIJail();
+            else if (ArrayMap[currentPlayer.currentPosition] is Tax)
+                CheckIfDouble();
+            else
+                CheckIfDouble();
         }
         public static void TakeCardChance()
         {
