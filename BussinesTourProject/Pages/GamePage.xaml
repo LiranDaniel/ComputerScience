@@ -1344,7 +1344,6 @@
 
             <TextBlock Grid.Column="3" Grid.Row="6" FontFamily="Cascadia code" Grid.ColumnSpan="5" x:Name="txtBuyingPrice"
                        HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Select To Buy" FontWeight="Bold"></TextBlock>
-            
 
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
