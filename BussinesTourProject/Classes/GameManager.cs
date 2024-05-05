@@ -19,6 +19,8 @@ namespace BussinesTourProject.Classes
         public static Grid UIBuyingHouseGrid { get; set; }
         public static Grid UIJailOptions {  get; set; }
         public static Grid UIBuyingStation{  get; set; }
+        public static Image ImgBuyingStation { get; set; }
+
         public static Player currentPlayer;
         public static int currentTimesPlay = 1;
         private static int IndexPlayers = rnd.Next(0, 4);
@@ -131,10 +133,8 @@ namespace BussinesTourProject.Classes
                 if (LandHouse.basicCostToBuy <= currentPlayer.amountOfMoney)
                     UIBuyingHouseGrid.Visibility = Visibility.Visible;
                 else
-                {
                     //Show you dont have enough money Ui
                     CheckIfDouble();
-                }
             }
             else // owned by some player
             {
@@ -181,9 +181,13 @@ namespace BussinesTourProject.Classes
                 {
                     //Show the interface to buy house
                     if (LandStation.basicCostToBuy <= currentPlayer.amountOfMoney)
+                    {
                         UIBuyingStation.Visibility = Visibility.Visible;
+                        ImgBuyingStation.Source = LandStation.imageOfProperty.Source;
+                    }
                     else
-                        Console.WriteLine(); // Show Doesnt Have Enough money
+                        CheckIfDouble();
+                        // Show Doesnt Have Enough money
                 }
                 else // owned by some player
                 {
