@@ -104,16 +104,12 @@ namespace BussinesTourProject.Classes
         {
             if (ArrayMap[currentPlayer.currentPosition] == null)
                 CheckIfDouble();
-
             else if (ArrayMap[currentPlayer.currentPosition] is House)
                 LandingHouse();
-
             else if (ArrayMap[currentPlayer.currentPosition] is Station)
                 CheckIfDouble();
-
             else if (ArrayMap[currentPlayer.currentPosition] is Chance)
                 CheckIfDouble();
-
             else if (ArrayMap[currentPlayer.currentPosition] is Jail)
                 ShowUIJail();
             else if (ArrayMap[currentPlayer.currentPosition] is Tax)
