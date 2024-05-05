@@ -21,6 +21,7 @@ namespace BussinesTourProject.Classes
         public static Grid UIBuyingStation{  get; set; }
         public static Image ImgBuyingStation { get; set; }
         public static RadioButton[] arrayRadioButtonBuyingHouse { get; set; } = new RadioButton[3];
+        public static TextBlock txtBlockBuyingHousePrice;
 
         public static Player currentPlayer;
         public static int currentTimesPlay = 1;
@@ -136,7 +137,7 @@ namespace BussinesTourProject.Classes
                     UIBuyingHouseGrid.Visibility = Visibility.Visible;
                     foreach(RadioButton btnRadio in arrayRadioButtonBuyingHouse)
                         btnRadio.IsChecked = false;
-
+                    txtBlockBuyingHousePrice.Text = "Select To Buy";
                 }
                 else
                     //Show you dont have enough money Ui

@@ -195,6 +195,7 @@ namespace BussinesTourProject.Pages
             GameManager.arrayRadioButtonBuyingHouse[0] = optionHouse1RadioButton;
             GameManager.arrayRadioButtonBuyingHouse[1] = optionHouse2RadioButton;
             GameManager.arrayRadioButtonBuyingHouse[2] = optionHouse3RadioButton;
+            GameManager.txtBlockBuyingHousePrice = txtBuyingPrice;
             SetPlayerTxtBlocks();
             GameManager.NextPlayer();
 

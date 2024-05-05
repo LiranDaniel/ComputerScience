@@ -1406,7 +1406,7 @@
                        Text="You Doesn't Have The Card" FontFamily="Cascadia code" Visibility="Collapsed"
                        VerticalAlignment="Center" x:Name="txtJailErrorCard"></TextBlock>
 
-                <Button Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="2" 
+            <Button Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="2" 
                     FontSize="25" HorizontalAlignment="Center" Style="{StaticResource MyButtonStyle}"
                     Background="White" VerticalAlignment="Center" FontFamily="Cascadia code"
                     Content="Pay The Bank: 200K" PointerEntered="btn_PointerEnteredRegular"
