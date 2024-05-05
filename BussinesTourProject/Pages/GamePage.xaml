@@ -1319,7 +1319,7 @@
                     PointerExited="btn_PointerExitedRegular"></Button>
 
             <RadioButton x:Name="optionHouse1RadioButton" GroupName="Options" Grid.Column="1" Grid.Row="2"
-                   Grid.ColumnSpan="2" Grid.RowSpan="2">
+                   Grid.ColumnSpan="2" Grid.RowSpan="2" Checked="optionHouse1RadioButton_Checked">
                 <Image Source="/Assets\Images\SquareImages\HousesIcons\House1.png" Stretch="Fill"  ></Image>
             </RadioButton>
 
@@ -1327,7 +1327,7 @@
                        HorizontalAlignment="Right" VerticalAlignment="Center">House Level 1</TextBlock>
             
             <RadioButton x:Name="optionHouse2RadioButton" GroupName="Options" Grid.Column="5" Grid.Row="2"
-                   Grid.ColumnSpan="2" Grid.RowSpan="2">
+                   Grid.ColumnSpan="2" Grid.RowSpan="2" Checked="optionHouse2RadioButton_Checked">
                 <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Stretch="Fill"></Image>
             </RadioButton>
 
@@ -1335,15 +1335,15 @@
                        HorizontalAlignment="Right" VerticalAlignment="Center">House Level 2</TextBlock>
             
             <RadioButton x:Name="optionHouse3RadioButton" GroupName="Options"  Grid.Column="9" Grid.Row="2"
-                   Grid.ColumnSpan="2" Grid.RowSpan="2" >
+                   Grid.ColumnSpan="2" Grid.RowSpan="2" Checked="optionHouse3RadioButton_Checked">
                 <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Stretch="Fill"></Image>
             </RadioButton>
 
             <TextBlock Grid.Column="9" Grid.Row="4" FontFamily="Cascadia code" Grid.ColumnSpan="2"
                        HorizontalAlignment="Right" VerticalAlignment="Center">House Level 3</TextBlock>
 
-            <TextBlock Grid.Column="3" Grid.Row="6" FontFamily="Cascadia code" Grid.ColumnSpan="5"
-                       HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Buy For: "></TextBlock>
+            <TextBlock Grid.Column="3" Grid.Row="6" FontFamily="Cascadia code" Grid.ColumnSpan="5" x:Name="txtBuyingPrice"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Select To Buy" FontWeight="Bold"></TextBlock>
             
 
         </Grid>

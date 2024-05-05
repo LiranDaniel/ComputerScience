@@ -51,7 +51,7 @@ namespace BussinesTourProject.Pages
             timerGame.Start();
 
             GameManager.timerPlayers = new DispatcherTimer();
-            GameManager.timerPlayers.Interval = TimeSpan.FromSeconds(5);
+            GameManager.timerPlayers.Interval = TimeSpan.FromSeconds(10);
             GameManager.timerPlayers.Tick += TimerPlayers_Tick;
         }
         private void TimerGame_Tick(object sender, object e)
@@ -453,5 +453,22 @@ namespace BussinesTourProject.Pages
             imgDice2.Visibility = Visibility.Collapsed;
         }
 
+        private void optionHouse2RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
+            txtBuyingPrice.Text = $"Buy For: {currentHouse.basicCostToBuy + currentHouse.levelUpgradePrice}";
+        }
+
+        private void optionHouse1RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
+            txtBuyingPrice.Text = $"Buy For: {currentHouse.basicCostToBuy}";
+        }
+
+        private void optionHouse3RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
+            txtBuyingPrice.Text = $"Buy For:  {currentHouse.basicCostToBuy + (currentHouse.levelUpgradePrice * 2)}";
+        }
     }
 }

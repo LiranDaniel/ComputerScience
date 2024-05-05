@@ -119,7 +119,6 @@ namespace BussinesTourProject.Classes
         }
         public static void TakeCardChance()
         {
-
         }
 
         public static void LandingHouse()
