@@ -428,7 +428,6 @@ namespace BussinesTourProject.Pages
         {
             btnRoll_Dice.Visibility = Visibility.Collapsed;
             UIJailOptions.Visibility = Visibility.Collapsed;
-            btnJailDiceRoll.Visibility = Visibility.Collapsed;
             GameManager.currentPlayer.turnsStackJail--;
 
             imgDice1.Visibility = Visibility.Visible;
@@ -437,6 +436,7 @@ namespace BussinesTourProject.Pages
             await Task.Delay(TimeSpan.FromSeconds(2));
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[1] + ").png"));
+
 
             GameManager.NextPlayer();
             btnRoll_Dice.Visibility = Visibility.Visible;
