@@ -475,6 +475,8 @@ namespace BussinesTourProject.Pages
         private void ButtonBuyingStation_Click(object sender, RoutedEventArgs e)
         {
             Station currentStation = (Station)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
+            GameManager.currentPlayer.amountOfMoney -= currentStation.basicCostToBuy;
+            currentStation.ownerOfTheProperty = GameManager.currentPlayer;
 
         }
     }

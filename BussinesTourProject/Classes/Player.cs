@@ -24,6 +24,7 @@ namespace BussinesTourProject.Classes
         public int turnsStackJail;
         public TextBlock txtMoney;
         public TextBlock txtState;
+        public int playerStations = 0;
 
         public enum state
         {
