@@ -74,6 +74,8 @@ namespace BussinesTourProject.Pages
         private void TimerPlayers_Tick(object sender, object e)
         {
             GameManager.UIBuyingHouseGrid.Visibility = Visibility.Collapsed;
+            GameManager.UIBuyingStation.Visibility = Visibility.Collapsed;
+            GameManager.UIJailOptions.Visibility = Visibility.Collapsed;
             GameManager.CheckIfDouble();
         }
 
