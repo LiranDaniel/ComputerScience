@@ -24,18 +24,16 @@ namespace BussinesTourProject.Classes
                     if(((Station)obj).ownerOfTheProperty == GameManager.currentPlayer)
                     {
                         ((Station)obj).currentCostToPayRent = currentCostToPayRent;
-                        ((Station)obj).currentCostToBuy = currentCostToBuy;
                     }    
             }
         }
         public void PropertyUpgrade()
         {
-            int LastCostToBuy = currentCostToBuy;
-            currentCostToBuy = basicCostToBuy * ownerOfTheProperty.playerStations;
+            currentCostToBuy = basicCostToBuy;
             currentCostToPayRent = basicCostToPayRent + ((ownerOfTheProperty.playerStations - 1) * levelUpgradeRent);
             double txtDisplay = currentCostToPayRent;
             int times = 0;
-            ownerOfTheProperty.amountOfMoney -= (currentCostToBuy - LastCostToBuy);
+            ownerOfTheProperty.amountOfMoney -= currentCostToBuy;
             while (txtDisplay > 1000)
             {
                 txtDisplay = txtDisplay / 1000;
