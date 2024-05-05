@@ -449,9 +449,5 @@ namespace BussinesTourProject.Pages
             imgDice2.Visibility = Visibility.Collapsed;
         }
 
-        private void CollapsedObjects()
-        {
-
-        }
     }
 }
