@@ -190,6 +190,7 @@ namespace BussinesTourProject.Pages
             SetImageAndTextBlockForProperty();
             GameManager.UIBuyingHouseGrid = UIBuyingHouse;
             GameManager.UIJailOptions = UIJailOptions;
+            GameManager.UIBuyingStation = UIBuyingStation;
             SetPlayerTxtBlocks();
             GameManager.NextPlayer();
 

@@ -18,6 +18,7 @@ namespace BussinesTourProject.Classes
         public static Random rnd = new Random();
         public static Grid UIBuyingHouseGrid { get; set; }
         public static Grid UIJailOptions {  get; set; }
+        public static Grid UIBuyingStation{  get; set; }
         public static Player currentPlayer;
         public static int currentTimesPlay = 1;
         private static int IndexPlayers = rnd.Next(0, 4);
@@ -128,7 +129,7 @@ namespace BussinesTourProject.Classes
             {
                 //Show the interface to buy house
                 if (LandHouse.basicCostToBuy <= currentPlayer.amountOfMoney)
-                    ShowUIBuyingHouse();  
+                    UIBuyingHouseGrid.Visibility = Visibility.Visible;
                 else
                 {
                     //Show you dont have enough money Ui
@@ -170,10 +171,6 @@ namespace BussinesTourProject.Classes
                 GameManager.NextPlayer();
             IsDouble = false;
         }
-        private static void ShowUIBuyingHouse()
-        {
-            UIBuyingHouseGrid.Visibility = Visibility.Visible;
-        }
 
         public static void LandingStation()
         {
@@ -183,6 +180,7 @@ namespace BussinesTourProject.Classes
                 if (LandStation.ownerOfTheProperty == null)
                 {
                     //Show the interface to buy house
+                    UIBuyingStation.Visibility = Visibility.Visible;
                 }
                 else // owned by some player
                 {
