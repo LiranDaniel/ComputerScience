@@ -442,6 +442,9 @@ namespace BussinesTourProject.Pages
                 GameManager.currentPlayer.turnsStackJail = 0;
             GameManager.NextPlayer();
             btnRoll_Dice.Visibility = Visibility.Visible;
+
+            imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
+            imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
         }
 
         private void CollapsedObjects()
