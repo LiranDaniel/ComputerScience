@@ -1229,16 +1229,16 @@
 
 
             <Image x:Name="imgPlayer" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="22" Grid.Row="82" Stretch="Fill"></Image>
+                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="22" Grid.Row="82" ></Image>
 
             <Image x:Name="imgPlayer2" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="18" Grid.Row="82" Stretch="Fill"></Image>
+                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="18" Grid.Row="82" ></Image>
 
             <Image x:Name="imgPlayer3" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="14" Grid.Row="82" Stretch="Fill"></Image>
+                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="14" Grid.Row="82" ></Image>
 
             <Image x:Name="imgPlayer4" Source="/Assets\Images\Players\Player1\RedCarForward.png" 
-                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="10" Grid.Row="82" Stretch="Fill"></Image>
+                   Grid.ColumnSpan="3" Grid.RowSpan="5" Grid.Column="10" Grid.Row="82" ></Image>
             
 
             <Border Grid.Row="75" Grid.Column="35" Grid.ColumnSpan="110" Background="White" Grid.RowSpan="2"></Border>
