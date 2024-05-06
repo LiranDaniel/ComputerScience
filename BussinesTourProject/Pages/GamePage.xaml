@@ -377,40 +377,40 @@
                Grid.Row="107" Grid.Column="196" Grid.ColumnSpan="8" Grid.RowSpan="7"></Image>
         
         <TextBlock Grid.Row="4" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer1Name"
-                   Text="Liran Daniel" FontFamily="Cascadia code" FontSize="15" Foreground="Black" FontWeight="Bold"></TextBlock>
+                   Text="Liran Daniel" FontFamily="Cascadia code" FontSize="12" Foreground="Black" FontWeight="Bold"></TextBlock>
 
         <TextBlock Grid.Row="9" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer1Status" FontWeight="Bold"
-                   Text="Playing..." FontFamily="Cascadia code" FontSize="15" Foreground="White" Visibility="Collapsed"></TextBlock>
+                   Text="Playing..." FontFamily="Cascadia code" FontSize="12" Foreground="White" Visibility="Collapsed"></TextBlock>
 
         <TextBlock Grid.Row="9" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer2Status" FontWeight="Bold"
-                   Text="Playing..." FontFamily="Cascadia code" FontSize="15" Foreground="White" Visibility="Collapsed"></TextBlock>
+                   Text="Playing..." FontFamily="Cascadia code" FontSize="12" Foreground="White" Visibility="Collapsed"></TextBlock>
 
         <TextBlock Grid.Row="113" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer3Status" FontWeight="Bold"
-                   Text="Playing..." FontFamily="Cascadia code" FontSize="15" Foreground="White" Visibility="Collapsed"></TextBlock>
+                   Text="Playing..." FontFamily="Cascadia code" FontSize="12" Foreground="White" Visibility="Collapsed"></TextBlock>
 
         <TextBlock Grid.Row="113" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer4Status" FontWeight="Bold"
-                   Text="Playing..." FontFamily="Cascadia code" FontSize="15" Foreground="White" Visibility="Collapsed"></TextBlock>
+                   Text="Playing..." FontFamily="Cascadia code" FontSize="12" Foreground="White" Visibility="Collapsed"></TextBlock>
         
         <TextBlock Grid.Row="6" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer1Money" 
-                   Text="2,000,000$" FontFamily="Cascadia code" FontSize="15" Foreground="White" FontWeight="Bold"></TextBlock>
+                   Text="2,000,000$" FontFamily="Cascadia code" FontSize="12" Foreground="White" FontWeight="Bold"></TextBlock>
 
         <TextBlock Grid.Row="4" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer2Name" FontWeight="Bold"
-                   Text="Liran Daniel" FontFamily="Cascadia code" FontSize="15" Foreground="Black"></TextBlock>
+                   Text="Liran Daniel" FontFamily="Cascadia code" FontSize="12" Foreground="Black"></TextBlock>
 
         <TextBlock Grid.Row="6" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer2Money" FontWeight="Bold"
-                   Text="2,000,000$" FontFamily="Cascadia code" FontSize="15" Foreground="White"></TextBlock>
+                   Text="2,000,000$" FontFamily="Cascadia code" FontSize="12" Foreground="White"></TextBlock>
 
         <TextBlock Grid.Row="108" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer3Name" FontWeight="Bold"
-                   Text="Liran Daniel" FontFamily="Cascadia code" FontSize="15" Foreground="Black"></TextBlock>
+                   Text="Liran Daniel" FontFamily="Cascadia code" FontSize="12" Foreground="Black"></TextBlock>
 
         <TextBlock Grid.Row="110" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer3Money" FontWeight="Bold"
-                   Text="2,000,000$" FontFamily="Cascadia code" FontSize="15" Foreground="White"></TextBlock>
+                   Text="2,000,000$" FontFamily="Cascadia code" FontSize="12" Foreground="White"></TextBlock>
 
         <TextBlock Grid.Row="108" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer4Name" FontWeight="Bold"
-                   Text="Liran Daniel" FontFamily="Cascadia code" FontSize="15" Foreground="Black"></TextBlock>
+                   Text="Liran Daniel" FontFamily="Cascadia code" FontSize="12" Foreground="Black"></TextBlock>
 
         <TextBlock Grid.Row="110" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer4Money" FontWeight="Bold"
-                   Text="2,000,000$" FontFamily="Cascadia code" FontSize="15" Foreground="White"></TextBlock>
+                   Text="2,000,000$" FontFamily="Cascadia code" FontSize="12" Foreground="White"></TextBlock>
 
 
         <Grid Grid.Row="13" Grid.Column="26" Grid.ColumnSpan="156" Grid.RowSpan="92"
@@ -1284,7 +1284,7 @@
                    Grid.ColumnSpan="5" Grid.RowSpan="4"></Image>
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
-              Background="Black" CornerRadius="30" x:Name="UIBuyingHouse" >
+              Background="Black" CornerRadius="30" x:Name="UIBuyingHouse" Visibility="Collapsed">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
