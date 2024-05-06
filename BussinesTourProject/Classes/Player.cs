@@ -34,7 +34,7 @@ namespace BussinesTourProject.Classes
         public Player(string playerNumber, string imgName, state[] playerState, string name)
         {
             this.playerNumber = playerNumber;
-            this.imgName = "RedCar";
+            this.imgName = imgName;
             this.name = name;
             this.currentPosition = 0;
             amountOfMoney = 2_000_000;
@@ -65,33 +65,34 @@ namespace BussinesTourProject.Classes
             {
                 case Player.state.left:
                     //                                                             /Players/Player1/RedCarForward.png
-                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarLeft.png"));
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName + "Left.png"));
                     Grid.SetColumnSpan(Img, 6);
                     Grid.SetRowSpan(Img, 3);
                     break;
 
                 case Player.state.right:
 
-                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarRight.png"));
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName + "Right.png"));
                     Grid.SetColumnSpan(Img, 6);
                     Grid.SetRowSpan(Img, 3);
                     break;
 
                 case Player.state.forward:
 
-                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarForward.png"));
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName + "Forward.png"));
                     Grid.SetColumnSpan(Img, 3);
                     Grid.SetRowSpan(Img, 5);
                     break;
 
                 case Player.state.backward:
 
-                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarBackward.png"));
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName + "Backward.png"));
                     Grid.SetColumnSpan(Img, 3);
                     Grid.SetRowSpan(Img, 5);
                     break;
             }
         }
+
         public void ChangePlayerImageByPosition(int currentPosition)
         {
             if(currentPosition > 0 && currentPosition < 8)
