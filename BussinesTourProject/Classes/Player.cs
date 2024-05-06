@@ -96,25 +96,25 @@ namespace BussinesTourProject.Classes
         {
             if(currentPosition > 0 && currentPosition < 8)
             {
-                Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarForward.png"));
+                Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName +"Forward.png"));
                 Grid.SetColumnSpan(Img, 3);
                 Grid.SetRowSpan(Img, 5);
             }
             else if (currentPosition > 8 && currentPosition < 16)
             {
-                Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarRight.png"));
+                Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName + "Right.png"));
                 Grid.SetColumnSpan(Img, 6);
                 Grid.SetRowSpan(Img, 3);
             }
             else if (currentPosition > 16 && currentPosition < 24)
             {
-                Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarBackward.png"));
+                Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName + "Backward.png"));
                 Grid.SetColumnSpan(Img, 3);
                 Grid.SetRowSpan(Img, 5);
             }
             else
             {
-                Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarLeft.png"));
+                Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName + "Left.png"));
                 Grid.SetColumnSpan(Img, 6);
                 Grid.SetRowSpan(Img, 3);
             }
