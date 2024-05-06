@@ -161,16 +161,20 @@ namespace DataBase
                 connection.Open();
 
                 // Query to check if user exists and password is correct
-                string query = $"UPDATE User SET UserPassword = {password} WHERE UserMail = {mail}";
+                string query = $"SELECT COUNT(*) FROM User WHERE UserMail = {mail}";
                 using (SqliteCommand command = new SqliteCommand(query, connection))
                 {
                     int count = Convert.ToInt32(command.ExecuteScalar());
-
                     if (count > 0)
                     {
                         // User authenticated successfully, proceed with your action
                         // For example, navigate to another page
+                        query = $"UPDATE User SET UserPassword = {password} WHERE UserMail = {mail}";
+                        using (SqliteCommand commandSet = new SqliteCommand(query, connection))
+                        {
+                            commandSet.ExecuteNonQuery();
 
+                        }
                         return true;
                     }
                     else
@@ -178,9 +182,11 @@ namespace DataBase
 
                         return false;
                         // Invalid credentials, show error message to the user
-                        // For example: ErrorMessageTextBlock.Text = "Invalid email or password.";
+                        // For example: ErrorMessageTextBlock.Text = "Invalid email"
                     }
                 }
+
+                
             }
         }
         /*
