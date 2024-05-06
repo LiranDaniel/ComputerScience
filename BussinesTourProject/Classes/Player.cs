@@ -19,6 +19,7 @@ namespace BussinesTourProject.Classes
         public int amountOfMoney;
         public string name;
         public string imgName;
+        public string playerNumber;
         public Image Img;
         public state[] playerState;
         public int turnsStackJail;
@@ -63,28 +64,28 @@ namespace BussinesTourProject.Classes
             {
                 case Player.state.left:
 
-                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + imgName + "/RedCarLeft.png"));
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName + "Left.png"));
                     Grid.SetColumnSpan(Img, 6);
                     Grid.SetRowSpan(Img, 3);
                     break;
 
                 case Player.state.right:
 
-                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + imgName + "/RedCarRight.png"));
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName + "Right.png"));
                     Grid.SetColumnSpan(Img, 6);
                     Grid.SetRowSpan(Img, 3);
                     break;
 
                 case Player.state.forward:
 
-                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + imgName + "/RedCarForward.png"));
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName + "Forward.png"));
                     Grid.SetColumnSpan(Img, 3);
                     Grid.SetRowSpan(Img, 5);
                     break;
 
                 case Player.state.backward:
 
-                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + imgName + "/RedCarBackward.png"));
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName + "Backward.png"));
                     Grid.SetColumnSpan(Img, 3);
                     Grid.SetRowSpan(Img, 5);
                     break;
