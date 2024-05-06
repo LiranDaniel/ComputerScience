@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Windows.Media.Core;
 using Windows.Media.Playback;
 using Windows.Storage;
@@ -156,6 +157,10 @@ namespace DataBase
 
         public static bool RestorePassword(string mail, string password, string confirmPassword) 
         {
+
+            if ((password != confirmPassword) || (!CheckValidation.IsMailValid(mail)) || (!CheckValidation.IsPasswordValid(password)))
+                return false;
+
             using (SqliteConnection connection = new SqliteConnection(connectString))
             {
                 connection.Open();
@@ -173,6 +178,9 @@ namespace DataBase
                         query = "UPDATE User SET UserPassword = @NewPassword WHERE UserMail = @UserMail";
                         using (SqliteCommand commandSet = new SqliteCommand(query, connection))
                         {
+                            commandSet.Parameters.AddWithValue("@UserMail", mail);
+                            commandSet.Parameters.AddWithValue("@NewPassword", password);
+
                             commandSet.ExecuteNonQuery();
 
                         }
