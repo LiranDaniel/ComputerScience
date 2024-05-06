@@ -1455,7 +1455,7 @@
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
               Background="Black" CornerRadius="30" x:Name="UITax" Visibility="Collapsed"></Grid>
         <Grid Grid.Row="13" Grid.Column="26" Grid.ColumnSpan="156" Grid.RowSpan="92"
-              Background="Black" CornerRadius="30" x:Name="UIEndGame">
+              Background="Black" CornerRadius="30" x:Name="UIEndGame" Visibility="Collapsed">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
