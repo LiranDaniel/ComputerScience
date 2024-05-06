@@ -462,6 +462,10 @@
     <Content Include="Assets\Images\Players\Player1\RedCarBackward.png" />
     <Content Include="Assets\Images\Players\Player1\RedCarLeft.png" />
     <Content Include="Assets\Images\Players\Player1\RedCarRight.png" />
+    <Content Include="Assets\Images\Players\Player1\TrackCarBackward.png" />
+    <Content Include="Assets\Images\Players\Player1\TrackCarForward.png" />
+    <Content Include="Assets\Images\Players\Player1\TrackCarLeft.png" />
+    <Content Include="Assets\Images\Players\Player1\TrackCarRight.png" />
     <Content Include="Assets\Images\Players\Player2\YellowCarBackward.png" />
     <Content Include="Assets\Images\Players\Player2\YellowCarForward.png" />
     <Content Include="Assets\Images\Players\Player2\YellowCarLeft.png" />

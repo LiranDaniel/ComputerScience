@@ -310,7 +310,7 @@ namespace BussinesTourProject.Pages
 
             int currentPosition = player.currentPosition + 1;
             player.ChangePlayerPosition(currentDiceResult); // changing position of the player, and make sure that there is not overflow
-            // Delay for 2 seconds
+            // Delay for 2 seconds 
 
             for (int i = 0; i < currentDiceResult; i++)
             {

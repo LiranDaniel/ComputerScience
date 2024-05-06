@@ -93,7 +93,7 @@ namespace BussinesTourProject.Classes
         {
             arrayPlayers  = 
             new Player[] {new Player(playerState: new state[4]{state.forward, state.right,
-            state.backward, state.left}, name:"Alexander Yanai", imgName:"RedCar" , playerNumber:"Player1"),
+            state.backward, state.left}, name:"Alexander Yanai", imgName:"TrackCar" , playerNumber:"Player1"),
 
             new Player(playerState: new state[4]{state.forward, state.right, state.backward,
             state.left}, name:"Daniel Shlomo", imgName:"YellowCar" , playerNumber:"Player2"),
