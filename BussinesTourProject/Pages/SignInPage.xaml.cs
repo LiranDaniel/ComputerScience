@@ -83,6 +83,11 @@ namespace BussinesTourProject.Pages
                 // validate
                 await Console.Out.WriteLineAsync(   );
         }
+
+        private void btnRestorePassword_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(RestorePasswordPage));
+        }
     }
 }
 

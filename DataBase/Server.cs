@@ -161,15 +161,16 @@ namespace DataBase
                 connection.Open();
 
                 // Query to check if user exists and password is correct
-                string query = $"SELECT COUNT(*) FROM User WHERE UserMail = {mail}";
+                string query = "SELECT COUNT(*) FROM User WHERE UserMail = @Email";
                 using (SqliteCommand command = new SqliteCommand(query, connection))
                 {
+                    command.Parameters.AddWithValue("@Email", mail);
                     int count = Convert.ToInt32(command.ExecuteScalar());
                     if (count > 0)
                     {
                         // User authenticated successfully, proceed with your action
                         // For example, navigate to another page
-                        query = $"UPDATE User SET UserPassword = {password} WHERE UserMail = {mail}";
+                        query = "UPDATE User SET UserPassword = @NewPassword WHERE UserMail = @UserMail";
                         using (SqliteCommand commandSet = new SqliteCommand(query, connection))
                         {
                             commandSet.ExecuteNonQuery();

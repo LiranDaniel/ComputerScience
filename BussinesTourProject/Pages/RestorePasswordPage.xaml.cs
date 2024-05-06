@@ -1,10 +1,12 @@
-﻿using System;
+﻿using DataBase;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -21,12 +23,13 @@ namespace BussinesTourProject.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class StorePage : Page
+    public sealed partial class RestorePasswordPage : Page
     {
-        public StorePage()
+        public RestorePasswordPage()
         {
             this.InitializeComponent();
         }
+
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             Button btnPlayEnter = (Button)sender;
@@ -46,6 +49,39 @@ namespace BussinesTourProject.Pages
         private void btn_SliderVertical_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MenuPage));
+        }
+
+        private void btnSignUp_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SignUpPage));
+        }
+
+
+
+        private async void LogInImage_PointerOressed(object sender, PointerRoutedEventArgs e)
+        {
+            if (tboxPassword.Password == "" || tboxMail.Text == "")
+                await new MessageDialog("Data is missing!", "Tennis").ShowAsync();
+            else
+                // validate
+                await Console.Out.WriteLineAsync();
+        }
+
+        private async void btnConfrimRestore_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (Server.RestorePassword(tboxMail.Text, tboxPassword.Password, tboxPasswordConfirm.Password))
+            {
+                Frame.Navigate(typeof(MenuPage));
+
+                var dialog = new MessageDialog("You have successfully changed the password");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                var dialog = new MessageDialog("You have entered an invalid username or password");
+                await dialog.ShowAsync();
+            }
         }
     }
 }
