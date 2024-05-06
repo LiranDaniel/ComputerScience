@@ -154,7 +154,35 @@ namespace DataBase
             }
         }
 
+        public static bool RestorePassword(string mail, string password, string confirmPassword) 
+        {
+            using (SqliteConnection connection = new SqliteConnection(connectString))
+            {
+                connection.Open();
 
+                // Query to check if user exists and password is correct
+                string query = $"UPDATE User SET UserPassword = {password} WHERE UserMail = {mail}";
+                using (SqliteCommand command = new SqliteCommand(query, connection))
+                {
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+
+                    if (count > 0)
+                    {
+                        // User authenticated successfully, proceed with your action
+                        // For example, navigate to another page
+
+                        return true;
+                    }
+                    else
+                    {
+
+                        return false;
+                        // Invalid credentials, show error message to the user
+                        // For example: ErrorMessageTextBlock.Text = "Invalid email or password.";
+                    }
+                }
+            }
+        }
         /*
         //הפעולה מבצעת שאילתה
         private static void Execute(string query)
