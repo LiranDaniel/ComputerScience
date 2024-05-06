@@ -122,6 +122,7 @@ namespace BussinesTourProject.Classes
             else
                 CheckIfDouble();
         }
+
         public static void TakeCardChance()
         {
         }

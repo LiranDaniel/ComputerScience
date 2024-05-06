@@ -31,6 +31,7 @@ namespace BussinesTourProject.Classes
         {
             forward, backward, right, left
         }
+
         public Player(string playerNumber, string imgName, state[] playerState, string name)
         {
             this.playerNumber = playerNumber;
@@ -121,7 +122,6 @@ namespace BussinesTourProject.Classes
             }
             
         }
-
 
         public int CalculatePropertyValue()
         {
