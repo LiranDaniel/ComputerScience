@@ -1454,6 +1454,45 @@
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
               Background="Black" CornerRadius="30" x:Name="UITax" Visibility="Collapsed"></Grid>
+        <Grid Grid.Row="13" Grid.Column="26" Grid.ColumnSpan="156" Grid.RowSpan="92"
+              Background="Black" CornerRadius="30" x:Name="UIEndGame">
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"></TextBlock>
+            
+            <TextBlock Grid.Column="1" Grid.Row="4"></TextBlock>
+            
+            <TextBlock Grid.Column="1" Grid.Row="6"></TextBlock>
+            
+            <TextBlock Grid.Column="1" Grid.Row="8"></TextBlock>
+        </Grid>
 
         <TextBlock x:Name="UpdateUITextBlock" Grid.ColumnSpan="30" Grid.RowSpan="5" Grid.Row="4" Grid.Column="95"
                    FontSize="22" FontFamily="Cascadia code" FontWeight="Bold"></TextBlock>
