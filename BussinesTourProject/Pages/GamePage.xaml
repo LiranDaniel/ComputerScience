@@ -1284,7 +1284,7 @@
                    Grid.ColumnSpan="5" Grid.RowSpan="4"></Image>
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
-              Background="Black" CornerRadius="30" x:Name="UIBuyingHouse" Visibility="Collapsed">
+              Background="Black" CornerRadius="30" x:Name="UIBuyingHouse" >
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -1313,8 +1313,8 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Button FontFamily="Aharoni" Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="3"
-                    Content="Buy House" Style="{StaticResource MyButtonStyle}" FontSize="30"
+            <Button FontFamily="Aharoni" Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="4" Grid.RowSpan="2"
+                    Content="Buy House" Style="{StaticResource MyButtonStyle}" FontSize="25"
                     Click="ButtonBuyHouse_Click" PointerEntered="btn_PointerEnteredRegular" 
                     PointerExited="btn_PointerExitedRegular"></Button>
 
@@ -1324,7 +1324,7 @@
             </RadioButton>
 
             <TextBlock Grid.Column="1" Grid.Row="4" FontFamily="Cascadia code" Grid.ColumnSpan="2"
-                       HorizontalAlignment="Right" VerticalAlignment="Center">House Level 1</TextBlock>
+                       HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12">House Level 1</TextBlock>
             
             <RadioButton x:Name="optionHouse2RadioButton" GroupName="Options" Grid.Column="5" Grid.Row="2"
                    Grid.ColumnSpan="2" Grid.RowSpan="2" Checked="optionHouse2RadioButton_Checked">
@@ -1332,7 +1332,7 @@
             </RadioButton>
 
             <TextBlock Grid.Column="5" Grid.Row="4" FontFamily="Cascadia code" Grid.ColumnSpan="2"
-                       HorizontalAlignment="Right" VerticalAlignment="Center">House Level 2</TextBlock>
+                       HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12">House Level 2</TextBlock>
             
             <RadioButton x:Name="optionHouse3RadioButton" GroupName="Options"  Grid.Column="9" Grid.Row="2"
                    Grid.ColumnSpan="2" Grid.RowSpan="2" Checked="optionHouse3RadioButton_Checked">
@@ -1340,10 +1340,10 @@
             </RadioButton>
 
             <TextBlock Grid.Column="9" Grid.Row="4" FontFamily="Cascadia code" Grid.ColumnSpan="2"
-                       HorizontalAlignment="Right" VerticalAlignment="Center">House Level 3</TextBlock>
+                       HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="12">House Level 3</TextBlock>
 
-            <TextBlock Grid.Column="3" Grid.Row="6" FontFamily="Cascadia code" Grid.ColumnSpan="5" x:Name="txtBuyingPrice"
-                       HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="Select To Buy" FontWeight="Bold"></TextBlock>
+            <TextBlock Grid.Column="3" Grid.Row="6" FontFamily="Cascadia code" Grid.ColumnSpan="6" x:Name="txtBuyingPrice"
+                       HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Text="Select To Buy" FontWeight="Bold"></TextBlock>
 
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
