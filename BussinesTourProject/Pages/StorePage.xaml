@@ -51,13 +51,16 @@
 
         </Grid.RowDefinitions>
 
-
         <Grid Grid.Column='3' Grid.Row="2" Grid.ColumnSpan="12" Grid.RowSpan="8"
-              BorderBrush="Black" BorderThickness="7" CornerRadius="40" >
+              BorderBrush="Black" BorderThickness="7" CornerRadius="40">
+            
             <Grid.Background>
                 <SolidColorBrush Color="White" Opacity=".25"></SolidColorBrush>
             </Grid.Background>
+
+            <RadioButton></RadioButton>
         </Grid>
+        
         <Button Grid.Row="0" Grid.Column="0" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited"
                 x:Name="btnSlider" Click="btn_SliderVertical_Click" Style="{StaticResource MyButtonStyle}">
             <Image x:Name="imgSlider" Source="/Assets\Buttons\UsingButtons\Slider (2).png"></Image>
