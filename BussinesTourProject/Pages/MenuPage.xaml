@@ -72,7 +72,7 @@
 
         <Button x:Name="btnSettings" Grid.Column="12" Grid.Row="2" Background="Transparent" Style="{StaticResource MyButtonStyle}"
                 Click="btnSettings_Click" PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited">
-                <Image x:Name="imgSettings" Source="/Assets\Buttons\UsingButtons\Settings (2).png"></Image>
+                <Image x:Name="imgSettings" Source="/Assets\Buttons\UsingButtons\Settings (2).png" Visibility="Collapsed"></Image>
         </Button>
 
             <Image Source="/Assets\Images\BussinesTour Logo.png"
