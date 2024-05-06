@@ -94,7 +94,7 @@ namespace BussinesTourProject.Pages
             player.Img = imgPlayer;
             Grid.SetRow(player.Img, player.PlayerPosition[0, 0]);
             Grid.SetColumn(player.Img, player.PlayerPosition[1, 0]);
-            player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarForward.png"));
+            player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.playerNumber + "/RedCarForward.png"));
         }
 
         public static void ChangePlayerPositionAnimation(Player player, int diceResult)
@@ -326,30 +326,9 @@ namespace BussinesTourProject.Pages
                     player.ChangePlayerImageByEnumValue(2);
                 else if (currentPosition == 24)
                     player.ChangePlayerImageByEnumValue(3);
-                else if (currentPosition > 8 && currentPosition < 16)
-                {
-                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarRight.png"));
-                    Grid.SetColumnSpan(player.Img, 6);
-                    Grid.SetRowSpan(player.Img, 3);
-                }
-                else if (currentPosition > 16 && currentPosition < 24)
-                {
-                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarBackward.png"));
-                    Grid.SetColumnSpan(player.Img, 3);
-                    Grid.SetRowSpan(player.Img, 5);
-                }
-                else if (currentPosition > 24 && currentPosition < 31)
-                {
-                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarLeft.png"));
-                    Grid.SetColumnSpan(player.Img, 6);
-                    Grid.SetRowSpan(player.Img, 3);
-                }
-                else if (currentPosition > 0 && currentPosition < 8)
-                {
-                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarForward.png"));
-                    Grid.SetColumnSpan(player.Img, 3);
-                    Grid.SetRowSpan(player.Img, 5);
-                }
+                else
+                    player.ChangePlayerImageByPosition(currentPosition);
+
                 if (currentPosition == 0)
                 {
                     player.amountOfMoney += 300_000;

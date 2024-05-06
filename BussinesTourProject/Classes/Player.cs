@@ -31,8 +31,9 @@ namespace BussinesTourProject.Classes
         {
             forward, backward, right, left
         }
-        public Player(string imgName, state[] playerState, string name)
+        public Player(string playerNumber, string imgName, state[] playerState, string name)
         {
+            this.playerNumber = playerNumber;
             this.imgName = imgName;
             this.name = name;
             this.currentPosition = 0;
@@ -63,33 +64,61 @@ namespace BussinesTourProject.Classes
             switch (playerState[stateIndex])
             {
                 case Player.state.left:
-
-                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName + "Left.png"));
+                    //                                                             /Players/Player1/RedCarForward.png
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarLeft.png"));
                     Grid.SetColumnSpan(Img, 6);
                     Grid.SetRowSpan(Img, 3);
                     break;
 
                 case Player.state.right:
 
-                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName + "Right.png"));
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarRight.png"));
                     Grid.SetColumnSpan(Img, 6);
                     Grid.SetRowSpan(Img, 3);
                     break;
 
                 case Player.state.forward:
 
-                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName + "Forward.png"));
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarForward.png"));
                     Grid.SetColumnSpan(Img, 3);
                     Grid.SetRowSpan(Img, 5);
                     break;
 
                 case Player.state.backward:
 
-                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/" + imgName + "Backward.png"));
+                    Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarBackward.png"));
                     Grid.SetColumnSpan(Img, 3);
                     Grid.SetRowSpan(Img, 5);
                     break;
             }
+        }
+        public void ChangePlayerImageByPosition(int currentPosition)
+        {
+            if(currentPosition > 0 && currentPosition < 8)
+            {
+                Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarForward.png"));
+                Grid.SetColumnSpan(Img, 3);
+                Grid.SetRowSpan(Img, 5);
+            }
+            else if (currentPosition > 8 && currentPosition < 16)
+            {
+                Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarRight.png"));
+                Grid.SetColumnSpan(Img, 6);
+                Grid.SetRowSpan(Img, 3);
+            }
+            else if (currentPosition > 16 && currentPosition < 24)
+            {
+                Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarBackward.png"));
+                Grid.SetColumnSpan(Img, 3);
+                Grid.SetRowSpan(Img, 5);
+            }
+            else
+            {
+                Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + playerNumber + "/RedCarLeft.png"));
+                Grid.SetColumnSpan(Img, 6);
+                Grid.SetRowSpan(Img, 3);
+            }
+            
         }
 
 

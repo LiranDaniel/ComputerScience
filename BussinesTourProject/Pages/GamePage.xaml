@@ -1453,7 +1453,7 @@
 
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
-              Background="Black" CornerRadius="30" x:Name="UITax" ></Grid>
+              Background="Black" CornerRadius="30" x:Name="UITax" Visibility="Collapsed"></Grid>
 
         <Button x:Name="btnProfile" Grid.Column="2" Grid.Row="60" Grid.ColumnSpan="10" Grid.RowSpan="10"
                 PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Click="btnMovePlayer_Click">
