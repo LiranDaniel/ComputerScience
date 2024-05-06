@@ -64,7 +64,7 @@ namespace BussinesTourProject.Pages
 
         private void btnMusic_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(BlankPage1));
+            Frame.Navigate(typeof(SoundPage));
         }
 
         private void btnInfo_Click(object sender, RoutedEventArgs e)
