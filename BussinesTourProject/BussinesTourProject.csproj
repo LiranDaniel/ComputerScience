@@ -462,6 +462,18 @@
     <Content Include="Assets\Images\Players\Player1\RedCarBackward.png" />
     <Content Include="Assets\Images\Players\Player1\RedCarLeft.png" />
     <Content Include="Assets\Images\Players\Player1\RedCarRight.png" />
+    <Content Include="Assets\Images\Players\Player2\YellowCarBackward.png" />
+    <Content Include="Assets\Images\Players\Player2\YellowCarForward.png" />
+    <Content Include="Assets\Images\Players\Player2\YellowCarLeft.png" />
+    <Content Include="Assets\Images\Players\Player2\YellowCarRight.png" />
+    <Content Include="Assets\Images\Players\Player3\PurpleCarBackward.png" />
+    <Content Include="Assets\Images\Players\Player3\PurpleCarForward.png" />
+    <Content Include="Assets\Images\Players\Player3\PurpleCarLeft.png" />
+    <Content Include="Assets\Images\Players\Player3\PurpleCarRight.png" />
+    <Content Include="Assets\Images\Players\Player4\BlueCarBackward.png" />
+    <Content Include="Assets\Images\Players\Player4\BlueCarForward.png" />
+    <Content Include="Assets\Images\Players\Player4\BlueCarLeft.png" />
+    <Content Include="Assets\Images\Players\Player4\BlueCarRight.png" />
     <Content Include="Assets\Images\Screenshot 2024-02-29 232955.png" />
     <Content Include="Assets\Images\SignInBackGround.png" />
     <Content Include="Assets\Images\SquareImages\BlockImages\blockBrick.png" />
@@ -579,11 +591,7 @@
       <Name>DataBase</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\Images\Players\Player2\" />
-    <Folder Include="Assets\Images\Players\Player3\" />
-    <Folder Include="Assets\Images\Players\Player4\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="DBGame.db" />
   </ItemGroup>

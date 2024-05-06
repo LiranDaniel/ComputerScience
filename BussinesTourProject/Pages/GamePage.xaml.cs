@@ -94,7 +94,7 @@ namespace BussinesTourProject.Pages
             player.Img = imgPlayer;
             Grid.SetRow(player.Img, player.PlayerPosition[0, 0]);
             Grid.SetColumn(player.Img, player.PlayerPosition[1, 0]);
-            player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.playerNumber + "/RedCarForward.png"));
+            player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.playerNumber + "/" + player.imgName + "Forward.png"));
         }
 
         public static void ChangePlayerPositionAnimation(Player player, int diceResult)

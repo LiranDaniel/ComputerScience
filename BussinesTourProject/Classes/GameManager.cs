@@ -96,13 +96,13 @@ namespace BussinesTourProject.Classes
             state.backward, state.left}, name:"Alexander Yanai", imgName:"RedCar" , playerNumber:"Player1"),
 
             new Player(playerState: new state[4]{state.forward, state.right, state.backward,
-            state.left}, name:"Daniel Shlomo", imgName:"RedCar" , playerNumber:"Player2"),
+            state.left}, name:"Daniel Shlomo", imgName:"YellowCar" , playerNumber:"Player2"),
 
             new Player(playerState: new state[4]{state.forward, state.forward, state.right,
-            state.backward}, name:"Liran Daniel", imgName:"RedCar" , playerNumber:"Player3"),
+            state.backward}, name:"Liran Daniel", imgName:"PurpleCar" , playerNumber:"Player3"),
 
             new Player(playerState: new state[4]{state.forward, state.forward, state.right,
-                state.backward}, name:"Oleg woller", imgName:"RedCar" , playerNumber:"Player4")};
+                state.backward}, name:"Oleg woller", imgName:"BlueCar" , playerNumber:"Player4")};
         }
         
         public static void Land()
