@@ -34,7 +34,7 @@ namespace BussinesTourProject.Classes
         public Player(string playerNumber, string imgName, state[] playerState, string name)
         {
             this.playerNumber = playerNumber;
-            this.imgName = imgName;
+            this.imgName = "RedCar";
             this.name = name;
             this.currentPosition = 0;
             amountOfMoney = 2_000_000;
