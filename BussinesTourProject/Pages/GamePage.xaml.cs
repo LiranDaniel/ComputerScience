@@ -97,61 +97,6 @@ namespace BussinesTourProject.Pages
             player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.playerNumber + "/" + player.imgName + "Forward.png"));
         }
 
-        public static void ChangePlayerPositionAnimation(Player player, int diceResult)
-        {
-            int currentPosition = player.currentPosition + 1;
-            player.ChangePlayerPosition(1); // changing position of the player, and make sure that there is not overflow
-            for (int i = 0; i < 1; i++)
-            {
-
-                while (currentPosition > (player.PlayerPosition.GetLength(1) - 1))
-                {
-                    currentPosition -= player.PlayerPosition.GetLength(1);
-                }
-                if (currentPosition == 8)
-                {
-                    player.ChangePlayerImageByEnumValue(1);
-                }
-                else if (currentPosition > 8 && currentPosition < 16)
-                {
-                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarRight.png"));
-                    Grid.SetColumnSpan(player.Img, 6);
-                    Grid.SetRowSpan(player.Img, 3);
-                }
-                else if (currentPosition == 16)
-                    player.ChangePlayerImageByEnumValue(2);
-                else if (currentPosition > 16 && currentPosition < 24)
-                {
-                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarBackward.png"));
-                    Grid.SetColumnSpan(player.Img, 3);
-                    Grid.SetRowSpan(player.Img, 5);
-                }
-                else if (currentPosition == 24)
-                    player.ChangePlayerImageByEnumValue(3);
-                else if (currentPosition > 24 && currentPosition < 31)
-                {
-                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarLeft.png"));
-                    Grid.SetColumnSpan(player.Img, 6);
-                    Grid.SetRowSpan(player.Img, 3);
-                }
-                else if (currentPosition == 0)
-                    player.ChangePlayerImageByEnumValue(0);
-                else if (currentPosition > 0 && currentPosition < 8)
-                {
-                    player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.imgName + "/RedCarForward.png"));
-                    Grid.SetColumnSpan(player.Img, 3);
-                    Grid.SetRowSpan(player.Img, 5);
-                }
-
-                Grid.SetRow(player.Img, player.PlayerPosition[0, currentPosition]);
-                Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);
-                Task.Delay(5000);
-
-                currentPosition++;
-
-            }
-        }
-
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             Button btnPlayEnter = (Button)sender;
@@ -172,17 +117,6 @@ namespace BussinesTourProject.Pages
         {
             Frame.Navigate(typeof(MenuPage));
         }
-
-        private void btnMovePlayer_Click(object sender, RoutedEventArgs e)
-        {
-            ChangePlayerPositionAnimation(GameManager.arrayPlayers[0], 1);
-        }
-
-        private void btnSettings_Click(object sender, RoutedEventArgs e)
-        {
-            ChangePlayerPositionAnimation(GameManager.arrayPlayers[1], 1);
-        }
-
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {

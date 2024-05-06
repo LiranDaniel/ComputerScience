@@ -1455,18 +1455,8 @@
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
               Background="Black" CornerRadius="30" x:Name="UITax" Visibility="Collapsed"></Grid>
 
-        <Button x:Name="btnProfile" Grid.Column="2" Grid.Row="60" Grid.ColumnSpan="10" Grid.RowSpan="10"
-                PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Click="btnMovePlayer_Click">
-            <Image x:Name="imgProfile" Source="/Assets\Buttons\UsingButtons\Profile (2).png"></Image>
-        </Button>
-        
-        <Button x:Name="btnSettings" Grid.Column="2" Grid.Row="70" Grid.ColumnSpan="10" Grid.RowSpan="10"
-                PointerEntered="btn_PointerEntered" PointerExited="btn_PointerExited" Click="btnSettings_Click">
-            <Image x:Name="imgSettings" Source="/Assets\Buttons\UsingButtons\Settings (2).png"></Image>
-        </Button>
-
-
-        <TextBlock x:Name="UpdateUITextBlock" Grid.ColumnSpan="30" Grid.RowSpan="10" Grid.Row="26" Grid.Column="5"></TextBlock>
+        <TextBlock x:Name="UpdateUITextBlock" Grid.ColumnSpan="30" Grid.RowSpan="5" Grid.Row="4" Grid.Column="95"
+                   FontSize="22" FontFamily="Cascadia code" FontWeight="Bold"></TextBlock>
 
     </Grid>
 </Page>
