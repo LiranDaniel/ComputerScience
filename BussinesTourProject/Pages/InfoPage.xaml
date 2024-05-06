@@ -82,10 +82,15 @@
         <Viewbox Grid.Column='5' Grid.Row="3" Grid.ColumnSpan="22" Grid.RowSpan="13">
             <TextBlock x:Name="blockInfo" Grid.Row="5" Grid.Column="7" Grid.ColumnSpan="18" Grid.RowSpan="13"
                    FontSize="50" FontFamily="Ink Draft" Foreground="Black" HorizontalAlignment="Left"
-                   VerticalAlignment="Top" Text="&#10; there are few ways to win: 
+                   VerticalAlignment="Top" Text="
+                                                 &#10; To play this game you simple need to roll the dice and than buy properties
+                                                 &#10; all around the map.
+                                                 &#10; 
+                                                 &#10; there are few ways to win: 
                                                  &#10; First you can earn more money than control 3 monopoly.
                                                  &#10; Second you can control get Station monopoly by buying all the stations and win.
-                                                 &#10; Third when the game come to its end than the player with the highest value will win.         ">
+                                                 &#10; Third when the game come to its end than the player with the highest value will win. 
+                                                 ">
 
             </TextBlock>
         </Viewbox>
