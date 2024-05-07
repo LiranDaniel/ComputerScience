@@ -16,8 +16,6 @@ namespace DataBase.Models
         public string CurrentSkin { get; set; } = "Defulte"; // his current sking in the database
         public string CurrentAvatar { get; set; } = "Defulte"; // his current avatar in the database
 
-
-
         private static Dictionary<string, string> filePathSkins = new Dictionary<string, string>() {
                 {"Defulte", @"/Assets\Images\SquareImages\House1.png"},
                 {"CoolCar1", @"/Assets\Images\SquareImages\House2.png"},

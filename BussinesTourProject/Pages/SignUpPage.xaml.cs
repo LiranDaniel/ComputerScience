@@ -31,7 +31,6 @@ namespace BussinesTourProject.Pages
             this.InitializeComponent();
         }
 
-
         /// <summary>
         /// When you use your mouse and getting entered a buttons area than the function is Being called.
         /// This function is just changing the buttons image into some else image that show that you enterd the area
