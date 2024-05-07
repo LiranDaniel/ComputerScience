@@ -9,12 +9,12 @@ namespace DataBase.Models
 {
     public class User
     {
-        public int Id { get; set; }
-        public string Name { get; set; } = "Anonymous";
-        public string Email { get; set; }
-        public int Money { get; set; } = 100;
-        public string CurrentSkin { get; set; } = "Defulte";
-        public string CurrentAvatar { get; set; } = "Defulte";
+        public int Id { get; set; } // id of the player in the database
+        public string Name { get; set; } = "Anonymous"; // his name in the database
+        public string Email { get; set; } // his email in the database
+        public int Money { get; set; } = 100; // his amount of money in the database
+        public string CurrentSkin { get; set; } = "Defulte"; // his current sking in the database
+        public string CurrentAvatar { get; set; } = "Defulte"; // his current avatar in the database
 
 
 
