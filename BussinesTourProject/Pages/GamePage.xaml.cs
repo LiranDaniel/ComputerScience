@@ -57,7 +57,7 @@ namespace BussinesTourProject.Pages
             timerGame.Start();
 
             GameManager.timerPlayers = new DispatcherTimer();
-            GameManager.timerPlayers.Interval = TimeSpan.FromSeconds(5);
+            GameManager.timerPlayers.Interval = TimeSpan.FromSeconds(15);
             GameManager.timerPlayers.Tick += TimerPlayers_Tick;
         }
 
