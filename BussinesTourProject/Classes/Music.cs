@@ -10,9 +10,9 @@ namespace BussinesTourProject.Classes
 {
     public static class Music
     {
-        public static MediaPlayer _mediaPlayer = new MediaPlayer();
-        public static bool IsOn { get; set; } = true;
-        public static double Volume { get; private set; } = 100;
+        public static MediaPlayer _mediaPlayer = new MediaPlayer(); // media player object, the object that will play the music
+        public static bool IsOn { get; set; } = true;               // IsOn variable that present of the music is active or not
+        public static double Volume { get; private set; } = 100;    // volume of the music
 
         /// <summary>
         /// Load the music: its file and its volume and everthing

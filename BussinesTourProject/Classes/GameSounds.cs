@@ -10,9 +10,8 @@ namespace BussinesTourProject.Classes
 {
     public static class GameSounds
     {
-        public static MediaPlayer _mediaPlayer = new MediaPlayer();
-
-        public static bool IsOn = false;
+        public static MediaPlayer _mediaPlayer = new MediaPlayer(); // object that holds will be control on the game sounds effects
+        public static bool IsOn = false;                            // IsOn variable that present of the music is active or not 
 
         /// <summary>
         /// Set the music file and start it 
@@ -26,6 +25,7 @@ namespace BussinesTourProject.Classes
                 _mediaPlayer.Play();
             }
         }
+
         /// <summary>
         /// stop the music mediaplayer
         /// </summary>

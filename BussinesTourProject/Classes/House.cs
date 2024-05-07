@@ -27,7 +27,7 @@ namespace BussinesTourProject.Classes
                 {HouseState.Hotel, @"/Assets\Images\SquareImages\HousesIcons\House4.png"}
         };
 
-        public HouseState houseCurrentState;
+        public HouseState houseCurrentState; // hold the current house level state
         public int levelUpgradePrice; // If you upgrade your house then you need to pay that amount of money between every level upgrade
 
         public House(int basicCostToBuy, int basicCostToPayRent, int levelUpgradeRent, int levelUpgradePrice) : 

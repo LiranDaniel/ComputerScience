@@ -13,19 +13,19 @@ namespace BussinesTourProject.Classes
     {
         // Matrix.GetLenght(0) == Number of rows
         // Matrix.GetLenght(1) == Number of column 
-        public const int MaxPosition = 32;
-        public int[,] PlayerPosition;
-        public int currentPosition;
-        public int amountOfMoney;
-        public string name;
-        public string imgName;
-        public string playerNumber;
-        public Image Img;
-        public state[] playerState;
-        public int turnsStackJail;
-        public TextBlock txtMoney;
-        public TextBlock txtState;
-        public int playerStations = 0;
+        public const int MaxPosition = 32; // max amount of squares in the map
+        public int[,] PlayerPosition;      // array of all the position of the player
+        public int currentPosition;        // the current position of the player on the map
+        public int amountOfMoney;          // the amount of money that the player have
+        public string name;                // player name
+        public string imgName;             // player img name
+        public string playerNumber;        // the number of the player
+        public Image Img;                  // the Image object of the player in the game
+        public state[] playerState;        // the state of the player on the special squares at the map
+        public int turnsStackJail;         // how much turns remain him to be stuck in jail
+        public TextBlock txtMoney;         // the Text block object that display his amount of money in the game
+        public TextBlock txtState;         // the Text block object that display his state in the game
+        public int playerStations = 0;     // the amount of Station that he have
 
         public enum state
         {
