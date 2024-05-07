@@ -29,6 +29,13 @@ namespace BussinesTourProject.Pages
             this.InitializeComponent();
         }
 
+        /// <summary>
+        /// When you use your mouse and getting entered a buttons area than the function is Being called.
+        /// This function is just changing the buttons image into some else image that show that you enterd the area
+        /// also this function changing the mouse Cursor into hand shape
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             Button btnPlayEnter = (Button)sender;
@@ -36,6 +43,15 @@ namespace BussinesTourProject.Pages
                 "Assets/Buttons/UsingButtons/" + ((Image)btnPlayEnter.Content).Name.Replace("img", "") + " (1).png"));
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
         }
+
+        /// <summary>
+        /// When you use your mouse and leave the buttons area this function is being called
+        /// This function is just changing the buttons image into some else image that show that you leaved the area
+        /// also this function changing the mouse Cursor into hand shape
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void btn_PointerExited(object sender, PointerRoutedEventArgs e)
         {
 
@@ -45,11 +61,22 @@ namespace BussinesTourProject.Pages
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
 
+        /// <summary>
+        /// Just navigate you into the menu page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_SliderVertical_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MenuPage));
         }
 
+        /// <summary>
+        /// Check if the informations are correct and if it is then log in
+        /// also display the appropiate pop up
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void btnSignIn_Click(object sender, RoutedEventArgs e)
         {
             if(Server.IsConnected(tboxMail, tboxPassword))
@@ -68,22 +95,21 @@ namespace BussinesTourProject.Pages
 
         }
 
+        /// <summary>
+        /// Just navigate you into the sign up page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSignUp_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(SignUpPage));
         }
 
-
-
-        private async void LogInImage_PointerOressed(object sender, PointerRoutedEventArgs e)
-        {
-            if (tboxPassword.Password == "" || tboxMail.Text == "")
-                await new MessageDialog("Data is missing!", "Tennis").ShowAsync();
-            else
-                // validate
-                await Console.Out.WriteLineAsync(   );
-        }
-
+        /// <summary>
+        /// Just navigate you into the restore password page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRestorePassword_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(RestorePasswordPage));

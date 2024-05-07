@@ -16,6 +16,11 @@ namespace BussinesTourProject.Classes
         public Station() : base (basicCostToBuy: 200_000, basicCostToPayRent: 50_000,
             levelUpgradeRent: 50_000) { }
 
+
+        /// <summary>
+        /// Increase Station value if there is more than one station
+        /// that the current player owns
+        /// </summary>
         private void IncreaseValuesStation()
         {
             foreach(object obj in GameManager.ArrayMap)
@@ -43,6 +48,10 @@ namespace BussinesTourProject.Classes
                 }
             }
         }
+
+        /// <summary>
+        /// Upgrade the station
+        /// </summary>
         public void PropertyUpgrade()
         {
             currentCostToBuy = basicCostToBuy;
@@ -66,6 +75,10 @@ namespace BussinesTourProject.Classes
 
             IncreaseValuesStation();
         }
+
+        /// <summary>
+        /// Buy for the current player the current station
+        /// </summary>
         public void BuyProperty()
         {
             ownerOfTheProperty = GameManager.currentPlayer;

@@ -8,6 +8,11 @@ namespace BussinesTourProject.Classes
 {
     public class Tax
     {
+        /// <summary>
+        /// Calculate the amount of money that the current player have to pay if he lands on the tax square
+        /// </summary>
+        /// <param name="player"></param>
+        /// <returns></returns>
         public static int CalculateTaxes(Player player)
         {
             int taxes = player.amountOfMoney;

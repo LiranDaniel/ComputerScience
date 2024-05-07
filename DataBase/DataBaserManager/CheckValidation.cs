@@ -10,6 +10,11 @@ namespace DataBase.DataBaserManager
 {
     public class CheckValidation
     {       
+        /// <summary>
+        /// Check if the string is includes some digit
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns></returns>
         private static bool IsIncludeDigit(string str)
         {
             foreach (char c in str)
@@ -20,6 +25,11 @@ namespace DataBase.DataBaserManager
             return false;
         }
 
+        /// <summary>
+        /// Check if the mail is valid
+        /// </summary>
+        /// <param name="mail"></param>
+        /// <returns></returns>
         public static bool IsMailValid(string mail)
         {
             if((mail.IndexOf("@") < 0) || (mail.IndexOf(".") < mail.IndexOf("@")) ||
@@ -30,6 +40,11 @@ namespace DataBase.DataBaserManager
             return true;
         }
 
+        /// <summary>
+        /// Check if the password is valid
+        /// </summary>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public static bool IsPasswordValid(string password) 
         {
             if ((password.Length < 8) || (password.ToUpper() == password) ||

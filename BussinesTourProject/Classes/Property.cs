@@ -28,6 +28,11 @@ namespace BussinesTourProject.Classes
             this.currentCostToPayRent = 0;
         }
 
+        /// <summary>
+        /// Set property Image displayed in map, and Set its txt rent price displayed
+        /// </summary>
+        /// <param name="imageOfProperty"></param>
+        /// <param name="txtOfMoneyDisplayRent"></param>
         public void SetImageAndTxt(Image imageOfProperty, TextBlock txtOfMoneyDisplayRent)
         {
             this.txtOfMoneyDisplayRent = txtOfMoneyDisplayRent;

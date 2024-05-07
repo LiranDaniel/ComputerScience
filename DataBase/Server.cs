@@ -21,8 +21,8 @@ namespace DataBase
     public static class Server
     {
 
-        private static string dbPath = ApplicationData.Current.LocalFolder.Path;
-        private static string connectString = "Filename=" + dbPath + "\\DBGame.db";
+        private static string dbPath = ApplicationData.Current.LocalFolder.Path; // the path location of the database
+        private static string connectString = "Filename=" + dbPath + "\\DBGame.db"; // the full path of the database file
 
         
         // Method to play the sound for a specific duration
@@ -40,7 +40,10 @@ namespace DataBase
             mediaPlayer.Dispose(); // Dispose the MediaPlayer instance
         }
 
-
+        /// <summary>
+        /// This method is displaying pop up message 
+        /// </summary>
+        /// <param name="message"> displaying the message the getting as parameter</param>
         private async static void PopUpMessage(string message)
         {
             var dialog = new MessageDialog(message);
@@ -48,6 +51,13 @@ namespace DataBase
             await dialog.ShowAsync();
         }
 
+        /// <summary>
+        /// Sign the user if hes iformation is valid and are not exist to the database
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="name"></param>
+        /// <param name="password"></param>
+        /// <param name="passwordConfirm"></param>
         public  static void SignUp(string email,string name,
             string password, string passwordConfirm)
         {
@@ -118,7 +128,12 @@ namespace DataBase
         }
 
 
-
+        /// <summary>
+        /// Connect the use into the data base if the information are valids
+        /// </summary>
+        /// <param name="mailTestBlox"></param>
+        /// <param name="passwordTextBlox"></param>
+        /// <returns></returns>
         public static bool IsConnected(TextBox mailTestBlox, PasswordBox passwordTextBlox)
         {
             string email = mailTestBlox.Text;
@@ -155,6 +170,14 @@ namespace DataBase
             }
         }
 
+
+        /// <summary>
+        /// restore user password if the mail is valid and if the password are also valid
+        /// </summary>
+        /// <param name="mail"> used to locate the user in the database </param>
+        /// <param name="password"> used to check if the password is valid, and to know for what to change</param>
+        /// <param name="confirmPassword"> use to veriy the password, to make sure the he didn't miss clicked some key</param>
+        /// <returns></returns>
         public static bool RestorePassword(string mail, string password, string confirmPassword) 
         {
 

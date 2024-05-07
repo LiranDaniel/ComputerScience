@@ -18,6 +18,7 @@ namespace BussinesTourProject.Classes
             villa = 3, 
             Hotel = 4
         }
+
         public static Dictionary<HouseState, string> filePathImageHouses = new Dictionary<HouseState, string>() {
                 {HouseState.None, null},
                 {HouseState.BasicHouse, @"/Assets\Images\SquareImages\HousesIcons\House1.png"},
@@ -36,7 +37,12 @@ namespace BussinesTourProject.Classes
             this.houseCurrentState = HouseState.None;
         }
 
-
+        /// <summary>
+        /// when upgrading the house updateing the display rent price, image,
+        /// and decrease from the player amount of money the price of the upgrade.
+        /// updating the currentPriceToPay and the currentBuyingPrice
+        /// </summary>
+        /// <param name="level"></param>
         public void PropertyUpgrade(int level)
         {
             houseCurrentState = (HouseState)level;
@@ -62,6 +68,11 @@ namespace BussinesTourProject.Classes
             string formattedNumber = ownerOfTheProperty.amountOfMoney.ToString("N0"); // adding 
             ownerOfTheProperty.txtMoney.Text = $"{formattedNumber}$";
         }
+
+        /// <summary>
+        /// buys for the player the property
+        /// </summary>
+        /// <param name="level"></param>
         public void BuyProperty(int level)
         {
             ownerOfTheProperty = GameManager.currentPlayer;
