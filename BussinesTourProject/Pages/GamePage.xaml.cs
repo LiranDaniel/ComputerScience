@@ -33,16 +33,22 @@ namespace BussinesTourProject.Pages
     /// </summary>
     public sealed partial class GamePage : Page
     {
-        private DispatcherTimer timerGame;
-        private int secondsElapsed;
-        private int minutes;
+        private DispatcherTimer timerGame; // timer of the game
+        private int secondsElapsed; // minute of the timer of the game
+        private int minutes;        // seconds of the timer of the game
 
+        /// <summary>
+        /// Initiate the Components for the page
+        /// </summary>
         public GamePage()
         {
             this.InitializeComponent();
             InitializeTimers();
         }
 
+        /// <summary>
+        /// Initiate the timers, adding to the timer function and defining the time to play
+        /// </summary>
         private void InitializeTimers()
         {
             timerGame = new DispatcherTimer();
@@ -54,6 +60,13 @@ namespace BussinesTourProject.Pages
             GameManager.timerPlayers.Interval = TimeSpan.FromSeconds(5);
             GameManager.timerPlayers.Tick += TimerPlayers_Tick;
         }
+
+        /// <summary>
+        /// at every second this function is been calling and displays the time of the game,
+        /// also when the times play is 20 mins then the game is end
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TimerGame_Tick(object sender, object e)
         {
             secondsElapsed++;
@@ -71,6 +84,13 @@ namespace BussinesTourProject.Pages
             if (minutes == 20 && secondsElapsed == 0)
                 GameOver();
         }
+
+        /// <summary>
+        /// when starting the timer after 5 seconds this function is calling,
+        /// after that the function closing every opened UI. also stopping the timer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TimerPlayers_Tick(object sender, object e)
         {
             GameManager.UIBuyingHouseGrid.Visibility = Visibility.Collapsed;
@@ -83,11 +103,18 @@ namespace BussinesTourProject.Pages
             GameManager.CheckIfDouble();
         }
 
+        //Just navigate into different page
         private void GameOver()
         {
             Frame.Navigate(typeof(SignInPage));
         }
 
+        /// <summary>
+        /// This function is Initiating the data of a player from this page
+        /// </summary>
+        /// <param name="player"> refrence into a player object</param>
+        /// <param name="imgPlayer"> refrence into the image of that player in the map</param>
+        /// <param name="playerMatrixPositions"> refrence into the matrix of all the positions of the players</param>
         private static void InitPlayer(Player player, Image imgPlayer, int[,] playerMatrixPositions)
         {
             player.SetPlayerPosition(playerMatrixPositions);
@@ -97,6 +124,13 @@ namespace BussinesTourProject.Pages
             player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.playerNumber + "/" + player.imgName + "Forward.png"));
         }
 
+        /// <summary>
+        /// When you use your mouse and getting entered a buttons area than the function is Being called.
+        /// This function is just changing the buttons image into some else image that show that you enterd the area
+        /// also this function changing the mouse Cursor into hand shape
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             Button btnPlayEnter = (Button)sender;
@@ -105,6 +139,13 @@ namespace BussinesTourProject.Pages
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
         }
 
+        /// <summary>
+        /// When you use your mouse and leave the buttons area this function is being called
+        /// This function is just changing the buttons image into some else image that show that you leaved the area
+        /// also this function changing the mouse Cursor into hand shape
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             Button btnPlayExit = (Button)sender;
@@ -113,11 +154,24 @@ namespace BussinesTourProject.Pages
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
 
+        /// <summary>
+        /// When the pause button is being pressed the function is being called
+        /// and its basickly just navigate you into the menupage
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_Pause_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MenuPage));
         }
 
+        /// <summary>
+        /// This function is Being called when you enter the page
+        /// everthing it does is basickly just Initiate and definding few important things
+        /// plyers Information, UI Grids and many other information on the map
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             GameManager.InitPlayers();
@@ -142,6 +196,10 @@ namespace BussinesTourProject.Pages
             Jail.txtRemaningRoundJail = txtRemaningRoundJail;
         }
 
+        /// <summary>
+        /// this function is definding the veriables that are saved in the GameManager class
+        /// that we could get access to change the name of the player and their money
+        /// </summary>
         private void SetPlayerTxtBlocks()
         {
             txtPlayer1Name.Text = GameManager.arrayPlayers[0].name;
