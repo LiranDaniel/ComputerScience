@@ -43,11 +43,19 @@ namespace BussinesTourProject.Classes
             this.turnsStackJail = 0;
         }
 
+        /// <summary>
+        /// just setting player position array
+        /// </summary>
+        /// <param name="PlayerPosition"></param>
         public void SetPlayerPosition(int[,] PlayerPosition)
         {
             this.PlayerPosition = PlayerPosition;
         }
 
+        /// <summary>
+        /// Change player positon
+        /// </summary>
+        /// <param name="diceResult"></param>
         public void ChangePlayerPosition(int diceResult)
         {
             currentPosition += diceResult;
@@ -59,6 +67,11 @@ namespace BussinesTourProject.Classes
                 this.turnsStackJail = 3;
         }
 
+        /// <summary>
+        /// when you are going thought the special square basickly it those is just 
+        /// chaning the player angel the appropriate one that specific square
+        /// </summary>
+        /// <param name="stateIndex"></param>
         public void ChangePlayerImageByEnumValue(int stateIndex)
         {
 
@@ -94,6 +107,10 @@ namespace BussinesTourProject.Classes
             }
         }
 
+        /// <summary>
+        /// changing the player angle compare to his position
+        /// </summary>
+        /// <param name="currentPosition"></param>
         public void ChangePlayerImageByPosition(int currentPosition)
         {
             if(currentPosition > 0 && currentPosition < 8)
@@ -123,6 +140,11 @@ namespace BussinesTourProject.Classes
             
         }
 
+        /// <summary>
+        /// caculate the overall value of the player. Includes: his amount of money,
+        /// and his overall buy prive of his property
+        /// </summary>
+        /// <returns></returns>
         public int CalculatePropertyValue()
         {
             int value = 0;
