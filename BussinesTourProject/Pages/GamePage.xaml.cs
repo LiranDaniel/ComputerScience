@@ -216,6 +216,9 @@ namespace BussinesTourProject.Pages
             GameManager.arrayPlayers[3].txtState = txtPlayer4Status;     
         }
 
+        /// <summary>
+        /// Set the image and the priceOfRent of every square in the map
+        /// </summary>
         private void SetImageAndTextBlockForProperty()
         {
             ((Property)GameManager.ArrayMap[1]).SetImageAndTxt(imgGranadaHouse, txtRentGranada);
@@ -247,6 +250,10 @@ namespace BussinesTourProject.Pages
             ((Property)GameManager.ArrayMap[31]).SetImageAndTxt(imgTokyoHouse, txtRentTokyo);
         }
 
+        /// <summary>
+        /// moving the player into the jail Square
+        /// </summary>
+        /// <param name="player"></param>
         private async void MoveToJail(Player player)
         {
             GridCards.Visibility = Visibility.Visible;
@@ -260,6 +267,13 @@ namespace BussinesTourProject.Pages
             GameManager.IsDouble = false;
         }
 
+        /// <summary>
+        /// this function is being called when pressing the "Dice Roll" button.
+        /// this function is basickly the "Main" function you can call it and everthing it does is to 
+        /// roll the dice and calling other functions for landing dice result
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void btnRoll_Dice_Click(object sender, RoutedEventArgs e)
         {
             GameManager.timerPlayers.Stop();
@@ -348,6 +362,11 @@ namespace BussinesTourProject.Pages
             GameManager.Land();
         }
 
+        /// <summary>
+        /// Reset the image of the dice and make sure that roll dice button is being prepared to the next round
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ResetTheButtons(object sender, RoutedEventArgs e)
         {
             imgDice1.Visibility = Visibility.Collapsed;
@@ -360,16 +379,34 @@ namespace BussinesTourProject.Pages
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/DiceGif.gif"));
         }
 
+        /// <summary>
+        /// When you use your mouse and getting entered a buttons area than the function is Being called.
+        /// this function changing the mouse Cursor into hand shape
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_PointerEnteredRegular(object sender, PointerRoutedEventArgs e)
         {
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Hand, 1);
         }
 
+        /// <summary>
+        /// When you use your mouse and leave the buttons area this function is being called
+        /// this function changing the mouse Cursor into hand shape
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_PointerExitedRegular(object sender, PointerRoutedEventArgs e)
         {
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 1);
         }
 
+        /// <summary>
+        /// When these function is being called that means that the current player tried to buy house,
+        /// If he has enough money he will get that house, else nothing would happen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonBuyHouse_Click(object sender, RoutedEventArgs e)
         {
             House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
@@ -401,6 +438,15 @@ namespace BussinesTourProject.Pages
             GameManager.CheckIfDouble();
         }
 
+
+        /// <summary>
+        /// This function is being called when you are in jail and choosed the pay as option
+        /// everything it does is basickly just makes you pay 200K dollars to leave the jail in the
+        /// the current round, if you dont have the money then the error message will appear the you doesn't have eonugh
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// 
         private void btnJailPay_Click(object sender, RoutedEventArgs e)
         {
             if (GameManager.currentPlayer.amountOfMoney >= 200_000)
@@ -415,6 +461,13 @@ namespace BussinesTourProject.Pages
             }
         }
 
+        /// <summary>
+        /// This function is being called when you are in jail and choose the roll dice as option
+        /// everything it does is basickly just dice the roll and if there is a double result
+        /// then in the next round you would be free
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void btnJailDiceRoll_Click(object sender, RoutedEventArgs e)
         {
             btnRoll_Dice.Visibility = Visibility.Collapsed;
@@ -440,24 +493,47 @@ namespace BussinesTourProject.Pages
             imgDice2.Visibility = Visibility.Collapsed;
         }
 
+        /// <summary>
+        /// When you are in UI buying house and select and house then its display its price to buy
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void optionHouse1RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
             txtBuyingPrice.Text = $"Buy For: {currentHouse.basicCostToBuy.ToString("N0")}";
         }
 
+
+        /// <summary>
+        /// When you are in UI buying house and select and house then its display its price to buy
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void optionHouse2RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
             txtBuyingPrice.Text = $"Buy For: {(currentHouse.basicCostToBuy + currentHouse.levelUpgradePrice).ToString("N0")}";
         }
 
+
+        /// <summary>
+        /// When you are in UI buying house and select and house then its display its price to buy
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void optionHouse3RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
             txtBuyingPrice.Text = $"Buy For: {(currentHouse.basicCostToBuy + (currentHouse.levelUpgradePrice * 2)).ToString("N0")}";
         }
 
+        /// <summary>
+        /// this function is just buying for the current player the current station and then 
+        /// display the UI of dicing roll
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonBuyingStation_Click(object sender, RoutedEventArgs e)
         {
             ((Station)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition]).BuyProperty();
