@@ -43,7 +43,6 @@ namespace Arkanoid.GameObjects
                 case JellyType.yellow:
                     base.SetImage("Images/GameImages/jelly_yellow.png");
                     break;
-
             }
         }
         public void ChangeJelly()
