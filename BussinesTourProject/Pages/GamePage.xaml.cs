@@ -24,6 +24,7 @@ using System.Reflection.Metadata.Ecma335;
 using Windows.ApplicationModel.VoiceCommands;
 using Windows.UI.Xaml.Media.Animation;
 using static BussinesTourProject.Classes.House;
+using static BussinesTourProject.Classes.Player;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace BussinesTourProject.Pages
@@ -123,7 +124,27 @@ namespace BussinesTourProject.Pages
             Grid.SetColumn(player.Img, player.PlayerPosition[1, 0]);
             player.Img.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Players/" + player.playerNumber + "/" + player.imgName + "Forward.png"));
         }
+        /*private void initPlayer(Player.state[] state, string name, string imgName, string playerNumber,
+            int[,] matrixPositions, Image imgPlayer)
+        {
+           GameManager.
+        }
+        private static void InitPlayers()
+        {
+            GameManager.arrayPlayers =
+            new Player[] {new Player(playerState: new state[4]{state.forward, state.right, state.backward, state.left}, 
+            name:"Alexander Yanai", imgName:"TrackCar" , playerNumber:"Player1", matrixPlayerPosition: GameManager.MatrixPositionPlayer1),
 
+            new Player(playerState: new state[4]{state.forward, state.right, state.backward,
+            state.left}, name:"Daniel Shlomo", imgName:"YellowCar" , playerNumber:"Player2"),
+
+            new Player(playerState: new state[4]{state.forward, state.forward, state.right,
+            state.backward}, name:"Liran Daniel", imgName:"PurpleCar" , playerNumber:"Player3"),
+
+            new Player(playerState: new state[4]{state.forward, state.forward, state.right,
+                state.backward}, name:"Oleg woller", imgName:"BlueCar" , playerNumber:"Player4")};
+        }
+        */
         /// <summary>
         /// When you use your mouse and getting entered a buttons area than the function is Being called.
         /// This function is just changing the buttons image into some else image that show that you enterd the area

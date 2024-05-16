@@ -42,6 +42,18 @@ namespace BussinesTourProject.Classes
             this.playerState = playerState;
             this.turnsStackJail = 0;
         }
+        public Player(string playerNumber, string imgName, state[] playerState, string name, Image img, int[,] matrixPlayerPosition)
+        {
+            this.PlayerPosition = matrixPlayerPosition;
+            this.playerNumber = playerNumber;
+            this.imgName = imgName;
+            this.name = name;
+            this.currentPosition = 0;
+            amountOfMoney = 2_000_000;
+            this.playerState = playerState;
+            this.turnsStackJail = 0;
+            this.Img = img;
+        }
 
         /// <summary>
         /// just setting player position array
