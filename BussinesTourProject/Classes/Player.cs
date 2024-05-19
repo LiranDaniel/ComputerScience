@@ -164,13 +164,9 @@ namespace BussinesTourProject.Classes
             foreach (object obj in GameManager.ArrayMap )
             {
                 if( obj != null )
-                {
-                    if ( obj is House ) {
-                        if (((House)obj).ownerOfTheProperty == GameManager.currentPlayer)
-                            value += ((House)obj).currentCostToPayRent;
-                    }
-                    else if ( obj is Station ) { }
-                }
+                    if ( obj is Property )
+                        if (((Property)obj).ownerOfTheProperty == GameManager.currentPlayer)
+                            value += ((Property)obj).currentCostToBuy;       
             }
             return value;
         }

@@ -9,6 +9,26 @@
     Loaded="Page_Loaded"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+
+    <Page.Resources>
+        <Style TargetType="ToggleButton" x:Key="ImageToggleButtonStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ToggleButton">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch"
+                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                Content="{TemplateBinding Content}"
+                                Margin="{TemplateBinding Padding}" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    
     <Grid>
 
         <Grid.Background>
@@ -712,22 +732,26 @@
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\JailimgSquare.png" Stretch="Fill"
                    Grid.Row="5" Grid.RowSpan="16" Grid.ColumnSpan="27" Grid.Column="7"></Image>
 
-            <Image  Grid.Row="6" Grid.Column="99" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick4.png" Stretch="Fill"
-                    Opacity=".6"></Image>
-            <Image  Grid.Row="6" Grid.Column="131" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick4.png" Stretch="Fill"
-                    Opacity=".6"></Image>
+            <ToggleButton Grid.Row="6" Grid.Column="99" Grid.ColumnSpan="14" Grid.RowSpan="15" Padding="0" BorderThickness="0" IsEnabled="True">
+                    <Image Source="/Assets\Images\SquareImages\BlockImages\blockBrick4.png" Stretch="Fill" Opacity=".6"></Image>
+            </ToggleButton>
 
-            <Image  Grid.Row="6" Grid.Column="35" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick10.png" Stretch="Fill"
-                    Opacity=".6"></Image>
-            <Image  Grid.Row="6" Grid.Column="51" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick10.png" Stretch="Fill"
-                    Opacity=".6"></Image>
-            <Image  Grid.Row="6" Grid.Column="67" Grid.ColumnSpan="14" Grid.RowSpan="15"
-                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick10.png" Stretch="Fill"
-                    Opacity=".6"></Image>
+            <ToggleButton Grid.Row="6" Grid.Column="131" Grid.ColumnSpan="14" Grid.RowSpan="15" Padding="0" BorderThickness="0" IsEnabled="True">
+                <Image Source="/Assets\Images\SquareImages\BlockImages\blockBrick4.png" Stretch="Fill" Opacity=".6"></Image>
+            </ToggleButton>
+
+            <ToggleButton Grid.Row="6" Grid.Column="35" Grid.ColumnSpan="14" Grid.RowSpan="15" Padding="0" BorderThickness="0" IsEnabled="True">
+                <Image Source="/Assets\Images\SquareImages\BlockImages\blockBrick10.png" Stretch="Fill" Opacity=".6"></Image>
+            </ToggleButton>
+
+            <ToggleButton Grid.Row="6" Grid.Column="51" Grid.ColumnSpan="14" Grid.RowSpan="15" Padding="0" BorderThickness="0" IsEnabled="True">
+                <Image Source="/Assets\Images\SquareImages\BlockImages\blockBrick10.png" Stretch="Fill" Opacity=".6"></Image>
+            </ToggleButton>
+
+            <ToggleButton  Grid.Row="6" Grid.Column="67" Grid.ColumnSpan="14" Grid.RowSpan="15" Padding="0" BorderThickness="0" IsEnabled="True">
+                <Image Source="/Assets\Images\SquareImages\BlockImages\blockBrick10.png" Stretch="Fill" Opacity=".6"></Image>
+            </ToggleButton>
+            
             <Image  Grid.Row="21" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="22"
                     Source="/Assets\Images\SquareImages\BlockImages\blockBrick6.png" Stretch="Fill"
                     Opacity=".6"></Image>
@@ -1453,7 +1477,46 @@
 
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
-              Background="Black" CornerRadius="30" x:Name="UITax" Visibility="Collapsed"></Grid>
+              Background="Black" CornerRadius="30" x:Name="UITax" Visibility="Collapsed">
+
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="3" Grid.Column="2" Grid.RowSpan="4" Grid.ColumnSpan="8" FontSize="25" FontFamily="Cascadia code"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Text="You are About to pay &#x0a;to the Goverment the&#x0a;taxes of your propertys"></TextBlock>
+
+            <TextBlock Grid.Row="7" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="6" Text="Taxes value of:" 
+                       FontFamily="Cascadia code" FontSize="25"></TextBlock>
+            
+            <TextBlock x:Name="txtTaxPrice" Grid.Row="7" Grid.Column="6" Grid.RowSpan="2" Grid.ColumnSpan="3"
+                       Text="1,000,000$" FontSize="25" FontFamily="Cascadia code" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+        </Grid>
         <Grid Grid.Row="13" Grid.Column="26" Grid.ColumnSpan="156" Grid.RowSpan="92"
               Background="Black" CornerRadius="30" x:Name="UIEndGame" Visibility="Collapsed">
 

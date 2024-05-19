@@ -19,9 +19,11 @@ namespace BussinesTourProject.Classes
         public static Grid UIBuyingHouseGrid { get; set; } // The Grid of buying house in game page
         public static Grid UIJailOptions {  get; set; }    // The Grid of Jail Options in game page
         public static Grid UIBuyingStation{  get; set; }   // The Grid of buying Station in game page
+        public static Grid UITax {  get; set; }            // The Grid of paying the taxes of player propertys
         public static Image ImgBuyingStation { get; set; } // The image that display when using the UI station, chaning it to the current Station
         public static RadioButton[] arrayRadioButtonBuyingHouse { get; set; } = new RadioButton[3]; // radio buttons from the Grid buying house from Game page
         public static TextBlock txtBlockBuyingHousePrice; // the text that present the price of the house  that you want to buy
+        public static TextBlock txtBlockTaxesPrice;
 
         public static Player currentPlayer; // current player playing 
         public static int currentTimesPlay = 1; // how much rounds in row did he play to check if he needs  to go to jail
@@ -119,20 +121,22 @@ namespace BussinesTourProject.Classes
         /// </summary>
         public static void Land()
         {
-            if (ArrayMap[currentPlayer.currentPosition] == null)
-                CheckIfDouble();
-            else if (ArrayMap[currentPlayer.currentPosition] is House)
-                LandingHouse();
-            else if (ArrayMap[currentPlayer.currentPosition] is Station)
-                LandingStation();
-            else if (ArrayMap[currentPlayer.currentPosition] is Chance)
-                CheckIfDouble();
-            else if (ArrayMap[currentPlayer.currentPosition] is Jail)
-                ShowUIJail();
-            else if (ArrayMap[currentPlayer.currentPosition] is Tax)
-                CheckIfDouble();
-            else
-                CheckIfDouble();
+            /* if (ArrayMap[currentPlayer.currentPosition] == null)
+                 CheckIfDouble();
+             else if (ArrayMap[currentPlayer.currentPosition] is House)
+                 LandingHouse();
+             else if (ArrayMap[currentPlayer.currentPosition] is Station)
+                 LandingStation();
+             else if (ArrayMap[currentPlayer.currentPosition] is Chance)
+                 CheckIfDouble();
+             else if (ArrayMap[currentPlayer.currentPosition] is Jail)
+                 ShowUIJail();
+             else if (ArrayMap[currentPlayer.currentPosition] is Tax)
+                 CheckIfDouble();
+             else
+                 CheckIfDouble();
+            */
+            ShowUITax();
         }
 
         public static void TakeCardChance()
@@ -145,8 +149,6 @@ namespace BussinesTourProject.Classes
         /// </summary>
         public static void LandingHouse()
         {
-            
-
             House LandHouse = (House)ArrayMap[currentPlayer.currentPosition];
             if (LandHouse.ownerOfTheProperty == null)
             {
@@ -182,14 +184,12 @@ namespace BussinesTourProject.Classes
                     {   
                         currentPlayer.amountOfMoney -= LandHouse.currentCostToPayRent;
                         string formattedNumber = currentPlayer.amountOfMoney.ToString("N0"); // adding 
-                        currentPlayer.txtMoney.Text = $"{formattedNumber}"; 
-                        
+                        currentPlayer.txtMoney.Text = $"{formattedNumber}";   
                     }
                 }
                 CheckIfDouble();
             }
         }
-
 
         /// <summary>
         /// If there is doule, if there isn't doube then move the round to the next player, else show him an option to play again
@@ -256,12 +256,37 @@ namespace BussinesTourProject.Classes
             Jail.txtRemaningRoundJail.Text = $"Remaning Rounds In jail:{currentPlayer.turnsStackJail}";
         }
 
+        public async  static void ShowUITax()
+        {
+            int taxPropertysValue = currentPlayer.CalculatePropertyValue() / 10;
+            txtBlockTaxesPrice.Text = $"{taxPropertysValue.ToString("N0")}";
+            UITax.Visibility = Visibility.Visible;
+            await Task.Delay(TimeSpan.FromSeconds(2));
+
+            UITax.Visibility = Visibility.Collapsed;
+
+            if (currentPlayer.amountOfMoney < taxPropertysValue)
+            {
+                // Show UI To sell House
+            }
+            else
+            {
+                currentPlayer.amountOfMoney -= taxPropertysValue;
+                currentPlayer.txtMoney.Text = currentPlayer.amountOfMoney.ToString("N0");
+            }
+        }
+
         public static void WorldChampionShip()
         {
 
         }
 
         public static void WorldTour()
+        {
+
+        }
+
+        public static void ShowUISellProperty()
         {
 
         }
