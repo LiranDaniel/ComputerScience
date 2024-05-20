@@ -1027,15 +1027,19 @@
             <Image  Grid.Row="69" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\BlockImages\blockBrick12.jpg" Stretch="Fill" Opacity=".65"
                     ></Image>
-            <Image  Grid.Row="53" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick11.png" Stretch="Fill" Opacity=".65"
-                    ></Image>
-            <Image  Grid.Row="61" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick11.png" Stretch="Fill" Opacity=".65"
-                    ></Image>
-            <Image  Grid.Row="69" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick11.png" Stretch="Fill" Opacity=".65"
-                    ></Image>
+
+            <ToggleButton Grid.Row="53" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6" Padding="0" BorderThickness="0" IsEnabled="True" Click="Button_Click">
+                <Image Source="/Assets\Images\SquareImages\BlockImages\blockBrick11.png" Stretch="Fill" Opacity=".65"></Image>
+            </ToggleButton>
+
+            <ToggleButton Grid.Row="61" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6" Padding="0" BorderThickness="0" IsEnabled="True" Click="Button_Click">
+                <Image Source="/Assets\Images\SquareImages\BlockImages\blockBrick11.png" Stretch="Fill" Opacity=".65"></Image>
+            </ToggleButton>
+
+            <ToggleButton Grid.Row="69" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6" Padding="0" BorderThickness="0" IsEnabled="True" Click="Button_Click">
+                <Image Source="/Assets\Images\SquareImages\BlockImages\blockBrick11.png" Stretch="Fill" Opacity=".65"></Image>
+            </ToggleButton>
+            
             <Image  Grid.Row="61" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\BlockImages\blockBrick12.jpg" Stretch="Fill" Opacity=".65"
                     ></Image>
@@ -1073,9 +1077,10 @@
             <Image  Grid.Row="45" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\BlockImages\blockBrick9.png" Stretch="Fill"
                     Opacity=".6"></Image>
-            <Image  Grid.Row="45" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick8.png" Stretch="Fill"
-                    Opacity=".6"></Image>
+
+            <ToggleButton Grid.Row="45" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6" Padding="0" BorderThickness="0" IsEnabled="True" Click="Button_Click">
+                <Image Source="/Assets\Images\SquareImages\BlockImages\blockBrick8.png" Stretch="Fill" Opacity=".6"></Image>
+            </ToggleButton>
 
 
 
