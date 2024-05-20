@@ -751,13 +751,24 @@
             <ToggleButton  Grid.Row="6" Grid.Column="67" Grid.ColumnSpan="14" Grid.RowSpan="15" Padding="0" BorderThickness="0" IsEnabled="True" Click="Button_Click">
                 <Image Source="/Assets\Images\SquareImages\BlockImages\blockBrick10.png" Stretch="Fill" Opacity=".6"></Image>
             </ToggleButton>
+
+            <ToggleButton Grid.Row="21" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6" Padding="0" BorderThickness="0" IsEnabled="True" Click="Button_Click">
+                <Image Source="/Assets\Images\SquareImages\BlockImages\blockBrick6.png" Stretch="Fill" Opacity=".6"></Image>
+            </ToggleButton>
+
+            <ToggleButton Grid.Row="29" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6" Padding="0" BorderThickness="0" IsEnabled="True" Click="Button_Click">
+                <Image Source="/Assets\Images\SquareImages\BlockImages\blockBrick6.png" Stretch="Fill" Opacity=".6"></Image>
+            </ToggleButton>
+
+
+            <ToggleButton Grid.Row="37" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="6" Padding="0" BorderThickness="0" IsEnabled="True" Click="Button_Click">
+                <Image Source="/Assets\Images\SquareImages\BlockImages\blockBrick6.png" Stretch="Fill" Opacity=".6"></Image>
+            </ToggleButton>
             
-            <Image  Grid.Row="21" Grid.Column="7" Grid.ColumnSpan="27" Grid.RowSpan="22"
-                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick6.png" Stretch="Fill"
-                    Opacity=".6"></Image>
-            <Image  Grid.Row="21" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
-                    Source="/Assets\Images\SquareImages\BlockImages\blockBrick7.png" Stretch="Fill"
-                    Opacity=".6"></Image>
+            <ToggleButton Grid.Row="21" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6" Padding="0" BorderThickness="0" IsEnabled="True" Click="Button_Click">
+                <Image  Source="/Assets\Images\SquareImages\BlockImages\blockBrick7.png" Stretch="Fill" Opacity=".6"></Image>
+            </ToggleButton>
+           
             <Image  Grid.Row="29" Grid.Column="146" Grid.ColumnSpan="27" Grid.RowSpan="6"
                     Source="/Assets\Images\SquareImages\BlockImages\blockBrick8.png" Stretch="Fill"
                     Opacity=".6"></Image>
