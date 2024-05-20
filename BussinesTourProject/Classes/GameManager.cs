@@ -121,7 +121,7 @@ namespace BussinesTourProject.Classes
         /// </summary>
         public static void Land()
         {
-            /* if (ArrayMap[currentPlayer.currentPosition] == null)
+             if (ArrayMap[currentPlayer.currentPosition] == null)
                  CheckIfDouble();
              else if (ArrayMap[currentPlayer.currentPosition] is House)
                  LandingHouse();
@@ -132,11 +132,10 @@ namespace BussinesTourProject.Classes
              else if (ArrayMap[currentPlayer.currentPosition] is Jail)
                  ShowUIJail();
              else if (ArrayMap[currentPlayer.currentPosition] is Tax)
-                 CheckIfDouble();
+                 ShowUITax();
              else
                  CheckIfDouble();
-            */
-            ShowUITax();
+            
         }
 
         public static void TakeCardChance()

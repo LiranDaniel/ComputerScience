@@ -38,6 +38,7 @@ namespace BussinesTourProject.Pages
         private int secondsElapsed; // minute of the timer of the game
         private int minutes;        // seconds of the timer of the game
 
+        bool isRadioButtonMode = true;
         /// <summary>
         /// Initiate the Components for the page
         /// </summary>
@@ -108,6 +109,25 @@ namespace BussinesTourProject.Pages
         private void GameOver()
         {
             Frame.Navigate(typeof(SignInPage));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleButton clickedButton = sender as ToggleButton;
+
+            if (isRadioButtonMode)
+            {
+                // Deselect all other buttons if in radio button mode
+                foreach (var child in (clickedButton.Parent as Panel).Children)
+                {
+                    if (child is ToggleButton button && button != clickedButton)
+                    {
+                        button.IsChecked = false;
+                    }
+                }
+            }
+
+            // Perform any additional logic here if needed
         }
 
         /// <summary>

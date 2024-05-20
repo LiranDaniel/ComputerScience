@@ -89,7 +89,7 @@ namespace BussinesTourProject.Pages
         /// <param name="e"></param>
         private void btnProfile_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(BlankPage1));
+            Frame.Navigate(typeof(SignInPage));
         }
 
         /// <summary>
