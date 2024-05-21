@@ -315,7 +315,7 @@ namespace BussinesTourProject.Classes
 
         public static void WorldTour()
         {
-            bool IsThereProperty = false;
+            bool IsThereIsSquare = false;
             ToggleState = true;
             SetState(false); // first enable only the property buttons
             foreach (object square in ArrayMap)
@@ -325,13 +325,13 @@ namespace BussinesTourProject.Classes
                     if ((square as Property).ownerOfTheProperty == currentPlayer || (square as Property).ownerOfTheProperty == null)
                     {
                         (square as Property).toggleButtonBlock.IsEnabled = true;
-                        IsThereProperty = true;
+                        IsThereIsSquare = true;
                     }
                 }
             }
-            if (IsThereProperty)   // if there is not property then the not property UI will be displayed
+            if (IsThereIsSquare)   // if there is not property then the not property UI will be displayed
             {
-                //Show UI that the player doesnt have propertys
+                // Show UI that the player doesnt have propertys
             }
             else
             {
@@ -340,7 +340,7 @@ namespace BussinesTourProject.Classes
 
 
             // first enable only the property buttons and the null buttons
-            // after showing ui to go into that position
+            // after showing ui to go into that position if there is 
         }
 
         public static void ShowUISellProperty()
