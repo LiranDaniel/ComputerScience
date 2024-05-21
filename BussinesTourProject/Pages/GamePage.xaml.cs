@@ -584,12 +584,17 @@ namespace BussinesTourProject.Pages
             GameManager.SetState(true);
             // Perform any additional logic here if needed
         }
-        private void btnSelectedChampionShip_Click(object sender, RoutedEventArgs e)
+        private void btnSelecteChampionShip_Click(object sender, RoutedEventArgs e)
         {
             // first enable only the 
         }
 
-        private void btnCancelChampionShip_Click(object sender, RoutedEventArgs e)
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnSelectSquareToFly_Click(object sender, RoutedEventArgs e)
         {
 
         }

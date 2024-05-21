@@ -1616,15 +1616,15 @@
 
             <TextBlock Grid.Row="3" Grid.Column="2" Grid.RowSpan="4" Grid.ColumnSpan="8" FontSize="25" FontFamily="Cascadia code"
                        HorizontalAlignment="Center" VerticalAlignment="Top" Text="    Select Property To&#x0a;Hold The World ChampionShip"></TextBlock>
-            <Button x:Name="btnSelectedChampionShip" Grid.Row="6" Grid.Column="5" Content="Select" FontFamily="Cascadia code" CornerRadius="10" Click="btnSelectedChampionShip_Click"
+            <Button x:Name="btnSelectedChampionShip" Grid.Row="6" Grid.Column="5" Content="Select" FontFamily="Cascadia code" CornerRadius="10" Click="btnSelecteChampionShip_Click"
                     FontSize="20" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="Wheat" Foreground="Black"></Button>
             
-            <Button x:Name="btnCancelChampionShip"   Grid.Row="8" Grid.Column="5" Content="Cancel" FontFamily="Cascadia code" CornerRadius="10" Click="btnCancelChampionShip_Click"
+            <Button x:Name="btnCancelChampionShip"   Grid.Row="8" Grid.Column="5" Content="Cancel" FontFamily="Cascadia code" CornerRadius="10" Click="btnCancel_Click"
                     FontSize="20" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Background="Wheat" Foreground="Black"></Button>
 
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
-              Background="Black" CornerRadius="30" x:Name="UIWorldTour" Visibility="Collapsed">
+              Background="Black" CornerRadius="30" x:Name="UIWorldTour">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -1657,11 +1657,11 @@
 
             <TextBlock Grid.Row="3" Grid.Column="2" Grid.RowSpan="4" Grid.ColumnSpan="8" FontSize="25" FontFamily="Cascadia code"
                        HorizontalAlignment="Center" VerticalAlignment="Top" Text="Select Square To Fly"></TextBlock>
-            
-            <Button x:Name="btnSelecte" Grid.Row="6" Grid.Column="5" Content="Select" FontFamily="Cascadia code" CornerRadius="10" Click="btnSelectedChampionShip_Click"
+
+            <Button x:Name="btnSelectSquareToFly" Grid.Row="6" Grid.Column="5" Content="Select" FontFamily="Cascadia code" CornerRadius="10" Click="btnSelectSquareToFly_Click"
                     FontSize="20" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="Wheat" Foreground="Black"></Button>
 
-            <Button x:Name="btnCancelChampionSip"   Grid.Row="8" Grid.Column="5" Content="Cancel" FontFamily="Cascadia code" CornerRadius="10" Click="btnCancelChampionShip_Click"
+            <Button x:Name="btnCancel"   Grid.Row="8" Grid.Column="5" Content="Cancel" FontFamily="Cascadia code" CornerRadius="10" Click="btnCancel_Click"
                     FontSize="20" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Background="Wheat" Foreground="Black"></Button>
 
         </Grid>
