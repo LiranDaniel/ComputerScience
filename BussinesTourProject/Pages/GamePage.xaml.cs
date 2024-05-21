@@ -607,15 +607,16 @@ namespace BussinesTourProject.Pages
                 }
                 positionSquare++;
             }
-            if (positionSquare == -1)
-            {
-                UIWorldTour.Visibility = Visibility.Collapsed;
-                GameManager.NextPlayer(); 
-                GameManager.SetToggleState(false);
-                return;
-            }
-            positionSquare++;
+
+            UIWorldTour.Visibility = Visibility.Collapsed;
             Player player = GameManager.currentPlayer;
+            GameManager.NextPlayer();
+            GameManager.SetToggleState(false);
+
+            if (positionSquare == Player.MaxPosition - 1)
+                return;
+            
+            positionSquare++;
             int currentPosition = player.currentPosition + 1;
             while (currentPosition != positionSquare + 1)
             {
@@ -644,13 +645,7 @@ namespace BussinesTourProject.Pages
                 Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);
                 currentPosition++;
                 await Task.Delay(TimeSpan.FromMilliseconds(500));
-
-
             }
-
-            UIWorldTour.Visibility = Visibility.Collapsed;
-            GameManager.NextPlayer();
-            GameManager.SetToggleState(false);
 
         }
     }

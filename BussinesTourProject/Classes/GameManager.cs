@@ -319,6 +319,7 @@ namespace BussinesTourProject.Classes
             {
                 if(square is Property)
                 {
+                    (square as Property).toggleButtonBlock.IsChecked = false;
                     (square as Property).toggleButtonBlock.IsEnabled = state;
                 }
             }
