@@ -293,6 +293,7 @@ namespace BussinesTourProject.Classes
             if (IsThereProperty)   // if there is not property then the not property UI will be displayed
             {
                 //Show UI that the player doesnt have propertys
+                UIWorldChampion.Visibility = Visibility.Visible;
             }
             else
             {
