@@ -270,10 +270,8 @@ namespace BussinesTourProject.Classes
                 // Show UI To sell House
             }
             else
-            {
-                currentPlayer.amountOfMoney -= taxPropertysValue;
-                currentPlayer.txtMoney.Text = currentPlayer.amountOfMoney.ToString("N0");
-            }
+                currentPlayer.AmountOfMoneyChange(taxPropertysValue);
+            
         }
 
         public static void WorldChampionShip()
