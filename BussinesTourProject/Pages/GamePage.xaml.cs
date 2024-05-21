@@ -586,18 +586,20 @@ namespace BussinesTourProject.Pages
         }
         private async void btnSelecteChampionShip_Click(object sender, RoutedEventArgs e)
         {
-            ToggleButton btnSquare = null;
+            int positionSquare = 0;
             foreach(object square in GameManager.ArrayMap)
             {
                 if(square is Property)
                 {
                     if ((square as Property).toggleButtonBlock.IsChecked == true)
-                        btnSquare = (square as Property).toggleButtonBlock;
+                        break;
                 }
+                positionSquare++;
             }
+
             Player player = GameManager.currentPlayer;
             int currentPosition = player.currentPosition + 1;
-            while (btnSquare != null)
+            while (currentPosition != positionSquare)
             {
                 while (currentPosition > (player.PlayerPosition.GetLength(1) - 1))
                 {
