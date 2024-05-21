@@ -275,6 +275,7 @@ namespace BussinesTourProject.Classes
 
         public static void WorldChampionShip()
         {
+            ToggleState = true;
             SetState(false);
             foreach(object square in ArrayMap)
             {
