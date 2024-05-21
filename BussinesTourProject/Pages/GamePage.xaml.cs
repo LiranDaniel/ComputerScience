@@ -592,21 +592,8 @@ namespace BussinesTourProject.Pages
                     }
                 }
             }
-            SetState(clickedButton, true);
-
+            GameManager.SetState(true);
             // Perform any additional logic here if needed
-        }
-        private void SetState(ToggleButton clickedButton, bool state)
-        {
-            clickedButton.IsEnabled = state;
-            // Deselect all other buttons if in radio button mode
-            foreach (var child in (clickedButton.Parent as Panel).Children)
-            {
-                if (child is ToggleButton button && button != clickedButton)
-                {
-                    button.IsEnabled = state;
-                }
-            }
         }
         private void btnSelectedChampionShip_Click(object sender, RoutedEventArgs e)
         {
