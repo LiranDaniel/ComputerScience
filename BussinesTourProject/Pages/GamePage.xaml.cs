@@ -584,8 +584,50 @@ namespace BussinesTourProject.Pages
             GameManager.SetState(true);
             // Perform any additional logic here if needed
         }
-        private void btnSelecteChampionShip_Click(object sender, RoutedEventArgs e)
+        private async void btnSelecteChampionShip_Click(object sender, RoutedEventArgs e)
         {
+            ToggleButton btnSquare = null;
+            foreach(object square in GameManager.ArrayMap)
+            {
+                if(square is Property)
+                {
+                    if ((square as Property).toggleButtonBlock.IsChecked == true)
+                        btnSquare = (square as Property).toggleButtonBlock;
+                }
+            }
+            Player player = GameManager.currentPlayer;
+            int currentPosition = player.currentPosition + 1;
+            while (btnSquare != null)
+            {
+                while (currentPosition > (player.PlayerPosition.GetLength(1) - 1))
+                {
+                    currentPosition -= player.PlayerPosition.GetLength(1);
+                }
+                if (currentPosition == 0)
+                    player.ChangePlayerImageByEnumValue(0);
+                else if (currentPosition == 8)
+                    player.ChangePlayerImageByEnumValue(1);
+                else if (currentPosition == 16)
+                    player.ChangePlayerImageByEnumValue(2);
+                else if (currentPosition == 24)
+                    player.ChangePlayerImageByEnumValue(3);
+                else
+                    player.ChangePlayerImageByPosition(currentPosition);
+
+                if (currentPosition == 0)
+                {
+                    player.amountOfMoney += 300_000;
+                    player.txtMoney.Text = player.amountOfMoney.ToString("N0");
+                }
+
+                Grid.SetRow(player.Img, player.PlayerPosition[0, currentPosition]);
+                Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);
+                currentPosition++;
+                await Task.Delay(TimeSpan.FromMilliseconds(500));
+
+
+            }
+
             // first enable only the 
         }
 
