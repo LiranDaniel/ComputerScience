@@ -277,14 +277,14 @@ namespace BussinesTourProject.Classes
         public static void WorldChampionShip()
         {
 
-           /* foreach(ToggleButtonMap btn in ToggleButtonMap.ArrayToggleButtonMap)
+            foreach(ToggleButtonMap btn in ToggleButtonMap.ArrayToggleButtonMap)
             {
-                btn.
+                
             }
             // first enable only the property buttons
             // if there is not property then the not property UI will be displayed
             // else then the UI to Select world Champion will be displayed
-           */
+           
         }
 
 
