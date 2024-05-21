@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
 
 namespace BussinesTourProject.Classes
 {
@@ -18,6 +19,7 @@ namespace BussinesTourProject.Classes
 
         public Player ownerOfTheProperty;   // This is the owner of the property
         public Image imageOfProperty;
+        public ToggleButton toggleButtonBlock;
 
         public Property(int basicCostToBuy, int basicCostToPayRent, int levelUpgradeRent)
         {
@@ -33,10 +35,11 @@ namespace BussinesTourProject.Classes
         /// </summary>
         /// <param name="imageOfProperty"></param>
         /// <param name="txtOfMoneyDisplayRent"></param>
-        public void SetImageAndTxt(Image imageOfProperty, TextBlock txtOfMoneyDisplayRent)
+        public void SetXamlObjects(Image imageOfProperty, TextBlock txtOfMoneyDisplayRent, ToggleButton toggleButtonBlock)
         {
             this.txtOfMoneyDisplayRent = txtOfMoneyDisplayRent;
             this.imageOfProperty = imageOfProperty;
+            this.toggleButtonBlock = toggleButtonBlock;
         }
 
 

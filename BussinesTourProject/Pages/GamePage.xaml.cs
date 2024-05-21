@@ -197,7 +197,6 @@ namespace BussinesTourProject.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             GameManager.InitPlayers();
-            SetButtonToggleMapArray();
             InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer1);
             InitPlayer(GameManager.arrayPlayers[1], imgPlayer2, GameManager.MatrixPositionPlayer2);
             InitPlayer(GameManager.arrayPlayers[2], imgPlayer3, GameManager.MatrixPositionPlayer3);
@@ -245,33 +244,34 @@ namespace BussinesTourProject.Pages
         /// </summary>
         private void SetImageAndTextBlockForProperty()
         {
-            ((Property)GameManager.ArrayMap[1]).SetImageAndTxt(imgGranadaHouse, txtRentGranada);
-            ((Property)GameManager.ArrayMap[2]).SetImageAndTxt(imgSevilleHouse, txtRentSeville);
-            ((Property)GameManager.ArrayMap[3]).SetImageAndTxt(imgMadridHouse, txtRentMadrid);
-            ((Property)GameManager.ArrayMap[4]).SetImageAndTxt(imgTrafficLight, txtRentTrafficLight);
-            ((Property)GameManager.ArrayMap[5]).SetImageAndTxt(imgHongKongHouse, txtRentHongKong);
-            ((Property)GameManager.ArrayMap[6]).SetImageAndTxt(imgBeijingHouse, txtRentBeijing);
-            ((Property)GameManager.ArrayMap[7]).SetImageAndTxt(imgShanghaiHouse, txtRentShanghai);
+            ((Property)GameManager.ArrayMap[1]).SetXamlObjects(imgGranadaHouse, txtRentGranada, tglbtnGranada);
+            ((Property)GameManager.ArrayMap[2]).SetXamlObjects(imgSevilleHouse, txtRentSeville, tglbtnSeville);
+            ((Property)GameManager.ArrayMap[3]).SetXamlObjects(imgMadridHouse, txtRentMadrid, tglbtnMadrid);
+            ((Property)GameManager.ArrayMap[4]).SetXamlObjects(imgTrafficLight, txtRentTrafficLight, tglbtnTrafficLight);
+            ((Property)GameManager.ArrayMap[5]).SetXamlObjects(imgHongKongHouse, txtRentHongKong, tglbtnHongKong);
+            ((Property)GameManager.ArrayMap[6]).SetXamlObjects(imgBeijingHouse, txtRentBeijing, tglbtnBeijing);
+            ((Property)GameManager.ArrayMap[7]).SetXamlObjects(imgShanghaiHouse, txtRentShanghai, tglbtnShanghai);
 
-            ((Property)GameManager.ArrayMap[9]).SetImageAndTxt(imgVeniceHouse, txtRentVenice);
-            ((Property)GameManager.ArrayMap[10]).SetImageAndTxt(imgMilanHouse, txtRentMilan);
-            ((Property)GameManager.ArrayMap[11]).SetImageAndTxt(imgRomeHouse, txtRentRome);
-            ((Property)GameManager.ArrayMap[13]).SetImageAndTxt(imgHamburgHouse, txtRentHamburg);
-            ((Property)GameManager.ArrayMap[14]).SetImageAndTxt(imgParking, txtRentParking);
-            ((Property)GameManager.ArrayMap[15]).SetImageAndTxt(imgBerlinHouse, txtRentBerlin);
+            ((Property)GameManager.ArrayMap[9]).SetXamlObjects(imgVeniceHouse, txtRentVenice, tglbtnVenice);
+            ((Property)GameManager.ArrayMap[10]).SetXamlObjects(imgMilanHouse, txtRentMilan, tglbtnMilan);
+            ((Property)GameManager.ArrayMap[11]).SetXamlObjects(imgRomeHouse, txtRentRome, tglbtnRome);
+            ((Property)GameManager.ArrayMap[13]).SetXamlObjects(imgHamburgHouse, txtRentHamburg, tglbtnHamburg);
+            ((Property)GameManager.ArrayMap[14]).SetXamlObjects(imgParking, txtRentParking, tglbtnParking);
+            ((Property)GameManager.ArrayMap[15]).SetXamlObjects(imgBerlinHouse, txtRentBerlin, tglbtnBerlin);
 
-            ((Property)GameManager.ArrayMap[17]).SetImageAndTxt(imgLondonHouse, txtRentLondon);
-            ((Property)GameManager.ArrayMap[18]).SetImageAndTxt(imgGasStation, txtRentGasStation);
-            ((Property)GameManager.ArrayMap[19]).SetImageAndTxt(imgSydneyHouse, txtRentSydney);
-            ((Property)GameManager.ArrayMap[21]).SetImageAndTxt(imgChicagoHouse, txtRentChicago);
-            ((Property)GameManager.ArrayMap[22]).SetImageAndTxt(imgLasVegasHouse, txtRentLasVegas);
-            ((Property)GameManager.ArrayMap[23]).SetImageAndTxt(imgNewYorkHouse, txtRentNewYork);
+            ((Property)GameManager.ArrayMap[17]).SetXamlObjects(imgLondonHouse, txtRentLondon, tglbtnLondon);
+            ((Property)GameManager.ArrayMap[18]).SetXamlObjects(imgGasStation, txtRentGasStation, tglbtnGasStation);
+            ((Property)GameManager.ArrayMap[19]).SetXamlObjects(imgSydneyHouse, txtRentSydney, tglbtnSydney);
+            ((Property)GameManager.ArrayMap[21]).SetXamlObjects(imgChicagoHouse, txtRentChicago, tglbtnChicago);
+            ((Property)GameManager.ArrayMap[22]).SetXamlObjects(imgLasVegasHouse, txtRentLasVegas, tglbtnLasVegas);
+            ((Property)GameManager.ArrayMap[23]).SetXamlObjects(imgNewYorkHouse, txtRentNewYork, tglbtnNewYork);
 
-            ((Property)GameManager.ArrayMap[25]).SetImageAndTxt(imgStation, txtRentStation);
-            ((Property)GameManager.ArrayMap[26]).SetImageAndTxt(imgLyonHouse, txtRentLyon);
-            ((Property)GameManager.ArrayMap[27]).SetImageAndTxt(imgParisHouse, txtRentParis);
-            ((Property)GameManager.ArrayMap[29]).SetImageAndTxt(imgOsakaHouse, txtRentOsaka);
-            ((Property)GameManager.ArrayMap[31]).SetImageAndTxt(imgTokyoHouse, txtRentTokyo);
+            ((Property)GameManager.ArrayMap[25]).SetXamlObjects(imgStation, txtRentStation, tglbtnStation);
+            ((Property)GameManager.ArrayMap[26]).SetXamlObjects(imgLyonHouse, txtRentLyon, tglbtnLyon);
+            ((Property)GameManager.ArrayMap[27]).SetXamlObjects(imgParisHouse, txtRentParis, tglbtnParis);
+            ((Property)GameManager.ArrayMap[29]).SetXamlObjects(imgOsakaHouse, txtRentOsaka, tglbtnOsaka);
+            ((Property)GameManager.ArrayMap[31]).SetXamlObjects(imgTokyoHouse, txtRentTokyo, tglbtnTokyo);
+
         }
 
         /// <summary>
@@ -563,20 +563,6 @@ namespace BussinesTourProject.Pages
             GameManager.CheckIfDouble();
         }
 
-        private void SetButtonToggleMapArray()
-        {
-            ToggleButtonMap.ArrayToggleButtonMap = new ToggleButtonMap[]{
-                new ToggleButtonMap(1, tglbtnGranada), new ToggleButtonMap(2, tglbtnSeville), new ToggleButtonMap(3,tglbtnMadrid),
-                new ToggleButtonMap(4, tglbtnTrafficLight), new ToggleButtonMap(5, tglbtnHongKong), new ToggleButtonMap(6, tglbtnBeijing),
-                new ToggleButtonMap(7, tglbtnShanghai), new ToggleButtonMap(9, tglbtnVenice), new ToggleButtonMap(10, tglbtnMilan),
-                new ToggleButtonMap(11, tglbtnRome), new ToggleButtonMap(13, tglbtnHamburg), new ToggleButtonMap(14, tglbtnParking),
-                new ToggleButtonMap(15, tglbtnParking), new ToggleButtonMap(16, tglbtnBerlin), new ToggleButtonMap(18, tglbtnLondon),
-                new ToggleButtonMap(19, tglbtnGasStation), new ToggleButtonMap(20, tglbtnSydney), new ToggleButtonMap(22, tglbtnChicago),
-                new ToggleButtonMap(23, tglbtnLasVegas), new ToggleButtonMap(24, tglbtnNewYork), new ToggleButtonMap(26, tglbtnStation),
-                new ToggleButtonMap(27, tglbtnLyon), new ToggleButtonMap(28, tglbtnParis), new ToggleButtonMap(29, tglbtnOsaka), new ToggleButtonMap(30, tglbtnTokyo)
-            };
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             ToggleButton clickedButton = sender as ToggleButton;
@@ -592,7 +578,7 @@ namespace BussinesTourProject.Pages
                     }
                 }
             }
-            GameManager.SetState(false);
+            GameManager.SetState(true);
             // Perform any additional logic here if needed
         }
         private void btnSelectedChampionShip_Click(object sender, RoutedEventArgs e)

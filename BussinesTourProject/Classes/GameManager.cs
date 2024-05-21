@@ -275,10 +275,16 @@ namespace BussinesTourProject.Classes
 
         public static void WorldChampionShip()
         {
-
-            foreach(ToggleButtonMap btn in ToggleButtonMap.ArrayToggleButtonMap)
+            SetState(false);
+            foreach(object square in ArrayMap)
             {
-                
+                if(square is Property)
+                {
+                    if((square as Property).ownerOfTheProperty == currentPlayer)
+                    {
+                        //foreach 
+                    }
+                }
             }
             // first enable only the property buttons
             // if there is not property then the not property UI will be displayed
@@ -289,9 +295,12 @@ namespace BussinesTourProject.Classes
 
         public static void SetState(bool state)
         {
-            foreach (ToggleButtonMap btn in ToggleButtonMap.ArrayToggleButtonMap)
+            foreach (object square in ArrayMap)
             {
-                btn.button.IsEnabled = state;
+                if(square is Property)
+                {
+                    (square as Property).toggleButtonBlock.IsEnabled = state;
+                }
             }
         }
 
