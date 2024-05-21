@@ -207,12 +207,15 @@ namespace BussinesTourProject.Pages
             GameManager.UIJailOptions = UIJailOptions;
             GameManager.UIBuyingStation = UIBuyingStation;
             GameManager.UITax = UITax;
+            GameManager.UIWorldChampion = UIWorldChampion;
+            GameManager.UIWorldTour = UIWorldTour;
             GameManager.ImgBuyingStation = imgBuyingStation;
             GameManager.arrayRadioButtonBuyingHouse[0] = optionHouse1RadioButton;
             GameManager.arrayRadioButtonBuyingHouse[1] = optionHouse2RadioButton;
             GameManager.arrayRadioButtonBuyingHouse[2] = optionHouse3RadioButton;
             GameManager.txtBlockBuyingHousePrice = txtBuyingPrice;
             GameManager.txtBlockTaxesPrice = txtTaxPrice;
+            //GameManager.txtBlockBasic = txt
             SetPlayerTxtBlocks();
             GameManager.NextPlayer();
 

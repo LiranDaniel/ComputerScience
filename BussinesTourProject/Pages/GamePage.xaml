@@ -1624,7 +1624,7 @@
 
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
-              Background="Black" CornerRadius="30" x:Name="UIWorldTour">
+              Background="Black" CornerRadius="30" x:Name="UIWorldTour" Visibility="Collapsed">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -1658,7 +1658,7 @@
             <TextBlock Grid.Row="3" Grid.Column="2" Grid.RowSpan="4" Grid.ColumnSpan="8" FontSize="25" FontFamily="Cascadia code"
                        HorizontalAlignment="Center" VerticalAlignment="Top" Text="Select Square To Fly"></TextBlock>
             
-            <Button x:Name="btnSelectedChampionSip" Grid.Row="6" Grid.Column="5" Content="Select" FontFamily="Cascadia code" CornerRadius="10" Click="btnSelectedChampionShip_Click"
+            <Button x:Name="btnSelecte" Grid.Row="6" Grid.Column="5" Content="Select" FontFamily="Cascadia code" CornerRadius="10" Click="btnSelectedChampionShip_Click"
                     FontSize="20" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="Wheat" Foreground="Black"></Button>
 
             <Button x:Name="btnCancelChampionSip"   Grid.Row="8" Grid.Column="5" Content="Cancel" FontFamily="Cascadia code" CornerRadius="10" Click="btnCancelChampionShip_Click"

@@ -125,7 +125,7 @@ namespace BussinesTourProject.Classes
         /// </summary>
         public static void Land()
         {
-             if (ArrayMap[currentPlayer.currentPosition] == null)
+            /* if (ArrayMap[currentPlayer.currentPosition] == null)
                  CheckIfDouble();
              else if (ArrayMap[currentPlayer.currentPosition] is House)
                  LandingHouse();
@@ -139,7 +139,10 @@ namespace BussinesTourProject.Classes
                  ShowUITax();
              else
                  CheckIfDouble();
-            
+            */
+            WorldTour();
+
+
         }
 
         public static void TakeCardChance()
@@ -337,7 +340,7 @@ namespace BussinesTourProject.Classes
                     }
                 }
             }
-            if (IsThereIsSquare)   // if there is not property then the not property UI will be displayed
+            if (!IsThereIsSquare)   // if there is not property then the not property UI will be displayed
             {
                 // Show UI that the player doesnt have propertys
                 txtBlockBasic.Text = "Theres Is Not Free Square";
