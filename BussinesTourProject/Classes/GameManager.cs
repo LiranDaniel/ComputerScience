@@ -284,7 +284,7 @@ namespace BussinesTourProject.Classes
         {
             bool IsThereProperty = false;
             ToggleState = true;
-            SetState(false); // first enable only the property buttons
+            SetToggleState(false); // first enable only the property buttons
             foreach (object square in ArrayMap)
             {
                 if(square is Property)
@@ -313,7 +313,7 @@ namespace BussinesTourProject.Classes
         }
 
 
-        public static void SetState(bool state)
+        public static void SetToggleState(bool state)
         {
             foreach (object square in ArrayMap)
             {
@@ -328,7 +328,7 @@ namespace BussinesTourProject.Classes
         {
             bool IsThereIsSquare = false;
             ToggleState = true;
-            SetState(false); // first enable only the property buttons
+            SetToggleState(false); // first enable only the property buttons
             foreach (object square in ArrayMap)
             {
                 if (square is Property)

@@ -581,25 +581,43 @@ namespace BussinesTourProject.Pages
                     }
                 }
             }
-            GameManager.SetState(true);
+            GameManager.SetToggleState(true);
             // Perform any additional logic here if needed
         }
         private async void btnSelecteChampionShip_Click(object sender, RoutedEventArgs e)
         {
-            int positionSquare = 0;
-            foreach(object square in GameManager.ArrayMap)
+            // first enable only the 
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private async void btnSelectSquareToFly_Click(object sender, RoutedEventArgs e)
+        {
+
+            int positionSquare = -1;
+            foreach (object square in GameManager.ArrayMap)
             {
-                if(square is Property)
+                if (square is Property)
                 {
                     if ((square as Property).toggleButtonBlock.IsChecked == true)
                         break;
                 }
                 positionSquare++;
             }
-
+            if (positionSquare == -1)
+            {
+                UIWorldTour.Visibility = Visibility.Collapsed;
+                GameManager.NextPlayer(); 
+                GameManager.SetToggleState(false);
+                return;
+            }
+            positionSquare++;
             Player player = GameManager.currentPlayer;
             int currentPosition = player.currentPosition + 1;
-            while (currentPosition != positionSquare)
+            while (currentPosition != positionSquare + 1)
             {
                 while (currentPosition > (player.PlayerPosition.GetLength(1) - 1))
                 {
@@ -630,16 +648,9 @@ namespace BussinesTourProject.Pages
 
             }
 
-            // first enable only the 
-        }
-
-        private void btnCancel_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnSelectSquareToFly_Click(object sender, RoutedEventArgs e)
-        {
+            UIWorldTour.Visibility = Visibility.Collapsed;
+            GameManager.NextPlayer();
+            GameManager.SetToggleState(false);
 
         }
     }
