@@ -592,7 +592,7 @@ namespace BussinesTourProject.Pages
                     }
                 }
             }
-            GameManager.SetState(true);
+            GameManager.SetState(false);
             // Perform any additional logic here if needed
         }
         private void btnSelectedChampionShip_Click(object sender, RoutedEventArgs e)
