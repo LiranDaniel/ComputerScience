@@ -176,7 +176,5 @@ namespace BussinesTourProject.Classes
             string formattedNumber = amountOfMoney.ToString("N0"); // adding 
             txtMoney.Text = $"{formattedNumber}";
         }
-    }
-
-    
+    }  
 }
