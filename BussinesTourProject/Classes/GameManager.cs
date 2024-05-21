@@ -302,10 +302,9 @@ namespace BussinesTourProject.Classes
                 UIBasicText.Visibility = Visibility.Collapsed;
             }
             else
-            {
                 UIWorldChampion.Visibility = Visibility.Visible;
                 // Show UI Select World Champion
-            }
+            
             // else then the UI to Select world Champion will be displayed
 
         }
@@ -347,10 +346,9 @@ namespace BussinesTourProject.Classes
                 UIBasicText.Visibility = Visibility.Collapsed;
             }
             else
-            {
                 UIWorldTour.Visibility = Visibility.Visible;
                 // Show Ui Select World Champion
-            }
+            
 
 
             // first enable only the property buttons and the null buttons
