@@ -275,22 +275,30 @@ namespace BussinesTourProject.Classes
 
         public static void WorldChampionShip()
         {
+            bool IsThereProperty = false;
             ToggleState = true;
-            SetState(false);
-            foreach(object square in ArrayMap)
+            SetState(false); // first enable only the property buttons
+            foreach (object square in ArrayMap)
             {
                 if(square is Property)
                 {
                     if((square as Property).ownerOfTheProperty == currentPlayer)
                     {
-                        //foreach 
+                        (square as Property).toggleButtonBlock.IsEnabled = true;
+                        IsThereProperty = true;
                     }
                 }
             }
-            // first enable only the property buttons
-            // if there is not property then the not property UI will be displayed
+            if (IsThereProperty)   // if there is not property then the not property UI will be displayed
+            {
+                //Show UI that the player doesnt have propertys
+            }
+            else
+            {
+                // Show Ui Select World Champion
+            }
             // else then the UI to Select world Champion will be displayed
-           
+
         }
 
 
@@ -307,6 +315,30 @@ namespace BussinesTourProject.Classes
 
         public static void WorldTour()
         {
+            bool IsThereProperty = false;
+            ToggleState = true;
+            SetState(false); // first enable only the property buttons
+            foreach (object square in ArrayMap)
+            {
+                if (square is Property)
+                {
+                    if ((square as Property).ownerOfTheProperty == currentPlayer || (square as Property).ownerOfTheProperty == null)
+                    {
+                        (square as Property).toggleButtonBlock.IsEnabled = true;
+                        IsThereProperty = true;
+                    }
+                }
+            }
+            if (IsThereProperty)   // if there is not property then the not property UI will be displayed
+            {
+                //Show UI that the player doesnt have propertys
+            }
+            else
+            {
+                // Show Ui Select World Champion
+            }
+
+
             // first enable only the property buttons and the null buttons
             // after showing ui to go into that position
         }
