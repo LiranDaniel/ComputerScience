@@ -110,38 +110,6 @@ namespace BussinesTourProject.Pages
             Frame.Navigate(typeof(SignInPage));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            ToggleButton clickedButton = sender as ToggleButton;
-
-            if (GameManager.ToggleState)
-            {
-                // Deselect all other buttons if in radio button mode
-                foreach (var child in (clickedButton.Parent as Panel).Children)
-                {
-                    if (child is ToggleButton button && button != clickedButton)
-                    {
-                        button.IsChecked = false;
-                    }
-                }
-            }
-            SetState(clickedButton, true);
-
-            // Perform any additional logic here if needed
-        }
-        private void SetState(ToggleButton clickedButton, bool state)
-        {
-            clickedButton.IsEnabled = state;
-            // Deselect all other buttons if in radio button mode
-            foreach (var child in (clickedButton.Parent as Panel).Children)
-            {
-                if (child is ToggleButton button && button != clickedButton)
-                {
-                        button.IsEnabled = state;
-                }
-            }
-            
-        }
 
         /// <summary>
         /// This function is Initiating the data of a player from this page
@@ -229,7 +197,7 @@ namespace BussinesTourProject.Pages
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             GameManager.InitPlayers();
-
+            SetButtonToggleMapArray();
             InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer1);
             InitPlayer(GameManager.arrayPlayers[1], imgPlayer2, GameManager.MatrixPositionPlayer2);
             InitPlayer(GameManager.arrayPlayers[2], imgPlayer3, GameManager.MatrixPositionPlayer3);
@@ -593,6 +561,61 @@ namespace BussinesTourProject.Pages
             ((Station)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition]).BuyProperty();
             UIBuyingStation.Visibility = Visibility.Collapsed;
             GameManager.CheckIfDouble();
+        }
+
+        private void SetButtonToggleMapArray()
+        {
+            ToggleButtonMap.ArrayToggleButtonMap = new ToggleButtonMap[]{
+                new ToggleButtonMap(1, tglbtnGranada), new ToggleButtonMap(2, tglbtnSeville), new ToggleButtonMap(3,tglbtnMadrid),
+                new ToggleButtonMap(4, tglbtnTrafficLight), new ToggleButtonMap(5, tglbtnHongKong), new ToggleButtonMap(6, tglbtnBeijing),
+                new ToggleButtonMap(7, tglbtnShanghai), new ToggleButtonMap(9, tglbtnVenice), new ToggleButtonMap(10, tglbtnMilan),
+                new ToggleButtonMap(11, tglbtnRome), new ToggleButtonMap(13, tglbtnHamburg), new ToggleButtonMap(14, tglbtnParking),
+                new ToggleButtonMap(15, tglbtnParking), new ToggleButtonMap(16, tglbtnBerlin), new ToggleButtonMap(18, tglbtnLondon),
+                new ToggleButtonMap(19, tglbtnGasStation), new ToggleButtonMap(20, tglbtnSydney), new ToggleButtonMap(22, tglbtnChicago),
+                new ToggleButtonMap(23, tglbtnLasVegas), new ToggleButtonMap(24, tglbtnNewYork), new ToggleButtonMap(26, tglbtnStation),
+                new ToggleButtonMap(27, tglbtnLyon), new ToggleButtonMap(28, tglbtnParis), new ToggleButtonMap(29, tglbtnOsaka), new ToggleButtonMap(30, tglbtnTokyo)
+            };
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleButton clickedButton = sender as ToggleButton;
+
+            if (GameManager.ToggleState)
+            {
+                // Deselect all other buttons if in radio button mode
+                foreach (var child in (clickedButton.Parent as Panel).Children)
+                {
+                    if (child is ToggleButton button && button != clickedButton)
+                    {
+                        button.IsChecked = false;
+                    }
+                }
+            }
+            SetState(clickedButton, true);
+
+            // Perform any additional logic here if needed
+        }
+        private void SetState(ToggleButton clickedButton, bool state)
+        {
+            clickedButton.IsEnabled = state;
+            // Deselect all other buttons if in radio button mode
+            foreach (var child in (clickedButton.Parent as Panel).Children)
+            {
+                if (child is ToggleButton button && button != clickedButton)
+                {
+                    button.IsEnabled = state;
+                }
+            }
+        }
+        private void btnSelectedChampionShip_Click(object sender, RoutedEventArgs e)
+        {
+            // first enable only the 
+        }
+
+        private void btnCancelChampionShip_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

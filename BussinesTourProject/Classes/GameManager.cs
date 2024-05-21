@@ -276,12 +276,15 @@ namespace BussinesTourProject.Classes
 
         public static void WorldChampionShip()
         {
-
+            // first enable only the property buttons
+            // if there is not property then the not property UI will be displayed
+            // else then the UI to Select world Champion will be displayed
         }
 
         public static void WorldTour()
         {
-
+            // first enable only the property buttons and the null buttons
+            // after showing ui to go into that position
         }
 
         public static void ShowUISellProperty()
