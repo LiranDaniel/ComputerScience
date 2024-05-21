@@ -89,7 +89,6 @@ namespace BussinesTourProject.Classes
 
         public static double WorldChampionTimes = 1.5; // Time world champion ships times its currentretPrice of the house
 
-
         /// <summary>
         /// Increase the amount of times that the world championships increase the price of a house
         /// </summary>
