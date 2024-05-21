@@ -22,6 +22,7 @@ namespace BussinesTourProject.Classes
         public static Grid UIBuyingStation{  get; set; }   // The Grid of buying Station in game page
         public static Grid UITax {  get; set; }            // The Grid of paying the taxes of player propertys
         public static Grid UIWorldChampion { get; set; }   // The Grid of selecting property to World Champion
+        public static Grid UIWorldTour { get; set; }       // The Grid of selecting World Tour square
         public static Grid UIBasicText { get; set; }       // This Grid will display 
         public static Image ImgBuyingStation { get; set; } // The image that display when using the UI station, chaning it to the current Station
         public static RadioButton[] arrayRadioButtonBuyingHouse { get; set; } = new RadioButton[3]; // radio buttons from the Grid buying house from Game page
@@ -321,7 +322,7 @@ namespace BussinesTourProject.Classes
             }
         }
 
-        public static void WorldTour()
+        public async static void WorldTour()
         {
             bool IsThereIsSquare = false;
             ToggleState = true;
@@ -340,9 +341,14 @@ namespace BussinesTourProject.Classes
             if (IsThereIsSquare)   // if there is not property then the not property UI will be displayed
             {
                 // Show UI that the player doesnt have propertys
+                txtBlockBasic.Text = "Theres Is Not Free Square";
+                UIBasicText.Visibility = Visibility.Visible;
+                await Task.Delay(TimeSpan.FromSeconds(3));
+                UIBasicText.Visibility = Visibility.Collapsed;
             }
             else
             {
+                UIWorldTour.Visibility = Visibility.Visible;
                 // Show Ui Select World Champion
             }
 
