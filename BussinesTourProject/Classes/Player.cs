@@ -170,7 +170,12 @@ namespace BussinesTourProject.Classes
             }
             return value;
         }
-
+        public void AmountOfMoneyChange(int amount)
+        {
+            amountOfMoney -= amount;
+            string formattedNumber = amountOfMoney.ToString("N0"); // adding 
+            txtMoney.Text = $"{formattedNumber}";
+        }
     }
 
     

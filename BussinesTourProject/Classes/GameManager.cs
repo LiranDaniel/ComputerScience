@@ -14,6 +14,7 @@ namespace BussinesTourProject.Classes
     public static class GameManager
     {
         public static DispatcherTimer timerPlayers;
+        public static bool ToggleState { get; set; } = true;
 
         public static Random rnd = new Random();
         public static Grid UIBuyingHouseGrid { get; set; } // The Grid of buying house in game page
@@ -178,12 +179,12 @@ namespace BussinesTourProject.Classes
                         {
 
                         }
+                        else
+                            Console.WriteLine(); // BunkRupt Giving all the money to the owner and losing the game
                     }
                     else
                     {   
-                        currentPlayer.amountOfMoney -= LandHouse.currentCostToPayRent;
-                        string formattedNumber = currentPlayer.amountOfMoney.ToString("N0"); // adding 
-                        currentPlayer.txtMoney.Text = $"{formattedNumber}";   
+                        currentPlayer.AmountOfMoneyChange(LandHouse.currentCostToPayRent);
                     }
                 }
                 CheckIfDouble();
@@ -238,7 +239,7 @@ namespace BussinesTourProject.Classes
                         }
                         else
                         {
-                            currentPlayer.amountOfMoney -= LandStation.currentCostToPayRent;
+                            currentPlayer.AmountOfMoneyChange(LandStation.currentCostToPayRent);
                         }
                     }
                     CheckIfDouble();

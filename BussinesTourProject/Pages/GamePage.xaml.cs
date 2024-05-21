@@ -38,7 +38,6 @@ namespace BussinesTourProject.Pages
         private int secondsElapsed; // minute of the timer of the game
         private int minutes;        // seconds of the timer of the game
 
-        bool isRadioButtonMode = true;
         /// <summary>
         /// Initiate the Components for the page
         /// </summary>
@@ -115,7 +114,7 @@ namespace BussinesTourProject.Pages
         {
             ToggleButton clickedButton = sender as ToggleButton;
 
-            if (isRadioButtonMode)
+            if (GameManager.ToggleState)
             {
                 // Deselect all other buttons if in radio button mode
                 foreach (var child in (clickedButton.Parent as Panel).Children)
@@ -126,8 +125,22 @@ namespace BussinesTourProject.Pages
                     }
                 }
             }
+            SetState(clickedButton, false);
 
             // Perform any additional logic here if needed
+        }
+        private void SetState(ToggleButton clickedButton, bool state)
+        {
+            clickedButton.IsEnabled = state;
+            // Deselect all other buttons if in radio button mode
+            foreach (var child in (clickedButton.Parent as Panel).Children)
+            {
+                if (child is ToggleButton button && button != clickedButton)
+                {
+                        button.IsEnabled = state;
+                }
+            }
+            
         }
 
         /// <summary>
@@ -494,7 +507,7 @@ namespace BussinesTourProject.Pages
         {
             if (GameManager.currentPlayer.amountOfMoney >= 200_000)
             {
-                GameManager.currentPlayer.amountOfMoney -= 200_000;
+                GameManager.currentPlayer.AmountOfMoneyChange(200_000);
                 GameManager.currentPlayer.turnsStackJail = 0;
                 UIJailOptions.Visibility = Visibility.Collapsed;
             }
@@ -547,7 +560,6 @@ namespace BussinesTourProject.Pages
             txtBuyingPrice.Text = $"Buy For: {currentHouse.basicCostToBuy.ToString("N0")}";
         }
 
-
         /// <summary>
         /// When you are in UI buying house and select and house then its display its price to buy
         /// </summary>
@@ -558,7 +570,6 @@ namespace BussinesTourProject.Pages
             House currentHouse = (House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition];
             txtBuyingPrice.Text = $"Buy For: {(currentHouse.basicCostToBuy + currentHouse.levelUpgradePrice).ToString("N0")}";
         }
-
 
         /// <summary>
         /// When you are in UI buying house and select and house then its display its price to buy
@@ -581,6 +592,7 @@ namespace BussinesTourProject.Pages
         {
             ((Station)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition]).BuyProperty();
             UIBuyingStation.Visibility = Visibility.Collapsed;
+            GameManager.CheckIfDouble();
         }
     }
 }
