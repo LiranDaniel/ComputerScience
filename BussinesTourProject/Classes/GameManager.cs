@@ -22,11 +22,12 @@ namespace BussinesTourProject.Classes
         public static Grid UIBuyingStation{  get; set; }   // The Grid of buying Station in game page
         public static Grid UITax {  get; set; }            // The Grid of paying the taxes of player propertys
         public static Grid UIWorldChampion { get; set; }   // The Grid of selecting property to World Champion
-        public static Grid UI;
+        public static Grid UIBasicText { get; set; }       // This Grid will display 
         public static Image ImgBuyingStation { get; set; } // The image that display when using the UI station, chaning it to the current Station
         public static RadioButton[] arrayRadioButtonBuyingHouse { get; set; } = new RadioButton[3]; // radio buttons from the Grid buying house from Game page
-        public static TextBlock txtBlockBuyingHousePrice; // the text that present the price of the house  that you want to buy
+        public static TextBlock txtBlockBuyingHousePrice;  // The text that present the price of the house  that you want to buy
         public static TextBlock txtBlockTaxesPrice;
+        public static TextBlock txtBlockBasic;             // The text will be displayed 
 
         public static Player currentPlayer; // current player playing 
         public static int currentTimesPlay = 1; // how much rounds in row did he play to check if he needs  to go to jail
@@ -275,7 +276,7 @@ namespace BussinesTourProject.Classes
             
         }
 
-        public static void WorldChampionShip()
+        public async static void WorldChampionShip()
         {
             bool IsThereProperty = false;
             ToggleState = true;
@@ -294,11 +295,15 @@ namespace BussinesTourProject.Classes
             if (IsThereProperty)   // if there is not property then the not property UI will be displayed
             {
                 //Show UI that the player doesnt have propertys
-                UIWorldChampion.Visibility = Visibility.Visible;
+                txtBlockBasic.Text = "You Does Not Have Any Propertys";
+                UIBasicText.Visibility = Visibility.Visible;
+                await Task.Delay(TimeSpan.FromSeconds(3));
+                UIBasicText.Visibility = Visibility.Collapsed;
             }
             else
             {
-                // Show Ui Select World Champion
+                UIWorldChampion.Visibility = Visibility.Visible;
+                // Show UI Select World Champion
             }
             // else then the UI to Select world Champion will be displayed
 
