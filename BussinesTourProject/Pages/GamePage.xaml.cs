@@ -125,7 +125,7 @@ namespace BussinesTourProject.Pages
                     }
                 }
             }
-            SetState(clickedButton, false);
+            SetState(clickedButton, true);
 
             // Perform any additional logic here if needed
         }
