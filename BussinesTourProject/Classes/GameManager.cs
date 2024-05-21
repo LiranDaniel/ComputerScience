@@ -22,7 +22,7 @@ namespace BussinesTourProject.Classes
         public static Grid UIBuyingStation{  get; set; }   // The Grid of buying Station in game page
         public static Grid UITax {  get; set; }            // The Grid of paying the taxes of player propertys
         public static Grid UIWorldChampion { get; set; }   // The Grid of selecting property to World Champion
-        public static Grid UI
+        public static Grid UI;
         public static Image ImgBuyingStation { get; set; } // The image that display when using the UI station, chaning it to the current Station
         public static RadioButton[] arrayRadioButtonBuyingHouse { get; set; } = new RadioButton[3]; // radio buttons from the Grid buying house from Game page
         public static TextBlock txtBlockBuyingHousePrice; // the text that present the price of the house  that you want to buy
