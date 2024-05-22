@@ -80,9 +80,6 @@ namespace BussinesTourProject.Classes
             PropertyUpgrade(level);
         }
 
-
-
-
         //public void ChangeHouse(int houseUpgradeLevel)
         //{
         //    imageOfProperty.Source = new BitmapImage(new Uri($"ms-appx://" + filePathImageHouses[(HouseState)houseUpgradeLevel]));
