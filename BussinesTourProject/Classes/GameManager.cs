@@ -128,9 +128,9 @@ namespace BussinesTourProject.Classes
              else if (ArrayMap[currentPlayer.currentPosition] is Tax)
                 ShowUITax();
              else if (currentPlayer.currentPosition == 16)
-                WorldTour();
-             else if (currentPlayer.currentPosition == 24)
                 WorldChampionShip();
+             else if (currentPlayer.currentPosition == 24)
+                WorldTour();
              else
                 CheckIfDouble();
         }
