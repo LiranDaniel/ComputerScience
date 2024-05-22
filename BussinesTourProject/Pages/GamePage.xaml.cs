@@ -592,13 +592,9 @@ namespace BussinesTourProject.Pages
             {
                 positionSquare++;
 
-                if (WorldChampion.PropertyHoldingWorldChampion == null)
-                    WorldChampion.PropertyHoldingWorldChampion = GameManager.ArrayMap[positionSquare] as Property;
-                else
+                if (WorldChampion.PropertyHoldingWorldChampion != null)
                 {
                     WorldChampion.PropertyHoldingWorldChampion.currentCostToPayRent = WorldChampion.PropertyHoldingWorldChampion.CalculatePayRentByLevel();
-
-                    (GameManager.ArrayMap[positionSquare] as Property).currentCostToPayRent = (int)((GameManager.ArrayMap[positionSquare] as Property).CalculatePayRentByLevel() * WorldChampion.WorldChampionTimes);
 
                     double normalCostToPayRent = WorldChampion.PropertyHoldingWorldChampion.currentCostToPayRent;
                     int timesDigits = 0;
@@ -613,13 +609,13 @@ namespace BussinesTourProject.Pages
                         WorldChampion.PropertyHoldingWorldChampion.txtOfMoneyDisplayRent.Text = $"{normalCostToPayRent}M";
                     else
                         WorldChampion.PropertyHoldingWorldChampion.txtOfMoneyDisplayRent.Text = $"{normalCostToPayRent}";
-
-                    WorldChampion.PropertyHoldingWorldChampion = GameManager.ArrayMap[positionSquare] as Property;
                 }
+                WorldChampion.PropertyHoldingWorldChampion = GameManager.ArrayMap[positionSquare] as Property;
+
                 // the property that have been selected the payrent price will be double 
                 // into the current world champion value
-                double newPrice =  (GameManager.ArrayMap[positionSquare] as Property).currentCostToPayRent  * WorldChampion.WorldChampionTimes;
-                (GameManager.ArrayMap[positionSquare] as Property).currentCostToPayRent = (int)newPrice;
+                int newPrice = (int)((GameManager.ArrayMap[positionSquare] as Property).CalculatePayRentByLevel() * WorldChampion.WorldChampionTimes);
+                (GameManager.ArrayMap[positionSquare] as Property).currentCostToPayRent = newPrice;
 
                 int times = 0;
                 while (newPrice > 1000)
