@@ -21,10 +21,10 @@ namespace BussinesTourProject.Classes
 
         public static Dictionary<HouseState, string> filePathImageHouses = new Dictionary<HouseState, string>() {
                 {HouseState.None, null},
-                {HouseState.BasicHouse, @"/Assets\Images\SquareImages\HousesIcons\House1.png"},
-                {HouseState.AdvanceHouse, @"/Assets\Images\SquareImages\HousesIcons\House2.png"},
-                {HouseState.villa, @"/Assets\Images\SquareImages\HousesIcons\House3.png"},
-                {HouseState.Hotel, @"/Assets\Images\SquareImages\HousesIcons\House4.png"}
+                {HouseState.BasicHouse, @"House1.png"},
+                {HouseState.AdvanceHouse, @"House2.png"},
+                {HouseState.villa, @"House3.png"},
+                {HouseState.Hotel, @"House4.png"}
         };
 
         public HouseState houseCurrentState; // hold the current house level state
@@ -46,7 +46,7 @@ namespace BussinesTourProject.Classes
         public void PropertyUpgrade(int level)
         {
             currentLevel = level;
-            houseCurrentState = (HouseState)(level + 1);
+            houseCurrentState = (HouseState)(level);
             int LastCostToBuy = currentCostToBuy;
             currentCostToPayRent = ((level - 1) * levelUpgradeRent) + basicCostToPayRent;
             currentCostToBuy = basicCostToBuy + (level * levelUpgradePrice);
@@ -65,7 +65,7 @@ namespace BussinesTourProject.Classes
                 txtOfMoneyDisplayRent.Text = $"{txtDisplay}M";
             else
                 txtOfMoneyDisplayRent.Text = $"{txtDisplay}";
-            imageOfProperty.Source = new BitmapImage(new Uri($"ms-appx://{House.filePathImageHouses[houseCurrentState]}"));
+            imageOfProperty.Source = new BitmapImage(new Uri($@"ms-appx:///Assets\Images\SquareImages\HousesIcons\{ownerOfTheProperty.playerNumber}\{House.filePathImageHouses[houseCurrentState]}"));
             string formattedNumber = ownerOfTheProperty.amountOfMoney.ToString("N0"); // adding 
             ownerOfTheProperty.txtMoney.Text = $"{formattedNumber}$";
         }
