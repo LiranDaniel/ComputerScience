@@ -45,7 +45,7 @@ namespace BussinesTourProject.Classes
         }
         public int CalculatePayRentByLevel()
         {
-            return basicCostToPayRent + ((currentLevel - 1) * levelUpgradeRent);
+            return basicCostToPayRent + ((currentLevel -1) * levelUpgradeRent);
         }
 
 

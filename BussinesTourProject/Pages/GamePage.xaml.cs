@@ -441,14 +441,14 @@ namespace BussinesTourProject.Pages
             if (optionHouse1RadioButton.IsChecked == true)
             {
                if(GameManager.currentPlayer.amountOfMoney >= currentHouse.basicCostToBuy)
-                    currentHouse.BuyProperty(0); 
+                    currentHouse.BuyProperty(1); 
                else
                     optionHouse1RadioButton.IsChecked = false;
             }
             else if (optionHouse2RadioButton.IsChecked == true)
             {
                 if (GameManager.currentPlayer.amountOfMoney >= currentHouse.levelUpgradePrice + currentHouse.basicCostToBuy)
-                    currentHouse.BuyProperty(1);
+                    currentHouse.BuyProperty(2);
                 else
                     optionHouse1RadioButton.IsChecked = false;
 
@@ -456,7 +456,7 @@ namespace BussinesTourProject.Pages
             else if (optionHouse3RadioButton.IsChecked == true)
             {
                 if (GameManager.currentPlayer.amountOfMoney >= (currentHouse.levelUpgradePrice * 2)+ currentHouse.basicCostToBuy)
-                    currentHouse.BuyProperty(2);
+                    currentHouse.BuyProperty(3);
                 else
                     optionHouse1RadioButton.IsChecked = false;
 
@@ -614,8 +614,8 @@ namespace BussinesTourProject.Pages
 
                 // the property that have been selected the payrent price will be double 
                 // into the current world champion value
-                int newPrice = (int)((GameManager.ArrayMap[positionSquare] as Property).CalculatePayRentByLevel() * WorldChampion.WorldChampionTimes);
-                (GameManager.ArrayMap[positionSquare] as Property).currentCostToPayRent = newPrice;
+                double newPrice = WorldChampion.PropertyHoldingWorldChampion.CalculatePayRentByLevel() * WorldChampion.WorldChampionTimes;
+                WorldChampion.PropertyHoldingWorldChampion.currentCostToPayRent = (int)newPrice;
 
                 int times = 0;
                 while (newPrice > 1000)
@@ -624,11 +624,11 @@ namespace BussinesTourProject.Pages
                     times++;
                 }
                 if (times == 1)
-                    (GameManager.ArrayMap[positionSquare] as Property).txtOfMoneyDisplayRent.Text = $"{newPrice}K";
+                    WorldChampion.PropertyHoldingWorldChampion.txtOfMoneyDisplayRent.Text = $"{newPrice}K";
                 else if (times == 2)
-                    (GameManager.ArrayMap[positionSquare] as Property).txtOfMoneyDisplayRent.Text = $"{newPrice}M";
+                    WorldChampion.PropertyHoldingWorldChampion.txtOfMoneyDisplayRent.Text = $"{newPrice}M";
                 else
-                    (GameManager.ArrayMap[positionSquare] as Property).txtOfMoneyDisplayRent.Text = $"{newPrice}";
+                    WorldChampion.PropertyHoldingWorldChampion.txtOfMoneyDisplayRent.Text = $"{newPrice}";
 
                 WorldChampion.IncreaseWorldChampion();
                 UIWorldChampion.Visibility = Visibility.Collapsed;
@@ -651,11 +651,11 @@ namespace BussinesTourProject.Pages
             UIWorldTour.Visibility = Visibility.Collapsed;
             btnRoll_Dice.Visibility = Visibility.Collapsed;
             Player player = GameManager.currentPlayer;
-            GameManager.NextPlayer();
             GameManager.SetToggleState(false);
 
             if (positionSquare == -1)
             {
+                GameManager.NextPlayer();
                 btnRoll_Dice.Visibility = Visibility.Visible;
                 return;
             }
@@ -692,6 +692,7 @@ namespace BussinesTourProject.Pages
             }
             player.currentPosition = positionSquare;
             btnRoll_Dice.Visibility = Visibility.Visible;
+            GameManager.NextPlayer();
         }
     }
 }

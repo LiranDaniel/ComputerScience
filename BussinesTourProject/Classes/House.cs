@@ -48,7 +48,7 @@ namespace BussinesTourProject.Classes
             currentLevel = level;
             houseCurrentState = (HouseState)(level + 1);
             int LastCostToBuy = currentCostToBuy;
-            currentCostToPayRent = (level * levelUpgradeRent) + basicCostToPayRent;
+            currentCostToPayRent = ((level - 1) * levelUpgradeRent) + basicCostToPayRent;
             currentCostToBuy = basicCostToBuy + (level * levelUpgradePrice);
             ownerOfTheProperty.amountOfMoney -= (currentCostToBuy - LastCostToBuy);
             double txtDisplay = currentCostToPayRent;
