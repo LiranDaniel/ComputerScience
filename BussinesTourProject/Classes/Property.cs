@@ -16,6 +16,7 @@ namespace BussinesTourProject.Classes
         public int currentCostToBuy;
         public int currentCostToPayRent;
         public TextBlock txtOfMoneyDisplayRent;
+        public int currentLevel;
 
         public Player ownerOfTheProperty;   // This is the owner of the property
         public Image imageOfProperty;
@@ -28,6 +29,7 @@ namespace BussinesTourProject.Classes
             this.levelUpgradeRent = levelUpgradeRent;
             this.currentCostToBuy = 0;
             this.currentCostToPayRent = 0;
+            this.currentLevel = 0;
         }
 
         /// <summary>

@@ -25,6 +25,7 @@ using Windows.ApplicationModel.VoiceCommands;
 using Windows.UI.Xaml.Media.Animation;
 using static BussinesTourProject.Classes.House;
 using static BussinesTourProject.Classes.Player;
+using System.Timers;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace BussinesTourProject.Pages
@@ -584,7 +585,58 @@ namespace BussinesTourProject.Pages
         }
         private  void btnSelecteChampionShip_Click(object sender, RoutedEventArgs e)
         {
-            // first enable only the 
+            int positionSquare = GameManager.GetSquarePosition();
+            GameManager.SetToggleState(false);
+            GameManager.CheckIfDouble();
+            if (positionSquare != -1)
+            {
+                positionSquare++;
+
+                if (WorldChampion.PropertyHoldingWorldChampion == null)
+                    WorldChampion.PropertyHoldingWorldChampion = GameManager.ArrayMap[positionSquare] as Property;
+                else
+                {
+                    WorldChampion.PropertyHoldingWorldChampion.currentCostToPayRent /= (int)WorldChampion.WorldChampionTimes;
+                    double normalCostToPayRent = WorldChampion.PropertyHoldingWorldChampion.currentCostToPayRent;
+                    int timesDigits = 0;
+                    while (normalCostToPayRent > 1000)
+                    {
+                        normalCostToPayRent = normalCostToPayRent / 1000;
+                        timesDigits++;
+                    }
+                    if (timesDigits == 1)
+                        WorldChampion.PropertyHoldingWorldChampion.txtOfMoneyDisplayRent.Text = $"{normalCostToPayRent}K";
+                    else if (timesDigits == 2)
+                        WorldChampion.PropertyHoldingWorldChampion.txtOfMoneyDisplayRent.Text = $"{normalCostToPayRent}M";
+                    else
+                        WorldChampion.PropertyHoldingWorldChampion.txtOfMoneyDisplayRent.Text = $"{normalCostToPayRent}";
+
+                    WorldChampion.PropertyHoldingWorldChampion = GameManager.ArrayMap[positionSquare] as Property;
+                }
+                // the property that have been selected the payrent price will be double 
+                // into the current world champion value
+                double newPrice =  (GameManager.ArrayMap[positionSquare] as Property).currentCostToPayRent  * WorldChampion.WorldChampionTimes;
+                (GameManager.ArrayMap[positionSquare] as Property).currentCostToPayRent = (int)newPrice;
+
+                int times = 0;
+                while (newPrice > 1000)
+                {
+                    newPrice = newPrice / 1000;
+                    times++;
+                }
+                if (times == 1)
+                    (GameManager.ArrayMap[positionSquare] as Property).txtOfMoneyDisplayRent.Text = $"{newPrice}K";
+                else if (times == 2)
+                    (GameManager.ArrayMap[positionSquare] as Property).txtOfMoneyDisplayRent.Text = $"{newPrice}M";
+                else
+                    (GameManager.ArrayMap[positionSquare] as Property).txtOfMoneyDisplayRent.Text = $"{newPrice}";
+
+                WorldChampion.IncreaseWorldChampion();
+                UIWorldChampion.Visibility = Visibility.Collapsed;
+
+            }
+            else
+                return;
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
@@ -595,24 +647,15 @@ namespace BussinesTourProject.Pages
         private async void btnSelectSquareToFly_Click(object sender, RoutedEventArgs e)
         {
 
-            int positionSquare = -1;
-            foreach (object square in GameManager.ArrayMap)
-            {
-                if (square is Property)
-                {
-                    if ((square as Property).toggleButtonBlock.IsChecked == true)
-                        break;
-                }
-                positionSquare++;
-            }
-
+            int positionSquare = GameManager.GetSquarePosition();
+          
             UIWorldTour.Visibility = Visibility.Collapsed;
             btnRoll_Dice.Visibility = Visibility.Collapsed;
             Player player = GameManager.currentPlayer;
             GameManager.NextPlayer();
             GameManager.SetToggleState(false);
 
-            if (positionSquare == Player.MaxPosition - 1)
+            if (positionSquare == -1)
             {
                 btnRoll_Dice.Visibility = Visibility.Visible;
                 return;
@@ -650,7 +693,6 @@ namespace BussinesTourProject.Pages
             }
             player.currentPosition = positionSquare;
             btnRoll_Dice.Visibility = Visibility.Visible;
-
         }
     }
 }

@@ -8,6 +8,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml;
 using static BussinesTourProject.Classes.Player;
 using Windows.Perception.Spatial;
+using Windows.ApplicationModel.VoiceCommands;
 
 namespace BussinesTourProject.Classes
 {
@@ -91,15 +92,6 @@ namespace BussinesTourProject.Classes
                                                          150, 169, 169, 169, 169, 169, 169, 169,
                                                          175, 139, 123, 107, 91, 75, 59, 43} }; // array of all the position that the player4 should be on, the position in the square
 
-        public static double WorldChampionTimes = 1.5; // Time world champion ships times its currentretPrice of the house
-
-        /// <summary>
-        /// Increase the amount of times that the world championships increase the price of a house
-        /// </summary>
-        public static void IncreaseWorldChampion()
-        {
-            WorldChampionTimes += .5;
-        }
 
         /// <summary>
         /// Initiate the players data
@@ -124,25 +116,23 @@ namespace BussinesTourProject.Classes
         /// When landing on a square calling a function that will check which type of square it is than call other function squares
         /// </summary>
         public static void Land()
-        {
-            /* if (ArrayMap[currentPlayer.currentPosition] == null)
-                 CheckIfDouble();
-             else if (ArrayMap[currentPlayer.currentPosition] is House)
-                 LandingHouse();
+        {       
+             if (ArrayMap[currentPlayer.currentPosition] is House)
+                LandingHouse();
              else if (ArrayMap[currentPlayer.currentPosition] is Station)
-                 LandingStation();
+                LandingStation();
              else if (ArrayMap[currentPlayer.currentPosition] is Chance)
-                 CheckIfDouble();
+                WorldChampionShip();
              else if (ArrayMap[currentPlayer.currentPosition] is Jail)
-                 ShowUIJail();
+                ShowUIJail();
              else if (ArrayMap[currentPlayer.currentPosition] is Tax)
-                 ShowUITax();
+                ShowUITax();
+             else if (currentPlayer.currentPosition == 16)
+                WorldTour();
+             else if (currentPlayer.currentPosition == 24)
+                WorldChampionShip();
              else
-                 CheckIfDouble();
-            */
-            WorldTour();
-
-
+                CheckIfDouble();
         }
 
         public static void TakeCardChance()
@@ -296,8 +286,9 @@ namespace BussinesTourProject.Classes
                     }
                 }
             }
-            if (IsThereProperty)   // if there is not property then the not property UI will be displayed
+            if (!IsThereProperty)   // if there is not property then the not property UI will be displayed
             {
+                return;
                 //Show UI that the player doesnt have propertys
                 txtBlockBasic.Text = "You Does Not Have Any Propertys";
                 UIBasicText.Visibility = Visibility.Visible;
@@ -357,6 +348,29 @@ namespace BussinesTourProject.Classes
 
             // first enable only the property buttons and the null buttons
             // after showing ui to go into that position if there is 
+        }
+
+        // Return Square Position In ArrayMap
+        public static int GetSquarePosition()
+        {
+            int position = -1;
+            bool IsSquareChecked = false;
+            foreach (object square in GameManager.ArrayMap)
+            {
+                if (square is Property)
+                {
+                    if ((square as Property).toggleButtonBlock.IsChecked == true)
+                    {
+                        IsSquareChecked = true;
+                        break;
+                    }
+                }
+                position++;
+            }
+            if (IsSquareChecked)
+                return position;
+            else
+                return -1;
         }
 
         public static void ShowUISellProperty()

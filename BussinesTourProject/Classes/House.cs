@@ -45,7 +45,8 @@ namespace BussinesTourProject.Classes
         /// <param name="level"></param>
         public void PropertyUpgrade(int level)
         {
-            houseCurrentState = (HouseState)level;
+            currentLevel = level;
+            houseCurrentState = (HouseState)(level + 1);
             int LastCostToBuy = currentCostToBuy;
             currentCostToPayRent = (level * levelUpgradeRent) + basicCostToPayRent;
             currentCostToBuy = basicCostToBuy + (level * levelUpgradePrice);

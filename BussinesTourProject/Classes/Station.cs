@@ -54,6 +54,7 @@ namespace BussinesTourProject.Classes
         /// </summary>
         public void PropertyUpgrade()
         {
+            currentLevel = ownerOfTheProperty.playerStations;
             currentCostToBuy = basicCostToBuy;
             currentCostToPayRent = basicCostToPayRent + ((ownerOfTheProperty.playerStations - 1) * levelUpgradeRent);
             double txtDisplay = currentCostToPayRent;

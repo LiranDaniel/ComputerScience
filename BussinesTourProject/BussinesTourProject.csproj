@@ -129,6 +129,7 @@
     <Compile Include="Classes\Property.cs" />
     <Compile Include="Classes\Station.cs" />
     <Compile Include="Classes\Tax.cs" />
+    <Compile Include="Classes\WorldChampion.cs" />
     <Compile Include="Pages\GamePage.xaml.cs">
       <DependentUpon>GamePage.xaml</DependentUpon>
     </Compile>
