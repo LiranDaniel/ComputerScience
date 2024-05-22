@@ -43,6 +43,10 @@ namespace BussinesTourProject.Classes
             this.imageOfProperty = imageOfProperty;
             this.toggleButtonBlock = toggleButtonBlock;
         }
+        public int CalculatePayRentByLevel()
+        {
+            return basicCostToPayRent + ((currentLevel - 1) * levelUpgradeRent);
+        }
 
 
 

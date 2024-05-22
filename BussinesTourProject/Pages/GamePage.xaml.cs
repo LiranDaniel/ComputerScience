@@ -596,7 +596,7 @@ namespace BussinesTourProject.Pages
                     WorldChampion.PropertyHoldingWorldChampion = GameManager.ArrayMap[positionSquare] as Property;
                 else
                 {
-                    WorldChampion.PropertyHoldingWorldChampion.currentCostToPayRent /= (int)WorldChampion.WorldChampionTimes;
+                    WorldChampion.PropertyHoldingWorldChampion.currentCostToPayRent = (int)(WorldChampion.PropertyHoldingWorldChampion.CalculatePayRentByLevel() / WorldChampion.WorldChampionTimes);
                     double normalCostToPayRent = WorldChampion.PropertyHoldingWorldChampion.currentCostToPayRent;
                     int timesDigits = 0;
                     while (normalCostToPayRent > 1000)

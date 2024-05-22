@@ -56,7 +56,7 @@ namespace BussinesTourProject.Classes
         {
             currentLevel = ownerOfTheProperty.playerStations;
             currentCostToBuy = basicCostToBuy;
-            currentCostToPayRent = basicCostToPayRent + ((ownerOfTheProperty.playerStations - 1) * levelUpgradeRent);
+            currentCostToPayRent = CalculatePayRentByLevel();
             double txtDisplay = currentCostToPayRent;
             int times = 0;
             ownerOfTheProperty.amountOfMoney -= currentCostToBuy;
