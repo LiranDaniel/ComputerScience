@@ -42,21 +42,21 @@ namespace BussinesTourProject.Classes
              /// This is the array of all the components of the map, include propety, chane, Tax and other special square
              /// </summary>
 
-            null, new House(basicCostToBuy:60_000, basicCostToPayRent:15_000, levelUpgradeRent:35_000, levelUpgradePrice:50_000),
-            new House(60_000, 16_000, 35_000, 50_000), new House(60_000, 17_000, 35_000, 50_000), new Station(),
-            new House(70_000, 50_000, 35_000, 50_000), new House(70_000, 50_000, 35_000, 50_000),
-            new House(70_000, 50_000, 35_000, 50_000), // first Line
+            null, new House(basicCostToBuy:55_000, basicCostToPayRent:2_000, levelUpgradeRent:25_000, levelUpgradePrice:50_000),
+            new House(60_000, 2_000, 26_000, 50_000), new House(65_000, 3_000, 27_000, 50_000), new Station(),
+            new House(100_000, 5_000, 33_000, 50_000), new House(110_000, 6_000, 34_000, 50_000),
+            new House(120_000, 8_000, 35_000, 50_000), // first Line
 
-            null, new House(90_000, 100_000, 35_000, 100_000), new House(90_000, 100_000, 35_000, 100_000),
-            new House(90_000, 100_000, 35_000, 100_000), new Chance(), new House(100_000, 100_000, 35_000, 100_000),
-            new Station(), new House(105_000, 100_000, 35_000, 100_000), // Second line
+            null, new House(140_000, 10_000, 64_000, 100_000), new House(150_000, 11_000, 66_000, 100_000),
+            new House(160_000, 12_000, 68_000, 100_000), new Chance(), new House(180_000, 14_000, 78_000, 100_000),
+            new Station(), new House(200_000, 16_000, 80_000, 100_000), // Second line
 
-            null, new House(90_000, 100_000, 35_000, 150_000), new Station(),
-            new House(90_000, 100_000, 35_000, 150_000), new Chance(), new House(90_000, 100_000, 35_000, 150_000),
-            new House(90_000, 100_000, 35_000, 150_000), new House(90_000, 100_000, 35_000, 150_000), // Third line
+            null, new House(220_000, 18_000, 102_000, 150_000), new Station(),
+            new House(240_000, 19_000, 104_000, 150_000), new Chance(), new House(260_000, 20_000, 118_000, 150_000),
+            new House(270_000, 22_000, 120_000, 150_000), new House(280_000, 24_000, 122_000, 150_000), // Third line
 
-            null, new Station(), new House(90_000, 100_000, 35_000, 200_000), new House(90_000, 100_000, 35_000, 200_000),
-            new Chance(), new House(90_000, 100_000, 35_000, 200_000), new Tax(), new House(90_000, 100_000, 35_000, 200_000) //fourth line
+            null, new Station(), new House(300_000, 26_000, 160_000, 200_000), new House(320_000, 28_000, 165_000, 200_000),
+            new Chance(), new House(350_000, 35_000, 172_000, 200_000), new Tax(), new House(400_000, 38_000, 178_000, 200_000) //fourth line
 
         };
         public static int[,] MatrixPositionPlayer1 = { { 82, 70, 62, 54, 46, 38, 30, 22,
