@@ -218,7 +218,7 @@ namespace BussinesTourProject.Pages
             //GameManager.txtBlockBasic = txt
             SetPlayerTxtBlocks();
             GameManager.NextPlayer();
-
+            GameManager.SetToggleState(false);
             Jail.txtRemaningRoundJail = txtRemaningRoundJail;
         }
 
@@ -581,10 +581,8 @@ namespace BussinesTourProject.Pages
                     }
                 }
             }
-            GameManager.SetToggleState(true);
-            // Perform any additional logic here if needed
         }
-        private async void btnSelecteChampionShip_Click(object sender, RoutedEventArgs e)
+        private  void btnSelecteChampionShip_Click(object sender, RoutedEventArgs e)
         {
             // first enable only the 
         }
@@ -609,12 +607,16 @@ namespace BussinesTourProject.Pages
             }
 
             UIWorldTour.Visibility = Visibility.Collapsed;
+            btnRoll_Dice.Visibility = Visibility.Collapsed;
             Player player = GameManager.currentPlayer;
             GameManager.NextPlayer();
             GameManager.SetToggleState(false);
 
             if (positionSquare == Player.MaxPosition - 1)
+            {
+                btnRoll_Dice.Visibility = Visibility.Visible;
                 return;
+            }
             
             positionSquare++;
             int currentPosition = player.currentPosition + 1;
@@ -646,6 +648,8 @@ namespace BussinesTourProject.Pages
                 currentPosition++;
                 await Task.Delay(TimeSpan.FromMilliseconds(500));
             }
+            player.currentPosition = positionSquare;
+            btnRoll_Dice.Visibility = Visibility.Visible;
 
         }
     }
