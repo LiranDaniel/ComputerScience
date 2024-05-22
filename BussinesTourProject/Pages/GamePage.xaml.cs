@@ -595,7 +595,7 @@ namespace BussinesTourProject.Pages
                 if (WorldChampion.PropertyHoldingWorldChampion != null)
                 {
                     WorldChampion.PropertyHoldingWorldChampion.currentCostToPayRent = WorldChampion.PropertyHoldingWorldChampion.CalculatePayRentByLevel();
-
+                     
                     double normalCostToPayRent = WorldChampion.PropertyHoldingWorldChampion.currentCostToPayRent;
                     int timesDigits = 0;
                     while (normalCostToPayRent > 1000)
