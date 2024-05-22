@@ -595,7 +595,7 @@ namespace BussinesTourProject.Pages
                 if (WorldChampion.PropertyHoldingWorldChampion != null)
                 {
                     WorldChampion.PropertyHoldingWorldChampion.currentCostToPayRent = WorldChampion.PropertyHoldingWorldChampion.CalculatePayRentByLevel();
-                     
+
                     double normalCostToPayRent = WorldChampion.PropertyHoldingWorldChampion.currentCostToPayRent;
                     int timesDigits = 0;
                     while (normalCostToPayRent > 1000)
@@ -635,12 +635,17 @@ namespace BussinesTourProject.Pages
 
             }
             else
+            {
+                UIWorldChampion.Visibility = Visibility.Collapsed;
                 return;
+            }
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-
+            UIWorldChampion.Visibility= Visibility.Collapsed;
+            UIWorldTour.Visibility = Visibility.Collapsed;
+            GameManager.NextPlayer();
         }
 
         private async void btnSelectSquareToFly_Click(object sender, RoutedEventArgs e)
