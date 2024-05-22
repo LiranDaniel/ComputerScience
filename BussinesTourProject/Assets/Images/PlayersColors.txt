@@ -1,0 +1,11 @@
+Players Colors:
+
+Player1 - RGB = FE6F45
+
+Player2 - RGB = FFF842
+
+Player3 - RGB = 57007F
+
+Player4 - RGB = 0094FF
+
+
