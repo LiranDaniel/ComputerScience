@@ -555,6 +555,7 @@
     <Content Include="Assets\Music\BusinessTour.wav" />
     <Content Include="Assets\Music\BuyingProperty.wav" />
     <Content Include="Assets\Music\OGBackground.wav" />
+    <Content Include="Assets\Music\Paying.wav" />
     <Content Include="Assets\Music\RollDiceSound.wav" />
     <Content Include="Assets\Music\sad-hamster.wav" />
     <Content Include="Properties\Default.rd.xml" />

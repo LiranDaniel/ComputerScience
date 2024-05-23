@@ -69,7 +69,8 @@ namespace BussinesTourProject.Classes
             string formattedNumber = ownerOfTheProperty.amountOfMoney.ToString("N0"); // adding 
             ownerOfTheProperty.txtMoney.Text = $"{formattedNumber}$";
 
-            GameManager.MoneySoundPlayer.Play();
+            GameManager.PlaySound("BuyingProperty.wav");
+
         }
 
         /// <summary>

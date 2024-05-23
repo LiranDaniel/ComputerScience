@@ -192,13 +192,10 @@ namespace BussinesTourProject.Pages
 
         private void InitMediaPlayers()
         {
-            GameManager.RollDiceSoundPlayer.Source = MediaSource.CreateFromUri(new Uri($"ms-appx:///Assets/Music/RollDiceSound.wav"));
-            GameManager.MoneySoundPlayer.Source = MediaSource.CreateFromUri(new Uri($"ms-appx:///Assets/Music/BuyingProperty.wav"));
-            GameManager.RollDiceSoundPlayer.IsLoopingEnabled = false;
-            GameManager.MoneySoundPlayer.IsLoopingEnabled = false;
-            GameManager.MoneySoundPlayer.Pause();
-            GameManager.RollDiceSoundPlayer.Pause();
+            GameManager.SoundPlayer.IsLoopingEnabled = false;
+            GameManager.SoundPlayer.Pause();
         }
+        
         /// <summary>
         /// This function is Being called when you enter the page
         /// everthing it does is basickly just Initiate and definding few important things
@@ -328,7 +325,7 @@ namespace BussinesTourProject.Pages
             imgDice1.Visibility = Visibility.Visible;
             imgDice2.Visibility = Visibility.Visible;
             int[] Result = GameManager.RollDice();
-            GameManager.RollDiceSoundPlayer.Play();
+            GameManager.PlaySound("RollDiceSound.wav");
             await Task.Delay(TimeSpan.FromSeconds(1));
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[1] + ").png"));
@@ -494,6 +491,7 @@ namespace BussinesTourProject.Pages
         {
             if (GameManager.currentPlayer.amountOfMoney >= 200_000)
             {
+                GameManager.PlaySound("Paying.wav");
                 GameManager.currentPlayer.AmountOfMoneyChange(200_000);
                 GameManager.currentPlayer.turnsStackJail = 0;
                 UIJailOptions.Visibility = Visibility.Collapsed;
@@ -523,7 +521,8 @@ namespace BussinesTourProject.Pages
             await Task.Delay(TimeSpan.FromSeconds(2));
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[1] + ").png"));
-            await Task.Delay(TimeSpan.FromSeconds(2));
+            GameManager.PlaySound("RollDiceSound.wav");
+            await Task.Delay(TimeSpan.FromSeconds(1));
 
             if (Result[0] == Result[1])
                 GameManager.currentPlayer.turnsStackJail = 0;

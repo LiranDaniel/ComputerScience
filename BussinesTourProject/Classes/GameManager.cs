@@ -11,6 +11,7 @@ using Windows.Perception.Spatial;
 using Windows.ApplicationModel.VoiceCommands;
 using Windows.UI.Xaml.Media;
 using Windows.Media.Playback;
+using Windows.Media.Core;
 
 namespace BussinesTourProject.Classes
 {
@@ -19,9 +20,12 @@ namespace BussinesTourProject.Classes
         public static DispatcherTimer timerPlayers;
         public static bool ToggleState { get; set; } = true;
 
-        public static MediaPlayer MoneySoundPlayer { get; set; } = new MediaPlayer();
-        public static MediaPlayer RollDiceSoundPlayer { get; set; } = new MediaPlayer();
-
+        public static MediaPlayer SoundPlayer { get; set; } = new MediaPlayer();
+        public static void PlaySound(string file)
+        {
+            SoundPlayer.Source = MediaSource.CreateFromUri(new Uri($"ms-appx:///Assets/Music/{file}"));
+            SoundPlayer.Play();
+        }
         public static Random rnd = new Random();
         public static Grid UIBuyingHouseGrid { get; set; } // The Grid of buying house in game page
         public static Grid UIJailOptions {  get; set; }    // The Grid of Jail Options in game page
@@ -185,7 +189,8 @@ namespace BussinesTourProject.Classes
                             BankRupt(LandHouse); // BunkRupt Giving all the money to the owner and losing the game
                     }
                     else
-                    {   
+                    {
+                        PlaySound("Paying.wav");
                         currentPlayer.AmountOfMoneyChange(LandHouse.currentCostToPayRent);
                     }
                 }
@@ -244,6 +249,7 @@ namespace BussinesTourProject.Classes
                         }
                         else
                         {
+                            PlaySound("Paying.wav");
                             currentPlayer.AmountOfMoneyChange(LandStation.currentCostToPayRent);
                         }
                     }
