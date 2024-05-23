@@ -1680,7 +1680,45 @@
 
             <TextBlock x:Name="txtBlockMessage" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="3" FontSize="30" FontFamily="Cascadia code"
                        HorizontalAlignment="Center" VerticalAlignment="Top" Text="Theres Is No Free Square"></TextBlock>
-            
+
+        </Grid>
+        <Grid x:Name="UISellingProperty" Grid.Row="40" Grid.Column="63" Grid.ColumnSpan="85"
+              Grid.RowSpan="39" Background="Black" CornerRadius="30">
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="3" FontSize="30" FontFamily="Cascadia code"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Text="Select Property To Sell"></TextBlock>
+
+            <Button x:Name="btnSellProperty"  Grid.Row="8" Grid.Column="5" Content="Sell" FontFamily="Cascadia code" CornerRadius="10" Click="btnSellProperty_Click"
+                    FontSize="20" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Background="Wheat" Foreground="Black" Grid.RowSpan="2"></Button>
+
         </Grid>
 
         <TextBlock x:Name="UpdateUITextBlock" Grid.ColumnSpan="30" Grid.RowSpan="5" Grid.Row="4" Grid.Column="95"

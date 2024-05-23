@@ -700,5 +700,10 @@ namespace BussinesTourProject.Pages
             btnRoll_Dice.Visibility = Visibility.Visible;
             GameManager.NextPlayer();
         }
+
+        private void btnSellProperty_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
