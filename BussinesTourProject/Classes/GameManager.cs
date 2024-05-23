@@ -175,10 +175,10 @@ namespace BussinesTourProject.Classes
                     {   
                         if (LandHouse.currentCostToPayRent > (currentPlayer.CalculatePropertyValue() + currentPlayer.amountOfMoney))
                         {
-
+                            NotEnoughMoney(LandHouse);
                         }
                         else
-                            Console.WriteLine(); // BunkRupt Giving all the money to the owner and losing the game
+                            BankRupt(LandHouse); // BunkRupt Giving all the money to the owner and losing the game
                     }
                     else
                     {   
@@ -235,6 +235,8 @@ namespace BussinesTourProject.Classes
                             }
                             else
                                 BankRupt(LandStation); // BunkRupt Giving all the money to the owner and losing the game
+
+                            return;
                         }
                         else
                         {
