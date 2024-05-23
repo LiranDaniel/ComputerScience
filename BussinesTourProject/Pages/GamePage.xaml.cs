@@ -703,7 +703,7 @@ namespace BussinesTourProject.Pages
 
         private void btnSellProperty_Click(object sender, RoutedEventArgs e)
         {
-           
+           UISellingProperty.Visibility = Visibility.Collapsed;
             GameManager.CheckIfDouble();
         }
     }
