@@ -375,6 +375,28 @@ namespace BussinesTourProject.Classes
             else
                 return -1;
         }
+        public static int GetSquaresPosition()
+        {
+            List<int> positions = new List<int>();   
+            int position = -1;
+            bool IsSquareChecked = false;
+            foreach (object square in GameManager.ArrayMap)
+            {
+                if (square is Property)
+                {
+                    if ((square as Property).toggleButtonBlock.IsChecked == true)
+                    {
+                        IsSquareChecked = true;
+                        break;
+                    }
+                }
+                position++;
+            }
+            if (IsSquareChecked)
+                return position;
+            else
+                return -1;
+        }
 
         /// <summary>
         /// return array at size of 2 includes random resulte of the dices
