@@ -230,7 +230,7 @@ namespace BussinesTourProject.Classes
                         {
                             if (LandStation.currentCostToPayRent > (currentPlayer.CalculatePropertyValue() + currentPlayer.amountOfMoney))
                             {
-                                SellingProperty(LandStation.currentCostToPayRent);
+                                NotEnoughMoney(LandStation);
                                 //Show sell HouseOptions
                             }
                             else
@@ -405,7 +405,7 @@ namespace BussinesTourProject.Classes
         }
         public static DataBase.Models.User User { get; set; }
 
-        public async static void SellingProperty(int priceToPay)
+        public async static void NotEnoughMoney(Property property)
         {
             bool IsThereProperty = false;
             ToggleState = false;
@@ -428,6 +428,8 @@ namespace BussinesTourProject.Classes
                 UIMessage.Visibility = Visibility.Visible;
                 await Task.Delay(TimeSpan.FromSeconds(3));
                 UIMessage.Visibility = Visibility.Collapsed;
+
+                BankRupt(property);
             }
             else
                 UISellingProperty.Visibility = Visibility.Visible;
