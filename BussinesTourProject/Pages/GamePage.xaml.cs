@@ -704,6 +704,9 @@ namespace BussinesTourProject.Pages
         private void btnSellProperty_Click(object sender, RoutedEventArgs e)
         {
 
+
+
+            GameManager.CheckIfDouble();
         }
     }
 }
