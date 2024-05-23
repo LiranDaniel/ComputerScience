@@ -210,12 +210,14 @@ namespace BussinesTourProject.Pages
             GameManager.UITax = UITax;
             GameManager.UIWorldChampion = UIWorldChampion;
             GameManager.UIWorldTour = UIWorldTour;
+            GameManager.UIMessage = UIMessage;
             GameManager.ImgBuyingStation = imgBuyingStation;
             GameManager.arrayRadioButtonBuyingHouse[0] = optionHouse1RadioButton;
             GameManager.arrayRadioButtonBuyingHouse[1] = optionHouse2RadioButton;
             GameManager.arrayRadioButtonBuyingHouse[2] = optionHouse3RadioButton;
             GameManager.txtBlockBuyingHousePrice = txtBuyingPrice;
             GameManager.txtBlockTaxesPrice = txtTaxPrice;
+            GameManager.txtBlockMessage = txtBlockMessage;
             //GameManager.txtBlockBasic = txt
             SetPlayerTxtBlocks();
             GameManager.NextPlayer();
@@ -339,7 +341,6 @@ namespace BussinesTourProject.Pages
                 ResetTheButtons(sender, e);
                 return;
             }
-
             int currentDiceResult = Result[0] + Result[1];
 
             int currentPosition = player.currentPosition + 1;
@@ -376,7 +377,7 @@ namespace BussinesTourProject.Pages
 
             }
 
-            if (Result[0] == Result[1])
+            if (Result[0] == Result[1] && player.currentPosition != 8)
             {
                 GameManager.currentTimesPlay++;
                 GameManager.IsDouble = true;

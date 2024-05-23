@@ -24,12 +24,12 @@ namespace BussinesTourProject.Classes
         public static Grid UITax {  get; set; }            // The Grid of paying the taxes of player propertys
         public static Grid UIWorldChampion { get; set; }   // The Grid of selecting property to World Champion
         public static Grid UIWorldTour { get; set; }       // The Grid of selecting World Tour square
-        public static Grid UIBasicText { get; set; }       // This Grid will display 
+        public static Grid UIMessage { get; set; }       // This Grid will display 
         public static Image ImgBuyingStation { get; set; } // The image that display when using the UI station, chaning it to the current Station
         public static RadioButton[] arrayRadioButtonBuyingHouse { get; set; } = new RadioButton[3]; // radio buttons from the Grid buying house from Game page
         public static TextBlock txtBlockBuyingHousePrice;  // The text that present the price of the house  that you want to buy
         public static TextBlock txtBlockTaxesPrice;
-        public static TextBlock txtBlockBasic;             // The text will be displayed 
+        public static TextBlock txtBlockMessage;             // The text will be displayed 
 
         public static Player currentPlayer; // current player playing 
         public static int currentTimesPlay = 1; // how much rounds in row did he play to check if he needs  to go to jail
@@ -288,12 +288,11 @@ namespace BussinesTourProject.Classes
             }
             if (!IsThereProperty)   // if there is not property then the not property UI will be displayed
             {
-                return;
                 //Show UI that the player doesnt have propertys
-                txtBlockBasic.Text = "You Does Not Have Any Propertys";
-                UIBasicText.Visibility = Visibility.Visible;
+                txtBlockMessage.Text = "You Does Not Have\n   Any Propertys";
+                UIMessage.Visibility = Visibility.Visible;
                 await Task.Delay(TimeSpan.FromSeconds(3));
-                UIBasicText.Visibility = Visibility.Collapsed;
+                UIMessage.Visibility = Visibility.Collapsed;
             }
             else
                 UIWorldChampion.Visibility = Visibility.Visible;
@@ -335,10 +334,10 @@ namespace BussinesTourProject.Classes
             if (!IsThereIsSquare)   // if there is not property then the not property UI will be displayed
             {
                 // Show UI that the player doesnt have propertys
-                txtBlockBasic.Text = "Theres Is Not Free Square";
-                UIBasicText.Visibility = Visibility.Visible;
+                txtBlockMessage.Text = "Theres Is No Free Square";
+                UIMessage.Visibility = Visibility.Visible;
                 await Task.Delay(TimeSpan.FromSeconds(3));
-                UIBasicText.Visibility = Visibility.Collapsed;
+                UIMessage.Visibility = Visibility.Collapsed;
             }
             else
                 UIWorldTour.Visibility = Visibility.Visible;
