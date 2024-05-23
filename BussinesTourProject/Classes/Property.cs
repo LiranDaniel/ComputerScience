@@ -48,7 +48,15 @@ namespace BussinesTourProject.Classes
             return basicCostToPayRent + ((currentLevel -1) * levelUpgradeRent);
         }
 
-
+        public void SellProperty()
+        {
+            ownerOfTheProperty = null;
+            currentCostToBuy = basicCostToBuy;
+            currentCostToPayRent = 0;
+            currentLevel = 0;
+            imageOfProperty.Source = null;
+            txtOfMoneyDisplayRent.Text = null;
+        }
 
 
 

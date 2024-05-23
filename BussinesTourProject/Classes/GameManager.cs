@@ -9,6 +9,7 @@ using Windows.UI.Xaml;
 using static BussinesTourProject.Classes.Player;
 using Windows.Perception.Spatial;
 using Windows.ApplicationModel.VoiceCommands;
+using Windows.UI.Xaml.Media;
 
 namespace BussinesTourProject.Classes
 {
@@ -24,12 +25,13 @@ namespace BussinesTourProject.Classes
         public static Grid UITax {  get; set; }            // The Grid of paying the taxes of player propertys
         public static Grid UIWorldChampion { get; set; }   // The Grid of selecting property to World Champion
         public static Grid UIWorldTour { get; set; }       // The Grid of selecting World Tour square
-        public static Grid UIMessage { get; set; }       // This Grid will display 
+        public static Grid UIMessage { get; set; }         // This Grid will display 
+        public static Grid UISellingProperty { get; set; } // This Grid will display an options to sell on of your propertys to pay other rent
         public static Image ImgBuyingStation { get; set; } // The image that display when using the UI station, chaning it to the current Station
         public static RadioButton[] arrayRadioButtonBuyingHouse { get; set; } = new RadioButton[3]; // radio buttons from the Grid buying house from Game page
         public static TextBlock txtBlockBuyingHousePrice;  // The text that present the price of the house  that you want to buy
         public static TextBlock txtBlockTaxesPrice;
-        public static TextBlock txtBlockMessage;             // The text will be displayed 
+        public static TextBlock txtBlockMessage;           // The text will be displayed 
 
         public static Player currentPlayer; // current player playing 
         public static int currentTimesPlay = 1; // how much rounds in row did he play to check if he needs  to go to jail
@@ -228,10 +230,11 @@ namespace BussinesTourProject.Classes
                         {
                             if (LandStation.currentCostToPayRent > (currentPlayer.CalculatePropertyValue() + currentPlayer.amountOfMoney))
                             {
+                                SellingProperty(LandStation.currentCostToPayRent);
                                 //Show sell HouseOptions
                             }
                             else
-                                Console.WriteLine(); // BunkRupt Giving all the money to the owner and losing the game
+                                BankRupt(LandStation); // BunkRupt Giving all the money to the owner and losing the game
                         }
                         else
                         {
@@ -302,7 +305,6 @@ namespace BussinesTourProject.Classes
 
         }
 
-
         public static void SetToggleState(bool state)
         {
             foreach (object square in ArrayMap)
@@ -372,11 +374,6 @@ namespace BussinesTourProject.Classes
                 return -1;
         }
 
-        public static void ShowUISellProperty()
-        {
-
-        }
-
         /// <summary>
         /// return array at size of 2 includes random resulte of the dices
         /// </summary>
@@ -400,9 +397,72 @@ namespace BussinesTourProject.Classes
             currentPlayer.txtState.Visibility = Visibility.Visible;
             currentTimesPlay = 1;
 
+            if (arrayPlayers[IndexPlayers] == null)
+                NextPlayer();
+
             if (currentPlayer.turnsStackJail != 0)
                 ShowUIJail();
         }
         public static DataBase.Models.User User { get; set; }
+
+        public async static void SellingProperty(int priceToPay)
+        {
+            bool IsThereProperty = false;
+            ToggleState = false;
+            SetToggleState(false); // first enable only the property buttons
+            foreach (object square in ArrayMap)
+            {
+                if (square is Property)
+                {
+                    if ((square as Property).ownerOfTheProperty == currentPlayer)
+                    {
+                        (square as Property).toggleButtonBlock.IsEnabled = true;
+                        IsThereProperty = true;
+                    }
+                }
+            }
+            if (!IsThereProperty)   // if there is not property then the not property UI will be displayed
+            {
+                //Show UI that the player doesnt have propertys
+                txtBlockMessage.Text = "You Does Not Have\nAny Propertys To Sell";
+                UIMessage.Visibility = Visibility.Visible;
+                await Task.Delay(TimeSpan.FromSeconds(3));
+                UIMessage.Visibility = Visibility.Collapsed;
+            }
+            else
+                UISellingProperty.Visibility = Visibility.Visible;
+        }
+        
+        public async static void BankRupt(Property property)
+        {
+            currentPlayer.txtMoney.Text = "BankRupt";
+            currentPlayer.txtMoney.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+            property.ownerOfTheProperty.amountOfMoney += currentPlayer.CalculatePropertyValue() + currentPlayer.amountOfMoney;
+
+            property.ownerOfTheProperty.txtMoney.Text = $"{property.ownerOfTheProperty.amountOfMoney}";
+
+            foreach (object square in ArrayMap)
+            {
+                if (square is Property)
+                {
+                    if ((square as Property).ownerOfTheProperty == currentPlayer)
+                    {
+                        (square as Property).SellProperty();
+                    }
+                }
+            }
+            for (int i = 0; i < arrayPlayers.Length; i++)
+            {
+                if (arrayPlayers[i] == currentPlayer)
+                    arrayPlayers[i] = null;
+            }
+            txtBlockMessage.Text = "You Doesn't Have Any\nMoney Left";
+            UIMessage.Visibility = Visibility.Visible;
+            await Task.Delay(TimeSpan.FromSeconds(3));
+            UIMessage.Visibility = Visibility.Collapsed;
+
+            NextPlayer();
+
+        }
     }
 }
