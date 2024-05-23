@@ -553,7 +553,9 @@
     <Content Include="Assets\Images\WoodLoadingBlank.png" />
     <Content Include="Assets\Images\WoodLoadingGreen.png" />
     <Content Include="Assets\Music\BusinessTour.wav" />
+    <Content Include="Assets\Music\BuyingProperty.wav" />
     <Content Include="Assets\Music\OGBackground.wav" />
+    <Content Include="Assets\Music\RollDiceSound.wav" />
     <Content Include="Assets\Music\sad-hamster.wav" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="App\LockScreenLogo.scale-200.png" />

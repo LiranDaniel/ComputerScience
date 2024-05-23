@@ -10,6 +10,7 @@ using static BussinesTourProject.Classes.Player;
 using Windows.Perception.Spatial;
 using Windows.ApplicationModel.VoiceCommands;
 using Windows.UI.Xaml.Media;
+using Windows.Media.Playback;
 
 namespace BussinesTourProject.Classes
 {
@@ -17,6 +18,9 @@ namespace BussinesTourProject.Classes
     {
         public static DispatcherTimer timerPlayers;
         public static bool ToggleState { get; set; } = true;
+
+        public static MediaPlayer MoneySoundPlayer { get; set; } = new MediaPlayer();
+        public static MediaPlayer RollDiceSoundPlayer { get; set; } = new MediaPlayer();
 
         public static Random rnd = new Random();
         public static Grid UIBuyingHouseGrid { get; set; } // The Grid of buying house in game page

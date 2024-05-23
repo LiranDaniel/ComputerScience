@@ -26,6 +26,8 @@ using Windows.UI.Xaml.Media.Animation;
 using static BussinesTourProject.Classes.House;
 using static BussinesTourProject.Classes.Player;
 using System.Timers;
+using Windows.Media.Core;
+using Windows.Media.Playback;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace BussinesTourProject.Pages
@@ -188,6 +190,15 @@ namespace BussinesTourProject.Pages
             Frame.Navigate(typeof(MenuPage));
         }
 
+        private void InitMediaPlayers()
+        {
+            GameManager.RollDiceSoundPlayer.Source = MediaSource.CreateFromUri(new Uri($"ms-appx:///Assets/Music/RollDiceSound.wav"));
+            GameManager.MoneySoundPlayer.Source = MediaSource.CreateFromUri(new Uri($"ms-appx:///Assets/Music/BuyingProperty.wav"));
+            GameManager.RollDiceSoundPlayer.IsLoopingEnabled = false;
+            GameManager.MoneySoundPlayer.IsLoopingEnabled = false;
+            GameManager.MoneySoundPlayer.Pause();
+            GameManager.RollDiceSoundPlayer.Pause();
+        }
         /// <summary>
         /// This function is Being called when you enter the page
         /// everthing it does is basickly just Initiate and definding few important things
@@ -197,6 +208,8 @@ namespace BussinesTourProject.Pages
         /// <param name="e"></param>
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            InitMediaPlayers();
+
             GameManager.InitPlayers();
             InitPlayer(GameManager.arrayPlayers[0], imgPlayer, GameManager.MatrixPositionPlayer1);
             InitPlayer(GameManager.arrayPlayers[1], imgPlayer2, GameManager.MatrixPositionPlayer2);
@@ -315,6 +328,7 @@ namespace BussinesTourProject.Pages
             imgDice1.Visibility = Visibility.Visible;
             imgDice2.Visibility = Visibility.Visible;
             int[] Result = GameManager.RollDice();
+            GameManager.RollDiceSoundPlayer.Play();
             await Task.Delay(TimeSpan.FromSeconds(1));
             imgDice1.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[0] + ").png"));
             imgDice2.Source = new BitmapImage(new Uri($"ms-appx:///Assets/Images/Dice/Dice(" + Result[1] + ").png"));

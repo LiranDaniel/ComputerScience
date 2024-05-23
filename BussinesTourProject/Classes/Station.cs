@@ -75,6 +75,8 @@ namespace BussinesTourProject.Classes
             ownerOfTheProperty.txtMoney.Text = $"{formattedNumber}$";
 
             IncreaseValuesStation();
+            GameManager.MoneySoundPlayer.Play();
+
         }
 
         /// <summary>

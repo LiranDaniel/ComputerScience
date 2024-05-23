@@ -68,6 +68,8 @@ namespace BussinesTourProject.Classes
             imageOfProperty.Source = new BitmapImage(new Uri($@"ms-appx:///Assets\Images\SquareImages\HousesIcons\{ownerOfTheProperty.playerNumber}\{House.filePathImageHouses[houseCurrentState]}"));
             string formattedNumber = ownerOfTheProperty.amountOfMoney.ToString("N0"); // adding 
             ownerOfTheProperty.txtMoney.Text = $"{formattedNumber}$";
+
+            GameManager.MoneySoundPlayer.Play();
         }
 
         /// <summary>
