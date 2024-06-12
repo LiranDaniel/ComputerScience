@@ -1339,9 +1339,10 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock FontFamily="Cascadia code" FontSize="15" Foreground="White"
-                       Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" Grid.RowSpan="1" 
+                       Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="5" Grid.RowSpan="2" 
                        Text="You are going to jail &#x0a;you are moving too fast" x:Name="txtCards"></TextBlock>
-            <Button ></Button>
+            <Button x:Name="btnConfirmCard" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Foreground="Black" Background="Wheat" CornerRadius="5" FontSize="20">Confirm</Button>
 
         </Grid>
         
