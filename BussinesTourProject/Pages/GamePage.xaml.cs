@@ -229,6 +229,7 @@ namespace BussinesTourProject.Pages
             GameManager.txtBlockBuyingHousePrice = txtBuyingPrice;
             GameManager.txtBlockTaxesPrice = txtTaxPrice;
             GameManager.txtBlockMessage = txtBlockMessage;
+            GameManager.txtBlockTotalCostToPay = txtCostToPay;
             //GameManager.txtBlockBasic = txt
             SetPlayerTxtBlocks();
             GameManager.NextPlayer();

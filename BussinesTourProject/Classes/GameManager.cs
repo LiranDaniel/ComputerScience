@@ -41,6 +41,8 @@ namespace BussinesTourProject.Classes
         public static TextBlock txtBlockTaxesPrice;
         public static TextBlock txtBlockMessage;           // The text will be displayed 
 
+        public static TextBlock txtBlockTotalCostToPay;
+
         public static Player currentPlayer; // current player playing 
         public static int currentTimesPlay = 1; // how much rounds in row did he play to check if he needs  to go to jail
         private static int IndexPlayers = rnd.Next(0, 4); // Select randomly the first player to play, and points to player in the arrayOfPayers
@@ -467,6 +469,7 @@ namespace BussinesTourProject.Classes
             }
             else
             {
+                txtBlockTotalCostToPay.Text = $"Total Cost To Pay: {property.currentCostToPayRent}$";
                 UISellingProperty.Visibility = Visibility.Visible;
             }
         }
