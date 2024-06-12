@@ -35,11 +35,13 @@ namespace BussinesTourProject.Classes
         public static Grid UIWorldTour { get; set; }       // The Grid of selecting World Tour square
         public static Grid UIMessage { get; set; }         // This Grid will display 
         public static Grid UISellingProperty { get; set; } // This Grid will display an options to sell on of your propertys to pay other rent
+        public static Grid UICardGrid { get; set; }
         public static Image ImgBuyingStation { get; set; } // The image that display when using the UI station, chaning it to the current Station
         public static RadioButton[] arrayRadioButtonBuyingHouse { get; set; } = new RadioButton[3]; // radio buttons from the Grid buying house from Game page
         public static TextBlock txtBlockBuyingHousePrice;  // The text that present the price of the house  that you want to buy
         public static TextBlock txtBlockTaxesPrice;
         public static TextBlock txtBlockMessage;           // The text will be displayed 
+        public static TextBlock txtCardGrid;
 
         public static TextBlock txtBlockTotalCostToPay;
 
