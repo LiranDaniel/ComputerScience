@@ -200,6 +200,23 @@ namespace BussinesTourProject.Classes
             }
         }
 
+        public static void LandChance()
+        {
+            int ChanceResult = rnd.Next(4);
+
+            switch (ChanceResult)
+            {
+                case 0:
+                    Chance.GetMoney();
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    break;
+
+            }
+        }
+
         /// <summary>
         /// If there is doule, if there isn't doube then move the round to the next player, else show him an option to play again
         /// </summary>
