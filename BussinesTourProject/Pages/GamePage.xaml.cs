@@ -222,6 +222,7 @@ namespace BussinesTourProject.Pages
             GameManager.UIWorldTour = UIWorldTour;
             GameManager.UIMessage = UIMessage;
             GameManager.UISellingProperty = UISellingProperty;
+            GameManager.UICardGrid = GridCards;
             GameManager.ImgBuyingStation = imgBuyingStation;
             GameManager.arrayRadioButtonBuyingHouse[0] = optionHouse1RadioButton;
             GameManager.arrayRadioButtonBuyingHouse[1] = optionHouse2RadioButton;
@@ -230,6 +231,7 @@ namespace BussinesTourProject.Pages
             GameManager.txtBlockTaxesPrice = txtTaxPrice;
             GameManager.txtBlockMessage = txtBlockMessage;
             GameManager.txtBlockTotalCostToPay = txtCostToPay;
+            GameManager.txtCardGrid = txtCards;
             //GameManager.txtBlockBasic = txt
             SetPlayerTxtBlocks();
             GameManager.NextPlayer();
@@ -737,6 +739,8 @@ namespace BussinesTourProject.Pages
         private void btnConfirmCard_Click(object sender, RoutedEventArgs e)
         {
             GridCards.Visibility = Visibility.Collapsed;
+            GameManager.CheckIfDouble();
+
         }
     }
 }

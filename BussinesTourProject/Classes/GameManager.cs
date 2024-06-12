@@ -136,7 +136,7 @@ namespace BussinesTourProject.Classes
              else if (ArrayMap[currentPlayer.currentPosition] is Station)
                 LandingStation();
              else if (ArrayMap[currentPlayer.currentPosition] is Chance)
-                WorldChampionShip();
+                LandChance();
              else if (ArrayMap[currentPlayer.currentPosition] is Jail)
                 ShowUIJail();
              else if (ArrayMap[currentPlayer.currentPosition] is Tax)
@@ -204,7 +204,7 @@ namespace BussinesTourProject.Classes
 
         public static void LandChance()
         {
-            int ChanceResult = rnd.Next(4);
+            int ChanceResult = rnd.Next(2);
 
             switch (ChanceResult)
             {

@@ -12,12 +12,11 @@ namespace BussinesTourProject.Classes
         
         public static void GetMoney()
         {
-            TextDisplayed = "Congratulations You\n Won The lottery!!!\nYou are getting 300K";
+            TextDisplayed = "Congratulations You\nWon The lottery!!!\nYou are getting 300K";
             GameManager.currentPlayer.AmountOfMoneyChange(-300_000);
             GameManager.txtCardGrid.Text = TextDisplayed;
             GameManager.UICardGrid.Visibility = Windows.UI.Xaml.Visibility.Visible;
 
-            GameManager.CheckIfDouble();
         }
 
         public static void GoToWorldTourSquare()
