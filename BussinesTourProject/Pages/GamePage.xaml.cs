@@ -221,6 +221,7 @@ namespace BussinesTourProject.Pages
             GameManager.UIWorldChampion = UIWorldChampion;
             GameManager.UIWorldTour = UIWorldTour;
             GameManager.UIMessage = UIMessage;
+            GameManager.UISellingProperty = UISellingProperty;
             GameManager.ImgBuyingStation = imgBuyingStation;
             GameManager.arrayRadioButtonBuyingHouse[0] = optionHouse1RadioButton;
             GameManager.arrayRadioButtonBuyingHouse[1] = optionHouse2RadioButton;
@@ -688,7 +689,12 @@ namespace BussinesTourProject.Pages
                     currentPosition -= player.PlayerPosition.GetLength(1);
                 }
                 if (currentPosition == 0)
+                {
                     player.ChangePlayerImageByEnumValue(0);
+
+                    player.amountOfMoney += 300_000;
+                    player.txtMoney.Text = player.amountOfMoney.ToString("N0");
+                }
                 else if (currentPosition == 8)
                     player.ChangePlayerImageByEnumValue(1);
                 else if (currentPosition == 16)
@@ -697,12 +703,6 @@ namespace BussinesTourProject.Pages
                     player.ChangePlayerImageByEnumValue(3);
                 else
                     player.ChangePlayerImageByPosition(currentPosition);
-
-                if (currentPosition == 0)
-                {
-                    player.amountOfMoney += 300_000;
-                    player.txtMoney.Text = player.amountOfMoney.ToString("N0");
-                }
 
                 Grid.SetRow(player.Img, player.PlayerPosition[0, currentPosition]);
                 Grid.SetColumn(player.Img, player.PlayerPosition[1, currentPosition]);
@@ -716,7 +716,20 @@ namespace BussinesTourProject.Pages
 
         private void btnSellProperty_Click(object sender, RoutedEventArgs e)
         {
-           UISellingProperty.Visibility = Visibility.Collapsed;
+            foreach (object square in GameManager.arrayPlayers)
+            {
+                if (square is Property)
+                {
+                    if(((square as Property).ownerOfTheProperty == GameManager.currentPlayer) || ((square as Property).toggleButtonBlock.IsChecked == true))
+                    {
+                        (square as Property).SellProperty();
+                    }
+                }
+            }
+
+
+
+            UISellingProperty.Visibility = Visibility.Collapsed;
             GameManager.CheckIfDouble();
         }
     }

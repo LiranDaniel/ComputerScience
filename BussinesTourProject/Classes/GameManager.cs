@@ -181,7 +181,7 @@ namespace BussinesTourProject.Classes
                 {   
                     if(LandHouse.currentCostToPayRent > currentPlayer.amountOfMoney) // doesnot have enough money
                     {   
-                        if (LandHouse.currentCostToPayRent > (currentPlayer.CalculatePropertyValue() + currentPlayer.amountOfMoney))
+                        if (LandHouse.currentCostToPayRent <= (currentPlayer.CalculatePropertyValue() + currentPlayer.amountOfMoney))
                         {
                             NotEnoughMoney(LandHouse);
                         }

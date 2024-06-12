@@ -1683,7 +1683,7 @@
 
         </Grid>
         <Grid x:Name="UISellingProperty" Grid.Row="40" Grid.Column="63" Grid.ColumnSpan="85"
-              Grid.RowSpan="39" Background="Black" CornerRadius="30" Visibility="Collapsed">
+              Grid.RowSpan="39" Background="Black" CornerRadius="30">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>

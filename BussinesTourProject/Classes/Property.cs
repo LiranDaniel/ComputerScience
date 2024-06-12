@@ -50,12 +50,18 @@ namespace BussinesTourProject.Classes
 
         public void SellProperty()
         {
+            ownerOfTheProperty.AmountOfMoneyChange(-currentCostToBuy);
             ownerOfTheProperty = null;
             currentCostToBuy = basicCostToBuy;
             currentCostToPayRent = 0;
             currentLevel = 0;
             imageOfProperty.Source = null;
-            txtOfMoneyDisplayRent.Text = null;
+            txtOfMoneyDisplayRent.Text = "";
+
+            if (this is House)
+            {
+                ((House)this).houseCurrentState = House.HouseState.None;
+            }
         }
 
 
