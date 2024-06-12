@@ -16,6 +16,8 @@ namespace BussinesTourProject.Classes
             GameManager.currentPlayer.AmountOfMoneyChange(-300_000);
             GameManager.txtCardGrid.Text = TextDisplayed;
             GameManager.UICardGrid.Visibility = Windows.UI.Xaml.Visibility.Visible;
+
+            GameManager.CheckIfDouble();
         }
 
         public static void GoToWorldTourSquare()
