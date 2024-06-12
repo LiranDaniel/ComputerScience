@@ -1287,8 +1287,7 @@
         </Grid>
 
         <Grid Grid.Row="36" Grid.Column="87" Grid.ColumnSpan="40" Grid.RowSpan="47" x:Name="GridCards"
-              Opacity=".99" Background="DimGray" CornerRadius="30" BorderBrush="Black" BorderThickness="3"
-              >
+              Opacity=".99" Background="DimGray" CornerRadius="30" BorderBrush="Black" BorderThickness="3">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
