@@ -1288,7 +1288,7 @@
 
         <Grid Grid.Row="36" Grid.Column="87" Grid.ColumnSpan="40" Grid.RowSpan="47"
               Opacity=".99" Background="DimGray" CornerRadius="30" BorderBrush="Black" BorderThickness="3"
-              Visibility="Collapsed" x:Name="GridCards">
+              x:Name="GridCards">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -1316,6 +1316,7 @@
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\Jailimg.png" Grid.Column="1" Grid.Row="1"
                    Grid.ColumnSpan="5" Grid.RowSpan="4"></Image>
         </Grid>
+        
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
               Background="Black" CornerRadius="30" x:Name="UIBuyingHouse" Visibility="Collapsed">
 
@@ -1683,7 +1684,7 @@
 
         </Grid>
         <Grid x:Name="UISellingProperty" Grid.Row="34" Grid.Column="57" Grid.ColumnSpan="94"
-              Grid.RowSpan="50" Background="Black" CornerRadius="30">
+              Grid.RowSpan="50" Background="Black" CornerRadius="30" Visibility="Collapsed">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
