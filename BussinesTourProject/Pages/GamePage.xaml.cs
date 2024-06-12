@@ -733,5 +733,10 @@ namespace BussinesTourProject.Pages
             UISellingProperty.Visibility = Visibility.Collapsed;
             GameManager.CheckIfDouble();
         }
+
+        private void btnConfirmCard_Click(object sender, RoutedEventArgs e)
+        {
+            GridCards.Visibility = Visibility.Collapsed;
+        }
     }
 }

@@ -210,8 +210,7 @@ namespace BussinesTourProject.Classes
                     Chance.GetMoney();
                     break;
                 case 1:
-                    break;
-                case 2:
+                    WorldChampionShip();
                     break;
 
             }

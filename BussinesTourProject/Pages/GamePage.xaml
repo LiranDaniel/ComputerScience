@@ -1316,7 +1316,7 @@
                    Grid.ColumnSpan="5" Grid.RowSpan="4"></Image>
         </Grid>
         
-         <Grid Grid.Row="36" Grid.Column="87" Grid.ColumnSpan="40" Grid.RowSpan="47" x:Name="GridCards" Visibility="Collapsed"
+         <Grid Grid.Row="36" Grid.Column="87" Grid.ColumnSpan="40" Grid.RowSpan="47" x:Name="GridCards"
               Opacity=".99" Background="DimGray" CornerRadius="30" BorderBrush="Black" BorderThickness="3">
 
             <Grid.RowDefinitions>
@@ -1342,7 +1342,8 @@
                        Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="5" Grid.RowSpan="2" 
                        Text="You are going to jail &#x0a;you are moving too fast" x:Name="txtCards"></TextBlock>
             <Button x:Name="btnConfirmCard" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center"
-                    Foreground="Black" Background="Wheat" CornerRadius="5" FontSize="20">Confirm</Button>
+                    Foreground="Black" Background="Wheat" CornerRadius="5" FontSize="20" Click="btnConfirmCard_Click" 
+                    PointerEntered="btn_PointerEnteredRegular" PointerExited="btn_PointerExitedRegular">Confirm</Button>
 
         </Grid>
         
