@@ -466,7 +466,9 @@ namespace BussinesTourProject.Classes
                 BankRupt(property);
             }
             else
+            {
                 UISellingProperty.Visibility = Visibility.Visible;
+            }
         }
         
         public async static void BankRupt(Property property)
