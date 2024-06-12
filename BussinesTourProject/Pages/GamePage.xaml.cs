@@ -298,9 +298,9 @@ namespace BussinesTourProject.Pages
         /// <param name="player"></param>
         private async void MoveToJail(Player player)
         {
-            GridCards.Visibility = Visibility.Visible;
+            GridJailCard.Visibility = Visibility.Visible;
             await Task.Delay(TimeSpan.FromSeconds(2));
-            GridCards.Visibility = Visibility.Collapsed;
+            GridJailCard.Visibility = Visibility.Collapsed;
             player.currentPosition = 8;
             player.ChangePlayerImageByEnumValue(1);
 

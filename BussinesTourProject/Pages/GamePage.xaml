@@ -1286,7 +1286,7 @@
                    Grid.ColumnSpan="6" Grid.RowSpan="4" Stretch="Fill"></Image>
         </Grid>
 
-        <Grid Grid.Row="36" Grid.Column="87" Grid.ColumnSpan="40" Grid.RowSpan="47" x:Name="GridCards"
+        <Grid Grid.Row="36" Grid.Column="87" Grid.ColumnSpan="40" Grid.RowSpan="47" x:Name="GridJailCard" Visibility="Collapsed"
               Opacity=".99" Background="DimGray" CornerRadius="30" BorderBrush="Black" BorderThickness="3">
 
             <Grid.RowDefinitions>
@@ -1310,10 +1310,39 @@
 
             <TextBlock FontFamily="Cascadia code" FontSize="15" Foreground="White"
                        Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" Grid.RowSpan="1" 
-                       Text="You are going to jail &#x0a;you are moving too fast" x:Name="txtJailCard"></TextBlock>
+                       Text="You are going to jail &#x0a;you are moving too fast"></TextBlock>
 
             <Image Source="/Assets\Images\SquareImages\SpecialIcon\Jailimg.png" Grid.Column="1" Grid.Row="1"
                    Grid.ColumnSpan="5" Grid.RowSpan="4"></Image>
+        </Grid>
+        
+         <Grid Grid.Row="36" Grid.Column="87" Grid.ColumnSpan="40" Grid.RowSpan="47" x:Name="GridCards"
+              Opacity=".99" Background="DimGray" CornerRadius="30" BorderBrush="Black" BorderThickness="3">
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock FontFamily="Cascadia code" FontSize="15" Foreground="White"
+                       Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" Grid.RowSpan="1" 
+                       Text="You are going to jail &#x0a;you are moving too fast" x:Name="txtCards"></TextBlock>
+            <Button ></Button>
+
         </Grid>
         
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
