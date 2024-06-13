@@ -1713,8 +1713,8 @@
                        HorizontalAlignment="Center" VerticalAlignment="Top" Text="Theres Is No Free Square"></TextBlock>
 
         </Grid>
-        <Grid x:Name="UISellingProperty" Grid.Row="34" Grid.Column="57" Grid.ColumnSpan="94"
-              Grid.RowSpan="50" Background="Black" CornerRadius="30" >
+        <Grid x:Name="UISellingProperty" Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95"
+              Grid.RowSpan="49" Background="Black" CornerRadius="30" Visibility="Collapsed">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>

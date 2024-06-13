@@ -188,6 +188,7 @@ namespace BussinesTourProject.Classes
                     {   
                         if (LandHouse.currentCostToPayRent <= (currentPlayer.CalculatePropertyValue() + currentPlayer.amountOfMoney))
                         {
+                            IsSellingState = true;
                             NotEnoughMoney(LandHouse);
                         }
                         else
@@ -197,6 +198,7 @@ namespace BussinesTourProject.Classes
                     {
                         PlaySound("Paying.wav");
                         currentPlayer.AmountOfMoneyChange(LandHouse.currentCostToPayRent);
+                        LandHouse.ownerOfTheProperty.AmountOfMoneyChange(-LandHouse.currentCostToPayRent);
                     }
                 }
                 CheckIfDouble();
@@ -272,6 +274,7 @@ namespace BussinesTourProject.Classes
                         {
                             PlaySound("Paying.wav");
                             currentPlayer.AmountOfMoneyChange(LandStation.currentCostToPayRent);
+                            LandStation.ownerOfTheProperty.AmountOfMoneyChange(-LandStation.currentCostToPayRent);
                         }
                     }
                     CheckIfDouble();
@@ -406,6 +409,30 @@ namespace BussinesTourProject.Classes
             else
                 return -1;
         }
+
+        /// <summary>
+        /// Calculate The Total Value Property That Have Been Selected
+        /// </summary>
+        /// <returns></returns>
+        public static int CalculateTotalValueSelected()
+        {
+            int totalValue = 0;
+
+            foreach (object square in GameManager.ArrayMap)
+            {
+                if (square is Property)
+                {
+                    if ((square as Property).toggleButtonBlock.IsChecked == true)
+                    {
+                        totalValue += (square as Property).currentCostToBuy;
+                    }
+                }
+            }
+
+            return totalValue;
+        }
+
+
         public static int GetSquaresPosition()
         {
             List<int> positions = new List<int>();   

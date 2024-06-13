@@ -602,9 +602,8 @@ namespace BussinesTourProject.Pages
             }
 
             if(GameManager.IsSellingState)
-            {
-
-            }
+                txtCurrentTotalAmountSelling.Text = $"{GameManager.CalculateTotalValueSelected()}$";
+            
         }
         private  void btnSelecteChampionShip_Click(object sender, RoutedEventArgs e)
         {
