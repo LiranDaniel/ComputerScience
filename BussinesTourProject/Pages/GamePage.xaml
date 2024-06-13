@@ -1714,7 +1714,7 @@
 
         </Grid>
         <Grid x:Name="UISellingProperty" Grid.Row="34" Grid.Column="57" Grid.ColumnSpan="94"
-              Grid.RowSpan="50" Background="Black" CornerRadius="30" Visibility="Collapsed">
+              Grid.RowSpan="50" Background="Black" CornerRadius="30" >
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -1759,10 +1759,10 @@
                        HorizontalAlignment="Center" VerticalAlignment="Top" Text="Select Property To Sell"></TextBlock>
             
             <TextBlock Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="3" FontSize="20" FontFamily="Cascadia code"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Text="Total Cost To Pay: 10000000$" x:Name="txtCostToPay"></TextBlock>
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Text="Total Cost To Pay: 0$" x:Name="txtCostToPay"></TextBlock>
             
             <TextBlock Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="3" FontSize="20" FontFamily="Cascadia code"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Text="Current Total Amount Selected: 1000000$" x:Name="txtCurrentTotalAmountSelling"></TextBlock>
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Text="Current Total Amount Selected: 0$" x:Name="txtCurrentTotalAmountSelling"></TextBlock>
 
             <Button x:Name="btnSellProperty"  Grid.Row="14" Grid.Column="5" Content="Sell" FontFamily="Cascadia code" CornerRadius="10" Click="btnSellProperty_Click"
                     FontSize="20" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Background="Wheat" Foreground="Black" Grid.RowSpan="2"></Button>
