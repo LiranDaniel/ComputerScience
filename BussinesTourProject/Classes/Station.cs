@@ -13,10 +13,12 @@ namespace BussinesTourProject.Classes
     public class Station : Property
     {
 
-        public Station() : base (basicCostToBuy: 200_000, basicCostToPayRent: 50_000,
-            levelUpgradeRent: 50_000) { }
+        public Station(string nameOfStation) : base (basicCostToBuy: 200_000, basicCostToPayRent: 50_000,
+            levelUpgradeRent: 50_000) {
+            this.nameOfStation = nameOfStation;
+        }
 
-
+        public string nameOfStation;
         /// <summary>
         /// Increase Station value if there is more than one station
         /// that the current player owns
@@ -47,6 +49,22 @@ namespace BussinesTourProject.Classes
                     }
                 }
             }
+        }
+
+        public  void ChangeImageByPlayer()
+        {
+            foreach (object square in GameManager.ArrayMap)
+            {
+                if (square is Station)
+                {
+                    if ((square as Station).ownerOfTheProperty == ownerOfTheProperty)
+                    {
+
+                    }
+                }
+            }
+
+            imageOfProperty.Source = new BitmapImage(new Uri($@"ms-appx:///Assets\Images\SquareImages\StationsIcons\{ownerOfTheProperty.playerNumber}\{nameOfStation}.png"));
         }
 
         /// <summary>
