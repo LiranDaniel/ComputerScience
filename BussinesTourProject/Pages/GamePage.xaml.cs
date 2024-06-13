@@ -744,6 +744,8 @@ namespace BussinesTourProject.Pages
 
             UISellingProperty.Visibility = Visibility.Collapsed;
             GameManager.CheckIfDouble();
+
+            GameManager.IsSellingState = false;
         }
 
         private void btnConfirmCard_Click(object sender, RoutedEventArgs e)
