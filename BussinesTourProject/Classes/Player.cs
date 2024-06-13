@@ -36,7 +36,7 @@ namespace BussinesTourProject.Classes
         {
             this.playerNumber = playerNumber;
             this.imgName = imgName;
-            this.name = name;
+            this.name = name; 
             this.currentPosition = 0;
             amountOfMoney = 2_000_000;
             this.playerState = playerState;
