@@ -19,6 +19,7 @@ namespace BussinesTourProject.Classes
     {
         public static DispatcherTimer timerPlayers;
         public static bool ToggleState { get; set; } = true;
+        public static bool IsSellingState { get; set; }
 
         public static MediaPlayer SoundPlayer { get; set; } = new MediaPlayer();
         public static void PlaySound(string file)

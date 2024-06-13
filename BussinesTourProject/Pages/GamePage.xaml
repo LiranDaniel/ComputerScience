@@ -1755,14 +1755,20 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="3" FontSize="20" FontFamily="Cascadia code"
+            <TextBlock Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="3" FontSize="24" FontFamily="Cascadia code"
                        HorizontalAlignment="Center" VerticalAlignment="Top" Text="Select Property To Sell"></TextBlock>
             
-            <TextBlock Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="3" FontSize="20" FontFamily="Cascadia code"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Text="Total Cost To Pay: 0$" x:Name="txtCostToPay"></TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="8" Grid.RowSpan="3" FontSize="20" FontFamily="Cascadia code"
+                       HorizontalAlignment="Left" VerticalAlignment="Top" Text="Total Cost To Pay:"></TextBlock>
             
-            <TextBlock Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="3" FontSize="20" FontFamily="Cascadia code"
-                       HorizontalAlignment="Center" VerticalAlignment="Top" Text="Current Total Amount Selected: 0$" x:Name="txtCurrentTotalAmountSelling"></TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="3" Grid.RowSpan="3" FontSize="20" FontFamily="Cascadia code"
+                       HorizontalAlignment="Right" VerticalAlignment="Top" Text="0$" x:Name="txtCostToPay"></TextBlock>
+            
+            <TextBlock Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="8" Grid.RowSpan="3" FontSize="20" FontFamily="Cascadia code"
+                       HorizontalAlignment="Left" VerticalAlignment="Top" Text="Current Total Amount Selected:"></TextBlock>
+            
+            <TextBlock Grid.Row="8" Grid.Column="8" Grid.ColumnSpan="3" Grid.RowSpan="3" FontSize="20" FontFamily="Cascadia code"
+                       HorizontalAlignment="Right" VerticalAlignment="Top" Text="0$" x:Name="txtCurrentTotalAmountSelling"></TextBlock>
 
             <Button x:Name="btnSellProperty"  Grid.Row="14" Grid.Column="5" Content="Sell" FontFamily="Cascadia code" CornerRadius="10" Click="btnSellProperty_Click"
                     FontSize="20" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" Background="Wheat" Foreground="Black" Grid.RowSpan="2"></Button>

@@ -600,6 +600,11 @@ namespace BussinesTourProject.Pages
                     }
                 }
             }
+
+            if(GameManager.IsSellingState)
+            {
+
+            }
         }
         private  void btnSelecteChampionShip_Click(object sender, RoutedEventArgs e)
         {
