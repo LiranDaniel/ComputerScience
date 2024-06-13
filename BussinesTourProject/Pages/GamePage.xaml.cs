@@ -723,6 +723,12 @@ namespace BussinesTourProject.Pages
 
         private void btnSellProperty_Click(object sender, RoutedEventArgs e)
         {
+            if (GameManager.CalculateTotalValueSelected() < ((House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition]).currentCostToPayRent)
+                return;
+
+            ((House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition]).ownerOfTheProperty.AmountOfMoneyChange(-((House)GameManager.ArrayMap[GameManager.currentPlayer.currentPosition]).currentCostToPayRent);
+            // updating the money of the owner after paying the bills 
+
             foreach (object square in GameManager.arrayPlayers)
             {
                 if (square is Property)
