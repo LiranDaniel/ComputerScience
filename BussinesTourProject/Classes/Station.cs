@@ -53,17 +53,6 @@ namespace BussinesTourProject.Classes
 
         public  void ChangeImageByPlayer()
         {
-            foreach (object square in GameManager.ArrayMap)
-            {
-                if (square is Station)
-                {
-                    if ((square as Station).ownerOfTheProperty == ownerOfTheProperty)
-                    {
-
-                    }
-                }
-            }
-
             imageOfProperty.Source = new BitmapImage(new Uri($@"ms-appx:///Assets\Images\SquareImages\StationsIcons\{ownerOfTheProperty.playerNumber}\{nameOfStation}.png"));
         }
 
@@ -105,6 +94,7 @@ namespace BussinesTourProject.Classes
             ownerOfTheProperty = GameManager.currentPlayer;
             ownerOfTheProperty.playerStations++;
             PropertyUpgrade();
+            ChangeImageByPlayer();
         }
 
     }
