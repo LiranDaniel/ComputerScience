@@ -115,7 +115,7 @@ namespace BussinesTourProject.Classes
         {
             arrayPlayers = 
             new Player[] {new Player(playerState: new state[4]{state.forward, state.right,
-            state.backward, state.left}, name:"Alexander Yanai", imgName:"RedCar" , playerNumber:"Player1"),
+            state.backward, state.left}, name:"Dana Loris", imgName:"RedCar" , playerNumber:"Player1"),
 
             new Player(playerState: new state[4]{state.forward, state.right, state.backward,
             state.left}, name:"Daniel Shlomo", imgName:"YellowCar" , playerNumber:"Player2"),
@@ -124,7 +124,7 @@ namespace BussinesTourProject.Classes
             state.backward}, name:"Liran Daniel", imgName:"PurpleCar" , playerNumber:"Player3"),
 
             new Player(playerState: new state[4]{state.forward, state.forward, state.right,
-                state.backward}, name:"Oleg woller", imgName:"BlueCar" , playerNumber:"Player4")};
+                state.backward}, name:"Neomi Shemer", imgName:"BlueCar" , playerNumber:"Player4")};
         }
 
         /// <summary>

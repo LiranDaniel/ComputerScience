@@ -366,20 +366,20 @@
         <Image Source="/Assets\Images\WoodBar.png" x:Name="imgPlayer4Bar" Stretch="Fill"
                Grid.Row="1" Grid.Column="177" Grid.ColumnSpan="30" Grid.RowSpan="12"></Image>
 
-        <Image Source="/Assets\Images\Avatars\Avatar_2.png" x:Name="imgAvatar3"
+        <Image Source="/Assets\Images\Avatars\Avatar_1.png" x:Name="imgAvatar3"
                Grid.Row="107" Grid.Column="3" Grid.ColumnSpan="8" Grid.RowSpan="7"></Image>
         
         <Image Source="/Assets\Images\Avatars\Avatar_2.png" x:Name="imgAvatar1"
                Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="8" Grid.RowSpan="7"></Image>
         
-        <Image Source="/Assets\Images\Avatars\Avatar_2.png" x:Name="imgAvatar2"
+        <Image Source="/Assets\Images\Avatars\Avatar_3.png" x:Name="imgAvatar2"
                Grid.Row="3" Grid.Column="196" Grid.ColumnSpan="8" Grid.RowSpan="7"></Image>
         
-        <Image Source="/Assets\Images\Avatars\Avatar_2.png" x:Name="imgAvatar4"
+        <Image Source="/Assets\Images\Avatars\Avatar_4.png" x:Name="imgAvatar4"
                Grid.Row="107" Grid.Column="196" Grid.ColumnSpan="8" Grid.RowSpan="7"></Image>
         
         <TextBlock Grid.Row="4" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer1Name"
-                   Text="Liran Daniel" FontFamily="Cascadia code" FontSize="12" Foreground="Black" FontWeight="Bold"></TextBlock>
+                   Text="Dana lotis" FontFamily="Cascadia code" FontSize="12" Foreground="Black" FontWeight="Bold"></TextBlock>
 
         <TextBlock Grid.Row="9" Grid.Column="13" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer1Status" FontWeight="Bold"
                    Text="Playing..." FontFamily="Cascadia code" FontSize="12" Foreground="White" Visibility="Collapsed"></TextBlock>
@@ -397,7 +397,7 @@
                    Text="2,000,000$" FontFamily="Cascadia code" FontSize="12" Foreground="White" FontWeight="Bold"></TextBlock>
 
         <TextBlock Grid.Row="4" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer2Name" FontWeight="Bold"
-                   Text="Liran Daniel" FontFamily="Cascadia code" FontSize="12" Foreground="Black"></TextBlock>
+                   Text="David wolf" FontFamily="Cascadia code" FontSize="12" Foreground="Black"></TextBlock>
 
         <TextBlock Grid.Row="6" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer2Money" FontWeight="Bold"
                    Text="2,000,000$" FontFamily="Cascadia code" FontSize="12" Foreground="White"></TextBlock>
@@ -409,7 +409,7 @@
                    Text="2,000,000$" FontFamily="Cascadia code" FontSize="12" Foreground="White"></TextBlock>
 
         <TextBlock Grid.Row="108" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer4Name" FontWeight="Bold"
-                   Text="Liran Daniel" FontFamily="Cascadia code" FontSize="12" Foreground="Black"></TextBlock>
+                   Text="Neomi Shemer" FontFamily="Cascadia code" FontSize="12" Foreground="Black"></TextBlock>
 
         <TextBlock Grid.Row="110" Grid.Column="182" Grid.ColumnSpan="15" Grid.RowSpan="3" x:Name="txtPlayer4Money" FontWeight="Bold"
                    Text="2,000,000$" FontFamily="Cascadia code" FontSize="12" Foreground="White"></TextBlock>
@@ -1589,6 +1589,8 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"></TextBlock>
+
+            <Image Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" ></Image>
             
             <TextBlock Grid.Column="1" Grid.Row="4"></TextBlock>
             
