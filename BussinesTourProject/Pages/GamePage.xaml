@@ -1611,6 +1611,18 @@
             <TextBlock Grid.Column="3" Grid.Row="16" Grid.ColumnSpan="3" FontSize="20" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top"
                        FontFamily="Cascadia code" >Neomi Shemer</TextBlock>
 
+            <TextBlock Grid.Column="3" Grid.Row="6" Grid.ColumnSpan="3" FontSize="20" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top"
+                       FontFamily="Cascadia code" >100_0000$</TextBlock>
+
+            <TextBlock Grid.Column="3" Grid.Row="8" Grid.ColumnSpan="3" FontSize="20" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       FontFamily="Cascadia code" >Dana Loris</TextBlock>
+            
+            <TextBlock Grid.Column="3" Grid.Row="12" Grid.ColumnSpan="3" FontSize="20" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       FontFamily="Cascadia code" >Daniel Shlomo</TextBlock>
+            
+            <TextBlock Grid.Column="3" Grid.Row="16" Grid.ColumnSpan="3" FontSize="20" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       FontFamily="Cascadia code" >Neomi Shemer</TextBlock>
+
             <Image Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_1.png"></Image>
             
             <Image Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_2.png"></Image>
