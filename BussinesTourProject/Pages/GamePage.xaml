@@ -1558,7 +1558,7 @@
                        Text="1,000,000$" FontSize="25" FontFamily="Cascadia code" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
         </Grid>
         <Grid Grid.Row="13" Grid.Column="26" Grid.ColumnSpan="156" Grid.RowSpan="92"
-              Background="Black" CornerRadius="30" x:Name="UIEndGame" >
+              Background="Black" CornerRadius="30" x:Name="UIEndGame" Visibility="Collapsed">
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
