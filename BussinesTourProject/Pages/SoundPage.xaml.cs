@@ -76,6 +76,7 @@ namespace BussinesTourProject.Pages
         private void SoundEffectSw_Toggled(object sender, RoutedEventArgs e)
         {
             GameSounds.IsOn = SoundEffectSw.IsOn;
+            GameSounds.SetState();
         }
 
         /// <summary>
