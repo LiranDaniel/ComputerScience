@@ -1603,11 +1603,11 @@
 
             <Image Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_1.png"></Image>
             
-            <Image Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_1.png"></Image>
+            <Image Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_2.png"></Image>
             
-            <Image Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_1.png"></Image>
+            <Image Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_3.png"></Image>
             
-            <Image Grid.Row="16" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_1.png"></Image>
+            <Image Grid.Row="16" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_4.png"></Image>
 
             <TextBlock Grid.Column="1" Grid.Row="4"></TextBlock>
 
