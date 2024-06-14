@@ -1599,7 +1599,17 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"></TextBlock>
+            <TextBlock Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3" FontSize="20" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       FontFamily="Cascadia code" >Liran Daniel</TextBlock>
+
+            <TextBlock Grid.Column="3" Grid.Row="8" Grid.ColumnSpan="3" FontSize="20" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       FontFamily="Cascadia code" >Dana Loris</TextBlock>
+            
+            <TextBlock Grid.Column="3" Grid.Row="12" Grid.ColumnSpan="3" FontSize="20" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       FontFamily="Cascadia code" >Daniel Shlomo</TextBlock>
+            
+            <TextBlock Grid.Column="3" Grid.Row="16" Grid.ColumnSpan="3" FontSize="20" Grid.RowSpan="2" HorizontalAlignment="Left" VerticalAlignment="Top"
+                       FontFamily="Cascadia code" >Neomi Shemer</TextBlock>
 
             <Image Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_1.png"></Image>
             
@@ -1609,11 +1619,6 @@
             
             <Image Grid.Row="16" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_4.png"></Image>
 
-            <TextBlock Grid.Column="1" Grid.Row="4"></TextBlock>
-
-            <TextBlock Grid.Column="1" Grid.Row="6"></TextBlock>
-
-            <TextBlock Grid.Column="1" Grid.Row="8"></TextBlock>
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
               Background="Black" CornerRadius="30" x:Name="UIWorldChampion" Visibility="Collapsed">
