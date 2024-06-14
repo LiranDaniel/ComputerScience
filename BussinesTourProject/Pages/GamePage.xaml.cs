@@ -270,7 +270,18 @@ namespace BussinesTourProject.Pages
             GameManager.arrayPlayers[0].txtState = txtPlayer1Status;
             GameManager.arrayPlayers[1].txtState = txtPlayer2Status;
             GameManager.arrayPlayers[2].txtState = txtPlayer3Status;
-            GameManager.arrayPlayers[3].txtState = txtPlayer4Status;     
+            GameManager.arrayPlayers[3].txtState = txtPlayer4Status;
+
+            GameManager.arrayPlayers[0].txtTotalValueEndGame = txtPlayer3TotalValue;
+            GameManager.arrayPlayers[1].txtTotalValueEndGame = txtPlayer1TotalValue;
+            GameManager.arrayPlayers[2].txtTotalValueEndGame = txtPlayer2TotalValue;
+            GameManager.arrayPlayers[3].txtTotalValueEndGame = txtPlayer4TotalValue;
+
+            GameManager.arrayPlayers[0].txtTotalValueEndGame = txtPlayer3Winner;
+            GameManager.arrayPlayers[1].txtTotalValueEndGame = txtPlayer1Winner;
+            GameManager.arrayPlayers[2].txtTotalValueEndGame = txtPlayer2Winner;
+            GameManager.arrayPlayers[3].txtTotalValueEndGame = txtPlayer4Winner;
+
         }
 
         /// <summary>

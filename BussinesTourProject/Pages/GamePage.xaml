@@ -1558,7 +1558,7 @@
                        Text="1,000,000$" FontSize="25" FontFamily="Cascadia code" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
         </Grid>
         <Grid Grid.Row="13" Grid.Column="26" Grid.ColumnSpan="156" Grid.RowSpan="92"
-              Background="Black" CornerRadius="30" x:Name="UIEndGame" Visibility="Collapsed">
+              Background="Black" CornerRadius="30" x:Name="UIEndGame" >
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -1639,16 +1639,16 @@
             
             
             <TextBlock Grid.Column="8" Grid.Row="5" Grid.ColumnSpan="3" FontSize="20" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top"
-                       FontFamily="Cascadia code" x:Name="txtPlayer3Winner">Winner</TextBlock>
+                       FontFamily="Cascadia code" x:Name="txtPlayer3Winner" Visibility="Collapsed">Winner</TextBlock>
             
             <TextBlock Grid.Column="8" Grid.Row="9" Grid.ColumnSpan="3" FontSize="20" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top"
-                       FontFamily="Cascadia code" x:Name="txtPlayer1Winner">Winner</TextBlock>
+                       FontFamily="Cascadia code" x:Name="txtPlayer1Winner" Visibility="Collapsed">Winner</TextBlock>
             
             <TextBlock Grid.Column="8" Grid.Row="13" Grid.ColumnSpan="3" FontSize="20" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top"
-                       FontFamily="Cascadia code" x:Name="txtPlayer2Winner">Winner</TextBlock>
+                       FontFamily="Cascadia code" x:Name="txtPlayer2Winner" Visibility="Collapsed">Winner</TextBlock>
             
             <TextBlock Grid.Column="8" Grid.Row="17" Grid.ColumnSpan="3" FontSize="20" Grid.RowSpan="2" HorizontalAlignment="Right" VerticalAlignment="Top"
-                       FontFamily="Cascadia code" x:Name="txtPlayer4Winner">Winner</TextBlock>
+                       FontFamily="Cascadia code" x:Name="txtPlayer4Winner" Visibility="Collapsed">Winner</TextBlock>
 
 
             <Image Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_1.png"></Image>
