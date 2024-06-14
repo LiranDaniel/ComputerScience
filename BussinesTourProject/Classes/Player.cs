@@ -25,7 +25,11 @@ namespace BussinesTourProject.Classes
         public int turnsStackJail;         // how much turns remain him to be stuck in jail
         public TextBlock txtMoney;         // the Text block object that display his amount of money in the game
         public TextBlock txtState;         // the Text block object that display his state in the game
+        public TextBlock txtTotalValueEndGame;
+        public TextBlock txtWinnerStatus;
+
         public int playerStations = 0;     // the amount of Station that he have
+
 
         public enum state
         {

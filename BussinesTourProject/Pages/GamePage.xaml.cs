@@ -41,6 +41,7 @@ namespace BussinesTourProject.Pages
         private int secondsElapsed; // minute of the timer of the game
         private int minutes;        // seconds of the timer of the game
 
+
         /// <summary>
         /// Initiate the Components for the page
         /// </summary>
@@ -110,7 +111,20 @@ namespace BussinesTourProject.Pages
         //Just navigate into different page
         private void GameOver()
         {
-            Frame.Navigate(typeof(SignInPage));
+            Player HighestTotalValuePlayer = null;
+            foreach(Player player in GameManager.arrayPlayers)
+            {
+                player.txtTotalValueEndGame.Text = $"{player.CalculatePropertyValue() + player.amountOfMoney}$";
+
+                if (HighestTotalValuePlayer == null)
+                    HighestTotalValuePlayer = player;
+                else if (HighestTotalValuePlayer.CalculatePropertyValue() + HighestTotalValuePlayer.amountOfMoney < player.amountOfMoney + player.CalculatePropertyValue())
+                    HighestTotalValuePlayer = player;
+            }
+
+            HighestTotalValuePlayer.txtWinnerStatus.Visibility = Visibility.Visible;
+
+            UIEndGame.Visibility = Visibility.Visible;
         }
 
 
