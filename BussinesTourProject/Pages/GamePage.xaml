@@ -1377,14 +1377,14 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Button FontFamily="Aharoni" Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="4" Grid.RowSpan="2"
-                    Content="Buy House" Style="{StaticResource MyButtonStyle}" FontSize="25"
+            <Button FontFamily="Aharoni" Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="4" Grid.RowSpan="2"
+                    Content="Buy House" Style="{StaticResource MyButtonStyle}" FontSize="25" HorizontalAlignment="Center"
                     Click="ButtonBuyHouse_Click" PointerEntered="btn_PointerEnteredRegular" 
                     PointerExited="btn_PointerExitedRegular"></Button>
 
             <RadioButton x:Name="optionHouse1RadioButton" GroupName="Options" Grid.Column="1" Grid.Row="2"
                    Grid.ColumnSpan="2" Grid.RowSpan="2" Checked="optionHouse1RadioButton_Checked">
-                <Image Source="/Assets\Images\SquareImages\HousesIcons\House1.png" Stretch="Fill"  ></Image>
+                <Image Source="/Assets\Images\SquareImages\HousesIcons\House1.png"></Image>
             </RadioButton>
 
             <TextBlock Grid.Column="1" Grid.Row="4" FontFamily="Cascadia code" Grid.ColumnSpan="2"
@@ -1392,7 +1392,7 @@
 
             <RadioButton x:Name="optionHouse2RadioButton" GroupName="Options" Grid.Column="5" Grid.Row="2"
                    Grid.ColumnSpan="2" Grid.RowSpan="2" Checked="optionHouse2RadioButton_Checked">
-                <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png" Stretch="Fill"></Image>
+                <Image Source="/Assets\Images\SquareImages\HousesIcons\House2.png"></Image>
             </RadioButton>
 
             <TextBlock Grid.Column="5" Grid.Row="4" FontFamily="Cascadia code" Grid.ColumnSpan="2"
@@ -1400,7 +1400,7 @@
 
             <RadioButton x:Name="optionHouse3RadioButton" GroupName="Options"  Grid.Column="9" Grid.Row="2"
                    Grid.ColumnSpan="2" Grid.RowSpan="2" Checked="optionHouse3RadioButton_Checked">
-                <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png" Stretch="Fill"></Image>
+                <Image Source="/Assets\Images\SquareImages\HousesIcons\House3.png"></Image>
             </RadioButton>
 
             <TextBlock Grid.Column="9" Grid.Row="4" FontFamily="Cascadia code" Grid.ColumnSpan="2"
@@ -1411,7 +1411,7 @@
 
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
-              Background="Black" CornerRadius="30" x:Name="UIJailOptions" Visibility="Collapsed">
+              Background="Black" CornerRadius="30" x:Name="UIJailOptions" Visibility="Collapsed" >
 
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -1455,7 +1455,7 @@
                    Source="/Assets\Images\WoodBar.png" Stretch="Fill"></Image>
 
             <Button Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="2" 
-                    FontSize="25" HorizontalAlignment="Center" Style="{StaticResource MyButtonStyle}"
+                    FontSize="15" HorizontalAlignment="Center" Style="{StaticResource MyButtonStyle}"
                     Background="White" VerticalAlignment="Center" FontFamily="Cascadia code"
                     Content="Roll The Same Number On Both Dice" PointerEntered="btn_PointerEnteredRegular"
                     PointerExited="btn_PointerExitedRegular" x:Name="btnJailDiceRoll" Click="btnJailDiceRoll_Click"></Button>
@@ -1471,7 +1471,7 @@
                        VerticalAlignment="Center" x:Name="txtJailErrorCard"></TextBlock>
 
             <Button Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan="2" 
-                    FontSize="25" HorizontalAlignment="Center" Style="{StaticResource MyButtonStyle}"
+                    FontSize="15" HorizontalAlignment="Center" Style="{StaticResource MyButtonStyle}"
                     Background="White" VerticalAlignment="Center" FontFamily="Cascadia code"
                     Content="Pay The Bank: 200K" PointerEntered="btn_PointerEnteredRegular"
                     PointerExited="btn_PointerExitedRegular" x:Name="btnJailPay" Click="btnJailPay_Click"></Button>
@@ -1510,14 +1510,14 @@
             </Grid.ColumnDefinitions>
 
             <Image Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="5" Grid.RowSpan="6" x:Name="imgBuyingStation"></Image>
-            <Button FontFamily="Aharoni" Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="3"
-                    Content="Buy Station" Style="{StaticResource MyButtonStyle}" FontSize="30"
+            <Button FontFamily="Aharoni" Grid.Row="9" Grid.Column="4" Grid.ColumnSpan="4" Grid.RowSpan="2" VerticalAlignment="Top"
+                    Content="Buy Station" Style="{StaticResource MyButtonStyle}" FontSize="25" HorizontalAlignment="Center"
                     Click="ButtonBuyingStation_Click" PointerEntered="btn_PointerEnteredRegular" 
                     PointerExited="btn_PointerExitedRegular"></Button>
 
         </Grid>
         <Grid Grid.Row="35" Grid.Column="58" Grid.ColumnSpan="95" Grid.RowSpan="49"
-              Background="Black" CornerRadius="30" x:Name="UITax" Visibility="Collapsed">
+              Background="Black" CornerRadius="30" x:Name="UITax" Visibility="Collapsed" >
 
 
             <Grid.RowDefinitions>
@@ -1551,16 +1551,27 @@
             <TextBlock Grid.Row="3" Grid.Column="2" Grid.RowSpan="4" Grid.ColumnSpan="8" FontSize="25" FontFamily="Cascadia code"
                        HorizontalAlignment="Center" VerticalAlignment="Top" Text="You are About to pay &#x0a;to the Goverment the&#x0a;taxes of your propertys"></TextBlock>
 
-            <TextBlock Grid.Row="7" Grid.Column="3" Grid.RowSpan="2" Grid.ColumnSpan="6" Text="Taxes value of:" 
-                       FontFamily="Cascadia code" FontSize="25"></TextBlock>
+            <TextBlock Grid.Row="7" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="6" Text="Taxes value of:" 
+                       FontFamily="Cascadia code" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
 
-            <TextBlock x:Name="txtTaxPrice" Grid.Row="7" Grid.Column="6" Grid.RowSpan="2" Grid.ColumnSpan="3"
-                       Text="1,000,000$" FontSize="25" FontFamily="Cascadia code" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+            <TextBlock x:Name="txtTaxPrice" Grid.Row="7" Grid.Column="8" Grid.RowSpan="2" Grid.ColumnSpan="3"
+                       Text="1,000,000$" FontSize="25" FontFamily="Cascadia code" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
         </Grid>
         <Grid Grid.Row="13" Grid.Column="26" Grid.ColumnSpan="156" Grid.RowSpan="92"
-              Background="Black" CornerRadius="30" x:Name="UIEndGame" Visibility="Collapsed">
+              Background="Black" CornerRadius="30" x:Name="UIEndGame" >
 
             <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -1590,7 +1601,13 @@
 
             <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2"></TextBlock>
 
-            <Image Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" ></Image>
+            <Image Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_1.png"></Image>
+            
+            <Image Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_1.png"></Image>
+            
+            <Image Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_1.png"></Image>
+            
+            <Image Grid.Row="16" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" Source="/Assets\Images\Avatars\Avatar_1.png"></Image>
 
             <TextBlock Grid.Column="1" Grid.Row="4"></TextBlock>
 
