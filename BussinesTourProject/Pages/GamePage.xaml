@@ -1378,7 +1378,7 @@
             </Grid.ColumnDefinitions>
 
             <Button FontFamily="Aharoni" Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="4" Grid.RowSpan="2"
-                    Content="Buy House" Style="{StaticResource MyButtonStyle}" FontSize="25" HorizontalAlignment="Center"
+                    Content="Confirm" Style="{StaticResource MyButtonStyle}" FontSize="25" HorizontalAlignment="Center"
                     Click="ButtonBuyHouse_Click" PointerEntered="btn_PointerEnteredRegular" 
                     PointerExited="btn_PointerExitedRegular"></Button>
 
