@@ -219,6 +219,9 @@ namespace BussinesTourProject.Pages
         /// <param name="e"></param>
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            GameSounds.IsOn = true;
+            GameSounds.SetState();
+            
             InitMediaPlayers();
 
             GameManager.InitPlayers();
